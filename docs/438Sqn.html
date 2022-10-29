@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_eaac6c784822439eb4610cb5390cb23f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 96.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>    
+    
+                   <h3 align="center" style="font-size:16px"><b> Robert McKenzie 438 Squadron Sorties</b></h3>
+                 
+    
+            <div class="folium-map" id="map_eaac6c784822439eb4610cb5390cb23f" ></div>
+        
+</body>
+<script>    
+    
+            var map_eaac6c784822439eb4610cb5390cb23f = L.map(
+                "map_eaac6c784822439eb4610cb5390cb23f",
+                {
+                    center: [49.5, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    overlay: "false",
+                    fullscreenControl: true,
+                }
+            );
+            L.control.scale().addTo(map_eaac6c784822439eb4610cb5390cb23f);
+
+            
+
+        
+    
+            var tile_layer_edf08d2fa47a477d97b5716e3e1dd4c8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+        
+    
+            var tile_layer_1a69167ca0f44df981fb1ff160de4c1e = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+        
+    
+            var tile_layer_ea182a0ef8fd4341a9a128572e86ce9c = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+        
+    
+            var tile_layer_92cf193ca4fa4febb2868cf6be5b1eb2 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+        
+    
+            var tile_layer_9621d84f3f7d489198ac7f6ac14e5566 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+        
+    
+            var tile_layer_3657dd82ee334f01aff34b65ff1fbed2 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+        
+    
+            var feature_group_56e55b9ce68044aeb1ddde9d10a120d8 = L.featureGroup(
+                {}
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+        
+    
+            var marker_a8923436447c4d4daa0a21a73ddb2f50 = L.marker(
+                [50.7826164, -1.8489403],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_0b547dbce6354ca2a003e260abf93290 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a8923436447c4d4daa0a21a73ddb2f50.setIcon(icon_0b547dbce6354ca2a003e260abf93290);
+        
+    
+        var popup_bcfb07705f6d4fddb17341130d848ce9 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_37ddd918e80b4d12ab44b604de90b70b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgTWFyIDQ0PGJyPlJBRiBIdXJuPGJyPjxicj40MzggT3BlcmF0aW9uYWwgQmFzZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_bcfb07705f6d4fddb17341130d848ce9.setContent(i_frame_37ddd918e80b4d12ab44b604de90b70b);
+        
+
+        marker_a8923436447c4d4daa0a21a73ddb2f50.bindPopup(popup_bcfb07705f6d4fddb17341130d848ce9)
+        ;
+
+        
+    
+    
+            marker_a8923436447c4d4daa0a21a73ddb2f50.bindTooltip(
+                `<div>
+                     27 Mar 44<br>RAF Hurn<br><br>438 Operational Base
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b5d1b9eabc649e3965be52b9d0c8e26 = L.marker(
+                [49.5797993, -2.8157138],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_2ce6809c60f44698a9d34df5b0b0f83d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4b5d1b9eabc649e3965be52b9d0c8e26.setIcon(icon_2ce6809c60f44698a9d34df5b0b0f83d);
+        
+    
+        var popup_b77ce79d26da4561aa19f7ce95c8bb33 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_09a5231d9ca44c1e958e403c48ec7641 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MzAgTWFyIDQ0PGJyPkNoYW5uZWwgSXNsYW5kczxicj48YnI+RmlnaHRlciBTd2VlcDwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_b77ce79d26da4561aa19f7ce95c8bb33.setContent(i_frame_09a5231d9ca44c1e958e403c48ec7641);
+        
+
+        marker_4b5d1b9eabc649e3965be52b9d0c8e26.bindPopup(popup_b77ce79d26da4561aa19f7ce95c8bb33)
+        ;
+
+        
+    
+    
+            marker_4b5d1b9eabc649e3965be52b9d0c8e26.bindTooltip(
+                `<div>
+                     30 Mar 44<br>Channel Islands<br><br>Fighter Sweep
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_6a2759ac3f2a426ea0fe7dc901340c8e = L.polyline(
+                [[50.7826164, -1.8489403], [49.5797993, -2.8157138]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_d38daa41cd9a46a496a62661e6e712f1 = L.marker(
+                [49.192276, -1.2383399],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_f3a226afe7644b14b695ef45e7276880 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d38daa41cd9a46a496a62661e6e712f1.setIcon(icon_f3a226afe7644b14b695ef45e7276880);
+        
+    
+        var popup_3d9b7852606a441daaca1b61d52367b5 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_252f53c4e95543f39fe1f358f9006d9f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjUgQXByIDQ0PGJyPkNvdXRhbmNlcywgRlI8YnI+PGJyPkJyaWRnZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_3d9b7852606a441daaca1b61d52367b5.setContent(i_frame_252f53c4e95543f39fe1f358f9006d9f);
+        
+
+        marker_d38daa41cd9a46a496a62661e6e712f1.bindPopup(popup_3d9b7852606a441daaca1b61d52367b5)
+        ;
+
+        
+    
+    
+            marker_d38daa41cd9a46a496a62661e6e712f1.bindTooltip(
+                `<div>
+                     25 Apr 44<br>Coutances, FR<br><br>Bridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ea1ae9feae124385be4bc7163dde2096 = L.polyline(
+                [[50.7826164, -1.8489403], [49.192276, -1.2383399]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_b295bb549f104c5591d8dfa673d14d03 = L.marker(
+                [49.6683243, -1.693036],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_5f69b867f75c44f9952154abd330c139 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b295bb549f104c5591d8dfa673d14d03.setIcon(icon_5f69b867f75c44f9952154abd330c139);
+        
+    
+        var popup_9b992d89af2d464ba2edfbc780176032 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_1d7334cf8d694585a621085c17362747 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgQXByIDQ0PGJyPkNoZXJib3VyZywgRlI8YnI+PGJyPk9wZXJhdGlvbmFsIFNjcmFtYmxlPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_9b992d89af2d464ba2edfbc780176032.setContent(i_frame_1d7334cf8d694585a621085c17362747);
+        
+
+        marker_b295bb549f104c5591d8dfa673d14d03.bindPopup(popup_9b992d89af2d464ba2edfbc780176032)
+        ;
+
+        
+    
+    
+            marker_b295bb549f104c5591d8dfa673d14d03.bindTooltip(
+                `<div>
+                     27 Apr 44<br>Cherbourg, FR<br><br>Operational Scramble
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_40b8227c528a4c2db02d4e3a2cb09d61 = L.polyline(
+                [[50.7826164, -1.8489403], [49.6683243, -1.693036]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_7029783ba8be497580b4481440581b8d = L.marker(
+                [49.2997238, -1.3218456],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_793a974c8ad84e96911cae47da4a9899 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7029783ba8be497580b4481440581b8d.setIcon(icon_793a974c8ad84e96911cae47da4a9899);
+        
+    
+        var popup_9a3153b6ddc146bf95698ca902f8de01 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_6719ffa50d01421fbf8f1d528a1839b8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgQXByIDQ0PGJyPkJhdXB0ZSwgRlI8YnI+PGJyPlJhaWx3YXkgQnJpZGdlPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_9a3153b6ddc146bf95698ca902f8de01.setContent(i_frame_6719ffa50d01421fbf8f1d528a1839b8);
+        
+
+        marker_7029783ba8be497580b4481440581b8d.bindPopup(popup_9a3153b6ddc146bf95698ca902f8de01)
+        ;
+
+        
+    
+    
+            marker_7029783ba8be497580b4481440581b8d.bindTooltip(
+                `<div>
+                     27 Apr 44<br>Baupte, FR<br><br>Railway Bridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ebdaf3b703d740e7912e3411dd52dc63 = L.polyline(
+                [[50.7826164, -1.8489403], [49.2997238, -1.3218456]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_cbc98b96b8b14defbb4c33092661a9e3 = L.marker(
+                [49.3456666, 1.0575819],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_b6c38c4279634ae6b16fe81e24914d1a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cbc98b96b8b14defbb4c33092661a9e3.setIcon(icon_b6c38c4279634ae6b16fe81e24914d1a);
+        
+    
+        var popup_9ae558d593c54fad829a5b12370abad2 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_ab49ce8ac876411ab7283e02fc723546 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDcgTWF5IDQ0PGJyPk9pc3NlbCwgRlI8YnI+PGJyPkJyaWRnZSBzb3V0aCBvZiBSb3VlbjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_9ae558d593c54fad829a5b12370abad2.setContent(i_frame_ab49ce8ac876411ab7283e02fc723546);
+        
+
+        marker_cbc98b96b8b14defbb4c33092661a9e3.bindPopup(popup_9ae558d593c54fad829a5b12370abad2)
+        ;
+
+        
+    
+    
+            marker_cbc98b96b8b14defbb4c33092661a9e3.bindTooltip(
+                `<div>
+                     07 May 44<br>Oissel, FR<br><br>Bridge south of Rouen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a2e84ee91e2449f1a85a6a2b45939fc5 = L.polyline(
+                [[50.7826164, -1.8489403], [49.3456666, 1.0575819]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_5fa6cb6bf931405e86911dd3135af703 = L.marker(
+                [50.0560153, 1.9538772],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_9be3af4d536a456eb52072dd666e50e6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5fa6cb6bf931405e86911dd3135af703.setIcon(icon_9be3af4d536a456eb52072dd666e50e6);
+        
+    
+        var popup_f3f6bcffb27d4851a135215732c69131 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_ea0ba1c1b28d434f8fa3a9fc9cc51d91 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTAgTWF5IDQ0PGJyPkxvbmcsIEZSPGJyPjxicj5CcmlkZ2U8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_f3f6bcffb27d4851a135215732c69131.setContent(i_frame_ea0ba1c1b28d434f8fa3a9fc9cc51d91);
+        
+
+        marker_5fa6cb6bf931405e86911dd3135af703.bindPopup(popup_f3f6bcffb27d4851a135215732c69131)
+        ;
+
+        
+    
+    
+            marker_5fa6cb6bf931405e86911dd3135af703.bindTooltip(
+                `<div>
+                     10 May 44<br>Long, FR<br><br>Bridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b55196d3a7194980bbadf3cfaf4921b3 = L.polyline(
+                [[50.7826164, -1.8489403], [50.0560153, 1.9538772]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_dd55de84ce2b4dd5b686b828cdf44c53 = L.marker(
+                [50.0161715, 1.9568342],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_05d68f8283b1465a835dc1467694304a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_dd55de84ce2b4dd5b686b828cdf44c53.setIcon(icon_05d68f8283b1465a835dc1467694304a);
+        
+    
+        var popup_caf55bbf829b4dbb91175fa10cb8ff3f = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_4e6b9e9a665749f39f8f250a684d2157 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTEgTWF5IDQ0PGJyPkxvbmcsIEZSPGJyPjxicj5CcmlkZ2U8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_caf55bbf829b4dbb91175fa10cb8ff3f.setContent(i_frame_4e6b9e9a665749f39f8f250a684d2157);
+        
+
+        marker_dd55de84ce2b4dd5b686b828cdf44c53.bindPopup(popup_caf55bbf829b4dbb91175fa10cb8ff3f)
+        ;
+
+        
+    
+    
+            marker_dd55de84ce2b4dd5b686b828cdf44c53.bindTooltip(
+                `<div>
+                     11 May 44<br>Long, FR<br><br>Bridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b7c939fee858429b928eb7507163d12e = L.polyline(
+                [[50.7826164, -1.8489403], [50.0161715, 1.9568342]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_6bd49c4c347941de999cf57243f37101 = L.marker(
+                [49.7200953, 1.5258587],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_e4c2a360d512482b87e6665dee159e98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6bd49c4c347941de999cf57243f37101.setIcon(icon_e4c2a360d512482b87e6665dee159e98);
+        
+    
+        var popup_d1e4c7ca97d943359f6eca911742ba60 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_cb658cd72cd14bda8b5e2e851a04f709 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTIgTWF5IDQ0PGJyPkNoYXRlYXUgZGUgQm9zbWVsZXQ8YnI+PGJyPkNoYXRlYXU8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_d1e4c7ca97d943359f6eca911742ba60.setContent(i_frame_cb658cd72cd14bda8b5e2e851a04f709);
+        
+
+        marker_6bd49c4c347941de999cf57243f37101.bindPopup(popup_d1e4c7ca97d943359f6eca911742ba60)
+        ;
+
+        
+    
+    
+            marker_6bd49c4c347941de999cf57243f37101.bindTooltip(
+                `<div>
+                     12 May 44<br>Chateau de Bosmelet<br><br>Chateau
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a9edf88043494fe7a80209cb576dba82 = L.polyline(
+                [[50.7826164, -1.8489403], [49.7200953, 1.5258587]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_fd94ec4bda424313b88efcd34065ca46 = L.marker(
+                [51.1429821, 3.6808185],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_e98491cd038f4af68b0f72df661d09ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_fd94ec4bda424313b88efcd34065ca46.setIcon(icon_e98491cd038f4af68b0f72df661d09ba);
+        
+    
+        var popup_26cb90d0167f430ca5ab7683d1f11cdb = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_9b1c7bc0942e4ffda1cb04b45486c034 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTkgTWF5IDQ0PGJyPkV2ZXJndW0sIEJFPGJyPjxicj5UYW5rIENvbmNldHJhdGlvbjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_26cb90d0167f430ca5ab7683d1f11cdb.setContent(i_frame_9b1c7bc0942e4ffda1cb04b45486c034);
+        
+
+        marker_fd94ec4bda424313b88efcd34065ca46.bindPopup(popup_26cb90d0167f430ca5ab7683d1f11cdb)
+        ;
+
+        
+    
+    
+            marker_fd94ec4bda424313b88efcd34065ca46.bindTooltip(
+                `<div>
+                     19 May 44<br>Evergum, BE<br><br>Tank Concetration
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_6311e24b81ea443ea48b2b5c4541cc58 = L.polyline(
+                [[50.7826164, -1.8489403], [51.1429821, 3.6808185]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_8e03fcabcadc40cf9161383f3082a69c = L.marker(
+                [49.4958157, 0.096175],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_f9e62c098ca8490fa3e4d050a26e2203 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8e03fcabcadc40cf9161383f3082a69c.setIcon(icon_f9e62c098ca8490fa3e4d050a26e2203);
+        
+    
+        var popup_1f08a8572ffc432f8e150ad77818dc7f = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_441c69e056f645919a24943a74738a7a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDIgSnVuIDQ0PGJyPkNhcCBkZSBsYSBIYXZyZTxicj48YnI+UmFkYXIgU2l0ZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_1f08a8572ffc432f8e150ad77818dc7f.setContent(i_frame_441c69e056f645919a24943a74738a7a);
+        
+
+        marker_8e03fcabcadc40cf9161383f3082a69c.bindPopup(popup_1f08a8572ffc432f8e150ad77818dc7f)
+        ;
+
+        
+    
+    
+            marker_8e03fcabcadc40cf9161383f3082a69c.bindTooltip(
+                `<div>
+                     02 Jun 44<br>Cap de la Havre<br><br>Radar Site
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f70597ec5ee2429e82deb88bdffeb2aa = L.polyline(
+                [[50.7826164, -1.8489403], [49.4958157, 0.096175]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_a9adc024de29458f8837f2c5f6ee3832 = L.marker(
+                [49.4957988, 0.0594374],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_ffa5d63609f74b229e63683cd23d912e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a9adc024de29458f8837f2c5f6ee3832.setIcon(icon_ffa5d63609f74b229e63683cd23d912e);
+        
+    
+        var popup_a0303414751b45449412bbe483f02bc7 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_e7810a23f6a8456cb3c2e93c11e8456f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDMgSnVuIDQ0PGJyPkxhIEhhdnJlPGJyPjxicj5SYWRhciBTaXRlPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_a0303414751b45449412bbe483f02bc7.setContent(i_frame_e7810a23f6a8456cb3c2e93c11e8456f);
+        
+
+        marker_a9adc024de29458f8837f2c5f6ee3832.bindPopup(popup_a0303414751b45449412bbe483f02bc7)
+        ;
+
+        
+    
+    
+            marker_a9adc024de29458f8837f2c5f6ee3832.bindTooltip(
+                `<div>
+                     03 Jun 44<br>La Havre<br><br>Radar Site
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_67a9588bd6dd41ddaa1d1ab19d5718e2 = L.polyline(
+                [[50.7826164, -1.8489403], [49.4957988, 0.0594374]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_7688d8cc73074456afad7f332b7220f0 = L.marker(
+                [49.4958157, 0.096175],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_fdbc16bd57804bba94aa048b59a9d94c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7688d8cc73074456afad7f332b7220f0.setIcon(icon_fdbc16bd57804bba94aa048b59a9d94c);
+        
+    
+        var popup_63ecd8ff19df4d48be745b3810b13a5c = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_94b1ca96581a4cc092a8dabb7f886186 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDUgSnVuIDQ0PGJyPkNhcCBkZSBsYSBIYXZyZTxicj48YnI+UmFkYXIgU2l0ZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_63ecd8ff19df4d48be745b3810b13a5c.setContent(i_frame_94b1ca96581a4cc092a8dabb7f886186);
+        
+
+        marker_7688d8cc73074456afad7f332b7220f0.bindPopup(popup_63ecd8ff19df4d48be745b3810b13a5c)
+        ;
+
+        
+    
+    
+            marker_7688d8cc73074456afad7f332b7220f0.bindTooltip(
+                `<div>
+                     05 Jun 44<br>Cap de la Havre<br><br>Radar Site
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_63c6b7910a1047e38cb1fc716fdd4370 = L.polyline(
+                [[50.7826164, -1.8489403], [49.4958157, 0.096175]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_cde1da94ae644bb1a3a0f3545a9657a1 = L.marker(
+                [49.34341, -0.58386],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_ed15c4e5964f4b0993c2bfbd08f504e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cde1da94ae644bb1a3a0f3545a9657a1.setIcon(icon_ed15c4e5964f4b0993c2bfbd08f504e1);
+        
+    
+        var popup_2bf68aed378c42dc9d5601ec79a51477 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_42f2ec2d76ae4f7aad3281bb1370c616 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDYgSnVuIDQ0PGJyPkFzbmVsbGVzLXN1ci1NZXI8YnI+PGJyPkdvbGQgQmVhY2ggU3Ryb25nIFBvaW50czwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_2bf68aed378c42dc9d5601ec79a51477.setContent(i_frame_42f2ec2d76ae4f7aad3281bb1370c616);
+        
+
+        marker_cde1da94ae644bb1a3a0f3545a9657a1.bindPopup(popup_2bf68aed378c42dc9d5601ec79a51477)
+        ;
+
+        
+    
+    
+            marker_cde1da94ae644bb1a3a0f3545a9657a1.bindTooltip(
+                `<div>
+                     06 Jun 44<br>Asnelles-sur-Mer<br><br>Gold Beach Strong Points
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_e1811f7b00e34c4bb52359536be12bfa = L.polyline(
+                [[50.7826164, -1.8489403], [49.34341, -0.58386]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_cbfee3527b4a4a58b4fa2c6c462554e6 = L.marker(
+                [50.5670518, -2.0348655],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_020557ae665f4afeb21fd96e788f2c98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cbfee3527b4a4a58b4fa2c6c462554e6.setIcon(icon_020557ae665f4afeb21fd96e788f2c98);
+        
+    
+        var popup_3dafcfc74827468a818aaec496798c90 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_8d1aff8576a847738115acf2eac1fa58 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDcgSnVuIDQ0PGJyPlN0IEFsYmFuJ3MgSGVhZDxicj48YnI+U3VzcGVjdGVkIENvbnZveTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_3dafcfc74827468a818aaec496798c90.setContent(i_frame_8d1aff8576a847738115acf2eac1fa58);
+        
+
+        marker_cbfee3527b4a4a58b4fa2c6c462554e6.bindPopup(popup_3dafcfc74827468a818aaec496798c90)
+        ;
+
+        
+    
+    
+            marker_cbfee3527b4a4a58b4fa2c6c462554e6.bindTooltip(
+                `<div>
+                     07 Jun 44<br>St Alban's Head<br><br>Suspected Convoy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ae7e1b450aaf4b0f9eaa6140b396a71b = L.polyline(
+                [[50.7826164, -1.8489403], [50.5670518, -2.0348655]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_add220d345ed4b8883a205534ddf0dee = L.marker(
+                [48.99109, -0.73814],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_8caca2d63bc04d5b9cadf14f3407f597 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_add220d345ed4b8883a205534ddf0dee.setIcon(icon_8caca2d63bc04d5b9cadf14f3407f597);
+        
+    
+        var popup_8eede8a44fa94b03b706cb4549c0eed4 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_e1907d9c516941de84e8ce2f366410fd = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTQgSnVuIDQ0PGJyPlZpbGxpZXJzLUJvY2FnZTxicj48YnI+NiBBcm1vdXJlZCBWZWhpY2xlczwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_8eede8a44fa94b03b706cb4549c0eed4.setContent(i_frame_e1907d9c516941de84e8ce2f366410fd);
+        
+
+        marker_add220d345ed4b8883a205534ddf0dee.bindPopup(popup_8eede8a44fa94b03b706cb4549c0eed4)
+        ;
+
+        
+    
+    
+            marker_add220d345ed4b8883a205534ddf0dee.bindTooltip(
+                `<div>
+                     14 Jun 44<br>Villiers-Bocage<br><br>6 Armoured Vehicles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_6bc268a256dd4eb2b8d688b3a9e57ac8 = L.polyline(
+                [[50.7826164, -1.8489403], [48.99109, -0.73814]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_bbade473f77c47a6a6f649bdf998b421 = L.marker(
+                [49.22795, -0.13463],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_bec2ef478ab2444bb6e450441b8a6c3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_bbade473f77c47a6a6f649bdf998b421.setIcon(icon_bec2ef478ab2444bb6e450441b8a6c3f);
+        
+    
+        var popup_2ba8ffaff99e48d2ba79b5ed5919c34f = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_37bc5749236e4f829a416471d2b17831 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTQgSnVuIDQ0PGJyPkJhdmVudDxicj48YnI+QnJpZGdlIG9uIERpdmVzIFJpdmVyPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_2ba8ffaff99e48d2ba79b5ed5919c34f.setContent(i_frame_37bc5749236e4f829a416471d2b17831);
+        
+
+        marker_bbade473f77c47a6a6f649bdf998b421.bindPopup(popup_2ba8ffaff99e48d2ba79b5ed5919c34f)
+        ;
+
+        
+    
+    
+            marker_bbade473f77c47a6a6f649bdf998b421.bindTooltip(
+                `<div>
+                     14 Jun 44<br>Bavent<br><br>Bridge on Dives River
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b2415d666baa4834af6c375f22b2744c = L.polyline(
+                [[50.7826164, -1.8489403], [49.22795, -0.13463]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_3b2a094490364c06bbf0caaf8a85bd4c = L.marker(
+                [49.08637, -0.42483],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_03265a884a40450ead52ebae1e2030bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3b2a094490364c06bbf0caaf8a85bd4c.setIcon(icon_03265a884a40450ead52ebae1e2030bc);
+        
+    
+        var popup_6d18e12b197f4fd0a2b34582fe61dd74 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_0e93e14dff14456bb0bb7a127f715047 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTUgSnVuIDQ0PGJyPkFtYXllLXN1ci1Pcm5lPGJyPjxicj5CcmlkZ2Ugb24gUml2ZXIgT3JuZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_6d18e12b197f4fd0a2b34582fe61dd74.setContent(i_frame_0e93e14dff14456bb0bb7a127f715047);
+        
+
+        marker_3b2a094490364c06bbf0caaf8a85bd4c.bindPopup(popup_6d18e12b197f4fd0a2b34582fe61dd74)
+        ;
+
+        
+    
+    
+            marker_3b2a094490364c06bbf0caaf8a85bd4c.bindTooltip(
+                `<div>
+                     15 Jun 44<br>Amaye-sur-Orne<br><br>Bridge on River Orne
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_9b243dfcf97f47cdbebea419408501d7 = L.polyline(
+                [[50.7826164, -1.8489403], [49.08637, -0.42483]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_91353b08d2d84b498ea8e5a22caea99b = L.marker(
+                [49.25901, -0.11282],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_07f32330cc104c4d816876092a92ed2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_91353b08d2d84b498ea8e5a22caea99b.setIcon(icon_07f32330cc104c4d816876092a92ed2c);
+        
+    
+        var popup_e05e0c118285414c85e18593a94961cf = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_8f6ef89fc614492f8d99243970869cac = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTcgSnVuIDQ0PGJyPkRpdmVzLXN1ci1NZXJlPGJyPjxicj5CcmlkZ2Ugb24gRGl2ZXMgUml2ZXI8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_e05e0c118285414c85e18593a94961cf.setContent(i_frame_8f6ef89fc614492f8d99243970869cac);
+        
+
+        marker_91353b08d2d84b498ea8e5a22caea99b.bindPopup(popup_e05e0c118285414c85e18593a94961cf)
+        ;
+
+        
+    
+    
+            marker_91353b08d2d84b498ea8e5a22caea99b.bindTooltip(
+                `<div>
+                     17 Jun 44<br>Dives-sur-Mere<br><br>Bridge on Dives River
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_651bfef8f3ac4206959bdd3c4c4f7c06 = L.polyline(
+                [[50.7826164, -1.8489403], [49.25901, -0.11282]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_c97b5c5306dd4be487a3027e8d73c74f = L.marker(
+                [49.20219, -0.32145],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_8bfd43419db642e29afec0a2546e0df5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c97b5c5306dd4be487a3027e8d73c74f.setIcon(icon_8bfd43419db642e29afec0a2546e0df5);
+        
+    
+        var popup_4d8943dca88c48338faf7d08aa422c42 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_483f1e7e092b4df2a530559e7bc5df04 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTggSnVuIDQ0PGJyPkNhZW4gQ2FuYWw8YnI+PGJyPkJyaWRnZSBPdmVyIENhZW4gQ2FuYWw8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_4d8943dca88c48338faf7d08aa422c42.setContent(i_frame_483f1e7e092b4df2a530559e7bc5df04);
+        
+
+        marker_c97b5c5306dd4be487a3027e8d73c74f.bindPopup(popup_4d8943dca88c48338faf7d08aa422c42)
+        ;
+
+        
+    
+    
+            marker_c97b5c5306dd4be487a3027e8d73c74f.bindTooltip(
+                `<div>
+                     18 Jun 44<br>Caen Canal<br><br>Bridge Over Caen Canal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c89d52f074e14890a0911341760f6fb7 = L.polyline(
+                [[50.7826164, -1.8489403], [49.20219, -0.32145]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_a7b3851406e04dff818c47242464a22d = L.marker(
+                [49.12967, -0.05979],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_5a14e81bcf1d44fdb878b880cee71c9c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a7b3851406e04dff818c47242464a22d.setIcon(icon_5a14e81bcf1d44fdb878b880cee71c9c);
+        
+    
+        var popup_1aec0d422b2849cba65ec56115782c2e = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_f120a81e81074cda8199056c6fe1c8ec = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjAgSnVuIDQ0PGJyPkJlbGxlIFZpZSBlbiBhdWdlPGJyPjxicj5SYWlsd2F5IEVtYmFua21lbnQ8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_1aec0d422b2849cba65ec56115782c2e.setContent(i_frame_f120a81e81074cda8199056c6fe1c8ec);
+        
+
+        marker_a7b3851406e04dff818c47242464a22d.bindPopup(popup_1aec0d422b2849cba65ec56115782c2e)
+        ;
+
+        
+    
+    
+            marker_a7b3851406e04dff818c47242464a22d.bindTooltip(
+                `<div>
+                     20 Jun 44<br>Belle Vie en auge<br><br>Railway Embankment
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c1c500db75304ad5bdeef02f2a821c9b = L.polyline(
+                [[50.7826164, -1.8489403], [49.12967, -0.05979]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var marker_f76fb6e27ee94ed3a1ecbb74644d32f4 = L.marker(
+                [48.39808, 0.82241],
+                {"radius": 2}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var icon_b51acaf487204385bcdbf7bc0f3b8a4a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f76fb6e27ee94ed3a1ecbb74644d32f4.setIcon(icon_b51acaf487204385bcdbf7bc0f3b8a4a);
+        
+    
+        var popup_44dfab1c5f7c4b2da3c41d77638fbda4 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_04a3259ada4245b3b3aa590251a76d3e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjIgSnVuIDQ0PGJyPkdvcnJvbjxicj48YnI+UmFpbHdheSBNYXJzaGFsbGluZyBZYXJkczwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_44dfab1c5f7c4b2da3c41d77638fbda4.setContent(i_frame_04a3259ada4245b3b3aa590251a76d3e);
+        
+
+        marker_f76fb6e27ee94ed3a1ecbb74644d32f4.bindPopup(popup_44dfab1c5f7c4b2da3c41d77638fbda4)
+        ;
+
+        
+    
+    
+            marker_f76fb6e27ee94ed3a1ecbb74644d32f4.bindTooltip(
+                `<div>
+                     22 Jun 44<br>Gorron<br><br>Railway Marshalling Yards
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_077edba71187407e966294373d1fdfc0 = L.polyline(
+                [[50.7826164, -1.8489403], [48.39808, 0.82241]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_56e55b9ce68044aeb1ddde9d10a120d8);
+        
+    
+            var feature_group_a212c25704e94006bb5093f3e97946da = L.featureGroup(
+                {}
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+        
+    
+            var marker_5a8a671578fd4827969a239d1452612f = L.marker(
+                [49.27156, -0.54247],
+                {"radius": 2}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var icon_fadd2a2283db4a0fb1633e51059c78eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_5a8a671578fd4827969a239d1452612f.setIcon(icon_fadd2a2283db4a0fb1633e51059c78eb);
+        
+    
+        var popup_0a207a4f8fa040808fc980253d103bc8 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_b06e8baa4a354e5e864f34f95de79bc4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgSnVuIDQ0PGJyPkxhbnRoZXVpbCBBaXJmaWVsZCBCOTxicj48YnI+TGFudGhldWlsIEFpcmZpZWxkIEZvcndhcmQgT3BlcmF0aW5nIEJhc2U8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_0a207a4f8fa040808fc980253d103bc8.setContent(i_frame_b06e8baa4a354e5e864f34f95de79bc4);
+        
+
+        marker_5a8a671578fd4827969a239d1452612f.bindPopup(popup_0a207a4f8fa040808fc980253d103bc8)
+        ;
+
+        
+    
+    
+            marker_5a8a671578fd4827969a239d1452612f.bindTooltip(
+                `<div>
+                     27 Jun 44<br>Lantheuil Airfield B9<br><br>Lantheuil Airfield Forward Operating Base
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_173d8a9017cc406d9fb17e5eb6bd8d03 = L.marker(
+                [49.17148, -0.36509],
+                {"radius": 2}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var icon_cdc7a2dce67c425ebd0f68db34123107 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_173d8a9017cc406d9fb17e5eb6bd8d03.setIcon(icon_cdc7a2dce67c425ebd0f68db34123107);
+        
+    
+        var popup_a219e059bc3a4c6792731abcd7f71ae9 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_acd524b7931443ee9540b36230a3ce5b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgSnVuIDQ0PGJyPkNhZW48YnI+PGJyPkJyaWRnZXMgb3ZlciB0aGUgUml2ZXIgT3JuZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_a219e059bc3a4c6792731abcd7f71ae9.setContent(i_frame_acd524b7931443ee9540b36230a3ce5b);
+        
+
+        marker_173d8a9017cc406d9fb17e5eb6bd8d03.bindPopup(popup_a219e059bc3a4c6792731abcd7f71ae9)
+        ;
+
+        
+    
+    
+            marker_173d8a9017cc406d9fb17e5eb6bd8d03.bindTooltip(
+                `<div>
+                     27 Jun 44<br>Caen<br><br>Bridges over the River Orne
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_23a334dc487b4ecdaccb4ef218fd1919 = L.polyline(
+                [[49.27156, -0.54247], [49.17148, -0.36509]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var marker_c6d417b43c0c4f6b9addb3d984954b7b = L.marker(
+                [49.17892, -0.35451],
+                {"radius": 2}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var icon_d48e7e6674a34c4dbbd8eb4249700a4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c6d417b43c0c4f6b9addb3d984954b7b.setIcon(icon_d48e7e6674a34c4dbbd8eb4249700a4e);
+        
+    
+        var popup_96725917276e4c1db832dcc2db963cc0 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_8684c91ea564457e8939093fa22848b5 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgSnVuIDQ0PGJyPkNhZW48YnI+PGJyPkJyaWRnZSBvdmVyIFJpdmVyIE9ybmUsIG1pc3Npb24gY2FuY2VsbGVkPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_96725917276e4c1db832dcc2db963cc0.setContent(i_frame_8684c91ea564457e8939093fa22848b5);
+        
+
+        marker_c6d417b43c0c4f6b9addb3d984954b7b.bindPopup(popup_96725917276e4c1db832dcc2db963cc0)
+        ;
+
+        
+    
+    
+            marker_c6d417b43c0c4f6b9addb3d984954b7b.bindTooltip(
+                `<div>
+                     27 Jun 44<br>Caen<br><br>Bridge over River Orne, mission cancelled
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f2aa8fc5be2a4a32a2980883237fb52c = L.polyline(
+                [[49.27156, -0.54247], [49.17892, -0.35451]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var marker_91fd35e9eaa94cd99846567f31920883 = L.marker(
+                [49.1624975, -0.5024302],
+                {"radius": 2}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var icon_7852dd9435e94698a7f3b6a27524e8d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_91fd35e9eaa94cd99846567f31920883.setIcon(icon_7852dd9435e94698a7f3b6a27524e8d6);
+        
+    
+        var popup_9e1a75414b884ee89e9e6aa191e66523 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_b1d3c622776b44c0be6d7bb08850a05e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjggSnVuIDQ0PGJyPlZlcnNvbjxicj48YnI+VHJvb3AgQ29uY2VudHJhdGlvbjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_9e1a75414b884ee89e9e6aa191e66523.setContent(i_frame_b1d3c622776b44c0be6d7bb08850a05e);
+        
+
+        marker_91fd35e9eaa94cd99846567f31920883.bindPopup(popup_9e1a75414b884ee89e9e6aa191e66523)
+        ;
+
+        
+    
+    
+            marker_91fd35e9eaa94cd99846567f31920883.bindTooltip(
+                `<div>
+                     28 Jun 44<br>Verson<br><br>Troop Concentration
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_db8640f516f74ff2bc0d60ecd8b4c02b = L.polyline(
+                [[49.27156, -0.54247], [49.1624975, -0.5024302]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var marker_1ac25daac4ef4c02a7252f17a1ecb450 = L.marker(
+                [49.03408, -0.4657],
+                {"radius": 2}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var icon_6d624d9270f5410094f7fa8606638ee3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_1ac25daac4ef4c02a7252f17a1ecb450.setIcon(icon_6d624d9270f5410094f7fa8606638ee3);
+        
+    
+        var popup_8b38030190834d30ae48c12b40959871 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_a0fdcb32d344424b987e64620024cce7 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDUgSnVsIDQ0PGJyPlNvdXRoV2VzdCBvZiBDYWVuPGJyPjxicj5NaXNzaW9uIEFib3J0ZWQsIHdyb25nIGZ1emluZzwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_8b38030190834d30ae48c12b40959871.setContent(i_frame_a0fdcb32d344424b987e64620024cce7);
+        
+
+        marker_1ac25daac4ef4c02a7252f17a1ecb450.bindPopup(popup_8b38030190834d30ae48c12b40959871)
+        ;
+
+        
+    
+    
+            marker_1ac25daac4ef4c02a7252f17a1ecb450.bindTooltip(
+                `<div>
+                     05 Jul 44<br>SouthWest of Caen<br><br>Mission Aborted, wrong fuzing
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_09dbcbc3ac384d1f8fc619bc788c5dc8 = L.polyline(
+                [[49.27156, -0.54247], [49.03408, -0.4657]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var marker_251fffb67efd45449bb13ca34f1dd309 = L.marker(
+                [49.1234, -0.70386],
+                {"radius": 2}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var icon_8a99a6bd32924104a5eba837dfaad762 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_251fffb67efd45449bb13ca34f1dd309.setIcon(icon_8a99a6bd32924104a5eba837dfaad762);
+        
+    
+        var popup_418cff4923264b9d87c6035cf0293ecf = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_4f0df1bd2ef74a35a18537258d2afe1e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgSnVsIDQ0PGJyPlNvdXRoV2VzdCBvZiBDYWVuPGJyPjxicj5VbmFibGUgdG8gTG9jYXRlIFRhcmdldDwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_418cff4923264b9d87c6035cf0293ecf.setContent(i_frame_4f0df1bd2ef74a35a18537258d2afe1e);
+        
+
+        marker_251fffb67efd45449bb13ca34f1dd309.bindPopup(popup_418cff4923264b9d87c6035cf0293ecf)
+        ;
+
+        
+    
+    
+            marker_251fffb67efd45449bb13ca34f1dd309.bindTooltip(
+                `<div>
+                     09 Jul 44<br>SouthWest of Caen<br><br>Unable to Locate Target
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1af5eea159c146f684546b3f98a69d36 = L.polyline(
+                [[49.27156, -0.54247], [49.1234, -0.70386]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var marker_4140685914844b12be88cc175353c5c1 = L.marker(
+                [49.08637, -0.42483],
+                {"radius": 2}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            var icon_9dd49895771244d6be6a8769ba831436 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4140685914844b12be88cc175353c5c1.setIcon(icon_9dd49895771244d6be6a8769ba831436);
+        
+    
+        var popup_8dd01de2f2e64494a4ecc81d613b70f7 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_7b46761a26ee4d2bbc6d8e7090347f82 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTggSnVsIDQ0PGJyPkFtYXllLXN1ci1Pcm5lPGJyPjxicj5CcmlkZ2Ugb24gUml2ZXIgT3JuZS4gUm9iZXJ0IE1jS2VuemllIEtpbGxlZDwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_8dd01de2f2e64494a4ecc81d613b70f7.setContent(i_frame_7b46761a26ee4d2bbc6d8e7090347f82);
+        
+
+        marker_4140685914844b12be88cc175353c5c1.bindPopup(popup_8dd01de2f2e64494a4ecc81d613b70f7)
+        ;
+
+        
+    
+    
+            marker_4140685914844b12be88cc175353c5c1.bindTooltip(
+                `<div>
+                     18 Jul 44<br>Amaye-sur-Orne<br><br>Bridge on River Orne. Robert McKenzie Killed
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_efbf0b408a46458a82beb29aca4bcb8f = L.polyline(
+                [[49.27156, -0.54247], [49.08637, -0.42483]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a212c25704e94006bb5093f3e97946da);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("DD MMM YY");
+                }
+            });
+            map_eaac6c784822439eb4610cb5390cb23f.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": false, "loopButton": true, "maxSpeed": 1, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "timeSliderDragUpdate": true}
+            );
+            map_eaac6c784822439eb4610cb5390cb23f.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.54247, 49.27156]}, "properties": {"time": "2044-06-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.36509, 49.17148]}, "properties": {"time": "2044-06-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.35451, 49.17892]}, "properties": {"time": "2044-06-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.5024302, 49.1624975]}, "properties": {"time": "2044-06-28 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.4657, 49.03408]}, "properties": {"time": "2044-07-05 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.70386, 49.1234]}, "properties": {"time": "2044-07-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.42483, 49.08637]}, "properties": {"time": "2044-07-18 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_c9fbe477b4c24582a62ea0b121364c7b = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: "P1D",
+                }
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+        
+    
+            var mouse_position_bad296437cad4e2287221668c1590643 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "Mouse:", "separator": " | "}
+            );
+            mouse_position_bad296437cad4e2287221668c1590643.options["latFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            mouse_position_bad296437cad4e2287221668c1590643.options["lngFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            map_eaac6c784822439eb4610cb5390cb23f.addControl(mouse_position_bad296437cad4e2287221668c1590643);
+        
+    
+            L.Control.geocoder(
+                {"collapsed": "True", "defaultMarkGeocode": true, "position": "topright"}
+            ).on('markgeocode', function(e) {
+                map_eaac6c784822439eb4610cb5390cb23f.setView(e.geocode.center, 11);
+            }).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+
+        
+    
+            var layer_control_0824a49bdbc04cc0ad7b2f8d5c949076 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_edf08d2fa47a477d97b5716e3e1dd4c8,
+                },
+                overlays :  {
+                    "Google Maps" : tile_layer_1a69167ca0f44df981fb1ff160de4c1e,
+                    "Google Hybrid" : tile_layer_ea182a0ef8fd4341a9a128572e86ce9c,
+                    "Google Satellite" : tile_layer_92cf193ca4fa4febb2868cf6be5b1eb2,
+                    "Google Terrain" : tile_layer_9621d84f3f7d489198ac7f6ac14e5566,
+                    "Esri Satellite" : tile_layer_3657dd82ee334f01aff34b65ff1fbed2,
+                    "438Sqn" : feature_group_a212c25704e94006bb5093f3e97946da,
+                },
+            };
+            L.control.layers(
+                layer_control_0824a49bdbc04cc0ad7b2f8d5c949076.base_layers,
+                layer_control_0824a49bdbc04cc0ad7b2f8d5c949076.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_eaac6c784822439eb4610cb5390cb23f);
+            tile_layer_1a69167ca0f44df981fb1ff160de4c1e.remove();
+            tile_layer_ea182a0ef8fd4341a9a128572e86ce9c.remove();
+            tile_layer_92cf193ca4fa4febb2868cf6be5b1eb2.remove();
+            tile_layer_9621d84f3f7d489198ac7f6ac14e5566.remove();
+            tile_layer_3657dd82ee334f01aff34b65ff1fbed2.remove();
+        
+    
+            var measure_control_3818cafc41494df382e1f8f0013f54df = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "kilometers", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_eaac6c784822439eb4610cb5390cb23f.addControl(measure_control_3818cafc41494df382e1f8f0013f54df);
+
+        
+    
+            var tile_layer_60a182c170164b8e9024bf2e2424f58e = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_bdb14cc7ffc548df8c7361fd08194106 = new L.Control.MiniMap(
+                tile_layer_60a182c170164b8e9024bf2e2424f58e,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_eaac6c784822439eb4610cb5390cb23f.addControl(mini_map_bdb14cc7ffc548df8c7361fd08194106);
+        
+</script>

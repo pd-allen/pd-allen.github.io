@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<head>    
+<html>
+<head>
+    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     
         <script>
@@ -23,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_591a836996a146839cfdbbcd0ab8688f {
+                #map_1985193f7bc9b5bfa3a95723f2cecd0b {
                     position: relative;
                     width: 100.0%;
                     height: 96.0%;
@@ -47,19 +49,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
 </head>
-<body>    
+<body>
+    
     
                    <h3 align="center" style="font-size:16px"><b>William Smith Lancaster Bomber 9 Sqn RAF</b></h3>
                  
     
-            <div class="folium-map" id="map_591a836996a146839cfdbbcd0ab8688f" ></div>
+            <div class="folium-map" id="map_1985193f7bc9b5bfa3a95723f2cecd0b" ></div>
         
 </body>
-<script>    
+<script>
     
-            var map_591a836996a146839cfdbbcd0ab8688f = L.map(
-                "map_591a836996a146839cfdbbcd0ab8688f",
+    
+            var map_1985193f7bc9b5bfa3a95723f2cecd0b = L.map(
+                "map_1985193f7bc9b5bfa3a95723f2cecd0b",
                 {
                     center: [50.5, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -70,79 +76,79 @@
                     fullscreenControl: true,
                 }
             );
-            L.control.scale().addTo(map_591a836996a146839cfdbbcd0ab8688f);
+            L.control.scale().addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
 
             
 
         
     
-            var tile_layer_0e084ac2e3d741a38004189531e5d8a0 = L.tileLayer(
+            var tile_layer_557296d81348f32c2f05896e619864d7 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_591a836996a146839cfdbbcd0ab8688f);
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
         
     
-            var tile_layer_bb72b8bb7dce4eac818b62dfe36e325e = L.tileLayer(
+            var tile_layer_d8b05bd05521eebf8542d9280d2b81ae = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_591a836996a146839cfdbbcd0ab8688f);
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
         
     
-            var tile_layer_b8c9ec9759e14e73b18acfe8e5b6c2e1 = L.tileLayer(
+            var tile_layer_6d7d303467ee56d62c2f1088a607e097 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_591a836996a146839cfdbbcd0ab8688f);
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
         
     
-            var tile_layer_37d6f3a3488644c192f1156c7a341877 = L.tileLayer(
+            var tile_layer_3ab91a3b78a6a748879753cdb8a0fabc = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
                 {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_591a836996a146839cfdbbcd0ab8688f);
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
         
     
-            var tile_layer_8e56453fdd134cfcab4c175f08d3cb06 = L.tileLayer(
+            var tile_layer_fd34c2941421e3d55e9bc9cdae3d73ec = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
                 {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_591a836996a146839cfdbbcd0ab8688f);
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
         
     
-            var tile_layer_9c58277c202e4db9a7ac429f1a7adf45 = L.tileLayer(
+            var tile_layer_c460d1258ed7ccc306da4fd81b9b37dc = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_591a836996a146839cfdbbcd0ab8688f);
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
         
     
-            var feature_group_598c34cc1144448f8a41c853912871c8 = L.featureGroup(
+            var feature_group_355e3b599d2eb32aac8b9ac3acbf2578 = L.featureGroup(
                 {}
-            ).addTo(map_591a836996a146839cfdbbcd0ab8688f);
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
         
     
-            var marker_60213404bcc746a99a8be7363d0c5e19 = L.marker(
+            var marker_277313cb540c697071e346af39ab5969 = L.marker(
                 [53.2319086, -0.2927451],
                 {"radius": 2}
-            ).addTo(feature_group_598c34cc1144448f8a41c853912871c8);
+            ).addTo(feature_group_355e3b599d2eb32aac8b9ac3acbf2578);
         
     
-            var icon_cb41fe9a752b47a78148828fac6da22e = L.AwesomeMarkers.icon(
+            var icon_cadfc0be8d2d84acf66c3a7daa08bfc6 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_60213404bcc746a99a8be7363d0c5e19.setIcon(icon_cb41fe9a752b47a78148828fac6da22e);
+            marker_277313cb540c697071e346af39ab5969.setIcon(icon_cadfc0be8d2d84acf66c3a7daa08bfc6);
         
     
-        var popup_fd1ba06a12f04209bf607828df3f64ba = L.popup({"maxWidth": 800});
+        var popup_c70248195676460e436e94e20f8b8da9 = L.popup({"maxWidth": 800});
 
         
-            var i_frame_e047670ffe3c43009e0b49a7100e9a78 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjYgTWFyIDQ0PGJyPlJBRiBCYXJkbmV5PGJyPjxicj45IFNxdWFkcm9uIEhvbWUgQmFzZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
-            popup_fd1ba06a12f04209bf607828df3f64ba.setContent(i_frame_e047670ffe3c43009e0b49a7100e9a78);
+            var i_frame_a40f51f47a22d290ca878634aa87abbc = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjYgTWFyIDQ0PGJyPlJBRiBCYXJkbmV5PGJyPjxicj45IFNxdWFkcm9uIEhvbWUgQmFzZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_c70248195676460e436e94e20f8b8da9.setContent(i_frame_a40f51f47a22d290ca878634aa87abbc);
         
 
-        marker_60213404bcc746a99a8be7363d0c5e19.bindPopup(popup_fd1ba06a12f04209bf607828df3f64ba)
+        marker_277313cb540c697071e346af39ab5969.bindPopup(popup_c70248195676460e436e94e20f8b8da9)
         ;
 
         
     
     
-            marker_60213404bcc746a99a8be7363d0c5e19.bindTooltip(
+            marker_277313cb540c697071e346af39ab5969.bindTooltip(
                 `<div>
                      26 Mar 44<br>RAF Bardney<br><br>9 Squadron Home Base
                  </div>`,
@@ -150,149 +156,149 @@
             );
         
     
-            var marker_4cdb3cab7a9145e2ace922e8a2810cba = L.marker(
+            var marker_c46825f47958766d51e525772d1d17ba = L.marker(
                 [49.4289865, -1.253467],
                 {"radius": 2}
-            ).addTo(feature_group_598c34cc1144448f8a41c853912871c8);
+            ).addTo(feature_group_355e3b599d2eb32aac8b9ac3acbf2578);
         
     
-            var icon_099e7426fb83481b997a86b43e5ad87d = L.AwesomeMarkers.icon(
+            var icon_a6b5bd1db34e6b605ea12c66107b9c70 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_4cdb3cab7a9145e2ace922e8a2810cba.setIcon(icon_099e7426fb83481b997a86b43e5ad87d);
+            marker_c46825f47958766d51e525772d1d17ba.setIcon(icon_a6b5bd1db34e6b605ea12c66107b9c70);
         
     
-        var popup_0d63e816a3e943b680e16a6e8584e807 = L.popup({"maxWidth": 800});
+        var popup_7c35d0602742871b1759eee188aa3c78 = L.popup({"maxWidth": 800});
 
         
-            var i_frame_828d45cc835c4d578bdb7cf4e99e4651 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjggTWF5IDQ0PGJyPlN0IE1hcnRpbiBkZSBWYXJyZWxsZTxicj48YnI+NyBMYW5jYXN0ZXJzIGZyb20gTm8gOSBTcXVhZHJvbiBhdHRhY2tlZCBTdCBNYXJ0aW4gZGUgVmFycmV2aWxsZSBhdHRhY2tlZCBhdCAwMDQwIGhvdXJzIGZyb20gNyw3NTAgZnQuIEJvbWJpbmcgd2FzIHdlbGwgY29uY2VudHJhdGVkLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
-            popup_0d63e816a3e943b680e16a6e8584e807.setContent(i_frame_828d45cc835c4d578bdb7cf4e99e4651);
+            var i_frame_3d4d263f59d7e2b4bdcee881f7906e2c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjggTWF5IDQ0PGJyPlN0IE1hcnRpbiBkZSBWYXJyZWxsZTxicj48YnI+NyBMYW5jYXN0ZXJzIGZyb20gTm8gOSBTcXVhZHJvbiBhdHRhY2tlZCBTdCBNYXJ0aW4gZGUgVmFycmV2aWxsZSBhdHRhY2tlZCBhdCAwMDQwIGhvdXJzIGZyb20gNyw3NTAgZnQuIEJvbWJpbmcgd2FzIHdlbGwgY29uY2VudHJhdGVkLiBPdmVyYWxsLCAxODEgTGFuY2FzdGVycyBhbmQgMjAgTW9zcXVpdG9zIGJvbWJlZCAzIGNvYXN0YWwgYmF0dGVyaWVzLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_7c35d0602742871b1759eee188aa3c78.setContent(i_frame_3d4d263f59d7e2b4bdcee881f7906e2c);
         
 
-        marker_4cdb3cab7a9145e2ace922e8a2810cba.bindPopup(popup_0d63e816a3e943b680e16a6e8584e807)
+        marker_c46825f47958766d51e525772d1d17ba.bindPopup(popup_7c35d0602742871b1759eee188aa3c78)
         ;
 
         
     
     
-            marker_4cdb3cab7a9145e2ace922e8a2810cba.bindTooltip(
+            marker_c46825f47958766d51e525772d1d17ba.bindTooltip(
                 `<div>
-                     28 May 44<br>St Martin de Varrelle<br><br>7 Lancasters from No 9 Squadron attacked St Martin de Varreville attacked at 0040 hours from 7,750 ft. Bombing was well concentrated.
+                     28 May 44<br>St Martin de Varrelle<br><br>7 Lancasters from No 9 Squadron attacked St Martin de Varreville attacked at 0040 hours from 7,750 ft. Bombing was well concentrated. Overall, 181 Lancasters and 20 Mosquitos bombed 3 coastal batteries.
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var poly_line_4099443884c44c509c320e9309e491b1 = L.polyline(
+            var poly_line_0b3f6e993da8dd8a26b5446ab5b91bae = L.polyline(
                 [[53.2319086, -0.2927451], [49.4289865, -1.253467]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_598c34cc1144448f8a41c853912871c8);
+            ).addTo(feature_group_355e3b599d2eb32aac8b9ac3acbf2578);
         
     
-            var marker_6d035e4836364bfd9672b008a1ce97d0 = L.marker(
+            var marker_6b44689b91e95cd6d8db6a905bef6534 = L.marker(
                 [49.3923165, -0.9721575],
                 {"radius": 2}
-            ).addTo(feature_group_598c34cc1144448f8a41c853912871c8);
+            ).addTo(feature_group_355e3b599d2eb32aac8b9ac3acbf2578);
         
     
-            var icon_aa138265a918435693444d8ad417230f = L.AwesomeMarkers.icon(
+            var icon_4e96d76fc10f0778de453542c4f913bc = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_6d035e4836364bfd9672b008a1ce97d0.setIcon(icon_aa138265a918435693444d8ad417230f);
+            marker_6b44689b91e95cd6d8db6a905bef6534.setIcon(icon_4e96d76fc10f0778de453542c4f913bc);
         
     
-        var popup_21b61af935824a2daf9d8dab97d47d6f = L.popup({"maxWidth": 800});
+        var popup_29fdfb3cdddc84acfdcdbfa62d66fad0 = L.popup({"maxWidth": 800});
 
         
-            var i_frame_09b6b8f5c98e487c98e4451962f984f4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDUgSnVuIDQ0PGJyPlN0IFBpZXJyZSBkdSBNb250PGJyPjxicj4yMSBMYW5jYXN0ZXJzIGZyb20gTm8gOSBTcXVhZHJvbiBhdHRhY2tlZCBTdCBQaWVycmUgZHUgTW9udCBhdCAwNDU3IGhvdXJzIGZyb20gOCwwMDAgZnQuIENhcmJ1cmV0b3IgaWNpbmcgYmV0d2VlbiA5LDAwMCBhbmQgMTEsMDAwIGZ0IG5lYXIgdGFyZ2V0IGFyZWEuPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
-            popup_21b61af935824a2daf9d8dab97d47d6f.setContent(i_frame_09b6b8f5c98e487c98e4451962f984f4);
+            var i_frame_d4f7920707c44aa7dca02efbd82e73a9 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDUgSnVuIDQ0PGJyPlN0IFBpZXJyZSBkdSBNb250PGJyPjxicj4yMSBMYW5jYXN0ZXJzIGZyb20gTm8gOSBTcXVhZHJvbiBhdHRhY2tlZCBTdCBQaWVycmUgZHUgTW9udCBhdCAwNDU3IGhvdXJzIGZyb20gOCwwMDAgZnQuIENhcmJ1cmV0b3IgaWNpbmcgYmV0d2VlbiA5LDAwMCBhbmQgMTEsMDAwIGZ0IG5lYXIgdGFyZ2V0IGFyZWEuIE92ZXJhbGwsIDEwMTIgYWlyY3JhZnQgYm9tYmVkIDEwIGNvYXN0YWwgYmF0dGVyaWVzLCAzIGFpcmNyYWZ0IHdlcmUgbG9zdC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_29fdfb3cdddc84acfdcdbfa62d66fad0.setContent(i_frame_d4f7920707c44aa7dca02efbd82e73a9);
         
 
-        marker_6d035e4836364bfd9672b008a1ce97d0.bindPopup(popup_21b61af935824a2daf9d8dab97d47d6f)
+        marker_6b44689b91e95cd6d8db6a905bef6534.bindPopup(popup_29fdfb3cdddc84acfdcdbfa62d66fad0)
         ;
 
         
     
     
-            marker_6d035e4836364bfd9672b008a1ce97d0.bindTooltip(
+            marker_6b44689b91e95cd6d8db6a905bef6534.bindTooltip(
                 `<div>
-                     05 Jun 44<br>St Pierre du Mont<br><br>21 Lancasters from No 9 Squadron attacked St Pierre du Mont at 0457 hours from 8,000 ft. Carburetor icing between 9,000 and 11,000 ft near target area.
+                     05 Jun 44<br>St Pierre du Mont<br><br>21 Lancasters from No 9 Squadron attacked St Pierre du Mont at 0457 hours from 8,000 ft. Carburetor icing between 9,000 and 11,000 ft near target area. Overall, 1012 aircraft bombed 10 coastal batteries, 3 aircraft were lost.
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var poly_line_a1170a7e84d048faa9991c50e28aebfe = L.polyline(
+            var poly_line_ff350a2d812a7cbd16c64a7e6a223eac = L.polyline(
                 [[53.2319086, -0.2927451], [49.3923165, -0.9721575]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_598c34cc1144448f8a41c853912871c8);
+            ).addTo(feature_group_355e3b599d2eb32aac8b9ac3acbf2578);
         
     
-            var marker_3777b8989b0a487c92a474f7ac7947fc = L.marker(
+            var marker_d7d99c8c46edbc11727971e822492430 = L.marker(
                 [48.736952, -0.024976],
                 {"radius": 2}
-            ).addTo(feature_group_598c34cc1144448f8a41c853912871c8);
+            ).addTo(feature_group_355e3b599d2eb32aac8b9ac3acbf2578);
         
     
-            var icon_e73008c78e32456e8de509ce1a34b0f6 = L.AwesomeMarkers.icon(
+            var icon_5e15c07417429c32fd6af3200c93840f = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_3777b8989b0a487c92a474f7ac7947fc.setIcon(icon_e73008c78e32456e8de509ce1a34b0f6);
+            marker_d7d99c8c46edbc11727971e822492430.setIcon(icon_5e15c07417429c32fd6af3200c93840f);
         
     
-        var popup_4b9c74606f3f4da697149010f0840798 = L.popup({"maxWidth": 800});
+        var popup_86448d54009e300b3da94682c9a1fb20 = L.popup({"maxWidth": 800});
 
         
-            var i_frame_c714e56be04e45f6b5d2f2ccf994083c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDYgSnVuIDQ0PGJyPkFyZ2VudGFuPGJyPjxicj4yMCBMYW5jYXN0ZXJzIGZyb20gTm8gOSBTcXVhZHJvbiBhdHRhY2tlZCBBcmdlbnRhbiBSYWlseWFyZHMuIFByaW1hcnkgYXR0YWNrIGF0IDAxMTMgaG91cnMgZnJvbSA2LDUwMCBmdC4gT24gcmV0dXJuIGZsaWdodCwgYWlyY3JhZnQgY2FsbGVkIFdhZGRpbmd0aW9uIEQvRiBhdCAwMjI4IGhvdXJzIGFuZCBwYXNzZWQgYSBtZXNzYWdlLCBiZWxpZXZlZCB0byBiZSBhIHdlYXRoZXIgcmVwb3J0LCBhdCAwMjI5IGhvdXJzLiBUaGlzIHdhcyByZXBlYXRlZCBiYWNrIGZvciBjb25maXJtYXRpb24gYnV0IHRoZSBhaXJjcmFmdCBkaWQgbm90IHJlcGx5LiBBaXJjcmFmdCB3YXMgdmVyeSB3ZWFrIGFuZCBubyBiZWFyaW5nIGNvdWxkIGJlIHRha2VuLiBXZWF0aGVyIHJlcG9ydCBwYXNzZWQgYXQgMDI0MiBob3VycywgYnV0IGFpcmNyYWZ0IHN0aWxsIGRpZCBub3QgcmVwbHkuIEFpcmNyYWZ0IFN1YnNlcXVlbnRseSBmb3VuZCB0byBoYXZlIGNyYXNoZWQgbmVhciBCZWx2b2lyIENhc3RsZSAoNTIuODk0NzQ5NCwtMC43ODQ2MTY5KSBhYm91dCAzMCBtaWxlcyBmcm9tIFJBRiBCYXJkbmV5LiBBbGwgY3JldyBraWxsZWQgZXhjZXB0IFNndCBIYXNzb24gdGhlIHJlYXIgZ3VubmVyPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
-            popup_4b9c74606f3f4da697149010f0840798.setContent(i_frame_c714e56be04e45f6b5d2f2ccf994083c);
+            var i_frame_62403f3d83af32f2bccc3e09d90bf63d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDYgSnVuIDQ0PGJyPkFyZ2VudGFuPGJyPjxicj4yMCBMYW5jYXN0ZXJzIGZyb20gTm8gOSBTcXVhZHJvbiBhdHRhY2tlZCBBcmdlbnRhbiBSYWlseWFyZHMuIFByaW1hcnkgYXR0YWNrIGF0IDAxMTMgaG91cnMgZnJvbSA2LDUwMCBmdC4gT24gcmV0dXJuIGZsaWdodCwgYWlyY3JhZnQgY2FsbGVkIFdhZGRpbmd0aW9uIEQvRiBhdCAwMjI4IGhvdXJzIGFuZCBwYXNzZWQgYSBtZXNzYWdlLCBiZWxpZXZlZCB0byBiZSBhIHdlYXRoZXIgcmVwb3J0LCBhdCAwMjI5IGhvdXJzLiBUaGlzIHdhcyByZXBlYXRlZCBiYWNrIGZvciBjb25maXJtYXRpb24gYnV0IHRoZSBhaXJjcmFmdCBNRTU3OSBkaWQgbm90IHJlcGx5LiBBaXJjcmFmdCB3YXMgdmVyeSB3ZWFrIGFuZCBubyBiZWFyaW5nIGNvdWxkIGJlIHRha2VuLiBXZWF0aGVyIHJlcG9ydCBwYXNzZWQgYXQgMDI0MiBob3VycywgYnV0IGFpcmNyYWZ0IHN0aWxsIGRpZCBub3QgcmVwbHkuIEFpcmNyYWZ0IFN1YnNlcXVlbnRseSBmb3VuZCB0byBoYXZlIGNyYXNoZWQgbmVhciBCZWx2b2lyIENhc3RsZSAoNTIuODk0NzQ5NCwtMC43ODQ2MTY5KSBhYm91dCAzMCBtaWxlcyBmcm9tIFJBRiBCYXJkbmV5LiBBbGwgY3JldyBraWxsZWQgZXhjZXB0IFNndCBIYXNzb24gdGhlIHJlYXIgZ3VubmVyLiBPdmVyYWxsIDEwNjUgYWlyY3JhZnQgYm9tYmVkIDggcmFpbHdheSBhbmQgcm9hZCBjZW50cmVzLiAxMSBhaXJjcmFmdCBsb3N0LjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_86448d54009e300b3da94682c9a1fb20.setContent(i_frame_62403f3d83af32f2bccc3e09d90bf63d);
         
 
-        marker_3777b8989b0a487c92a474f7ac7947fc.bindPopup(popup_4b9c74606f3f4da697149010f0840798)
+        marker_d7d99c8c46edbc11727971e822492430.bindPopup(popup_86448d54009e300b3da94682c9a1fb20)
         ;
 
         
     
     
-            marker_3777b8989b0a487c92a474f7ac7947fc.bindTooltip(
+            marker_d7d99c8c46edbc11727971e822492430.bindTooltip(
                 `<div>
-                     06 Jun 44<br>Argentan<br><br>20 Lancasters from No 9 Squadron attacked Argentan Railyards. Primary attack at 0113 hours from 6,500 ft. On return flight, aircraft called Waddingtion D/F at 0228 hours and passed a message, believed to be a weather report, at 0229 hours. This was repeated back for confirmation but the aircraft did not reply. Aircraft was very weak and no bearing could be taken. Weather report passed at 0242 hours, but aircraft still did not reply. Aircraft Subsequently found to have crashed near Belvoir Castle (52.8947494,-0.7846169) about 30 miles from RAF Bardney. All crew killed except Sgt Hasson the rear gunner
+                     06 Jun 44<br>Argentan<br><br>20 Lancasters from No 9 Squadron attacked Argentan Railyards. Primary attack at 0113 hours from 6,500 ft. On return flight, aircraft called Waddingtion D/F at 0228 hours and passed a message, believed to be a weather report, at 0229 hours. This was repeated back for confirmation but the aircraft ME579 did not reply. Aircraft was very weak and no bearing could be taken. Weather report passed at 0242 hours, but aircraft still did not reply. Aircraft Subsequently found to have crashed near Belvoir Castle (52.8947494,-0.7846169) about 30 miles from RAF Bardney. All crew killed except Sgt Hasson the rear gunner. Overall 1065 aircraft bombed 8 railway and road centres. 11 aircraft lost.
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var poly_line_a276fbafff0e41daba4784769bd6905c = L.polyline(
+            var poly_line_299ff107ffc77be13f66dade3db6e465 = L.polyline(
                 [[53.2319086, -0.2927451], [48.736952, -0.024976]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_598c34cc1144448f8a41c853912871c8);
+            ).addTo(feature_group_355e3b599d2eb32aac8b9ac3acbf2578);
         
     
-            var marker_bc1330ed967f46c9bb9d1ff6fad250ae = L.marker(
+            var marker_b2e8102722a98becf271c759ee868054 = L.marker(
                 [52.8947494, -0.7846169],
                 {"radius": 2}
-            ).addTo(feature_group_598c34cc1144448f8a41c853912871c8);
+            ).addTo(feature_group_355e3b599d2eb32aac8b9ac3acbf2578);
         
     
-            var icon_325a53048a904800adb0c3c9efd8c895 = L.AwesomeMarkers.icon(
+            var icon_c8a75ec38294d3a62189f0211cb91cd6 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_bc1330ed967f46c9bb9d1ff6fad250ae.setIcon(icon_325a53048a904800adb0c3c9efd8c895);
+            marker_b2e8102722a98becf271c759ee868054.setIcon(icon_c8a75ec38294d3a62189f0211cb91cd6);
         
     
-        var popup_7f395f80ea7245cca06b7ca940f55fa8 = L.popup({"maxWidth": 800});
+        var popup_22947fd20bbdca47977e8f1feee850c9 = L.popup({"maxWidth": 800});
 
         
-            var i_frame_3c49b80b372341cdb59053dc94374bcf = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDcgSnVuIDQ0PGJyPkJlbHZvaXIgQ2FzdGxlPGJyPkNyYXNoIFNpdGUgb2YgTGFuY2FzdGVyIE1FLjU3OTxicj42IG9mIDcgY3JldyBraWxsZWQ8L2gxPg==" width="600" style="border:none !important;" height="400"></iframe>`)[0];
-            popup_7f395f80ea7245cca06b7ca940f55fa8.setContent(i_frame_3c49b80b372341cdb59053dc94374bcf);
+            var i_frame_c79afa14d00649467859d1f36a1df370 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDcgSnVuIDQ0PGJyPkJlbHZvaXIgQ2FzdGxlPGJyPkNyYXNoIFNpdGUgb2YgTGFuY2FzdGVyIE1FLjU3OTxicj42IG9mIDcgY3JldyBraWxsZWQ8L2gxPg==" width="600" style="border:none !important;" height="400"></iframe>`)[0];
+            popup_22947fd20bbdca47977e8f1feee850c9.setContent(i_frame_c79afa14d00649467859d1f36a1df370);
         
 
-        marker_bc1330ed967f46c9bb9d1ff6fad250ae.bindPopup(popup_7f395f80ea7245cca06b7ca940f55fa8)
+        marker_b2e8102722a98becf271c759ee868054.bindPopup(popup_22947fd20bbdca47977e8f1feee850c9)
         ;
 
         
     
     
-            marker_bc1330ed967f46c9bb9d1ff6fad250ae.bindTooltip(
+            marker_b2e8102722a98becf271c759ee868054.bindTooltip(
                 `<div>
                      Crash Site ME.579<br>Belvoir Castle
                  </div>`,
@@ -307,7 +313,7 @@
                     return newdate.format("DD MMM YY");
                 }
             });
-            map_591a836996a146839cfdbbcd0ab8688f.timeDimension = L.timeDimension(
+            map_1985193f7bc9b5bfa3a95723f2cecd0b.timeDimension = L.timeDimension(
                 {
                     period: "P1D",
                 }
@@ -315,7 +321,7 @@
             var timeDimensionControl = new L.Control.TimeDimensionCustom(
                 {"autoPlay": false, "loopButton": true, "maxSpeed": 1, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "timeSliderDragUpdate": true}
             );
-            map_591a836996a146839cfdbbcd0ab8688f.addControl(this.timeDimensionControl);
+            map_1985193f7bc9b5bfa3a95723f2cecd0b.addControl(this.timeDimensionControl);
 
             var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.2927451, 53.2319086]}, "properties": {"time": "2044-03-26 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.253467, 49.4289865]}, "properties": {"time": "2044-05-28 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.9721575, 49.3923165]}, "properties": {"time": "2044-06-05 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.024976, 48.736952]}, "properties": {"time": "2044-06-06 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}]}, {
                     pointToLayer: function (feature, latLng) {
@@ -348,73 +354,79 @@
                     }
                 })
 
-            var timestamped_geo_json_b367a4b9ccf54fc3815e6131f3234d3f = L.timeDimension.layer.geoJson(
+            var timestamped_geo_json_0071c30fa7d89e49f804d0fd9dfb1e2e = L.timeDimension.layer.geoJson(
                 geoJsonLayer,
                 {
                     updateTimeDimension: true,
                     addlastPoint: true,
                     duration: "P1D",
                 }
-            ).addTo(map_591a836996a146839cfdbbcd0ab8688f);
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
         
     
-            var mouse_position_686a8966e3cb4ad0815ba8168587316a = new L.Control.MousePosition(
+            var mouse_position_95fc8ef02d027394d68905d56041a7fa = new L.Control.MousePosition(
                 {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "Mouse:", "separator": " | "}
             );
-            mouse_position_686a8966e3cb4ad0815ba8168587316a.options["latFormatter"] =
+            mouse_position_95fc8ef02d027394d68905d56041a7fa.options["latFormatter"] =
                 function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
-            mouse_position_686a8966e3cb4ad0815ba8168587316a.options["lngFormatter"] =
+            mouse_position_95fc8ef02d027394d68905d56041a7fa.options["lngFormatter"] =
                 function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
-            map_591a836996a146839cfdbbcd0ab8688f.addControl(mouse_position_686a8966e3cb4ad0815ba8168587316a);
+            map_1985193f7bc9b5bfa3a95723f2cecd0b.addControl(mouse_position_95fc8ef02d027394d68905d56041a7fa);
         
     
             L.Control.geocoder(
                 {"collapsed": "True", "defaultMarkGeocode": true, "position": "topright"}
             ).on('markgeocode', function(e) {
-                map_591a836996a146839cfdbbcd0ab8688f.setView(e.geocode.center, 11);
-            }).addTo(map_591a836996a146839cfdbbcd0ab8688f);
+                map_1985193f7bc9b5bfa3a95723f2cecd0b.setView(e.geocode.center, 11);
+            }).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
 
         
     
-            var layer_control_c8022a1df26941af84dfc0b00756ed90 = {
+            var layer_control_0a5b9274827e5dfb59a9cf8dca6cbf86 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_0e084ac2e3d741a38004189531e5d8a0,
+                    "openstreetmap" : tile_layer_557296d81348f32c2f05896e619864d7,
                 },
                 overlays :  {
-                    "Google Maps" : tile_layer_bb72b8bb7dce4eac818b62dfe36e325e,
-                    "Google Hybrid" : tile_layer_b8c9ec9759e14e73b18acfe8e5b6c2e1,
-                    "Google Satellite" : tile_layer_37d6f3a3488644c192f1156c7a341877,
-                    "Google Terrain" : tile_layer_8e56453fdd134cfcab4c175f08d3cb06,
-                    "Esri Satellite" : tile_layer_9c58277c202e4db9a7ac429f1a7adf45,
-                    "9Sqn" : feature_group_598c34cc1144448f8a41c853912871c8,
+                    "Google Maps" : tile_layer_d8b05bd05521eebf8542d9280d2b81ae,
+                    "Google Hybrid" : tile_layer_6d7d303467ee56d62c2f1088a607e097,
+                    "Google Satellite" : tile_layer_3ab91a3b78a6a748879753cdb8a0fabc,
+                    "Google Terrain" : tile_layer_fd34c2941421e3d55e9bc9cdae3d73ec,
+                    "Esri Satellite" : tile_layer_c460d1258ed7ccc306da4fd81b9b37dc,
+                    "9Sqn" : feature_group_355e3b599d2eb32aac8b9ac3acbf2578,
                 },
             };
             L.control.layers(
-                layer_control_c8022a1df26941af84dfc0b00756ed90.base_layers,
-                layer_control_c8022a1df26941af84dfc0b00756ed90.overlays,
+                layer_control_0a5b9274827e5dfb59a9cf8dca6cbf86.base_layers,
+                layer_control_0a5b9274827e5dfb59a9cf8dca6cbf86.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_591a836996a146839cfdbbcd0ab8688f);
-            tile_layer_bb72b8bb7dce4eac818b62dfe36e325e.remove();
-            tile_layer_b8c9ec9759e14e73b18acfe8e5b6c2e1.remove();
-            tile_layer_37d6f3a3488644c192f1156c7a341877.remove();
-            tile_layer_8e56453fdd134cfcab4c175f08d3cb06.remove();
-            tile_layer_9c58277c202e4db9a7ac429f1a7adf45.remove();
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
+            tile_layer_d8b05bd05521eebf8542d9280d2b81ae.remove();
+            tile_layer_6d7d303467ee56d62c2f1088a607e097.remove();
+            tile_layer_3ab91a3b78a6a748879753cdb8a0fabc.remove();
+            tile_layer_fd34c2941421e3d55e9bc9cdae3d73ec.remove();
+            tile_layer_c460d1258ed7ccc306da4fd81b9b37dc.remove();
         
     
-            var measure_control_928a92e297a24343a340fa171a0a181c = new L.Control.Measure(
+            var measure_control_aa281ef2b0baba0bd673f4036e40ea9b = new L.Control.Measure(
                 {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "kilometers", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
-            map_591a836996a146839cfdbbcd0ab8688f.addControl(measure_control_928a92e297a24343a340fa171a0a181c);
+            map_1985193f7bc9b5bfa3a95723f2cecd0b.addControl(measure_control_aa281ef2b0baba0bd673f4036e40ea9b);
 
         
     
-            var tile_layer_3d80fc9970934e3d9e7251b8f43b8899 = L.tileLayer(
+            var tile_layer_9f279d094f2451c784280d16600ee665 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
-            var mini_map_defa19b5be754bdca641e43e17a95c7a = new L.Control.MiniMap(
-                tile_layer_3d80fc9970934e3d9e7251b8f43b8899,
+            var mini_map_9b2a62f54746be220014835551b9f8ba = new L.Control.MiniMap(
+                tile_layer_9f279d094f2451c784280d16600ee665,
                 {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
             );
-            map_591a836996a146839cfdbbcd0ab8688f.addControl(mini_map_defa19b5be754bdca641e43e17a95c7a);
+            map_1985193f7bc9b5bfa3a95723f2cecd0b.addControl(mini_map_9b2a62f54746be220014835551b9f8ba);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": false, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_1985193f7bc9b5bfa3a95723f2cecd0b);
         
 </script>
+</html>

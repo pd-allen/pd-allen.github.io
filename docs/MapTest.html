@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f58ddfafb67c3f8d5b726530630dd332 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 96.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f58ddfafb67c3f8d5b726530630dd332" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f58ddfafb67c3f8d5b726530630dd332 = L.map(
+                "map_f58ddfafb67c3f8d5b726530630dd332",
+                {
+                    center: [50.341607690190074, 2.7956575932590377],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_f58ddfafb67c3f8d5b726530630dd332);
+
+            
+
+        
+    
+            var tile_layer_1ae4903fe89cc9f1c7b8c9cc52bd6885 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f58ddfafb67c3f8d5b726530630dd332);
+        
+    
+            var tile_layer_60ee166f2725282d085263f8c4d19ff8 = L.tileLayer(
+                "http://localhost:59601/api/tiles/{z}/{x}/{y}.png?\u0026filename=c%3A%5Cpython%5Cdata%5CMap_VimyRidge.tif\u0026n_colors=255\u0026projection=EPSG%3A3857",
+                {"attribution": "Raster file served by \u003ca href=\u0027https://github.com/banesullivan/localtileserver\u0027 target=\u0027_blank\u0027\u003elocaltileserver\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 0.9, "subdomains": "abc", "tms": false}
+            ).addTo(map_f58ddfafb67c3f8d5b726530630dd332);
+        
+    
+            L.Control.geocoder(
+                {"collapsed": "True", "defaultMarkGeocode": true, "position": "topright"}
+            ).on('markgeocode', function(e) {
+                map_f58ddfafb67c3f8d5b726530630dd332.setView(e.geocode.center, 11);
+            }).addTo(map_f58ddfafb67c3f8d5b726530630dd332);
+
+        
+    
+            var layer_control_76a898e44312317fe21b4f0aedaf1c7f = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_1ae4903fe89cc9f1c7b8c9cc52bd6885,
+                },
+                overlays :  {
+                    "Map_VimyRidge" : tile_layer_60ee166f2725282d085263f8c4d19ff8,
+                },
+            };
+            L.control.layers(
+                layer_control_76a898e44312317fe21b4f0aedaf1c7f.base_layers,
+                layer_control_76a898e44312317fe21b4f0aedaf1c7f.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_f58ddfafb67c3f8d5b726530630dd332);
+        
+    
+            var measure_control_707247ea25974c5760a1888490d2b60e = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "kilometers", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_f58ddfafb67c3f8d5b726530630dd332.addControl(measure_control_707247ea25974c5760a1888490d2b60e);
+
+        
+    
+            var tile_layer_b79d2835edcc115f1bb96e8e56e5046a = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_c3bcfe26aebffe43f5c058116624c773 = new L.Control.MiniMap(
+                tile_layer_b79d2835edcc115f1bb96e8e56e5046a,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_f58ddfafb67c3f8d5b726530630dd332.addControl(mini_map_c3bcfe26aebffe43f5c058116624c773);
+        
+</script>
+</html>

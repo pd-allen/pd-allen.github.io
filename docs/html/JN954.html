@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fd0518b3362705c8aab4b57e03f9228c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 96.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+</head>
+<body>
+    
+    
+                   <h3 align="center" style="font-size:16px"><b>JN954 Crew</b></h3>
+                 
+    
+            <div class="folium-map" id="map_fd0518b3362705c8aab4b57e03f9228c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fd0518b3362705c8aab4b57e03f9228c = L.map(
+                "map_fd0518b3362705c8aab4b57e03f9228c",
+                {
+                    center: [50.5, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    overlay: "false",
+                    fullscreenControl: true,
+                }
+            );
+            L.control.scale().addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+
+            
+
+        
+    
+            var tile_layer_335ecfe1375bcbfe134e56c0f5c42b35 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+        
+    
+            var tile_layer_3fe141b8f4ec4eaf7622d5d6403b392e = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+        
+    
+            var tile_layer_8f7a6d39e90ba24ee7d5c1f5a801e436 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+        
+    
+            var tile_layer_d2497348b5041345a6d2ffa6a8def83f = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+        
+    
+            var tile_layer_36f875975cf26631825d5349c36bced0 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+        
+    
+            var tile_layer_cfe2a65d8a0f0af8f70485f1357fca06 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+        
+    
+            var feature_group_f57521ec2b983f4e69c167ff1e5b6c4a = L.featureGroup(
+                {}
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+        
+    
+            var marker_e4b7547792806930fff462b79b2aefde = L.marker(
+                [54.2381646, -1.4763882],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_6a72d03ba9d9323bf32a9a535e764881 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e4b7547792806930fff462b79b2aefde.setIcon(icon_6a72d03ba9d9323bf32a9a535e764881);
+        
+    
+        var popup_d0169d95e860ea5f344cd2bc7aef7637 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_cb8e4d3d74569732f77e8bafe81b1d0a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTMgRGVjIDQzPGJyPjxicj5DcmV3IGpvaW5lZCA0MTkgc3FuIG9uIDEzIERlYyAxOTQzPGJyPlJBRiBNaWRkbGV0b24gU3QgR2VvcmdlPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_d0169d95e860ea5f344cd2bc7aef7637.setContent(i_frame_cb8e4d3d74569732f77e8bafe81b1d0a);
+            
+        
+
+        marker_e4b7547792806930fff462b79b2aefde.bindPopup(popup_d0169d95e860ea5f344cd2bc7aef7637)
+        ;
+
+        
+    
+    
+            marker_e4b7547792806930fff462b79b2aefde.bindTooltip(
+                `<div>
+                     13 Dec 43<br><br>Crew joined 419 sqn on 13 Dec 1943<br>RAF Middleton St George
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_82904387dab7fa7a362c1961bb7fe0a7 = L.marker(
+                [46.11805556, -1.53055556],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_647727387483a764d2554079b7793619 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_82904387dab7fa7a362c1961bb7fe0a7.setIcon(icon_647727387483a764d2554079b7793619);
+        
+    
+        var popup_7f26f80ae2e268964bf5cf95e71053a4 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_fbd166761cc3419549f624ef38361aa5 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDQgSmFuIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTUzIFQgUGFydCBvZiA0MCBBaXJjcmFmdCBNaW5pbmcgT3BlcmF0aW9uPGJyPk1jSXZvciBhcyBzZWNvbmQgcGlsb3QuIDIgU3VjY2Vzc2Z1bC5UYXJnZXQgR2FyZGVuaW5nIGluIEJheSBvZiBCaXNjYXkgd2l0aCAxeCBHLjcwMCwgMSB4Ry43MTAgbWluZXMuIEdhcmRlbmVkIGF0IDQ2IDA2IDQwTiAwMSAzMCBXLiA0LjI4IGhvdXJzLCA2LDAwMCBmdCAxMjUgZGVnLiBHL1MgMTk1IG1waC4gVmlzaWJpbGl0eSBFeGNlbGxlbnQsIG1pc3Npb24gY29uc2lkZXJlZCBzdWNjZXNzZnVsPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_7f26f80ae2e268964bf5cf95e71053a4.setContent(i_frame_fbd166761cc3419549f624ef38361aa5);
+            
+        
+
+        marker_82904387dab7fa7a362c1961bb7fe0a7.bindPopup(popup_7f26f80ae2e268964bf5cf95e71053a4)
+        ;
+
+        
+    
+    
+            marker_82904387dab7fa7a362c1961bb7fe0a7.bindTooltip(
+                `<div>
+                     04 Jan 44<br><br>Halifax II JN953 T Part of 40 Aircraft Mining Operation<br>McIvor as second pilot. 2 Successful.Target Gardening in Bay of Biscay with 1x G.700, 1 xG.710 mines. Gardened at 46 06 40N 01 30 W. 4.28 hours, 6,000 ft 125 deg. G/S 195 mph. Visibility Excellent, mission considered successful
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ecbcd64dde010b89e4f41dd5b2028c4d = L.polyline(
+                [[54.2381646, -1.4763882], [46.11805556, -1.53055556]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_3e15d56a0ce9d923414f5e0de052da7f = L.marker(
+                [48.351589, -4.529723],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_70983caa4e84d695a8d2ed953f033dd5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3e15d56a0ce9d923414f5e0de052da7f.setIcon(icon_70983caa4e84d695a8d2ed953f033dd5);
+        
+    
+        var popup_d5a29dcf1cfdd52e23b6746af3fec2cd = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_be1b87711a24bf06a3446d8cfcb92ce3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDYgSmFuIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpQMTE5IE8gUGFydCBvZiA1NyBBaXJjcmFmdCBNaW5pbmcgb2ZmIEJpc2NheSBwb3J0czxicj5TdWNlc3NmdWwuIFRhcmdldCBNaW5pbmcgb2YgQnJlc3Qgd2l0aCAyIHggQi4yMDQgbWluZXMuIEdhcmRlbmVkIGF0IDIxLjEzIGhycywgMTMsMDAwIGZlZXQgYXQgUG9pbnQgRGVzIEVzcGFnbm9sLiBBL0MgZ29pbmcgaW4gdG8gZHJvcCBvbiBSYWRhciB3aGVuIGV2YXNpdmUgYWN0aW9uIGhhZCB0byBiZSB0YWtlbiwgc28gbWluZXMgZHJvcHBlZCB2aXN1YWwgZnJvbSBQb2ludCBkZXMgRXNwYWdub2wsIGJ1dCBvd2luZyB0byBuaWdodCBmaWdodGVyIGZvbGxvd2luZyBBL0MgYWdhaW4gcGFyYWNodXRlcyBub3Qgc2VlbiB0byBvcGVuLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_d5a29dcf1cfdd52e23b6746af3fec2cd.setContent(i_frame_be1b87711a24bf06a3446d8cfcb92ce3);
+            
+        
+
+        marker_3e15d56a0ce9d923414f5e0de052da7f.bindPopup(popup_d5a29dcf1cfdd52e23b6746af3fec2cd)
+        ;
+
+        
+    
+    
+            marker_3e15d56a0ce9d923414f5e0de052da7f.bindTooltip(
+                `<div>
+                     06 Jan 44<br><br>Halifax II JP119 O Part of 57 Aircraft Mining off Biscay ports<br>Sucessful. Target Mining of Brest with 2 x B.204 mines. Gardened at 21.13 hrs, 13,000 feet at Point Des Espagnol. A/C going in to drop on Radar when evasive action had to be taken, so mines dropped visual from Point des Espagnol, but owing to night fighter following A/C again parachutes not seen to open.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_e98f7b4400ca33a88723677bc4803784 = L.polyline(
+                [[54.2381646, -1.4763882], [48.351589, -4.529723]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_cece3a0c9faf0b09248d862e9629458d = L.marker(
+                [49.98361111, -3.83361111],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_03a608d60d15f0d26fef4bc2b562ccb1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cece3a0c9faf0b09248d862e9629458d.setIcon(icon_03a608d60d15f0d26fef4bc2b562ccb1);
+        
+    
+        var popup_63bbe96e7c74bfc804a97926285ddec9 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_ef664bb8fe72bf7461055232b8165133 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDQgRmViIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpQIDEzMSBTIFBhcnQgb2YgMjggQWlyY3JhZnQgTWluaW5nIAo8YnI+VW5zdWNjZXNzZnVsLiBUYXJnZXQgTWluaW5nIGluIHRoZSBhcmVhIG9mIFJvY2hlbGxlIHdpdGggMnggMTUwMCBsYiBtaW5lcy4gQWJhbmRvbmVkIG9wZXJhdGlvbiBhdCA0OSA1MFdOIDAzIDUwVywgMTUsMDAwIGZ0LCAwMzQyIGhvdXJzLiBIMlMgdW5zZXJ2aWNlYWJsZSAtIGZhaWxlZCB0byBvcGVyYXRlIG92ZXIgYmFzZS4gRmxldyBTb3V0aCBvbiB0cmFjayBob3BpbmcgaXQgd291bGQgYmVjb21lIHNlcnZpY2VhYmxlLiBSZW1haW5lZCB1L3Mga2VwdCBmYWRpbmcgY29tcGxldGVseSwgbGVhdmluZyBzY2FubmVyIGJsYW5rLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_63bbe96e7c74bfc804a97926285ddec9.setContent(i_frame_ef664bb8fe72bf7461055232b8165133);
+            
+        
+
+        marker_cece3a0c9faf0b09248d862e9629458d.bindPopup(popup_63bbe96e7c74bfc804a97926285ddec9)
+        ;
+
+        
+    
+    
+            marker_cece3a0c9faf0b09248d862e9629458d.bindTooltip(
+                `<div>
+                     04 Feb 44<br><br>Halifax II JP 131 S Part of 28 Aircraft Mining 
+<br>Unsuccessful. Target Mining in the area of Rochelle with 2x 1500 lb mines. Abandoned operation at 49 50WN 03 50W, 15,000 ft, 0342 hours. H2S unserviceable - failed to operate over base. Flew South on track hoping it would become serviceable. Remained u/s kept fading completely, leaving scanner blank.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f8c05dbc126d82f6a464d267c3362281 = L.polyline(
+                [[54.2381646, -1.4763882], [49.98361111, -3.83361111]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_2d75c1743e339709ac4016740688cd93 = L.marker(
+                [53.7654652628633, 6.50442646280059],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_6cf6dd603f8157546f598a30ff39eebf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2d75c1743e339709ac4016740688cd93.setIcon(icon_6cf6dd603f8157546f598a30ff39eebf);
+        
+    
+        var popup_3ca7d15090db722186c1122841f56128 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_39f4457adae692d9415f72d8184cb750 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTIgRmViIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpQIDIwMiBUIDI1IEhhbGlmYXhlcyBhbmQgU3RpcmxpbmdzIG1pbmVsYXlpbmcgaW4gdGhlIEZyaXNpYW5zIGFuZCBvZmYgQ2hlcmJvdXJnLiAxIEhhbGlmYXggbWluZWxheWVyIGxvc3QuPGJyPlN1Y2Nlc3NmdWwuIFRhcmdldCBNaW5pbmcgaW4gdGhlIGFyZWEgb2YgQk9SS1VNIHdpdGggMiB4IDEsNTAwIGxiIE1pbmVzLiBHYXJkZW5lZCBhdCAyMC4xNCBob3VycywgMTAsMDAwIGZ0LiA5LzEwIGNsb3VkcyB3aXRoIHRvcHMgYXQgNSwwMDAgZnQuIEJvdGggcGFyYWNodXRlcyBzZWVuIHRvIG9wZW4uIFVuZXZlbnRmdWwgdHJpcCBubyBkZWZlbmNlcyBlbmNvdW50ZXJlZC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_3ca7d15090db722186c1122841f56128.setContent(i_frame_39f4457adae692d9415f72d8184cb750);
+            
+        
+
+        marker_2d75c1743e339709ac4016740688cd93.bindPopup(popup_3ca7d15090db722186c1122841f56128)
+        ;
+
+        
+    
+    
+            marker_2d75c1743e339709ac4016740688cd93.bindTooltip(
+                `<div>
+                     12 Feb 44<br><br>Halifax II JP 202 T 25 Halifaxes and Stirlings minelaying in the Frisians and off Cherbourg. 1 Halifax minelayer lost.<br>Successful. Target Mining in the area of BORKUM with 2 x 1,500 lb Mines. Gardened at 20.14 hours, 10,000 ft. 9/10 clouds with tops at 5,000 ft. Both parachutes seen to open. Uneventful trip no defences encountered.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_e4b489078b8b26b5c0471812a06e0c01 = L.polyline(
+                [[54.2381646, -1.4763882], [53.7654652628633, 6.50442646280059]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_3170a13c695e5b1e9228cc887380aee3 = L.marker(
+                [52.5066434, 13.1129511],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_da9f950c520bd06b5e25c4df65c2f895 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3170a13c695e5b1e9228cc887380aee3.setIcon(icon_da9f950c520bd06b5e25c4df65c2f895);
+        
+    
+        var popup_d5eb9944a3c539d76f1526702f2bffcd = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_cf6383fe829224a406aabd9d8bce51bb = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTUgRmViIDQ0PGJyPjxicj5IYWxpZmF4IElJIFAyMDQgRSA4OTEgYWlyY3JhZnQg4oCTIDU2MSBMYW5jYXN0ZXJzLCAzMTQgSGFsaWZheGVzLCAxNiBNb3NxdWl0b2VzIOKAkyB3ZXJlIGRpc3BhdGNoZWQuPGJyPlN1Y2Nlc3NmdWwuIFRhcmdldCBCZXJsaW4gd2l0aCAyNCB4IDMwIGxiIExDIHFuZCA4MTAgeCA0IGxiIGluY2VuZGlhcmllcy4gIFNsaWdodCBnbG93IG9mIGZpcmVzIHNlZW4gdGhyb3VnaCBjbG91dC4gMTAvMTAgY2xvdWQgaWVuY291bnRlcmVkLiBUd28gbGlnaHRzIHNlZW4gb24gc2VhIG9uIHJvdXRlIHRvIHRoZSB0YXJnZXQuIEEvQyBsYW5kZWQgYXQgQnVyeSBTdCBFZG11bmRzLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_d5eb9944a3c539d76f1526702f2bffcd.setContent(i_frame_cf6383fe829224a406aabd9d8bce51bb);
+            
+        
+
+        marker_3170a13c695e5b1e9228cc887380aee3.bindPopup(popup_d5eb9944a3c539d76f1526702f2bffcd)
+        ;
+
+        
+    
+    
+            marker_3170a13c695e5b1e9228cc887380aee3.bindTooltip(
+                `<div>
+                     15 Feb 44<br><br>Halifax II P204 E 891 aircraft – 561 Lancasters, 314 Halifaxes, 16 Mosquitoes – were dispatched.<br>Successful. Target Berlin with 24 x 30 lb LC qnd 810 x 4 lb incendiaries.  Slight glow of fires seen through clout. 10/10 cloud iencountered. Two lights seen on sea on route to the target. A/C landed at Bury St Edmunds.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1b1766b051df3a25f333a7878f8951d5 = L.polyline(
+                [[54.2381646, -1.4763882], [52.5066434, 13.1129511]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_b56b088e4426786604871023ae665590 = L.marker(
+                [53.825439, 7.9792829],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_7a536c89e02b8cf0bb39c163da77a038 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b56b088e4426786604871023ae665590.setIcon(icon_7a536c89e02b8cf0bb39c163da77a038);
+        
+    
+        var popup_c89de321f778b8b424c33cd97e73b98a = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_a4feadc011fd624714698e5cec71f1c6 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjIgRmViIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpQIDEzMSBTIDcxIEhhbGlmYXhlcyBhbmQgNDAgU3RpcmxpbmdzIHNlbnQgbWluZWxheWluZyBvZmYgTm9ydGggR2VybWFuIGNvYXN0IHJlY2FsbGVkIGJlY2F1c2Ugb2YgYmFkIHdlYXRoZXIgYXQgYmFzZXMsCgo8YnI+VW5jb21wbGV0ZWQuIFRhcmdldCBNaW5pbmcgb2YgSGVsaWdvbGFuZCBCaWdodCB3aXRoIDJ4MSw1MDAgbGIgTWluZXMuIEFpcmNyYWYgcmVjYWxsZWQgZnJvbSA1MyAwM04sIDAwIDUxRS48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_c89de321f778b8b424c33cd97e73b98a.setContent(i_frame_a4feadc011fd624714698e5cec71f1c6);
+            
+        
+
+        marker_b56b088e4426786604871023ae665590.bindPopup(popup_c89de321f778b8b424c33cd97e73b98a)
+        ;
+
+        
+    
+    
+            marker_b56b088e4426786604871023ae665590.bindTooltip(
+                `<div>
+                     22 Feb 44<br><br>Halifax II JP 131 S 71 Halifaxes and 40 Stirlings sent minelaying off North German coast recalled because of bad weather at bases,
+
+<br>Uncompleted. Target Mining of Heligoland Bight with 2x1,500 lb Mines. Aircraf recalled from 53 03N, 00 51E.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5e0920500974c8e93425186e5c9edfcd = L.polyline(
+                [[54.2381646, -1.4763882], [53.825439, 7.9792829]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_fda25c2ed5ed6bdde6629bcb1e659a41 = L.marker(
+                [55.00027778, 6.00027778],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_91cb908dc92cd44c5ab8611c626de475 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_fda25c2ed5ed6bdde6629bcb1e659a41.setIcon(icon_91cb908dc92cd44c5ab8611c626de475);
+        
+    
+        var popup_0146ee1b192d8372c15e8e64abfe789e = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_53379084287492698dd73e95a2b0e4d4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjQgRmViIDQ0PGJyPjxicj5IYWxpZmF4IEpQIDIwMSBQIDE3OSB0cmFpbmluZyBhaXJjcmFmdCBvbiBhIGRpdmVyc2lvbmFyeSBzd2VlcCBvdmVyIHRoZSBOb3J0aCBTZWEsCgo8YnI+U3Bvb2YgYXR0YWNrLiBSZWFjaGVkIHBvc2l0aW9uIDU1TiAwNlcsIDE5MjcgaG91cnMsIDE4LDUwMCBmdCwgdGVuIEFDIHJldHVybmVkIHRvIGJhc2UgYXMgb3JkZXJlZC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_0146ee1b192d8372c15e8e64abfe789e.setContent(i_frame_53379084287492698dd73e95a2b0e4d4);
+            
+        
+
+        marker_fda25c2ed5ed6bdde6629bcb1e659a41.bindPopup(popup_0146ee1b192d8372c15e8e64abfe789e)
+        ;
+
+        
+    
+    
+            marker_fda25c2ed5ed6bdde6629bcb1e659a41.bindTooltip(
+                `<div>
+                     24 Feb 44<br><br>Halifax JP 201 P 179 training aircraft on a diversionary sweep over the North Sea,
+
+<br>Spoof attack. Reached position 55N 06W, 1927 hours, 18,500 ft, ten AC returned to base as ordered.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_53f59918a235d607e194d6abebac14eb = L.polyline(
+                [[54.2381646, -1.4763882], [55.00027778, 6.00027778]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_fe4b616d08abdbbf2fdc0bce1fda8c65 = L.marker(
+                [54.6006214, 8.4949663],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_e549d85c22b0f246d28d27fcb7bc91fa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_fe4b616d08abdbbf2fdc0bce1fda8c65.setIcon(icon_e549d85c22b0f246d28d27fcb7bc91fa);
+        
+    
+        var popup_822ffa9c1fd7835536d09ee8f82e8b98 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_a2f4a673308becb08bbc690852d3ccbb = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjUgRmViIDQ0PGJyPjxicj5IYWxpZmF4IEpQIDIwMSBQIDEzMSBBaXJjcmFmdCBtaW5lbGF5aW5nIGluIEtpZWwgQmF5Cjxicj5TdWNlc3NmdWwuIFRhcmdldCBNaW5pbmcgaW4gQmF5IG9mIEtpZWwgd2l0aCAyeDEsNTAwIGxiICBtaW5lcy4gR2FyZGVuZWQgYXQgMjI1MCBob3VycywgMTUsMDAwIGZ0LCAxNzkgZGVncmVlcy4gNS8xMCBjbG91ZCwgdG9wcyA2LDAwMCBmdC4gQm90aCBwYXJhY2h1dGVzIHNlZW4gdG8gb3Blbi4gTWVkaXVtIGFtb3VudCBvZiBmbGFrIGluIEdhcmRlbmluZyBhcmVhLiBUd28gZmxhcmVzIHNlZW4gc2hvdCBkb3duIGltbWVkaWF0ZWx5IHVwb24gYmVpbmcgZHJvcHBlZC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_822ffa9c1fd7835536d09ee8f82e8b98.setContent(i_frame_a2f4a673308becb08bbc690852d3ccbb);
+            
+        
+
+        marker_fe4b616d08abdbbf2fdc0bce1fda8c65.bindPopup(popup_822ffa9c1fd7835536d09ee8f82e8b98)
+        ;
+
+        
+    
+    
+            marker_fe4b616d08abdbbf2fdc0bce1fda8c65.bindTooltip(
+                `<div>
+                     25 Feb 44<br><br>Halifax JP 201 P 131 Aircraft minelaying in Kiel Bay
+<br>Sucessful. Target Mining in Bay of Kiel with 2x1,500 lb  mines. Gardened at 2250 hours, 15,000 ft, 179 degrees. 5/10 cloud, tops 6,000 ft. Both parachutes seen to open. Medium amount of flak in Gardening area. Two flares seen shot down immediately upon being dropped.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_111130f4cc348c4ccc999802c59abdc6 = L.polyline(
+                [[54.2381646, -1.4763882], [54.6006214, 8.4949663]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_f0da559b3f4b937e3d44d905c4542c64 = L.marker(
+                [47.2095765512129, -2.28970276432177],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_5e16c05df7b5e10f4e8ab0520922b711 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f0da559b3f4b937e3d44d905c4542c64.setIcon(icon_5e16c05df7b5e10f4e8ab0520922b711);
+        
+    
+        var popup_ed1cb424c1edbec48896d8a44534a922 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_322d9043012e70f023145822fefc6444 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTEgTWFyIDQ0PGJyPjxicj5IYWxpZmF4IEpQIDItMSBQIDQzIEFpcmNyYWZ0IG1pbmVsYXlpbmc8YnI+U3VjY2Vzc2Z1bC4gVGFyZ2V0IE1pbmluZyBvZiBTdCBOYXphaXJlIHdpdGggMiB4IDEsNTAwIGxiIE1pbmVzLiBHYXJkZW5lZCBhdCAyMTU0IGhvdXJzLCAxNSwwMDAgZnQuIDEzOCBkZWdzLiAxMC8xMCBjbG91ZCBlbmNvdW50ZXJlZC4gQm90aCBwYXJhY2h1dGVzIHNlZW4gdG8gb3Blbi48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_ed1cb424c1edbec48896d8a44534a922.setContent(i_frame_322d9043012e70f023145822fefc6444);
+            
+        
+
+        marker_f0da559b3f4b937e3d44d905c4542c64.bindPopup(popup_ed1cb424c1edbec48896d8a44534a922)
+        ;
+
+        
+    
+    
+            marker_f0da559b3f4b937e3d44d905c4542c64.bindTooltip(
+                `<div>
+                     11 Mar 44<br><br>Halifax JP 2-1 P 43 Aircraft minelaying<br>Successful. Target Mining of St Nazaire with 2 x 1,500 lb Mines. Gardened at 2154 hours, 15,000 ft. 138 degs. 10/10 cloud encountered. Both parachutes seen to open.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_cdbace3aea80401bd9262f70e3482d1d = L.polyline(
+                [[54.2381646, -1.4763882], [47.2095765512129, -2.28970276432177]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_379d8e333b87b90a22427f37b1cb6997 = L.marker(
+                [49.8987584, 2.2434821],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_428456e6fde26f4998e9495decf33560 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_379d8e333b87b90a22427f37b1cb6997.setIcon(icon_428456e6fde26f4998e9495decf33560);
+        
+    
+        var popup_2b3e29023706b1b5707738276ab48271 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_df5b527968c0d50630b2721c19507354 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTYgTWFyIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgMTMwIGFpcmNyYWZ0IOKAkyA4MSBIYWxpZmF4ZXMsIDQxIFN0aXJsaW5ncywgOCBNb3NxdWl0b2VzLiBObyBhaXJjcmFmdCBsb3N0LiBUaGUgQm9tYmVyIENvbW1hbmQgcmVwb3J0IGFnYWluIHJlcG9ydGVkIHN1Y2Vzc2Z1bCBib21iaW5nLiBBbWllbnMgc3VmZmVyZWQgMTggY2l2aWxpYW5zIGtpbGxlZCBhbmQgYXQgbGVhc3QgMTQgaW5qdXJlZC4KIDxicj5TdWNjZXNzZnVsLiBUYXJnZXQgQW1pZW5zIHdpdGggOXgxLDAwMCBsYiAgTUMgYW4gNng1MDAgbGIgTUMuIEdyb3VuZCBoYXplIGFuZCBzY2F0dGVyZWQgY2xvdWQgYXQgOCw5OTkgZnQgZW5jb3VudGVyZWQuIFRhcmdldCBpZGVudGlmaWVkIGJ5IFJlZCBUYXJnZXJ0IEluZGljYXRvciwgYm9tYmVkIGNlbnRyZSBvZiB0aGVzZS4gTWFya2VycyB3ZWxsIGNvbmNlbnRyYXRlZCwgYXMgd2FzIGJvbWJpbmcuIFN0aWNrcyBvZiBib21icyBzZWVuIGJ1cnN0aW5nIGFjcm9zcyBtYXJrZXJzLiBMYXJnZSBPcmFuZ2UgZXhwbG9zaW9uIHNlbiBhdCAyMjE2IGhycy4gYW1vbmcgVEkgbWFya2Vycy4gR2xvdyBvZiBmaXJlcyBzZWVuIGFmZXIgQUMgbGVmdC4gQ29uc2lkZXJlZCByZWFsbHkgZ29vZCBhdHRhY2suIFNlYXJjaCBMaWdodCBmbGlja2VkIG92ZXIgQUMganVzdCBiZWZvcmUgcmVhY2luZyBUYXJnZXJ0IEFyZWEsIEFDIGhpdCBieSBmbGFrLCB1bmRlciBibGlzdGVyIGFuZCBib21iIGJheSBkYW1hZ2VkLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_2b3e29023706b1b5707738276ab48271.setContent(i_frame_df5b527968c0d50630b2721c19507354);
+            
+        
+
+        marker_379d8e333b87b90a22427f37b1cb6997.bindPopup(popup_2b3e29023706b1b5707738276ab48271)
+        ;
+
+        
+    
+    
+            marker_379d8e333b87b90a22427f37b1cb6997.bindTooltip(
+                `<div>
+                     16 Mar 44<br><br>Halifax II JN954 R 130 aircraft – 81 Halifaxes, 41 Stirlings, 8 Mosquitoes. No aircraft lost. The Bomber Command report again reported sucessful bombing. Amiens suffered 18 civilians killed and at least 14 injured.
+ <br>Successful. Target Amiens with 9x1,000 lb  MC an 6x500 lb MC. Ground haze and scattered cloud at 8,999 ft encountered. Target identified by Red Targert Indicator, bombed centre of these. Markers well concentrated, as was bombing. Sticks of bombs seen bursting across markers. Large Orange explosion sen at 2216 hrs. among TI markers. Glow of fires seen afer AC left. Considered really good attack. Search Light flicked over AC just before reacing Targert Area, AC hit by flak, under blister and bomb bay damaged.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_13748253a297c582ef46291e377a57ed = L.polyline(
+                [[54.2381646, -1.4763882], [49.8987584, 2.2434821]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_4ddc79f9c19bce9fef6d352da1b5c3f1 = L.marker(
+                [53.825439, 7.9792829],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_8abc6b2be08f6b9497c65b706a05d7dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4ddc79f9c19bce9fef6d352da1b5c3f1.setIcon(icon_8abc6b2be08f6b9497c65b706a05d7dd);
+        
+    
+        var popup_9ee12c70b4f149fc22b7df20d4b0afe0 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_01ee3a0beb962a5c843fec4fa35bb623 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTggTWFyIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpQMTMxIFMgOTggYWlyY3JhZnQgb24gbWluZWxheWluZyBkaXZlcnNpb24gaW4gSGVsaW9sYW5kIGFyZWE8YnI+U3VjY2Vzc2Z1bC4gVGFyZ2V0IG1pbmluZyBvZmYgSGVsaWdvbGFuZCBCaWdodCB3aXRoIDIgeCAxLDUwMCBsYiBNaW5lcy4gR2FyZGVuZWQgYXQgMjA1OSBocnMsIDE1LDAwMCBmdCAxNjMgZGVncmVlcy4gRmxhcmVzIGF0IDIwNTUgc2FtZSBwb3NpdGlvbi4gQWxsIDQgcGFyYWNodXRlcyBzZWVuLiAxMC8xMCBjbG91ZCBiZWxvdy4gSDJzIFVTIHNvIGRyb3BwZWQgZmxhcmVzIG9uIG90aGVyIGZsYXJlcyB3aGljaCB3ZXJlIGFsbCB3ZWxsIGNvbmNlbnRyYXRlZC4gQ29uc2lkZXJlZCBhIHN1Y2Nlc3NmdWwgdHJpcC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_9ee12c70b4f149fc22b7df20d4b0afe0.setContent(i_frame_01ee3a0beb962a5c843fec4fa35bb623);
+            
+        
+
+        marker_4ddc79f9c19bce9fef6d352da1b5c3f1.bindPopup(popup_9ee12c70b4f149fc22b7df20d4b0afe0)
+        ;
+
+        
+    
+    
+            marker_4ddc79f9c19bce9fef6d352da1b5c3f1.bindTooltip(
+                `<div>
+                     18 Mar 44<br><br>Halifax II JP131 S 98 aircraft on minelaying diversion in Helioland area<br>Successful. Target mining off Heligoland Bight with 2 x 1,500 lb Mines. Gardened at 2059 hrs, 15,000 ft 163 degrees. Flares at 2055 same position. All 4 parachutes seen. 10/10 cloud below. H2s US so dropped flares on other flares which were all well concentrated. Considered a successful trip.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_01f2b73f39db53beccb8965804e46dcf = L.polyline(
+                [[54.2381646, -1.4763882], [53.825439, 7.9792829]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_32e6a4316b1f36603670a7568d018517 = L.marker(
+                [54.6006214, 8.4949663],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_a7de669175f592a938364cde762fed05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_32e6a4316b1f36603670a7568d018517.setIcon(icon_a7de669175f592a938364cde762fed05);
+        
+    
+        var popup_b66f436c3cdad2ad032531715325ccbc = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_a68ee8e2568b5c639036c5b069edd02f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjEgTWFyIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgMTggYWlyY3JhZnQgbWluZWxheWluZzxicj5VbmNvbXBsZXRlZC4gVGFyZ2V0IE1pbmluZyBpbiBLZWlsIEJheSB3aXRoIDJ4MSw1MDAgbGliIG1pbmVzLiBBaXJjcmFmdCByZWNhbGxlZCBieSBIUCA2IChSQ0FGKSBHcm91cCBhcHByb3hpbWF0ZWx5IDEwMjkgaG91cnM8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_b66f436c3cdad2ad032531715325ccbc.setContent(i_frame_a68ee8e2568b5c639036c5b069edd02f);
+            
+        
+
+        marker_32e6a4316b1f36603670a7568d018517.bindPopup(popup_b66f436c3cdad2ad032531715325ccbc)
+        ;
+
+        
+    
+    
+            marker_32e6a4316b1f36603670a7568d018517.bindTooltip(
+                `<div>
+                     21 Mar 44<br><br>Halifax II JN954 R 18 aircraft minelaying<br>Uncompleted. Target Mining in Keil Bay with 2x1,500 lib mines. Aircraft recalled by HP 6 (RCAF) Group approximately 1029 hours
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_4f2f305a431f6aa4e179812880c4074d = L.polyline(
+                [[54.2381646, -1.4763882], [54.6006214, 8.4949663]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_8710610893fee071e574b11fb017e7df = L.marker(
+                [54.6006214, 8.4949663],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_9ec9335de063e06b3a1eabece2ce312f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8710610893fee071e574b11fb017e7df.setIcon(icon_9ec9335de063e06b3a1eabece2ce312f);
+        
+    
+        var popup_4edc53899e398109382aa77366bf2f9e = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_baba7d84f2ce9dfcbb9b4708ed2096c4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjIgTWFyIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgMTI4IEhhbGlmYXhlcyBhbmQgMTggU3RpcmxpbmdzIG1pbmVsYXlpbmcgaW4gS2llbCBCYXkgYW5kIERlbm1hcms8YnI+U3VjZXNzZnVsLiBUYXJnZXQgTWluaW5nIGluIEJheSBvZiBLaWVsIHdpdGggMngxLDUwMCBtaW5lcy4gR2FyZGVuZWQgYXQgMjEyNTAgaG91cnMsIDE1LDAwMCBmdCwgMjM1IGRlZ3JlZXMuZmxhcmVzIGRyb3BwZWQgYXQgMjEyNCBob3Vycywgc2FtZSBwb3NpdGlvbi4gQ2xlYXIgb3ZlciBHYXJkZW4sICAyLzEwIGNsb3VkLCBvbiBhcHByb2FjaC50LiBCb3RoIHBhcmFjaHV0ZXMgc2VlbiB0byBvcGVuLiA8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_4edc53899e398109382aa77366bf2f9e.setContent(i_frame_baba7d84f2ce9dfcbb9b4708ed2096c4);
+            
+        
+
+        marker_8710610893fee071e574b11fb017e7df.bindPopup(popup_4edc53899e398109382aa77366bf2f9e)
+        ;
+
+        
+    
+    
+            marker_8710610893fee071e574b11fb017e7df.bindTooltip(
+                `<div>
+                     22 Mar 44<br><br>Halifax II JN954 R 128 Halifaxes and 18 Stirlings minelaying in Kiel Bay and Denmark<br>Sucessful. Target Mining in Bay of Kiel with 2x1,500 mines. Gardened at 21250 hours, 15,000 ft, 235 degrees.flares dropped at 2124 hours, same position. Clear over Garden,  2/10 cloud, on approach.t. Both parachutes seen to open. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_632780dd518f5ba63fbe6422e6c4ce6d = L.polyline(
+                [[54.2381646, -1.4763882], [54.6006214, 8.4949663]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_033a91b4e95ed7d96a9bf9ebcbdf9289 = L.marker(
+                [50.1485709, 3.9196669],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_6b3a4f5fc2219f2209add674c5dfb6a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_033a91b4e95ed7d96a9bf9ebcbdf9289.setIcon(icon_6b3a4f5fc2219f2209add674c5dfb6a4);
+        
+    
+        var popup_7e737554ae1c16af7d2951d201364c8b = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_11209e9373d4b447d9bacc8181853847 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjUgTWFyIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgMTkyIEFpcmNyYWZ0LCA5MiBIYWxpZmF4ZXMsIDQ3IExhbmNhc3RlcnMsIDM3IFN0aXJsaW5ncywgMTYgTW9zcXVpdG9lcy4gTm8gQWlyY3JhZnQgTG9zdC48YnI+U3VjY2Vzc2Z1bCBUYXJnZXQgQXVsbm95ZSB3aXRoIDYgeDEsMDAwIGxiIE1DIGFuZCA3IHg1MDAgbGIgTUMuIFRhcmdldCBpZGVudGlmaWVkIGJ5IGFuZCBib21iZWQgb24gcmVkIFRhcmdldCBJbmRpY2F0b3IuIFR3byB3ZWxsIGNvbmNlbnRyYXRlZCBUSSBib21iZWQuIFBGRiB3ZWxsIGNvbmNlbnRyYXRlZCBhbmQgb24gdGltZS4gTGFyZ2Ugb3JhbmdlIGV4cGxvc2lvbiBzZWVuIGluIHRoZSBOb3J0aCBhdCAyMjAxIGhyIGFzIEFDIGNhbWUgb3V0IG9mIFRhcmdldCBBcmVhPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_7e737554ae1c16af7d2951d201364c8b.setContent(i_frame_11209e9373d4b447d9bacc8181853847);
+            
+        
+
+        marker_033a91b4e95ed7d96a9bf9ebcbdf9289.bindPopup(popup_7e737554ae1c16af7d2951d201364c8b)
+        ;
+
+        
+    
+    
+            marker_033a91b4e95ed7d96a9bf9ebcbdf9289.bindTooltip(
+                `<div>
+                     25 Mar 44<br><br>Halifax II JN954 R 192 Aircraft, 92 Halifaxes, 47 Lancasters, 37 Stirlings, 16 Mosquitoes. No Aircraft Lost.<br>Successful Target Aulnoye with 6 x1,000 lb MC and 7 x500 lb MC. Target identified by and bombed on red Target Indicator. Two well concentrated TI bombed. PFF well concentrated and on time. Large orange explosion seen in the North at 2201 hr as AC came out of Target Area
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1e954617a1c2c0eba95a412c5becda26 = L.polyline(
+                [[54.2381646, -1.4763882], [50.1485709, 3.9196669]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_751b147e4641e93e75b097107772e619 = L.marker(
+                [50.8029139, 3.1975171],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_411176cecffae92719165ba05fdaebf5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_751b147e4641e93e75b097107772e619.setIcon(icon_411176cecffae92719165ba05fdaebf5);
+        
+    
+        var popup_9933a48228902afc44ceb9e159a7c542 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_3c027886b0126514617468e64bc3ceff = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjYgTWFyIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgMTA5IGFpcmNyYWZ0LCA3MCBIYWxpZmF4ZXMsIDMyIFN0aXJsaW5ncywgNyBtb3NxdWl0b2VzLCBubyBhaXJjcmFmdCBsb3N0Ljxicj5TdWNlc3NmdWwuIFRhcmdldCBDb3VydHJhaSB3aXRoIDl4MSwwMCBsYiBNQyBhbmQgNiB4IDUwIGxiIE1DLiBWaXNpYmlsaXR5IEhhenksIGJ1dCBubyBjbG91ZC4gUmVkIFRhcmdldCBJbmRpY2F0b3Igc2VlbiBhdCAyMDU4IGlkZW50aWZpZWQgdGhlIHRhcmdldC4gQm9tYmUgdGhyZWUgVEkgZmFsbGluZywgYSBnb29kIGNsdXN0ZXIgbyBmVEkgd2VsbCBjb25jZW50cmF0ZWQgYW5kIHdlbGwgdGltZWQuIE5vIHJlc3VsdHMgb2YgYm9tYmluZyBvYnNlcnZlZC4gQ29uc2lkZXJlZCB2ZXJ5IHVuZXZlbnRmdWwgdHJpcC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_9933a48228902afc44ceb9e159a7c542.setContent(i_frame_3c027886b0126514617468e64bc3ceff);
+            
+        
+
+        marker_751b147e4641e93e75b097107772e619.bindPopup(popup_9933a48228902afc44ceb9e159a7c542)
+        ;
+
+        
+    
+    
+            marker_751b147e4641e93e75b097107772e619.bindTooltip(
+                `<div>
+                     26 Mar 44<br><br>Halifax II JN954 R 109 aircraft, 70 Halifaxes, 32 Stirlings, 7 mosquitoes, no aircraft lost.<br>Sucessful. Target Courtrai with 9x1,00 lb MC and 6 x 50 lb MC. Visibility Hazy, but no cloud. Red Target Indicator seen at 2058 identified the target. Bombe three TI falling, a good cluster o fTI well concentrated and well timed. No results of bombing observed. Considered very uneventful trip.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_d39070a0c5444fcc3a292627e2616c3a = L.polyline(
+                [[54.2381646, -1.4763882], [50.8029139, 3.1975171]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_6ed4acdfa9519c49db83474518c98725 = L.marker(
+                [48.8669584, 2.5174441],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_21526370eb563b73be68e8a0b0b68eac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6ed4acdfa9519c49db83474518c98725.setIcon(icon_21526370eb563b73be68e8a0b0b68eac);
+        
+    
+        var popup_c667095ce58223ba08719b5fd7aeffc4 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_253de0e51cfdd5959ac526c6910940a9 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjkgTWFyIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgNzYgSGFsaWZheGVzIGFuZCA4IE1vc3F1aXRvZXMgb2YgNCwgNiBhbmQgOCBHcm91cHMgYXR0YWNrZWQgdGhlIHJhaWx3YXkgeWFyZHMgYXQgVmFpcmVzLCBuZWFyIFBhcmlzLCBpbiBicmlnaHQgbW9vbmxpZ2h0LiBUaGUgYm9tYmluZyB3YXMgdmVyeSBhY2N1cmF0ZSBhbmQgMiBhbW11bml0aW9uIHRyYWlucyBibGV3IHVwLiAxIEhhbGlmYXggTG9zdC48YnI+U3VjZXNzZnVsLiBUYXJnZXQgVmFpcmVzIG5lYXIgcGFyaXMsIHdpdGggNiB4MTAwbGIgTUMgYW5kIDh4NTAwIGxiIE1DLiBIYXp5IG92ZXIgVGFyZ2V0IEFyZWEuIDFzdCByZWQgVGFyZ2V0IEluZGljYXRvciAzOjQwIG1pbiBsYXRlLCBib21iZWQgMSBUSSByZWQgb24gZ3JvdW5kLiBBQyBoYWQgdG8gb3JiaXQgYXMgbWFya2luZyBsYXRlLCBhbmQgYXMgVEkgZHlpbmcgb3V0IEFDIGN1dCBpbiBxdWlja2x5IHQgYm9tIG9uIDE3OSBkZWdyZXMuIFRlcnJpZmljIGV4cGxvc2lvbiBzZWVuIGF0IDIxMzggaHJzLCBmZWx0IGluIEFDLCBibGFjayBzbW9rZSByaXNpbmcgdG8gMTIsMDAwIGZ0LiBTaG91ZCBiZSBnb29kIGF0dGFjaywgbm8gaWNpbmcgZW5jb3VudGVyZWQuPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_c667095ce58223ba08719b5fd7aeffc4.setContent(i_frame_253de0e51cfdd5959ac526c6910940a9);
+            
+        
+
+        marker_6ed4acdfa9519c49db83474518c98725.bindPopup(popup_c667095ce58223ba08719b5fd7aeffc4)
+        ;
+
+        
+    
+    
+            marker_6ed4acdfa9519c49db83474518c98725.bindTooltip(
+                `<div>
+                     29 Mar 44<br><br>Halifax II JN954 R 76 Halifaxes and 8 Mosquitoes of 4, 6 and 8 Groups attacked the railway yards at Vaires, near Paris, in bright moonlight. The bombing was very accurate and 2 ammunition trains blew up. 1 Halifax Lost.<br>Sucessful. Target Vaires near paris, with 6 x100lb MC and 8x500 lb MC. Hazy over Target Area. 1st red Target Indicator 3:40 min late, bombed 1 TI red on ground. AC had to orbit as marking late, and as TI dying out AC cut in quickly t bom on 179 degres. Terrific explosion seen at 2138 hrs, felt in AC, black smoke rising to 12,000 ft. Shoud be good attack, no icing encountered.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ca79a790acf17eca185fbb0fad0364cc = L.polyline(
+                [[54.2381646, -1.4763882], [48.8669584, 2.5174441]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_1bda6cbf8b9e18a3b21fca96f1c6de6d = L.marker(
+                [53.825439, 7.9792829],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_62035c3a489da5b0e2f59f533d1f8ea3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1bda6cbf8b9e18a3b21fca96f1c6de6d.setIcon(icon_62035c3a489da5b0e2f59f533d1f8ea3);
+        
+    
+        var popup_f7bea0bd2334ad4604b230cc4a178adf = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_ac952eb0f369793d07ffe24d95a7e4ba = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MzAgTWFyIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgNDkgSGFsaWZheGVzIG1pbmVsYXlpbmcgaW4gSGVsaW9sYW5kIGFyZWE8YnI+U3VjY2Vzc2Z1bC4gVGFyZ2V0IG1pbmluZyBvZmYgSGVsaWdvbGFuZCBCaWdodCB3aXRoIDIgeCAxLDUwMCBsYiBNaW5lcyBhbmQgMngxLDAwMCBsYiBtaW5lcy4gRXhjZWxsZW50IHZpc2liaWxpdHkgdXAgdG8gR2FyZGVuLiBHYXJkZW5lZCBhdCAyMzM0IGhycywgMTUsMDAwIGZ0IDExOCBkZWdyZWVzLiBGbGFyZXMgYXQgMjMzMCBzYW1lIHBvc2l0aW9uLiAzIHBhcmFjaHV0ZXMgc2Vlbi4gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_f7bea0bd2334ad4604b230cc4a178adf.setContent(i_frame_ac952eb0f369793d07ffe24d95a7e4ba);
+            
+        
+
+        marker_1bda6cbf8b9e18a3b21fca96f1c6de6d.bindPopup(popup_f7bea0bd2334ad4604b230cc4a178adf)
+        ;
+
+        
+    
+    
+            marker_1bda6cbf8b9e18a3b21fca96f1c6de6d.bindTooltip(
+                `<div>
+                     30 Mar 44<br><br>Halifax II JN954 R 49 Halifaxes minelaying in Helioland area<br>Successful. Target mining off Heligoland Bight with 2 x 1,500 lb Mines and 2x1,000 lb mines. Excellent visibility up to Garden. Gardened at 2334 hrs, 15,000 ft 118 degrees. Flares at 2330 same position. 3 parachutes seen. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_535c6d39a9d29b80e1ca1823e20f753e = L.polyline(
+                [[54.2381646, -1.4763882], [53.825439, 7.9792829]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_d680764a8e873329dce092af7fad48b1 = L.marker(
+                [53.9563902806759, 6.91224240637954],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_38f6c63862e1befcc37b846092558213 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d680764a8e873329dce092af7fad48b1.setIcon(icon_38f6c63862e1befcc37b846092558213);
+        
+    
+        var popup_5d3691ccb916d2f61d238d0a19d8173c = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_f99e3edb988650afbf09692e4b4ab598 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDEgQXByIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgMzQgSGFsaWZheGVzIG1pbmVsYXlpbmcgb2ZmIHRoZSBEdXRjaCBDb2FzdDxicj5TdWNjZXNzZnVsLiBUYXJnZXQgTWluaW5nIGluIHZpY2luaXR5IG9mIEZyaXNpYW4gSXNsYW5kcyB3aXRoIDUgeCAxLDAwMCBNaW5lcy4gR2FyZGVuZWQgYXQgMjEyNiBob3IsIDYsMDAwIGZ0IDA4NSBkZWcuIFZpc2liaWxpdHkgZ29vZC4gRnJpc2lhbiBJc2xhbmRzIHZpc2libGUuIEFsbCBmaXZlIHBhcmFjaHV0ZXMgc2VlbiB0byBvcGVuLiBVbmV2ZW50ZnVsIFRyaXA8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_5d3691ccb916d2f61d238d0a19d8173c.setContent(i_frame_f99e3edb988650afbf09692e4b4ab598);
+            
+        
+
+        marker_d680764a8e873329dce092af7fad48b1.bindPopup(popup_5d3691ccb916d2f61d238d0a19d8173c)
+        ;
+
+        
+    
+    
+            marker_d680764a8e873329dce092af7fad48b1.bindTooltip(
+                `<div>
+                     01 Apr 44<br><br>Halifax II JN954 R 34 Halifaxes minelaying off the Dutch Coast<br>Successful. Target Mining in vicinity of Frisian Islands with 5 x 1,000 Mines. Gardened at 2126 hor, 6,000 ft 085 deg. Visibility good. Frisian Islands visible. All five parachutes seen to open. Uneventful Trip
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_2ce1bdf98b5ee40d74545576b82b4fd4 = L.polyline(
+                [[54.2381646, -1.4763882], [53.9563902806759, 6.91224240637954]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_71027f3c67a8dc05366a03d7bf38564e = L.marker(
+                [50.4395579, 2.7801288],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_bad77d9d844b4b1a66bc2bb8051c303c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_71027f3c67a8dc05366a03d7bf38564e.setIcon(icon_bad77d9d844b4b1a66bc2bb8051c303c);
+        
+    
+        var popup_ccd4ec18cf694b7f4861a43afe322402 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_5ed24966a53b850fc15ce64498cca752 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjAgQXByIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgMTc1IGFpcmNyYWZ0LCAxNTQgSGFsaWZheGVzLCAxNCBMYW5jYXN0ZXJzLCA3IE1vc3F1aXRvcywgMSBIYWxpZmF4IGxvc3QuIFRoZSByYWlsd2F5IHlhcmRzIHdlcmUgYWNjdXJhdGVseSBib21iZWQgd2l0aCBwYXJ0aWN1bGFyIGRhbWFnZSBiZWluZyBjYXVzZWQgdG8gdGhlIGVuZ2luZSBzaGVkcyBhbmQgY2FycmlhZ2UgcmVwYWlyIHdvcmtzaG9wLjxicj5TdWNlc3NmdWwuIFRhcmdldCBMZW5zIHdpdGggN3gsMDAwIGxiIE1DLCA4eDQ1MDAgbGIgTUMuIDUvMTAgc3RyYXR1cyx0aGluLiBHcm91bmQgc2VlbiB0aHJvdWdoIGNsb3VkLiBIYWQgVGFyZ2V0IEluZGljYXRvciBvbiBncm91bmQgaW4gRWFzdC9Tb3V0aC4gTWFzdGVyIG9mIENlcmVtb25pZXMgc2FpZCBUSSByaWdodCBhbmQgdG8gYm9tYi4gQ29uc2llcmFibGUgaGVhdnkgZmxhayBlbmNvdW50ZXJlZCwgbGlmdGluZyBBQy4gRmFpcmx5IGxhcmdlIG9yYW5nZSBleHBsb3Npb25zIGF0IDIzNDQgaHJzIGZyb20gVGFyZ2V0IEFyZWEuIENvbnNpZGVyIG9wZXJhdGlvbiBnb29kIG9uZSwgbGlnaHRpbmcgdXAgb2YgdGFyZ2V0IGdvb2QgaWRlYSwgYW5kIHdheSBmYWZlciBmb3IgbWFpbiBmb3JjZSBhcyB3ZWxsIGFzIFBGRi4gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_ccd4ec18cf694b7f4861a43afe322402.setContent(i_frame_5ed24966a53b850fc15ce64498cca752);
+            
+        
+
+        marker_71027f3c67a8dc05366a03d7bf38564e.bindPopup(popup_ccd4ec18cf694b7f4861a43afe322402)
+        ;
+
+        
+    
+    
+            marker_71027f3c67a8dc05366a03d7bf38564e.bindTooltip(
+                `<div>
+                     20 Apr 44<br><br>Halifax II JN954 R 175 aircraft, 154 Halifaxes, 14 Lancasters, 7 Mosquitos, 1 Halifax lost. The railway yards were accurately bombed with particular damage being caused to the engine sheds and carriage repair workshop.<br>Sucessful. Target Lens with 7x,000 lb MC, 8x4500 lb MC. 5/10 stratus,thin. Ground seen through cloud. Had Target Indicator on ground in East/South. Master of Ceremonies said TI right and to bomb. Consierable heavy flak encountered, lifting AC. Fairly large orange explosions at 2344 hrs from Target Area. Consider operation good one, lighting up of target good idea, and way fafer for main force as well as PFF. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_4a0c02402be33a1d29aedc3dc8a39f53 = L.polyline(
+                [[54.2381646, -1.4763882], [50.4395579, 2.7801288]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_0039f5532d3e45276b8c6b9700e0d01c = L.marker(
+                [48.773776, -3.892413],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_4ea35505268d690caacf674fadd8ff4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0039f5532d3e45276b8c6b9700e0d01c.setIcon(icon_4ea35505268d690caacf674fadd8ff4b);
+        
+    
+        var popup_e29579566dc3dae30330ea044651924f = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_b6d154ac93d6775d64dbb1d9b59178ef = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjQgQXByIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgMTggSGFsaWZheGVzIG1pbmVsYXlpbmcgb2ZmIENoYW5uZWwgcG9ydHMgYW5kIGluIHRoZSBGcmlzaWFuczxicj5TdWNlc3NmdWwuIFRhZ2VyIG1pbmluZyBpbiB2aWNpbml0eSBvZiBNb3JsYWl4IHdpdGggMSBCMjMyIGFuZCAxIHggQjIzMCBNaW5lcy4gQ2xlYXIsIG5vIGNsb3VkIG92ZXIgYXJlYS4gQ29hc3QgbGluZSB2aXNpYmlsZS4gR2FyZGVuZGUgYXQgMDAxMiBociwgMTAsMDAwIGZ0LiBQYXJhY2h1dGVzIHNlZW4gdG8gb3Blbi48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_e29579566dc3dae30330ea044651924f.setContent(i_frame_b6d154ac93d6775d64dbb1d9b59178ef);
+            
+        
+
+        marker_0039f5532d3e45276b8c6b9700e0d01c.bindPopup(popup_e29579566dc3dae30330ea044651924f)
+        ;
+
+        
+    
+    
+            marker_0039f5532d3e45276b8c6b9700e0d01c.bindTooltip(
+                `<div>
+                     24 Apr 44<br><br>Halifax II JN954 R 18 Halifaxes minelaying off Channel ports and in the Frisians<br>Sucessful. Tager mining in vicinity of Morlaix with 1 B232 and 1 x B230 Mines. Clear, no cloud over area. Coast line visibile. Gardende at 0012 hr, 10,000 ft. Parachutes seen to open.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_bcae36e40def730375a22f865d0ea49d = L.polyline(
+                [[54.2381646, -1.4763882], [48.773776, -3.892413]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_d2b019e60e620111764d1a84b6d94716 = L.marker(
+                [50.7090243, 5.9280044],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_99980d6c5c3b45f7f430c819c8ade4ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d2b019e60e620111764d1a84b6d94716.setIcon(icon_99980d6c5c3b45f7f430c819c8ade4ad);
+        
+    
+        var popup_ed63e4e92401334e0abe90889be962a0 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_bdd18cccc1be1732eae0a4b9170bde15 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgQXByIDQ0PGJyPjxicj5IYWxpZmF4IElJIEpOOTU0IFIgMTQ0IGFpcmNyYWZ0IOKAkyAxMjAgSGFsaWZheGVzLCAxNiBMYW5jYXN0ZXJzLCA4IE1vc3F1aXRvZXMg4oCTIG9mIDQsIDYgYW5kIDggR3JvdXBzLiBUaGUgYm9tYmluZyBmb3JjZSwgcGFydGljdWxhcmx5IHRoZSBzZWNvbmQgb2YgdGhlIDIgd2F2ZXMsIHdhcyBpbnRlcmNlcHRlZCBieSBHZXJtYW4gZmlnaHRlcnMgYW5kIDE0IEhhbGlmYXhlcyBhbmQgMSBMYW5jYXN0ZXIgd2VyZSBzaG90IGRvd24uIE9ubHkgb25lIHBhcnQgb2YgdGhlIHJhaWx3YXkgeWFyZHMgd2FzIGhpdCBieSB0aGUgYm9tYmluZy4KPGJyPlRoaXMgYWlyY3JhZnQgdG9vayBvZiB0byBhdHRhY2sgTW9udHplbiB3aXRoIDR4MSwwMDAgbGIgTUMgYW5kIDExIHggNTAwIGxiLCBhbmQgbm90aGluZyBoYXMgYmVlbiBoZWFyZCBmcm9tIHRoaXMgYWlyY3JhZnQgc2luY2UgdGFrZW9mZi4gSXRzIGxvc3MgbXVzdCBiZSBwcmVzdW1lZCB0aHJvdWdoIGVuZW15IGFjdGlvbi48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_ed63e4e92401334e0abe90889be962a0.setContent(i_frame_bdd18cccc1be1732eae0a4b9170bde15);
+            
+        
+
+        marker_d2b019e60e620111764d1a84b6d94716.bindPopup(popup_ed63e4e92401334e0abe90889be962a0)
+        ;
+
+        
+    
+    
+            marker_d2b019e60e620111764d1a84b6d94716.bindTooltip(
+                `<div>
+                     27 Apr 44<br><br>Halifax II JN954 R 144 aircraft – 120 Halifaxes, 16 Lancasters, 8 Mosquitoes – of 4, 6 and 8 Groups. The bombing force, particularly the second of the 2 waves, was intercepted by German fighters and 14 Halifaxes and 1 Lancaster were shot down. Only one part of the railway yards was hit by the bombing.
+<br>This aircraft took of to attack Montzen with 4x1,000 lb MC and 11 x 500 lb, and nothing has been heard from this aircraft since takeoff. Its loss must be presumed through enemy action.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ebdaa5ee6c4c83fcd150be33dbefa957 = L.polyline(
+                [[54.2381646, -1.4763882], [50.7090243, 5.9280044]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var marker_526a9a373f5fe64e5cf78805db927e08 = L.marker(
+                [50.8371324, 5.7275033],
+                {"radius": 2}
+            ).addTo(feature_group_f57521ec2b983f4e69c167ff1e5b6c4a);
+        
+    
+            var icon_dca65e5f03b10103c3b4866468bf10d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cross", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_526a9a373f5fe64e5cf78805db927e08.setIcon(icon_dca65e5f03b10103c3b4866468bf10d2);
+        
+    
+        var popup_57e7fc2145c5f26fe31c8505854b724e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e4b0b59bf220d4576ea310dca95e8d3 = $(`<div id="html_7e4b0b59bf220d4576ea310dca95e8d3" style="width: 100.0%; height: 100.0%;"><h1>JN954 Crash Site<br></h1></div>`)[0];
+                popup_57e7fc2145c5f26fe31c8505854b724e.setContent(html_7e4b0b59bf220d4576ea310dca95e8d3);
+            
+        
+
+        marker_526a9a373f5fe64e5cf78805db927e08.bindPopup(popup_57e7fc2145c5f26fe31c8505854b724e)
+        ;
+
+        
+    
+    
+            marker_526a9a373f5fe64e5cf78805db927e08.bindTooltip(
+                `<div>
+                     <h1>JN954 Crash Site<br></h1>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("DD MMM YY");
+                }
+            });
+            map_fd0518b3362705c8aab4b57e03f9228c.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": false, "loopButton": true, "maxSpeed": 1, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": true}
+            );
+            map_fd0518b3362705c8aab4b57e03f9228c.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.4763882, 54.2381646]}, "properties": {"time": "2043-12-13 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.53055556, 46.11805556]}, "properties": {"time": "2044-01-04 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-4.529723, 48.351589]}, "properties": {"time": "2044-01-06 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-3.83361111, 49.98361111]}, "properties": {"time": "2044-02-04 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.50442646280059, 53.7654652628633]}, "properties": {"time": "2044-02-12 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.1129511, 52.5066434]}, "properties": {"time": "2044-02-15 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.9792829, 53.825439]}, "properties": {"time": "2044-02-22 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.00027778, 55.00027778]}, "properties": {"time": "2044-02-24 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.4949663, 54.6006214]}, "properties": {"time": "2044-02-25 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.28970276432177, 47.2095765512129]}, "properties": {"time": "2044-03-11 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.2434821, 49.8987584]}, "properties": {"time": "2044-03-16 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.9792829, 53.825439]}, "properties": {"time": "2044-03-18 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.4949663, 54.6006214]}, "properties": {"time": "2044-03-21 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.4949663, 54.6006214]}, "properties": {"time": "2044-03-22 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [3.9196669, 50.1485709]}, "properties": {"time": "2044-03-25 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [3.1975171, 50.8029139]}, "properties": {"time": "2044-03-26 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.5174441, 48.8669584]}, "properties": {"time": "2044-03-29 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.9792829, 53.825439]}, "properties": {"time": "2044-03-30 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.91224240637954, 53.9563902806759]}, "properties": {"time": "2044-04-01 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.7801288, 50.4395579]}, "properties": {"time": "2044-04-20 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-3.892413, 48.773776]}, "properties": {"time": "2044-04-24 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [5.9280044, 50.7090243]}, "properties": {"time": "2044-04-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_cd62153d085b426082a499a754044414 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: "P1D",
+                }
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+        
+    
+            var mouse_position_37591a3431499c6092257cf36291b4dc = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "Mouse:", "separator": " | "}
+            );
+            mouse_position_37591a3431499c6092257cf36291b4dc.options["latFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            mouse_position_37591a3431499c6092257cf36291b4dc.options["lngFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            map_fd0518b3362705c8aab4b57e03f9228c.addControl(mouse_position_37591a3431499c6092257cf36291b4dc);
+        
+    
+            L.Control.geocoder(
+                {"collapsed": "True", "defaultMarkGeocode": true, "position": "topright"}
+            ).on('markgeocode', function(e) {
+                map_fd0518b3362705c8aab4b57e03f9228c.setView(e.geocode.center, 11);
+            }).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+
+        
+    
+            var layer_control_bcbfdccfe3fdfc63cfdabfedcba9bf6e = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_335ecfe1375bcbfe134e56c0f5c42b35,
+                },
+                overlays :  {
+                    "Google Maps" : tile_layer_3fe141b8f4ec4eaf7622d5d6403b392e,
+                    "Google Hybrid" : tile_layer_8f7a6d39e90ba24ee7d5c1f5a801e436,
+                    "Google Satellite" : tile_layer_d2497348b5041345a6d2ffa6a8def83f,
+                    "Google Terrain" : tile_layer_36f875975cf26631825d5349c36bced0,
+                    "Esri Satellite" : tile_layer_cfe2a65d8a0f0af8f70485f1357fca06,
+                    "JN954" : feature_group_f57521ec2b983f4e69c167ff1e5b6c4a,
+                },
+            };
+            L.control.layers(
+                layer_control_bcbfdccfe3fdfc63cfdabfedcba9bf6e.base_layers,
+                layer_control_bcbfdccfe3fdfc63cfdabfedcba9bf6e.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+            tile_layer_3fe141b8f4ec4eaf7622d5d6403b392e.remove();
+            tile_layer_8f7a6d39e90ba24ee7d5c1f5a801e436.remove();
+            tile_layer_d2497348b5041345a6d2ffa6a8def83f.remove();
+            tile_layer_36f875975cf26631825d5349c36bced0.remove();
+            tile_layer_cfe2a65d8a0f0af8f70485f1357fca06.remove();
+        
+    
+            var measure_control_c0eb7099cae41408a18e10df9a2c100a = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "kilometers", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_fd0518b3362705c8aab4b57e03f9228c.addControl(measure_control_c0eb7099cae41408a18e10df9a2c100a);
+
+        
+    
+            var tile_layer_e366d2921f7c0d7b6292b0f86fede3f4 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_e3464b682078254e0d8042d88ecd0919 = new L.Control.MiniMap(
+                tile_layer_e366d2921f7c0d7b6292b0f86fede3f4,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_fd0518b3362705c8aab4b57e03f9228c.addControl(mini_map_e3464b682078254e0d8042d88ecd0919);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": false, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_fd0518b3362705c8aab4b57e03f9228c);
+        
+</script>
+</html>

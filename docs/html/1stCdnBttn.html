@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ad0cc6b621c2b2d4fd6d517380790856 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 96.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+                   <h3 align="center" style="font-size:16px"><b>1st Canadian Battalion</b></h3>
+                 
+    
+            <div class="folium-map" id="map_ad0cc6b621c2b2d4fd6d517380790856" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ad0cc6b621c2b2d4fd6d517380790856 = L.map(
+                "map_ad0cc6b621c2b2d4fd6d517380790856",
+                {
+                    center: [50.341607690190074, 2.7956575932590377],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    overlay: "false",
+                }
+            );
+            L.control.scale().addTo(map_ad0cc6b621c2b2d4fd6d517380790856);
+
+            
+
+        
+    
+            var tile_layer_fdad149ff541c3301c6c6e75b5d201ff = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ad0cc6b621c2b2d4fd6d517380790856);
+        
+    
+            var feature_group_423dae769b5c52942d93de1cc742fbd8 = L.featureGroup(
+                {}
+            ).addTo(map_ad0cc6b621c2b2d4fd6d517380790856);
+        
+    
+            var marker_866bfa8e79e5ecffe8d4c1425599ed77 = L.marker(
+                [50.334998, 2.772279],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_0c38f69e93b0a19174452f06b8c70406 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_866bfa8e79e5ecffe8d4c1425599ed77.setIcon(icon_0c38f69e93b0a19174452f06b8c70406);
+        
+    
+        var popup_b9c249d3761ec635f5bc213dbc5c0794 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_ea777b9ad39ba4e010f6e83a879a8f1e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDIgQXByIDE3PGJyPm5hbjxicj5MYWJ5cmludGhlIEF2ZW51ZTxicj5JbiB0aGUgZnJvbnQgbGluZSByZXBsYWNpbmcgNHRoIEJ0dG4uIDEgQnR0biBjb25kdWN0ZWQgbnVtZXJvdXMgdHJlbmNoIHJhaWRzLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_b9c249d3761ec635f5bc213dbc5c0794.setContent(i_frame_ea777b9ad39ba4e010f6e83a879a8f1e);
+            
+        
+
+        marker_866bfa8e79e5ecffe8d4c1425599ed77.bindPopup(popup_b9c249d3761ec635f5bc213dbc5c0794)
+        ;
+
+        
+    
+    
+            marker_866bfa8e79e5ecffe8d4c1425599ed77.bindTooltip(
+                `<div>
+                     02 Apr 17<br>nan<br>Labyrinthe Avenue<br>In the front line replacing 4th Bttn. 1 Bttn conducted numerous trench raids.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5d7cae2a64fa2e00bd6024e29621b2ce = L.marker(
+                [50.3628699, 2.6648582],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_d383ae8d37677193bc839fbaa9c4efe9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_5d7cae2a64fa2e00bd6024e29621b2ce.setIcon(icon_d383ae8d37677193bc839fbaa9c4efe9);
+        
+    
+        var popup_7dd8f7aa01df3c8b1208638498cd5ae6 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_383159f06aa89d115682143299792536 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDYgQXByIDE3PGJyPm5hbjxicj5DYW1ibGFpbiBsJ0FiYmU8YnI+UmVzdCBhbmQgdHJhaW5pbmc8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_7dd8f7aa01df3c8b1208638498cd5ae6.setContent(i_frame_383159f06aa89d115682143299792536);
+            
+        
+
+        marker_5d7cae2a64fa2e00bd6024e29621b2ce.bindPopup(popup_7dd8f7aa01df3c8b1208638498cd5ae6)
+        ;
+
+        
+    
+    
+            marker_5d7cae2a64fa2e00bd6024e29621b2ce.bindTooltip(
+                `<div>
+                     06 Apr 17<br>nan<br>Camblain l'Abbe<br>Rest and training
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f78847393ec84fdec9b65bdc0505e9a = L.marker(
+                [50.337177, 2.762072],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_8c00e62bf2b3f27a3c12e8ce17a931e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_8f78847393ec84fdec9b65bdc0505e9a.setIcon(icon_8c00e62bf2b3f27a3c12e8ce17a931e5);
+        
+    
+        var popup_dd3b9f34e3b1baf78e24e5c3c93406f0 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_5037422befe25b24db80460b4c799fa3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDggQXByIDE3PGJyPm5hbjxicj5FY3VyaWU8YnI+QXNzZW1ibHkgZm9yIEF0dGFjayBvbiBWaW15IFJpZGdlPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_dd3b9f34e3b1baf78e24e5c3c93406f0.setContent(i_frame_5037422befe25b24db80460b4c799fa3);
+            
+        
+
+        marker_8f78847393ec84fdec9b65bdc0505e9a.bindPopup(popup_dd3b9f34e3b1baf78e24e5c3c93406f0)
+        ;
+
+        
+    
+    
+            marker_8f78847393ec84fdec9b65bdc0505e9a.bindTooltip(
+                `<div>
+                     08 Apr 17<br>nan<br>Ecurie<br>Assembly for Attack on Vimy Ridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4ad0619701b8dff46a479ba0fe33bb89 = L.marker(
+                [50.333978, 2.768605],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_63e822fc61009276b015cc9a0678773e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4ad0619701b8dff46a479ba0fe33bb89.setIcon(icon_63e822fc61009276b015cc9a0678773e);
+        
+    
+        var popup_25e963bb2d7a29b124e917bbc1252edb = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_ce8c1407cf7557e2ce62da612afe7644 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5TdGFydCBvZiB0aGUgQXNzYXVsdCBvbiBWaW15IFJpZGdlPGJyPjA1MzAgQXR0YWNrIG9uIFZpbXkgUmlkZ2UgY29tbWVuY2VzIDA1MzAgaG91cnMgMXN0IEJhdHRuIEEgQ295PC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_25e963bb2d7a29b124e917bbc1252edb.setContent(i_frame_ce8c1407cf7557e2ce62da612afe7644);
+            
+        
+
+        marker_4ad0619701b8dff46a479ba0fe33bb89.bindPopup(popup_25e963bb2d7a29b124e917bbc1252edb)
+        ;
+
+        
+    
+    
+            marker_4ad0619701b8dff46a479ba0fe33bb89.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Start of the Assault on Vimy Ridge<br>0530 Attack on Vimy Ridge commences 0530 hours 1st Battn A Coy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6ea4b33f6f6e6d59a0ecf71241d22a5c = L.marker(
+                [50.336462, 2.769806],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_7af0e01276aef73cc2aa900d1db9ee77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6ea4b33f6f6e6d59a0ecf71241d22a5c.setIcon(icon_7af0e01276aef73cc2aa900d1db9ee77);
+        
+    
+        var popup_1b410b7447ca75adbd556a266765eb18 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_ee140c1a8cac4a3d396f9b714bcdb7db = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5TdGFydCBvZiB0aGUgQXNzYXVsdCBvbiBWaW15IFJpZGdlPGJyPjA1MzAgQXR0YWNrIG9uIFZpbXkgUmlkZ2UgY29tbWVuY2VzIDA1MzAgaG91cnMgMXN0IEJhdHRuIEIgQ295PC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_1b410b7447ca75adbd556a266765eb18.setContent(i_frame_ee140c1a8cac4a3d396f9b714bcdb7db);
+            
+        
+
+        marker_6ea4b33f6f6e6d59a0ecf71241d22a5c.bindPopup(popup_1b410b7447ca75adbd556a266765eb18)
+        ;
+
+        
+    
+    
+            marker_6ea4b33f6f6e6d59a0ecf71241d22a5c.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Start of the Assault on Vimy Ridge<br>0530 Attack on Vimy Ridge commences 0530 hours 1st Battn B Coy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_62a791ba96e5aa986d4a4ceea7c45bad = L.marker(
+                [50.337659, 2.767196],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_a900ab2018f6777081c3af766cb732ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_62a791ba96e5aa986d4a4ceea7c45bad.setIcon(icon_a900ab2018f6777081c3af766cb732ae);
+        
+    
+        var popup_d9222e642123ff776e89a82893e3541b = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_841c4429a30ba6c306c7d8116152caa1 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5TdGFydCBvZiB0aGUgQXNzYXVsdCBvbiBWaW15IFJpZGdlPGJyPjA1MzAgQXR0YWNrIG9uIFZpbXkgUmlkZ2UgY29tbWVuY2VzIDA1MzAgaG91cnMgMXN0IEJhdHRuIEMgQ295PC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_d9222e642123ff776e89a82893e3541b.setContent(i_frame_841c4429a30ba6c306c7d8116152caa1);
+            
+        
+
+        marker_62a791ba96e5aa986d4a4ceea7c45bad.bindPopup(popup_d9222e642123ff776e89a82893e3541b)
+        ;
+
+        
+    
+    
+            marker_62a791ba96e5aa986d4a4ceea7c45bad.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Start of the Assault on Vimy Ridge<br>0530 Attack on Vimy Ridge commences 0530 hours 1st Battn C Coy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_549422f8752d48f00caf726e07de2059 = L.marker(
+                [50.337195, 2.763356],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_d711b187b358e6e0fff50dce0049ea24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_549422f8752d48f00caf726e07de2059.setIcon(icon_d711b187b358e6e0fff50dce0049ea24);
+        
+    
+        var popup_2d3371692a4b539a9276da358ecc4d43 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_dabf666837aa5d94786c1e41c45e4639 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5TdGFydCBvZiB0aGUgQXNzYXVsdCBvbiBWaW15IFJpZGdlPGJyPjA1MzAgQXR0YWNrIG9uIFZpbXkgUmlkZ2UgY29tbWVuY2VzIDA1MzAgaG91cnMgMXN0IEJhdHRuIEQgQ295PC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_2d3371692a4b539a9276da358ecc4d43.setContent(i_frame_dabf666837aa5d94786c1e41c45e4639);
+            
+        
+
+        marker_549422f8752d48f00caf726e07de2059.bindPopup(popup_2d3371692a4b539a9276da358ecc4d43)
+        ;
+
+        
+    
+    
+            marker_549422f8752d48f00caf726e07de2059.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Start of the Assault on Vimy Ridge<br>0530 Attack on Vimy Ridge commences 0530 hours 1st Battn D Coy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4a800d6c7a5b661a248014dd6111466a = L.marker(
+                [50.344805, 2.793623],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_ec0bb3509769e40993217970862e9f0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4a800d6c7a5b661a248014dd6111466a.setIcon(icon_ec0bb3509769e40993217970862e9f0a);
+        
+    
+        var popup_61c183a6aece9125db9098b0e650a408 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_15304d3625f092af7693b8f6753889b8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5Td2lzY2hlbiBTdGVsbHVuZzxicj4wNzQ5IDFzdCBQaGFzZSBvZiB0aGUgQXR0YWNrIFN1Y2Nlc3NmdWw8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_61c183a6aece9125db9098b0e650a408.setContent(i_frame_15304d3625f092af7693b8f6753889b8);
+            
+        
+
+        marker_4a800d6c7a5b661a248014dd6111466a.bindPopup(popup_61c183a6aece9125db9098b0e650a408)
+        ;
+
+        
+    
+    
+            marker_4a800d6c7a5b661a248014dd6111466a.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Swischen Stellung<br>0749 1st Phase of the Attack Successful
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9be92dab265df092f22610b1390cbe17 = L.marker(
+                [50.340686, 2.793117],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_d2dac81775304dc517e88ce886f15066 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_9be92dab265df092f22610b1390cbe17.setIcon(icon_d2dac81775304dc517e88ce886f15066);
+        
+    
+        var popup_740dee45587474c1c51aacee13d4e01e = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_61e90a2c775bab7ed179e1f7e8d41834 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5Td2lzY2hlbiBTdGVsbHVuZzxicj4wNzQ5IDFzdCBQaGFzZSBvZiB0aGUgQXR0YWNrIFN1Y2Nlc3NmdWw8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_740dee45587474c1c51aacee13d4e01e.setContent(i_frame_61e90a2c775bab7ed179e1f7e8d41834);
+            
+        
+
+        marker_9be92dab265df092f22610b1390cbe17.bindPopup(popup_740dee45587474c1c51aacee13d4e01e)
+        ;
+
+        
+    
+    
+            marker_9be92dab265df092f22610b1390cbe17.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Swischen Stellung<br>0749 1st Phase of the Attack Successful
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cb22727f8d32564842f81308418c8b6f = L.marker(
+                [50.343144, 2.798498],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_b123bd57ab9752022a769285587d00db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_cb22727f8d32564842f81308418c8b6f.setIcon(icon_b123bd57ab9752022a769285587d00db);
+        
+    
+        var popup_33ea70465016280d5de90204fbe13d4a = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_adc0253e843ada404d2282d76eebf22a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5TZWNvbmQgQnJhbmNoIFN3aXNjaGVuIFN0ZWxsdW5nPGJyPjA4NDUgQyBDb21wYW55IHRha2VzIG5leHQgQnJhbmNoIG9mIFRyZW5jaCBpbmNsdWRpbmcgQWxicmVjaHQgQXZlbnVlPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_33ea70465016280d5de90204fbe13d4a.setContent(i_frame_adc0253e843ada404d2282d76eebf22a);
+            
+        
+
+        marker_cb22727f8d32564842f81308418c8b6f.bindPopup(popup_33ea70465016280d5de90204fbe13d4a)
+        ;
+
+        
+    
+    
+            marker_cb22727f8d32564842f81308418c8b6f.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Second Branch Swischen Stellung<br>0845 C Company takes next Branch of Trench including Albrecht Avenue
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0dc8d7196501e089ea629824443a52e5 = L.marker(
+                [50.342024, 2.800784],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_73be980b0afeabe547b212533d7b4923 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0dc8d7196501e089ea629824443a52e5.setIcon(icon_73be980b0afeabe547b212533d7b4923);
+        
+    
+        var popup_d073a9567760e14f36f974e9018b4d2c = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_a7dd643ef920b20783cdcf4aba4f8254 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5TZWNvbmQgQnJhbmNoIFN3aXNjaGVuIFN0ZWxsdW5nPGJyPjA4NDUgQiBDb21wYW55IHRha2VzIG5leHQgQnJhbmNoIG9mIFRyZW5jaDwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_d073a9567760e14f36f974e9018b4d2c.setContent(i_frame_a7dd643ef920b20783cdcf4aba4f8254);
+            
+        
+
+        marker_0dc8d7196501e089ea629824443a52e5.bindPopup(popup_d073a9567760e14f36f974e9018b4d2c)
+        ;
+
+        
+    
+    
+            marker_0dc8d7196501e089ea629824443a52e5.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Second Branch Swischen Stellung<br>0845 B Company takes next Branch of Trench
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a38b99634fa810274952f7dce2aecde9 = L.marker(
+                [50.345106, 2.809807],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_d6f122b2d8679b20181e21ff37e369de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a38b99634fa810274952f7dce2aecde9.setIcon(icon_d6f122b2d8679b20181e21ff37e369de);
+        
+    
+        var popup_9e639861b791d2dcf503bda704156f60 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_3d63481f3ae0134a2ca990b49fe4240a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5Jc2xhbmQgVHJhdmVyc2UgVHJlbmNoPGJyPjEwNTAgRCBDb21wYW55IE1vdmVzIGZvcndhcmQgdG8gQmx1ZSBMaW5lIE9iamVjdGl2ZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_9e639861b791d2dcf503bda704156f60.setContent(i_frame_3d63481f3ae0134a2ca990b49fe4240a);
+            
+        
+
+        marker_a38b99634fa810274952f7dce2aecde9.bindPopup(popup_9e639861b791d2dcf503bda704156f60)
+        ;
+
+        
+    
+    
+            marker_a38b99634fa810274952f7dce2aecde9.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Island Traverse Trench<br>1050 D Company Moves forward to Blue Line Objective
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_55ffdd8b7cc30930e5b7ce6b01862950 = L.marker(
+                [50.343088, 2.803447],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_7cdf80fe594c5c1acc7b331bf2333f15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_55ffdd8b7cc30930e5b7ce6b01862950.setIcon(icon_7cdf80fe594c5c1acc7b331bf2333f15);
+        
+    
+        var popup_5dbeeba06421a63d481d068cb702e841 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_0a3bb4621a1a67241342be270a153fcb = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5UcmVuY2ggVHJpYW5nbGU8YnI+MTUwMCAybmQgQnR0biB0YWtlcyBvdmVyIEJsdWUgTGluZS4gMXN0IEJ0dG4gY29uc29saWRhdGVzIGF0IFRyZW5jaCBUcmlhbmdsZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_5dbeeba06421a63d481d068cb702e841.setContent(i_frame_0a3bb4621a1a67241342be270a153fcb);
+            
+        
+
+        marker_55ffdd8b7cc30930e5b7ce6b01862950.bindPopup(popup_5dbeeba06421a63d481d068cb702e841)
+        ;
+
+        
+    
+    
+            marker_55ffdd8b7cc30930e5b7ce6b01862950.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Trench Triangle<br>1500 2nd Bttn takes over Blue Line. 1st Bttn consolidates at Trench Triangle
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cc2a96fb960426b01615a4b1575d0f8e = L.marker(
+                [50.341954, 2.780545],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_f957172d7e04cfee27bb4a84ee414c18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_cc2a96fb960426b01615a4b1575d0f8e.setIcon(icon_f957172d7e04cfee27bb4a84ee414c18);
+        
+    
+        var popup_f022fd563981c26c308f9e7d2f3a3e0d = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_98f11575ed3a659139f5db02d8bed3f3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDE3PGJyPm5hbjxicj5UcmVuY2ggVHJpYW5nbGU8YnI+MTkzMCBCdHRuIEhRIE1vdmVkIHRvIEp1bmN0aW9uIG9mIFNjaXNjaGVuIFN0ZWxsdW5nIGFuZCBBbGJyZWNodCBBdmVudWU8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_f022fd563981c26c308f9e7d2f3a3e0d.setContent(i_frame_98f11575ed3a659139f5db02d8bed3f3);
+            
+        
+
+        marker_cc2a96fb960426b01615a4b1575d0f8e.bindPopup(popup_f022fd563981c26c308f9e7d2f3a3e0d)
+        ;
+
+        
+    
+    
+            marker_cc2a96fb960426b01615a4b1575d0f8e.bindTooltip(
+                `<div>
+                     09 Apr 17<br>nan<br>Trench Triangle<br>1930 Bttn HQ Moved to Junction of Scischen Stellung and Albrecht Avenue
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_08d25284d6c79dcbc727c95427d8cef1 = L.marker(
+                [50.358024, 2.813433],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_56bfc19eb6d959b52ae0fb8736441afc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_08d25284d6c79dcbc727c95427d8cef1.setIcon(icon_56bfc19eb6d959b52ae0fb8736441afc);
+        
+    
+        var popup_2daab69e8ce209dc83a3de5bfbc456e2 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_c82bc1d7663efe4424cbd12bec3807af = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTAgQXByIDE3PGJyPm5hbjxicj5Cb2lzIGRlIGxhIFZpbGxlPGJyPjIzNTkgTW92ZSB0byBCb2lzIGRlIGxhIFZpbGxlIHRvIHJlbGlldmUgMjcgYW5kIDI4dGggQnR0biA2IEJyaWdhZGU8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_2daab69e8ce209dc83a3de5bfbc456e2.setContent(i_frame_c82bc1d7663efe4424cbd12bec3807af);
+            
+        
+
+        marker_08d25284d6c79dcbc727c95427d8cef1.bindPopup(popup_2daab69e8ce209dc83a3de5bfbc456e2)
+        ;
+
+        
+    
+    
+            marker_08d25284d6c79dcbc727c95427d8cef1.bindTooltip(
+                `<div>
+                     10 Apr 17<br>nan<br>Bois de la Ville<br>2359 Move to Bois de la Ville to relieve 27 and 28th Bttn 6 Brigade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e48fab5dac7da6b1a6c307dc5a3eb62c = L.marker(
+                [50.358897, 2.817261],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_acdb6ddedd7e464659703a1567d20070 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e48fab5dac7da6b1a6c307dc5a3eb62c.setIcon(icon_acdb6ddedd7e464659703a1567d20070);
+        
+    
+        var popup_2c883808ef23b37656f8c6dc6fcc1f53 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_2c28f359bdacb775acd1898f80825801 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTEgQXByIDE3PGJyPm5hbjxicj5Cb2lzIGRlIGxhIFZpbGxlPGJyPjE0MDUgUmVsaWV2ZSAyOXRoIEJ0dG4gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_2c883808ef23b37656f8c6dc6fcc1f53.setContent(i_frame_2c28f359bdacb775acd1898f80825801);
+            
+        
+
+        marker_e48fab5dac7da6b1a6c307dc5a3eb62c.bindPopup(popup_2c883808ef23b37656f8c6dc6fcc1f53)
+        ;
+
+        
+    
+    
+            marker_e48fab5dac7da6b1a6c307dc5a3eb62c.bindTooltip(
+                `<div>
+                     11 Apr 17<br>nan<br>Bois de la Ville<br>1405 Relieve 29th Bttn 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_98e60d78407081890a06caac9fc70516 = L.marker(
+                [50.337999, 2.762044],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_2ce82594d020875728013f715af8f53d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_98e60d78407081890a06caac9fc70516.setIcon(icon_2ce82594d020875728013f715af8f53d);
+        
+    
+        var popup_570284613d1d9f647247f111c19e454a = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_f28df24ce59eef6364d7b13ae5557325 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTIgQXByIDE3PGJyPm5hbjxicj5Eb3VhaSBUcmVuY2g8YnI+UmVsaWV2ZWQgYnkgN3RoIEJhdHRhbGlvbi4gUmV0dXJuIHRvIGZvcm1lciBHZXJtYW4gRnJvbnQgTGluZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_570284613d1d9f647247f111c19e454a.setContent(i_frame_f28df24ce59eef6364d7b13ae5557325);
+            
+        
+
+        marker_98e60d78407081890a06caac9fc70516.bindPopup(popup_570284613d1d9f647247f111c19e454a)
+        ;
+
+        
+    
+    
+            marker_98e60d78407081890a06caac9fc70516.bindTooltip(
+                `<div>
+                     12 Apr 17<br>nan<br>Douai Trench<br>Relieved by 7th Battalion. Return to former German Front Line
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0496b449d8bfaa5117833cecdd3dfbe7 = L.marker(
+                [50.328328, 2.717459],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_d6ae0d2f483106abfb5fb9a2ce081cc7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0496b449d8bfaa5117833cecdd3dfbe7.setIcon(icon_d6ae0d2f483106abfb5fb9a2ce081cc7);
+        
+    
+        var popup_ae5bd61480e7ef7310ae822d1d092fea = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_c7f4e7b0f91ce33436e3945d8671ebfa = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTYgQXByIDE3PGJyPm5hbjxicj5CcnVuZWhhdXQgRmFybTxicj5SZXN0IGFuZCByZW9yZ2FuaXphdGlvbjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_ae5bd61480e7ef7310ae822d1d092fea.setContent(i_frame_c7f4e7b0f91ce33436e3945d8671ebfa);
+            
+        
+
+        marker_0496b449d8bfaa5117833cecdd3dfbe7.bindPopup(popup_ae5bd61480e7ef7310ae822d1d092fea)
+        ;
+
+        
+    
+    
+            marker_0496b449d8bfaa5117833cecdd3dfbe7.bindTooltip(
+                `<div>
+                     16 Apr 17<br>nan<br>Brunehaut Farm<br>Rest and reorganization
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7824428d123c63dd2622b057678d4f84 = L.marker(
+                [50.35135, 2.826633],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_5f4b66a5de8a97de5b205b3dedb58acc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_7824428d123c63dd2622b057678d4f84.setIcon(icon_5f4b66a5de8a97de5b205b3dedb58acc);
+        
+    
+        var popup_b4ec4f944c35b9f176a487f095848880 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_374b8e7124efc36cc03806bb06211311 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjIgQXByIDE3PGJyPm5hbjxicj5GYXJidXMgV29vZDxicj5CcmlnYWRlIFN1cHBvcnQ8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_b4ec4f944c35b9f176a487f095848880.setContent(i_frame_374b8e7124efc36cc03806bb06211311);
+            
+        
+
+        marker_7824428d123c63dd2622b057678d4f84.bindPopup(popup_b4ec4f944c35b9f176a487f095848880)
+        ;
+
+        
+    
+    
+            marker_7824428d123c63dd2622b057678d4f84.bindTooltip(
+                `<div>
+                     22 Apr 17<br>nan<br>Farbus Wood<br>Brigade Support
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21c057cb3fd3f2292f0597bc402a23c3 = L.marker(
+                [50.317733, 2.81955],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_8bd734520b8f5edcef651b170d9508f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_21c057cb3fd3f2292f0597bc402a23c3.setIcon(icon_8bd734520b8f5edcef651b170d9508f1);
+        
+    
+        var popup_efc92d66701d540d408fdde5b75c1036 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_b4bd5df96650d03393adfab045947410 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgQXByIDE3PGJyPm5hbjxicj5NYWlzb24gQmxhbmNoZTxicj5TdXBwb3J0IGZvciAybmQgQnR0biBkdXJpbmcgQXR0YWNrIG9uIEFydGV1eC4gTm8gYWN0aW9uIHJlcXVpcmVkLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_efc92d66701d540d408fdde5b75c1036.setContent(i_frame_b4bd5df96650d03393adfab045947410);
+            
+        
+
+        marker_21c057cb3fd3f2292f0597bc402a23c3.bindPopup(popup_efc92d66701d540d408fdde5b75c1036)
+        ;
+
+        
+    
+    
+            marker_21c057cb3fd3f2292f0597bc402a23c3.bindTooltip(
+                `<div>
+                     27 Apr 17<br>nan<br>Maison Blanche<br>Support for 2nd Bttn during Attack on Arteux. No action required.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b7c0daf3779e775db175b98fd62da0cb = L.marker(
+                [50.344954, 2.687707],
+                {"radius": 2}
+            ).addTo(feature_group_423dae769b5c52942d93de1cc742fbd8);
+        
+    
+            var icon_bb7d350491d324bf07889006c1302755 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b7c0daf3779e775db175b98fd62da0cb.setIcon(icon_bb7d350491d324bf07889006c1302755);
+        
+    
+        var popup_3f81ddbdbb34c2a3707aaca8d0313251 = L.popup({"maxWidth": 800});
+
+        
+            
+                var i_frame_c3c8a9a73d45d9ca56ea626752cfbc9d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjkgQXByIDE3PGJyPm5hbjxicj5Nb250IFN0IEVsb2k8YnI+QmF0dGFsaW9uIFJlc3QuIDE0NSByZXBsYWNlbWVudHMgcmVjZWl2ZWQ8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+                popup_3f81ddbdbb34c2a3707aaca8d0313251.setContent(i_frame_c3c8a9a73d45d9ca56ea626752cfbc9d);
+            
+        
+
+        marker_b7c0daf3779e775db175b98fd62da0cb.bindPopup(popup_3f81ddbdbb34c2a3707aaca8d0313251)
+        ;
+
+        
+    
+    
+            marker_b7c0daf3779e775db175b98fd62da0cb.bindTooltip(
+                `<div>
+                     29 Apr 17<br>nan<br>Mont St Eloi<br>Battalion Rest. 145 replacements received
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+
+        function geo_json_d6e03ea1a382da23a3fe8492d1496723_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d6e03ea1a382da23a3fe8492d1496723 = L.geoJson(null, {
+                onEachFeature: geo_json_d6e03ea1a382da23a3fe8492d1496723_onEachFeature,
+            
+        });
+
+        function geo_json_d6e03ea1a382da23a3fe8492d1496723_add (data) {
+            geo_json_d6e03ea1a382da23a3fe8492d1496723
+                .addData(data)
+                .addTo(map_ad0cc6b621c2b2d4fd6d517380790856);
+        }
+            geo_json_d6e03ea1a382da23a3fe8492d1496723_add({"features": [{"geometry": {"coordinates": [[2.77186, 50.33359], [2.77191, 50.33332], [2.77193, 50.33329], [2.77196, 50.33309], [2.77204, 50.33276], [2.77209, 50.33242], [2.77217, 50.33212], [2.77222, 50.33185], [2.77221, 50.3318], [2.77219, 50.33176], [2.77197, 50.33169], [2.77115, 50.33147], [2.77061, 50.33118], [2.7694, 50.33049], [2.76936, 50.33046], [2.76913, 50.33035], [2.76906, 50.33029], [2.76903, 50.33022], [2.76915, 50.33003], [2.76935, 50.32981], [2.76938, 50.32977], [2.76956, 50.32955], [2.76962, 50.32948], [2.76969, 50.32939], [2.76962, 50.32933], [2.76932, 50.32916], [2.76865, 50.32894], [2.76766, 50.32858], [2.76626, 50.32802], [2.76597, 50.3279], [2.7653, 50.32762], [2.76401, 50.32708], [2.76392, 50.32702], [2.76385, 50.32699], [2.76365, 50.32688], [2.76095, 50.325], [2.76003, 50.32455], [2.75954, 50.32435], [2.75944, 50.3243], [2.75932, 50.32426], [2.7592, 50.32425], [2.75911, 50.32427], [2.75899, 50.32434], [2.75874, 50.32447], [2.75854, 50.32455], [2.7584, 50.32457], [2.75813, 50.32458], [2.75795, 50.32456], [2.75777, 50.32453], [2.75744, 50.32448], [2.7572, 50.32443], [2.7569, 50.32434], [2.75669, 50.32424], [2.75659, 50.32417], [2.75638, 50.32409], [2.75598, 50.32395], [2.7559, 50.32392], [2.75577, 50.32389], [2.75545, 50.32384], [2.75523, 50.32382], [2.73785, 50.32343], [2.7368, 50.32338], [2.73613, 50.32332], [2.73589, 50.32329], [2.73527, 50.3232], [2.73463, 50.32312], [2.73421, 50.32305], [2.73343, 50.32287], [2.73194, 50.32237], [2.73176, 50.32231], [2.73163, 50.32229], [2.73155, 50.32228], [2.73149, 50.3223], [2.73143, 50.3223], [2.73136, 50.32229], [2.73126, 50.32232], [2.73115, 50.32236], [2.73097, 50.32245], [2.73082, 50.32253], [2.73035, 50.32275], [2.72522, 50.32592], [2.72401, 50.32666], [2.72326, 50.32712], [2.72315, 50.32719], [2.7231, 50.32723], [2.72305, 50.32725], [2.72293, 50.32732], [2.72028, 50.32898], [2.71787, 50.33046], [2.71773, 50.33055], [2.71767, 50.33064], [2.71763, 50.33066], [2.71763, 50.33068], [2.71761, 50.3307], [2.71755, 50.33072], [2.71752, 50.33072], [2.7175, 50.33071], [2.71734, 50.33079], [2.71721, 50.33087], [2.71675, 50.33115], [2.71629, 50.33143], [2.71452, 50.33253], [2.71379, 50.33299], [2.71319, 50.33337], [2.71243, 50.33384], [2.71175, 50.33427], [2.71073, 50.33489], [2.71004, 50.33533], [2.70749, 50.33692], [2.70699, 50.33724], [2.70601, 50.33785], [2.70558, 50.33812], [2.70509, 50.33843], [2.70445, 50.33882], [2.70403, 50.3391], [2.69759, 50.34314], [2.69451, 50.345], [2.69428, 50.34514], [2.69406, 50.34527], [2.6925, 50.34624], [2.69213, 50.34643], [2.69177, 50.34658], [2.69145, 50.34675], [2.69092, 50.34698], [2.6903, 50.34722], [2.69017, 50.34725], [2.69002, 50.34728], [2.68977, 50.34733], [2.68965, 50.34735], [2.68938, 50.34745], [2.68915, 50.34757], [2.68882, 50.34777], [2.68876, 50.34781], [2.68868, 50.34786], [2.68797, 50.34832], [2.68771, 50.34857], [2.68757, 50.34874], [2.68744, 50.34886], [2.68701, 50.3493], [2.68685, 50.34943], [2.6867, 50.34956], [2.68638, 50.3498], [2.68578, 50.35019], [2.68203, 50.35256], [2.67885, 50.35451], [2.678, 50.35507], [2.67713, 50.35559], [2.67649, 50.35601], [2.67364, 50.35775], [2.67319, 50.35803], [2.67122, 50.35924], [2.66859, 50.36087], [2.66787, 50.3613], [2.66719, 50.3617], [2.66672, 50.36195], [2.66624, 50.36217], [2.666, 50.36226], [2.66567, 50.36239], [2.66522, 50.36254], [2.66474, 50.36269], [2.66522, 50.36254], [2.66567, 50.36239], [2.666, 50.36226], [2.66624, 50.36217], [2.66672, 50.36195], [2.66719, 50.3617], [2.66787, 50.3613], [2.66859, 50.36087], [2.67122, 50.35924], [2.67319, 50.35803], [2.67364, 50.35775], [2.67649, 50.35601], [2.67713, 50.35559], [2.678, 50.35507], [2.67885, 50.35451], [2.68203, 50.35256], [2.68578, 50.35019], [2.68638, 50.3498], [2.6867, 50.34956], [2.68685, 50.34943], [2.68701, 50.3493], [2.68744, 50.34886], [2.68757, 50.34874], [2.68771, 50.34857], [2.68797, 50.34832], [2.68868, 50.34786], [2.68876, 50.34781], [2.68882, 50.34777], [2.68915, 50.34757], [2.68938, 50.34745], [2.68965, 50.34735], [2.68977, 50.34733], [2.69002, 50.34728], [2.69017, 50.34725], [2.6903, 50.34722], [2.69092, 50.34698], [2.69145, 50.34675], [2.69177, 50.34658], [2.69213, 50.34643], [2.6925, 50.34624], [2.69406, 50.34527], [2.69428, 50.34514], [2.69434, 50.34515], [2.69801, 50.34581], [2.69954, 50.34626], [2.70095, 50.34676], [2.70142, 50.34691], [2.70191, 50.34706], [2.70299, 50.34731], [2.70391, 50.34758], [2.70497, 50.34797], [2.70585, 50.34825], [2.70675, 50.3485], [2.7074, 50.34868], [2.70969, 50.34928], [2.71053, 50.34955], [2.71234, 50.35069], [2.71375, 50.35129], [2.71415, 50.35144], [2.71443, 50.35145], [2.71735, 50.35132], [2.71887, 50.35128], [2.7238, 50.35104], [2.72408, 50.35101], [2.72685, 50.3509], [2.72734, 50.35091], [2.72794, 50.35101], [2.72857, 50.35116], [2.73, 50.35147], [2.73065, 50.35159], [2.73157, 50.35169], [2.73243, 50.35179], [2.73427, 50.35198], [2.73573, 50.35216], [2.73662, 50.35234], [2.7367, 50.35236], [2.7369, 50.35241], [2.73733, 50.35254], [2.73775, 50.35265], [2.73851, 50.35286], [2.73927, 50.35306], [2.73976, 50.35313], [2.74094, 50.35328], [2.74136, 50.35334], [2.74169, 50.35339], [2.74234, 50.3535], [2.74398, 50.3538], [2.74551, 50.35405], [2.74822, 50.35438], [2.74829, 50.35439], [2.74837, 50.3544], [2.7488, 50.35445], [2.74979, 50.35456], [2.74999, 50.35458], [2.75086, 50.35469], [2.7514, 50.35481], [2.75206, 50.35501], [2.7522, 50.35505], [2.7523, 50.35508], [2.75243, 50.35509], [2.75256, 50.35509], [2.75394, 50.35475], [2.75404, 50.35468], [2.75406, 50.35465], [2.75427, 50.35468], [2.7545, 50.35471], [2.75486, 50.35476], [2.75539, 50.35486], [2.75692, 50.35524], [2.75707, 50.35528], [2.7572, 50.35531], [2.75769, 50.3554], [2.75802, 50.35543], [2.75823, 50.35544], [2.759, 50.3554], [2.75916, 50.3554], [2.75929, 50.35539], [2.75974, 50.35535], [2.75998, 50.35532], [2.75996, 50.35529], [2.76, 50.35524], [2.76004, 50.35522], [2.76007, 50.35523], [2.7601, 50.35523], [2.76018, 50.35517], [2.76023, 50.35513], [2.76028, 50.3551], [2.76069, 50.35486], [2.76104, 50.35466], [2.76109, 50.35462], [2.76152, 50.35438], [2.76168, 50.35432], [2.76179, 50.35431], [2.76185, 50.3543], [2.76204, 50.35433], [2.76281, 50.3547], [2.76362, 50.35502], [2.76413, 50.35519], [2.76444, 50.35527], [2.7646, 50.35529], [2.76493, 50.35527], [2.76581, 50.35511], [2.76601, 50.35508], [2.76617, 50.35509], [2.76617, 50.35506], [2.76618, 50.35488], [2.76617, 50.35467], [2.76607, 50.35283], [2.76606, 50.3526], [2.76602, 50.35169], [2.76601, 50.35117], [2.76615, 50.35009], [2.76618, 50.34955], [2.76586, 50.34799], [2.76507, 50.34595], [2.76507, 50.34591], [2.76507, 50.34586], [2.76508, 50.34579], [2.76517, 50.34551], [2.76531, 50.34495], [2.76544, 50.34382], [2.76543, 50.34332], [2.76537, 50.34272], [2.76529, 50.34224], [2.76529, 50.34182], [2.76536, 50.34115], [2.76537, 50.34079], [2.76523, 50.33997], [2.76519, 50.33965], [2.7652, 50.33961], [2.76521, 50.3395], [2.7652, 50.33853], [2.76501, 50.33794], [2.76461, 50.33681], [2.76416, 50.33565], [2.76382, 50.33507], [2.76318, 50.33426], [2.76302, 50.334], [2.76283, 50.33334], [2.76253, 50.33165], [2.76254, 50.33143], [2.76266, 50.3306], [2.76293, 50.32956], [2.76308, 50.32914], [2.76358, 50.32812], [2.76374, 50.32765], [2.76381, 50.32722], [2.76392, 50.32702], [2.76401, 50.32708], [2.76626, 50.32802], [2.76766, 50.32858], [2.76865, 50.32894], [2.76932, 50.32916], [2.76962, 50.32933], [2.76969, 50.32939], [2.76915, 50.33003], [2.76903, 50.33022], [2.76906, 50.33029], [2.77061, 50.33118], [2.77115, 50.33147], [2.77219, 50.33176], [2.77222, 50.33185], [2.77217, 50.33212], [2.77209, 50.33242], [2.77204, 50.33276], [2.77186, 50.33359], [2.77191, 50.33332], [2.77193, 50.33329], [2.77196, 50.33309], [2.77204, 50.33276], [2.77209, 50.33242], [2.77217, 50.33212], [2.77222, 50.33185], [2.77221, 50.3318], [2.77219, 50.33176], [2.77197, 50.33169], [2.77115, 50.33147], [2.77061, 50.33118], [2.7694, 50.33049], [2.76936, 50.33046], [2.76913, 50.33035], [2.76906, 50.33029], [2.76903, 50.33022], [2.76915, 50.33003], [2.76935, 50.32981], [2.76938, 50.32977], [2.76956, 50.32955], [2.76962, 50.32948], [2.76969, 50.32939], [2.76962, 50.32933], [2.76932, 50.32916], [2.76865, 50.32894], [2.76766, 50.32858], [2.76626, 50.32802], [2.76597, 50.3279], [2.7653, 50.32762], [2.76401, 50.32708], [2.76392, 50.32702], [2.76389, 50.32706], [2.76381, 50.32722], [2.76374, 50.32765], [2.76358, 50.32812], [2.76308, 50.32914], [2.76293, 50.32956], [2.76266, 50.3306], [2.76254, 50.33143], [2.76253, 50.33165], [2.76283, 50.33334], [2.76302, 50.334], [2.76318, 50.33426], [2.76382, 50.33507], [2.76416, 50.33565], [2.7646, 50.33678], [2.76501, 50.33794], [2.76501, 50.33795], [2.76501, 50.33794], [2.76468, 50.337], [2.7646, 50.33678], [2.76416, 50.33565], [2.76382, 50.33507], [2.76318, 50.33426], [2.76302, 50.334], [2.76283, 50.33334], [2.76253, 50.33165], [2.76254, 50.33143], [2.76266, 50.3306], [2.76293, 50.32956], [2.76308, 50.32914], [2.76358, 50.32812], [2.76374, 50.32765], [2.76381, 50.32722], [2.76389, 50.32706], [2.76392, 50.32702], [2.76401, 50.32708], [2.7653, 50.32762], [2.76597, 50.3279], [2.76626, 50.32802], [2.76766, 50.32858], [2.76865, 50.32894], [2.76932, 50.32916], [2.76962, 50.32933], [2.76969, 50.32939], [2.76973, 50.32944], [2.76997, 50.32968], [2.77011, 50.32982], [2.77021, 50.32988], [2.77045, 50.32999], [2.77065, 50.33005], [2.77086, 50.33008], [2.77098, 50.33008], [2.77142, 50.32994], [2.77214, 50.32966], [2.77235, 50.32958], [2.77244, 50.32955], [2.77291, 50.32938], [2.77378, 50.32907], [2.77385, 50.32904], [2.77418, 50.32891], [2.77464, 50.32869], [2.77473, 50.32864], [2.77488, 50.32855], [2.77504, 50.32847], [2.77515, 50.32837], [2.77518, 50.32833], [2.77522, 50.32829], [2.77523, 50.32826], [2.77526, 50.32823], [2.77529, 50.32821], [2.77533, 50.32819], [2.77543, 50.32817], [2.77548, 50.32818], [2.77554, 50.32819], [2.77563, 50.3282], [2.77569, 50.3282], [2.77586, 50.32819], [2.77605, 50.32815], [2.77656, 50.3281], [2.7768, 50.32807], [2.77695, 50.32803], [2.77733, 50.32795], [2.77765, 50.32785], [2.77777, 50.32788], [2.77793, 50.328], [2.77785, 50.32841], [2.77781, 50.32889], [2.77788, 50.32981], [2.77783, 50.33002], [2.77789, 50.33064], [2.77794, 50.33144], [2.77804, 50.33211], [2.77812, 50.33247], [2.7782, 50.33278], [2.77842, 50.33343], [2.77875, 50.3342], [2.78192, 50.34034], [2.7821, 50.34066], [2.78241, 50.34126], [2.78284, 50.34208], [2.78302, 50.34226], [2.78334, 50.34272], [2.78357, 50.34294], [2.78387, 50.34316], [2.78422, 50.34336], [2.78527, 50.3439], [2.78606, 50.34433], [2.78627, 50.34443], [2.78711, 50.34478], [2.78735, 50.3449], [2.78757, 50.345], [2.78766, 50.34505], [2.78774, 50.34509], [2.78804, 50.34526], [2.78822, 50.34537], [2.7885, 50.34554], [2.78885, 50.34578], [2.78904, 50.34588], [2.78955, 50.34615], [2.7908, 50.3468], [2.79123, 50.34703], [2.79174, 50.34729], [2.79204, 50.3474], [2.79227, 50.34745], [2.79251, 50.34745], [2.79271, 50.34742], [2.79291, 50.34738], [2.79307, 50.34731], [2.79322, 50.34719], [2.79331, 50.34705], [2.79334, 50.34693], [2.79333, 50.34679], [2.79323, 50.34663], [2.79309, 50.3465], [2.79293, 50.34642], [2.79255, 50.34633], [2.7923, 50.34635], [2.7921, 50.34638], [2.7919, 50.34647], [2.79162, 50.34664], [2.79131, 50.34686], [2.78914, 50.34851], [2.78722, 50.3501], [2.7867, 50.35055], [2.78396, 50.35282], [2.77716, 50.35847], [2.77535, 50.35993], [2.77407, 50.36095], [2.76625, 50.36697], [2.76454, 50.36832], [2.76336, 50.36929], [2.76259, 50.36999], [2.76172, 50.37084], [2.76087, 50.37174], [2.76019, 50.37255], [2.75936, 50.37366], [2.75866, 50.37475], [2.75832, 50.37533], [2.75791, 50.37614], [2.75759, 50.37682], [2.7571, 50.37809], [2.75678, 50.37921], [2.75661, 50.37992], [2.75645, 50.38098], [2.75628, 50.38296], [2.75607, 50.39043], [2.75601, 50.39146], [2.75593, 50.39225], [2.75582, 50.39283], [2.75568, 50.39338], [2.75547, 50.39407], [2.75528, 50.39456], [2.75492, 50.3953], [2.75462, 50.39586], [2.7544, 50.39622], [2.75369, 50.39719], [2.7531, 50.3979], [2.75264, 50.39836], [2.7523, 50.39868], [2.75212, 50.39885], [2.75193, 50.39902], [2.75122, 50.39961], [2.75047, 50.40017], [2.74992, 50.40054], [2.74878, 50.40132], [2.73669, 50.40922], [2.73494, 50.41044], [2.7336, 50.41141], [2.73158, 50.41296], [2.73022, 50.41407], [2.7173, 50.42526], [2.711, 50.43097], [2.71001, 50.43192], [2.7094, 50.43252], [2.70757, 50.43445], [2.70575, 50.43656], [2.70493, 50.4376], [2.70496, 50.43767], [2.70484, 50.43785], [2.70396, 50.43913], [2.70382, 50.43938], [2.70374, 50.43956], [2.7037, 50.43967], [2.7037, 50.43979], [2.70377, 50.43996], [2.7039, 50.44007], [2.70408, 50.44018], [2.70431, 50.44022], [2.70442, 50.44023], [2.70466, 50.44021], [2.70478, 50.44018], [2.70492, 50.44012], [2.70506, 50.44003], [2.7052, 50.43989], [2.7061, 50.43888], [2.70631, 50.43869], [2.70671, 50.43822], [2.7071, 50.43777], [2.7073, 50.43753], [2.7072, 50.4374], [2.70719, 50.43734], [2.70764, 50.43685], [2.70782, 50.43673], [2.70798, 50.43668], [2.70825, 50.43636], [2.70823, 50.43629], [2.70846, 50.43604], [2.70887, 50.43537], [2.70891, 50.43526], [2.70892, 50.43509], [2.70888, 50.435], [2.70881, 50.43492], [2.70872, 50.43485], [2.70855, 50.43477], [2.70835, 50.43473], [2.70818, 50.43472], [2.70794, 50.43474], [2.70765, 50.43474], [2.70655, 50.43493], [2.70561, 50.4351], [2.70403, 50.43533], [2.70344, 50.43539], [2.70305, 50.43541], [2.70251, 50.43542], [2.70124, 50.43542], [2.7009, 50.43546], [2.70047, 50.43548], [2.70007, 50.43548], [2.69958, 50.43551], [2.69915, 50.43557], [2.69905, 50.4356], [2.69893, 50.43567], [2.69879, 50.43583], [2.69876, 50.4359], [2.69875, 50.43599], [2.69877, 50.4361], [2.69892, 50.43632], [2.69926, 50.43652], [2.69941, 50.43658], [2.69968, 50.43663], [2.69975, 50.43664], [2.69984, 50.43661], [2.69993, 50.43659], [2.70003, 50.43659], [2.70013, 50.43655], [2.70019, 50.4365], [2.70098, 50.43563], [2.70146, 50.4351], [2.70154, 50.43501], [2.70164, 50.43489], [2.70169, 50.43478], [2.70171, 50.43466], [2.70164, 50.43459], [2.70159, 50.43452], [2.70151, 50.43444], [2.70134, 50.43435], [2.70109, 50.43428], [2.70093, 50.43425], [2.7008, 50.43425], [2.70056, 50.43427], [2.70017, 50.43435], [2.70002, 50.43441], [2.69991, 50.43448], [2.69982, 50.4346], [2.69978, 50.43478], [2.6998, 50.43487], [2.69989, 50.43499], [2.70005, 50.43511], [2.7003, 50.4352], [2.70072, 50.43526], [2.70136, 50.43531], [2.70222, 50.43528], [2.7027, 50.43525], [2.70397, 50.43509], [2.7057, 50.43477], [2.70678, 50.43462], [2.70787, 50.4345], [2.70847, 50.43445], [2.70938, 50.43442], [2.7098, 50.43436], [2.71027, 50.43434], [2.71136, 50.43436], [2.7116, 50.43435], [2.7118, 50.43432], [2.71207, 50.43422], [2.71222, 50.43413], [2.71236, 50.434], [2.71241, 50.43381], [2.71238, 50.43363], [2.71233, 50.43355], [2.71216, 50.43339], [2.71208, 50.43335], [2.71194, 50.43328], [2.7118, 50.43325], [2.71163, 50.43323], [2.71146, 50.43323], [2.71128, 50.43325], [2.71115, 50.43328], [2.71098, 50.43336], [2.71079, 50.43348], [2.71058, 50.43368], [2.71027, 50.43404], [2.71016, 50.43417], [2.70973, 50.43468], [2.70952, 50.43493], [2.70829, 50.43642], [2.7082, 50.43655], [2.70773, 50.43719], [2.7076, 50.43739], [2.70747, 50.43759], [2.70729, 50.43782], [2.70706, 50.43808], [2.70701, 50.43826], [2.70696, 50.43834], [2.70651, 50.43877], [2.70639, 50.43885], [2.70622, 50.43892], [2.70614, 50.43901], [2.70603, 50.43913], [2.70568, 50.43952], [2.70507, 50.44026], [2.70476, 50.44046], [2.7046, 50.44054], [2.70443, 50.44059], [2.70427, 50.44063], [2.70413, 50.44065], [2.70396, 50.44066], [2.7038, 50.44065], [2.70333, 50.44057], [2.70318, 50.44052], [2.70241, 50.44031], [2.70208, 50.44022], [2.70185, 50.44017], [2.70165, 50.44014], [2.70143, 50.44011], [2.70121, 50.44012], [2.70103, 50.44016], [2.70085, 50.44024], [2.70071, 50.44034], [2.7006, 50.44043], [2.70055, 50.44055], [2.70057, 50.44081], [2.70063, 50.44093], [2.70088, 50.44113], [2.7011, 50.44119], [2.70133, 50.44123], [2.70152, 50.44122], [2.70172, 50.4412], [2.70185, 50.44116], [2.70201, 50.44108], [2.70217, 50.44097], [2.70247, 50.44062], [2.70283, 50.4402], [2.70415, 50.43836], [2.70557, 50.43654], [2.70741, 50.43442], [2.70869, 50.43303], [2.71001, 50.43172], [2.71081, 50.43097], [2.71719, 50.42517], [2.73007, 50.41402], [2.73212, 50.41237], [2.73345, 50.41136], [2.7348, 50.41038], [2.73656, 50.40915], [2.73813, 50.40812], [2.74874, 50.40119], [2.74985, 50.40044], [2.75083, 50.39973], [2.75127, 50.39936], [2.75178, 50.39894], [2.75201, 50.39874], [2.75228, 50.39849], [2.75249, 50.39829], [2.75284, 50.39793], [2.7533, 50.3974], [2.75406, 50.3964], [2.75435, 50.39596], [2.75466, 50.39542], [2.75506, 50.3946], [2.75526, 50.39409], [2.75547, 50.39348], [2.75574, 50.3922], [2.75581, 50.39149], [2.75587, 50.39048], [2.75594, 50.38821], [2.75596, 50.3878], [2.75602, 50.38513], [2.75607, 50.38307], [2.75624, 50.38134], [2.75641, 50.38011], [2.7567, 50.3789], [2.75691, 50.37819], [2.75744, 50.37679], [2.75779, 50.37601], [2.75816, 50.37532], [2.75855, 50.37466], [2.7592, 50.37363], [2.75945, 50.37327], [2.76031, 50.37218], [2.76081, 50.37159], [2.76159, 50.37075], [2.76244, 50.36994], [2.76324, 50.36923], [2.7644, 50.36826], [2.76569, 50.36723], [2.77393, 50.36089], [2.77523, 50.35986], [2.77705, 50.35838], [2.78287, 50.35353], [2.78448, 50.35221], [2.78663, 50.35042], [2.78717, 50.34997], [2.78983, 50.34776], [2.79139, 50.34652], [2.79239, 50.34575], [2.79365, 50.34482], [2.79448, 50.3442], [2.79587, 50.34323], [2.79695, 50.3425], [2.79829, 50.34162], [2.79978, 50.34069], [2.80135, 50.33974], [2.80346, 50.33853], [2.80612, 50.33708], [2.80752, 50.33636], [2.80899, 50.33562], [2.81045, 50.33493], [2.81279, 50.33385], [2.81431, 50.33319], [2.81565, 50.33263], [2.81797, 50.3317], [2.82059, 50.3307], [2.82341, 50.32969], [2.82563, 50.32895], [2.82763, 50.32833], [2.82933, 50.32782], [2.83105, 50.32734], [2.83128, 50.32728], [2.83236, 50.32702], [2.83425, 50.32649], [2.83627, 50.32599], [2.83828, 50.32553], [2.84192, 50.32476], [2.84357, 50.32444], [2.84588, 50.32403], [2.84804, 50.32367], [2.8515, 50.32318], [2.85429, 50.32283], [2.85488, 50.32276], [2.85946, 50.32226], [2.86072, 50.32213], [2.87633, 50.32046], [2.87945, 50.32009], [2.88088, 50.3199], [2.8824, 50.31966], [2.88343, 50.31949], [2.88586, 50.31903], [2.88732, 50.3187], [2.88898, 50.31832], [2.8893, 50.31816], [2.89065, 50.31778], [2.89129, 50.31756], [2.89199, 50.31728], [2.89275, 50.31692], [2.89328, 50.3166], [2.89362, 50.31636], [2.89407, 50.31599], [2.89448, 50.31558], [2.89493, 50.31493], [2.89506, 50.31471], [2.89518, 50.31448], [2.89526, 50.31431], [2.89531, 50.3142], [2.89541, 50.31383], [2.89548, 50.31352], [2.89546, 50.31319], [2.89535, 50.31281], [2.89506, 50.31243], [2.89408, 50.31165], [2.89395, 50.31142], [2.89391, 50.31129], [2.89388, 50.31104], [2.89393, 50.31083], [2.89399, 50.31072], [2.89415, 50.31051], [2.8944, 50.31031], [2.89453, 50.31024], [2.89462, 50.3102], [2.89472, 50.31016], [2.89503, 50.31006], [2.89518, 50.31004], [2.89542, 50.31001], [2.89561, 50.31], [2.89584, 50.31001], [2.8961, 50.31004], [2.89635, 50.31011], [2.8967, 50.31026], [2.89703, 50.3105], [2.89715, 50.31065], [2.89725, 50.31082], [2.8973, 50.31104], [2.89739, 50.31173], [2.89749, 50.31201], [2.89771, 50.31235], [2.89816, 50.31295], [2.89995, 50.31451], [2.90048, 50.31497], [2.904, 50.31806], [2.90479, 50.31872], [2.90704, 50.32069], [2.90756, 50.32115], [2.90825, 50.32177], [2.90869, 50.32215], [2.9092, 50.3226], [2.90983, 50.32319], [2.9104, 50.32369], [2.91156, 50.32469], [2.9122, 50.32522], [2.91253, 50.32553], [2.91317, 50.32609], [2.9135, 50.32642], [2.91421, 50.32701], [2.91478, 50.32752], [2.91484, 50.32758], [2.91549, 50.32815], [2.91763, 50.33008], [2.9179, 50.33032], [2.91878, 50.33103], [2.92004, 50.33205], [2.92046, 50.33234], [2.92097, 50.33261], [2.92145, 50.33283], [2.92171, 50.33294], [2.92194, 50.333], [2.92272, 50.33314], [2.92305, 50.33323], [2.92327, 50.33335], [2.92338, 50.33345], [2.92353, 50.33355], [2.92365, 50.3336], [2.92378, 50.33363], [2.92388, 50.33363], [2.92408, 50.33367], [2.92416, 50.3337], [2.92423, 50.33375], [2.92427, 50.3338], [2.9243, 50.33385], [2.92432, 50.33395], [2.92428, 50.33405], [2.92424, 50.3341], [2.92414, 50.33417], [2.92405, 50.33421], [2.92384, 50.33424], [2.92374, 50.33423], [2.92355, 50.33417], [2.92347, 50.33412], [2.92342, 50.33407], [2.92316, 50.33395], [2.92296, 50.33391], [2.92101, 50.33376], [2.92071, 50.3337], [2.92021, 50.33356], [2.92004, 50.33355], [2.91994, 50.3336], [2.91982, 50.33362], [2.9197, 50.33363], [2.91958, 50.33362], [2.9195, 50.33359], [2.91942, 50.33356], [2.91924, 50.33354], [2.91904, 50.33354], [2.91858, 50.33359], [2.9176, 50.33352], [2.91427, 50.33334], [2.91327, 50.33326], [2.91283, 50.33323], [2.90169, 50.33237], [2.90088, 50.33232], [2.90025, 50.3323], [2.89979, 50.3323], [2.89935, 50.33232], [2.8987, 50.33238], [2.89811, 50.33246], [2.8975, 50.33256], [2.89657, 50.33277], [2.89517, 50.33313], [2.89468, 50.33325], [2.8939, 50.33339], [2.89344, 50.33345], [2.89258, 50.33353], [2.89228, 50.33354], [2.89182, 50.33358], [2.89061, 50.33359], [2.8882, 50.3335], [2.88812, 50.33349], [2.88806, 50.3335], [2.88732, 50.33342], [2.88704, 50.33337], [2.88652, 50.33323], [2.88632, 50.33317], [2.88588, 50.333], [2.88541, 50.3328], [2.88446, 50.33242], [2.88351, 50.33206], [2.88167, 50.3313], [2.88111, 50.33111], [2.88073, 50.33104], [2.88045, 50.33106], [2.88019, 50.33111], [2.88007, 50.33114], [2.87976, 50.33129], [2.87955, 50.33139], [2.87907, 50.33162], [2.87853, 50.33182], [2.87812, 50.33194], [2.87612, 50.3324], [2.8759, 50.33245], [2.87477, 50.33271], [2.87143, 50.33348], [2.87015, 50.33378], [2.86301, 50.33538], [2.86049, 50.33598], [2.8601, 50.33616], [2.8599, 50.3363], [2.85901, 50.33692], [2.85854, 50.33717], [2.85847, 50.33721], [2.85717, 50.33784], [2.85681, 50.33798], [2.85578, 50.33833], [2.85576, 50.33833], [2.85535, 50.33846], [2.85511, 50.33852], [2.85501, 50.33853], [2.85447, 50.33839], [2.85428, 50.33834], [2.85362, 50.33815], [2.85347, 50.33813], [2.85325, 50.33814], [2.8529, 50.33821], [2.85268, 50.33828], [2.85257, 50.33832], [2.85227, 50.33848], [2.85166, 50.339], [2.8516, 50.33905], [2.85149, 50.33915], [2.85136, 50.33921], [2.85131, 50.33924], [2.85133, 50.33926], [2.85133, 50.33929], [2.85131, 50.33931], [2.85124, 50.33933], [2.8512, 50.33933], [2.85119, 50.33937], [2.85114, 50.33949], [2.85083, 50.33979], [2.8508, 50.33982], [2.85077, 50.33985], [2.85072, 50.3399], [2.8501, 50.3405], [2.84999, 50.3406], [2.84995, 50.34063], [2.8497, 50.34088], [2.8494, 50.34113], [2.84845, 50.34185], [2.84827, 50.34202], [2.84823, 50.34209], [2.84813, 50.34206], [2.84801, 50.34207], [2.84777, 50.34211], [2.84773, 50.34212], [2.84763, 50.34214], [2.84658, 50.34235], [2.84649, 50.34237], [2.8464, 50.34239], [2.84616, 50.34244], [2.84583, 50.34253], [2.84578, 50.34255], [2.84547, 50.34265], [2.84523, 50.34273], [2.84514, 50.34277], [2.8449, 50.34285], [2.84472, 50.34291], [2.84456, 50.34295], [2.84445, 50.34297], [2.8442, 50.34303], [2.84393, 50.34307], [2.84311, 50.3432], [2.84292, 50.34323], [2.84252, 50.3433], [2.84194, 50.34348], [2.8418, 50.34353], [2.84151, 50.3437], [2.84128, 50.34386], [2.84108, 50.34405], [2.84012, 50.34514], [2.84001, 50.34524], [2.83989, 50.34534], [2.83967, 50.34549], [2.83945, 50.3456], [2.83909, 50.34573], [2.83879, 50.34581], [2.83865, 50.34583], [2.83847, 50.34586], [2.83833, 50.34587], [2.83753, 50.3459], [2.83739, 50.34591], [2.83718, 50.34592], [2.837, 50.34592], [2.83689, 50.34592], [2.83615, 50.34594], [2.83602, 50.34595], [2.83568, 50.34596], [2.83291, 50.34606], [2.83264, 50.34608], [2.83159, 50.34617], [2.83044, 50.34627], [2.82944, 50.34639], [2.82882, 50.34653], [2.82786, 50.34683], [2.82763, 50.3469], [2.82581, 50.34748], [2.82364, 50.34811], [2.82266, 50.34838], [2.82224, 50.3485], [2.82035, 50.34904], [2.81982, 50.3492], [2.81975, 50.34921], [2.81738, 50.34989], [2.81662, 50.35006], [2.81415, 50.35051], [2.81381, 50.35057], [2.81313, 50.35071], [2.81278, 50.3508], [2.81245, 50.35089], [2.81222, 50.35098], [2.81198, 50.35105], [2.81177, 50.35108], [2.81173, 50.35109], [2.80966, 50.35164], [2.80878, 50.35186], [2.80816, 50.35202], [2.80782, 50.35211], [2.80664, 50.35239], [2.80582, 50.35262], [2.80465, 50.35299], [2.80424, 50.35313], [2.8032, 50.35346], [2.80292, 50.35355], [2.80222, 50.35376], [2.80215, 50.35378], [2.80198, 50.35383], [2.80183, 50.35389], [2.80178, 50.35391], [2.8017, 50.35399], [2.80167, 50.35401], [2.80164, 50.35405], [2.80163, 50.35406], [2.80158, 50.35409], [2.80155, 50.35409], [2.80152, 50.35408], [2.80149, 50.35404], [2.8015, 50.35402], [2.80147, 50.35401], [2.8013, 50.35393], [2.80052, 50.35343], [2.80036, 50.35331], [2.80034, 50.3533], [2.80028, 50.35325], [2.80021, 50.35318], [2.8001, 50.35299], [2.79997, 50.35259], [2.79993, 50.35249], [2.79986, 50.35221], [2.79982, 50.35206], [2.79964, 50.35137], [2.79964, 50.35135], [2.79962, 50.3513], [2.79959, 50.35121], [2.79939, 50.35045], [2.79921, 50.34993], [2.79919, 50.34985], [2.79915, 50.34962], [2.79889, 50.34881], [2.79812, 50.34707], [2.7979, 50.34656], [2.79771, 50.34613], [2.79757, 50.34573], [2.79738, 50.34527], [2.79736, 50.34523], [2.79658, 50.34321], [2.79634, 50.34258], [2.79596, 50.34162], [2.79553, 50.34058], [2.79524, 50.3397], [2.79521, 50.3396], [2.79498, 50.33882], [2.79404, 50.33915], [2.79232, 50.33974], [2.79404, 50.33915], [2.79498, 50.33882], [2.79521, 50.3396], [2.79524, 50.3397], [2.79553, 50.34058], [2.79596, 50.34162], [2.79634, 50.34258], [2.79658, 50.34321], [2.79736, 50.34523], [2.79738, 50.34527], [2.79751, 50.3452], [2.79753, 50.34515], [2.79752, 50.3451], [2.79719, 50.3442], [2.79707, 50.34382], [2.79685, 50.34323], [2.79682, 50.34305], [2.7975, 50.34258], [2.79759, 50.34252], [2.79843, 50.34203], [2.79943, 50.34137], [2.79963, 50.34125], [2.8012, 50.3403], [2.80172, 50.34], [2.8018, 50.33998], [2.80188, 50.34001], [2.80194, 50.34008], [2.80239, 50.34093], [2.80377, 50.343], [2.80423, 50.34358], [2.80495, 50.34444], [2.80543, 50.34508], [2.80609, 50.3461], [2.80543, 50.34508], [2.80495, 50.34444], [2.80423, 50.34358], [2.80377, 50.343], [2.80423, 50.34358], [2.80495, 50.34444], [2.80543, 50.34508], [2.80628, 50.34639], [2.80668, 50.34683], [2.80725, 50.34808], [2.80767, 50.34885], [2.80784, 50.34941], [2.80854, 50.35125], [2.80857, 50.35139], [2.80878, 50.35186], [2.80816, 50.35202], [2.80782, 50.35211], [2.80664, 50.35239], [2.80582, 50.35262], [2.80465, 50.35299], [2.80424, 50.35313], [2.8032, 50.35346], [2.80292, 50.35355], [2.80222, 50.35376], [2.80215, 50.35378], [2.80198, 50.35383], [2.80183, 50.35389], [2.80178, 50.35391], [2.8017, 50.35399], [2.80167, 50.35401], [2.80164, 50.35405], [2.80163, 50.35406], [2.80158, 50.35409], [2.80155, 50.35409], [2.80154, 50.3541], [2.8015, 50.35416], [2.80147, 50.35419], [2.80137, 50.35427], [2.8012, 50.35441], [2.8011, 50.35447], [2.80102, 50.35451], [2.80077, 50.35458], [2.80046, 50.35461], [2.80037, 50.35462], [2.80032, 50.35462], [2.8, 50.35463], [2.79968, 50.35466], [2.79943, 50.35468], [2.79788, 50.35485], [2.79777, 50.35486], [2.79767, 50.35487], [2.79664, 50.35499], [2.79557, 50.3551], [2.79524, 50.35516], [2.79477, 50.35526], [2.79408, 50.35541], [2.79379, 50.35545], [2.79363, 50.35545], [2.79175, 50.35555], [2.79165, 50.35556], [2.79128, 50.35558], [2.79076, 50.3556], [2.79036, 50.35562], [2.7897, 50.35565], [2.78962, 50.35565], [2.78953, 50.35546], [2.78912, 50.35463], [2.78899, 50.35439], [2.7888, 50.35403], [2.7886, 50.35366], [2.78847, 50.35322], [2.78839, 50.35275], [2.78828, 50.35229], [2.78818, 50.35206], [2.78802, 50.3518], [2.78786, 50.35165], [2.78765, 50.35152], [2.78753, 50.35148], [2.78742, 50.35149], [2.7873, 50.35148], [2.78716, 50.35144], [2.78705, 50.35137], [2.78699, 50.35131], [2.78696, 50.35124], [2.78695, 50.35117], [2.78698, 50.35108], [2.78704, 50.35101], [2.78714, 50.35095], [2.78714, 50.35088], [2.78699, 50.35052], [2.78519, 50.3471], [2.78484, 50.34641], [2.78462, 50.34599], [2.78436, 50.34545], [2.78386, 50.34442], [2.78345, 50.34357], [2.78323, 50.34311], [2.78269, 50.34208], [2.78237, 50.34147], [2.78219, 50.34113], [2.78143, 50.33979], [2.78105, 50.33906], [2.7807, 50.33839], [2.77909, 50.33528], [2.77858, 50.33425], [2.7784, 50.33384], [2.77825, 50.33344], [2.77801, 50.33265], [2.77793, 50.33231], [2.77787, 50.33198], [2.77782, 50.33163], [2.77774, 50.33143], [2.77763, 50.3312], [2.77745, 50.33104], [2.77735, 50.33098], [2.77697, 50.33085], [2.77682, 50.33078], [2.77677, 50.33075], [2.77676, 50.33082], [2.77677, 50.33085], [2.7768, 50.3309], [2.77701, 50.33129], [2.77702, 50.33132], [2.77789, 50.333], [2.778, 50.33334], [2.77808, 50.33351], [2.77818, 50.3339], [2.77941, 50.33632], [2.78013, 50.33765], [2.78018, 50.33781], [2.78062, 50.3386], [2.78176, 50.3409], [2.78175, 50.34098], [2.78163, 50.34115], [2.78146, 50.34127], [2.78113, 50.34145], [2.78108, 50.34153], [2.78109, 50.34166], [2.78118, 50.34182], [2.78109, 50.34166], [2.78108, 50.34153], [2.78113, 50.34145], [2.78146, 50.34127], [2.78163, 50.34115], [2.78175, 50.34098], [2.78176, 50.3409], [2.78062, 50.3386], [2.78018, 50.33781], [2.78012, 50.33789], [2.77965, 50.3383], [2.77923, 50.33875], [2.77829, 50.33952], [2.77814, 50.33958], [2.77805, 50.33958], [2.77691, 50.33949], [2.77684, 50.3395], [2.77676, 50.33955], [2.77673, 50.33959], [2.77563, 50.34291], [2.77518, 50.34437], [2.77491, 50.34557], [2.77483, 50.34596], [2.77475, 50.34672], [2.7747, 50.34803], [2.7745, 50.34962], [2.77448, 50.35054], [2.77453, 50.3511], [2.77452, 50.35135], [2.7745, 50.35152], [2.77441, 50.3517], [2.77434, 50.35186], [2.77428, 50.35219], [2.77413, 50.35274], [2.77409, 50.35299], [2.77407, 50.35358], [2.77428, 50.35467], [2.7743, 50.35473], [2.77463, 50.35475], [2.7751, 50.35479], [2.77524, 50.35479], [2.77583, 50.35485], [2.776, 50.35487], [2.77616, 50.35488], [2.77645, 50.35492], [2.77708, 50.35499], [2.77792, 50.35502], [2.77811, 50.35504], [2.77845, 50.35504], [2.77886, 50.35503], [2.78022, 50.35504], [2.78069, 50.35504], [2.78166, 50.35504], [2.78302, 50.35504], [2.78359, 50.35504], [2.78424, 50.35503], [2.78479, 50.35503], [2.78592, 50.35504], [2.78633, 50.35506], [2.78653, 50.35509], [2.78692, 50.35516], [2.78745, 50.35525], [2.78793, 50.35534], [2.78954, 50.35564], [2.78962, 50.35565], [2.7897, 50.35565], [2.79036, 50.35562], [2.79076, 50.3556], [2.79128, 50.35558], [2.79165, 50.35556], [2.79175, 50.35555], [2.79363, 50.35545], [2.79379, 50.35545], [2.79408, 50.35541], [2.79477, 50.35526], [2.79524, 50.35516], [2.79557, 50.3551], [2.79664, 50.35499], [2.79767, 50.35487], [2.79777, 50.35486], [2.79788, 50.35485], [2.79943, 50.35468], [2.79968, 50.35466], [2.8, 50.35463], [2.80032, 50.35462], [2.80037, 50.35462], [2.80046, 50.35461], [2.80077, 50.35458], [2.80102, 50.35451], [2.8011, 50.35447], [2.8012, 50.35441], [2.80137, 50.35427], [2.80147, 50.35419], [2.8015, 50.35416], [2.80154, 50.3541], [2.80155, 50.35409], [2.80152, 50.35408], [2.80149, 50.35404], [2.8015, 50.35402], [2.80152, 50.35401], [2.80154, 50.354], [2.80156, 50.35399], [2.80161, 50.35398], [2.80169, 50.35394], [2.80178, 50.35391], [2.80183, 50.35389], [2.80198, 50.35383], [2.80215, 50.35378], [2.80222, 50.35376], [2.80292, 50.35355], [2.80296, 50.3536], [2.80343, 50.35432], [2.80353, 50.35444], [2.80365, 50.35446], [2.80402, 50.3546], [2.80422, 50.35471], [2.80439, 50.35484], [2.80449, 50.35496], [2.80465, 50.35522], [2.80479, 50.35533], [2.80506, 50.35541], [2.80563, 50.35555], [2.80674, 50.35579], [2.80716, 50.35585], [2.80776, 50.35594], [2.80779, 50.35595], [2.80833, 50.35602], [2.80922, 50.35605], [2.81016, 50.35615], [2.81028, 50.35615], [2.81033, 50.35623], [2.81082, 50.35711], [2.811, 50.35763], [2.81115, 50.35811], [2.8113, 50.35856], [2.81143, 50.35885], [2.81319, 50.35785], [2.81143, 50.35885], [2.81156, 50.3592], [2.81159, 50.35948], [2.81157, 50.35971], [2.81149, 50.35983], [2.81154, 50.35986], [2.81169, 50.35986], [2.81203, 50.35981], [2.81247, 50.35982], [2.81325, 50.35995], [2.8135, 50.36001], [2.81361, 50.36002], [2.81398, 50.35993], [2.8145, 50.3597], [2.81463, 50.35969], [2.81537, 50.35978], [2.81629, 50.36009], [2.81537, 50.35978], [2.81463, 50.35969], [2.8145, 50.3597], [2.81398, 50.35993], [2.81361, 50.36002], [2.8135, 50.36001], [2.81325, 50.35995], [2.81247, 50.35982], [2.81203, 50.35981], [2.81169, 50.35986], [2.81154, 50.35986], [2.81149, 50.35983], [2.81145, 50.35985], [2.81127, 50.35992], [2.811, 50.35998], [2.81076, 50.36], [2.81016, 50.36002], [2.80995, 50.36002], [2.80974, 50.36], [2.80956, 50.35995], [2.80944, 50.35992], [2.80658, 50.35913], [2.80581, 50.3588], [2.80541, 50.35854], [2.80494, 50.35814], [2.80422, 50.3574], [2.80399, 50.35717], [2.80386, 50.35704], [2.80343, 50.35663], [2.80304, 50.35609], [2.8029, 50.3559], [2.80289, 50.35588], [2.80273, 50.35561], [2.80258, 50.3555], [2.80227, 50.35535], [2.80182, 50.35506], [2.80159, 50.35474], [2.80156, 50.35465], [2.80158, 50.3546], [2.80161, 50.35457], [2.80163, 50.35455], [2.80166, 50.35448], [2.80166, 50.35439], [2.80162, 50.35431], [2.8015, 50.35421], [2.80147, 50.35419], [2.80137, 50.35427], [2.8012, 50.35441], [2.8011, 50.35447], [2.80102, 50.35451], [2.80077, 50.35458], [2.80046, 50.35461], [2.80037, 50.35462], [2.80032, 50.35462], [2.8, 50.35463], [2.79968, 50.35466], [2.79943, 50.35468], [2.79788, 50.35485], [2.79777, 50.35486], [2.79767, 50.35487], [2.79664, 50.35499], [2.79557, 50.3551], [2.79524, 50.35516], [2.79477, 50.35526], [2.79408, 50.35541], [2.79379, 50.35545], [2.79363, 50.35545], [2.79175, 50.35555], [2.79165, 50.35556], [2.79128, 50.35558], [2.79076, 50.3556], [2.79036, 50.35562], [2.7897, 50.35565], [2.78962, 50.35565], [2.78954, 50.35564], [2.78793, 50.35534], [2.78745, 50.35525], [2.78692, 50.35516], [2.78653, 50.35509], [2.78633, 50.35506], [2.78592, 50.35504], [2.78479, 50.35503], [2.78424, 50.35503], [2.78359, 50.35504], [2.78302, 50.35504], [2.78166, 50.35504], [2.78069, 50.35504], [2.78022, 50.35504], [2.77886, 50.35503], [2.77845, 50.35504], [2.77811, 50.35504], [2.77791, 50.35507], [2.77715, 50.35507], [2.77637, 50.35499], [2.77606, 50.35495], [2.77581, 50.35492], [2.7752, 50.35483], [2.7751, 50.35479], [2.77463, 50.35475], [2.7743, 50.35473], [2.77404, 50.35474], [2.7737, 50.35476], [2.77292, 50.35479], [2.77182, 50.35486], [2.77086, 50.35491], [2.77017, 50.35494], [2.76987, 50.35498], [2.76978, 50.35499], [2.76952, 50.35504], [2.76901, 50.3552], [2.7683, 50.35549], [2.76819, 50.35552], [2.76804, 50.35554], [2.76781, 50.35554], [2.76758, 50.35549], [2.76675, 50.35521], [2.76631, 50.35511], [2.76617, 50.35509], [2.76617, 50.35506], [2.76618, 50.35488], [2.76617, 50.35467], [2.76607, 50.35283], [2.76606, 50.3526], [2.76602, 50.35169], [2.76601, 50.35117], [2.76615, 50.35009], [2.76618, 50.34955], [2.76586, 50.34799], [2.76507, 50.34595], [2.76507, 50.34591], [2.76507, 50.34586], [2.76508, 50.34579], [2.76517, 50.34551], [2.76531, 50.34495], [2.76544, 50.34382], [2.76543, 50.34332], [2.76537, 50.34272], [2.76529, 50.34224], [2.76529, 50.34182], [2.76536, 50.34115], [2.76537, 50.34079], [2.76523, 50.33997], [2.76519, 50.33965], [2.7652, 50.33961], [2.76521, 50.3395], [2.7652, 50.33853], [2.76501, 50.33794], [2.76488, 50.33759], [2.7646, 50.33678], [2.76416, 50.33565], [2.76382, 50.33507], [2.76318, 50.33426], [2.76302, 50.334], [2.76283, 50.33334], [2.76253, 50.33165], [2.76254, 50.33143], [2.76266, 50.3306], [2.76293, 50.32956], [2.76308, 50.32914], [2.76358, 50.32812], [2.76374, 50.32765], [2.76381, 50.32722], [2.76389, 50.32706], [2.76392, 50.32702], [2.76385, 50.32699], [2.76365, 50.32688], [2.76095, 50.325], [2.76003, 50.32455], [2.75954, 50.32435], [2.75944, 50.3243], [2.75932, 50.32426], [2.7592, 50.32425], [2.75911, 50.32427], [2.75899, 50.32434], [2.75874, 50.32447], [2.75854, 50.32455], [2.7584, 50.32457], [2.75813, 50.32458], [2.75795, 50.32456], [2.75777, 50.32453], [2.75744, 50.32448], [2.7572, 50.32443], [2.7569, 50.32434], [2.75669, 50.32424], [2.75659, 50.32417], [2.75638, 50.32409], [2.75598, 50.32395], [2.7559, 50.32392], [2.75577, 50.32389], [2.75545, 50.32384], [2.75523, 50.32382], [2.73785, 50.32343], [2.7368, 50.32338], [2.73613, 50.32332], [2.73589, 50.32329], [2.73527, 50.3232], [2.73463, 50.32312], [2.73421, 50.32305], [2.73343, 50.32287], [2.73194, 50.32237], [2.73176, 50.32231], [2.73163, 50.32229], [2.73155, 50.32228], [2.73149, 50.3223], [2.73143, 50.3223], [2.73136, 50.32229], [2.73126, 50.32232], [2.73115, 50.32236], [2.73097, 50.32245], [2.73082, 50.32253], [2.73035, 50.32275], [2.72522, 50.32592], [2.72401, 50.32666], [2.72326, 50.32712], [2.72315, 50.32719], [2.7231, 50.32723], [2.72305, 50.32725], [2.72293, 50.32732], [2.72028, 50.32898], [2.71787, 50.33046], [2.71773, 50.33055], [2.71767, 50.33064], [2.71763, 50.33066], [2.71763, 50.33068], [2.71761, 50.3307], [2.71755, 50.33072], [2.71752, 50.33072], [2.7175, 50.33071], [2.71748, 50.3307], [2.71746, 50.33069], [2.71745, 50.33067], [2.71745, 50.33065], [2.71745, 50.33064], [2.71742, 50.33062], [2.71732, 50.33056], [2.71713, 50.33048], [2.71677, 50.33032], [2.71618, 50.32998], [2.7161, 50.32992], [2.71597, 50.32985], [2.71518, 50.32939], [2.71448, 50.32902], [2.71426, 50.32892], [2.71398, 50.32878], [2.71469, 50.32831], [2.71487, 50.32822], [2.71508, 50.32818], [2.7152, 50.32818], [2.71534, 50.32809], [2.71561, 50.328], [2.71574, 50.32793], [2.71581, 50.32784], [2.71574, 50.32793], [2.71561, 50.328], [2.71534, 50.32809], [2.7152, 50.32818], [2.71508, 50.32818], [2.71487, 50.32822], [2.71469, 50.32831], [2.71398, 50.32878], [2.71426, 50.32892], [2.71448, 50.32902], [2.71518, 50.32939], [2.71597, 50.32985], [2.7161, 50.32992], [2.71618, 50.32998], [2.71677, 50.33032], [2.71713, 50.33048], [2.71732, 50.33056], [2.71744, 50.33058], [2.71751, 50.33058], [2.71756, 50.3306], [2.71758, 50.3306], [2.7176, 50.33061], [2.71763, 50.33064], [2.71763, 50.33066], [2.71763, 50.33068], [2.71765, 50.33072], [2.71768, 50.33079], [2.71776, 50.33089], [2.71837, 50.3313], [2.7201, 50.33267], [2.72046, 50.333], [2.72201, 50.33431], [2.72283, 50.33486], [2.72353, 50.33523], [2.72453, 50.33565], [2.72567, 50.33608], [2.72629, 50.33634], [2.72675, 50.33658], [2.72726, 50.33688], [2.72765, 50.33714], [2.73021, 50.33878], [2.73077, 50.33914], [2.73118, 50.33934], [2.73149, 50.3395], [2.73217, 50.33975], [2.73305, 50.34002], [2.7337, 50.34029], [2.73391, 50.34039], [2.73401, 50.34044], [2.73449, 50.34073], [2.73595, 50.34156], [2.73681, 50.34208], [2.73689, 50.34213], [2.73739, 50.34241], [2.73833, 50.34302], [2.73919, 50.34359], [2.73988, 50.34404], [2.74038, 50.34433], [2.74137, 50.34489], [2.74195, 50.34527], [2.74511, 50.3473], [2.74522, 50.34738], [2.74602, 50.34803], [2.74662, 50.34853], [2.74686, 50.34873], [2.74769, 50.34941], [2.74815, 50.34982], [2.74894, 50.35059], [2.74917, 50.3508], [2.74928, 50.35085], [2.74936, 50.35087], [2.74931, 50.35103], [2.74939, 50.35106], [2.74951, 50.35115], [2.74957, 50.35122], [2.75012, 50.352], [2.75027, 50.35223], [2.7504, 50.35242], [2.75092, 50.3529], [2.75129, 50.35321], [2.75161, 50.35344], [2.75243, 50.354], [2.75281, 50.35423], [2.75314, 50.3544], [2.7535, 50.35452], [2.75385, 50.35461], [2.75406, 50.35465], [2.75427, 50.35468], [2.7545, 50.35471], [2.75486, 50.35476], [2.75539, 50.35486], [2.75692, 50.35524], [2.75707, 50.35528], [2.7572, 50.35531], [2.75769, 50.3554], [2.75802, 50.35543], [2.75823, 50.35544], [2.759, 50.3554], [2.75916, 50.3554], [2.75929, 50.35539], [2.75974, 50.35535], [2.75998, 50.35532], [2.75996, 50.35529], [2.76, 50.35524], [2.76004, 50.35522], [2.76007, 50.35523], [2.7601, 50.35523], [2.76018, 50.35517], [2.76023, 50.35513], [2.76028, 50.3551], [2.76069, 50.35486], [2.76104, 50.35466], [2.76109, 50.35462], [2.76152, 50.35438], [2.76168, 50.35432], [2.76179, 50.35431], [2.76185, 50.3543], [2.76204, 50.35433], [2.76281, 50.3547], [2.76362, 50.35502], [2.76413, 50.35519], [2.76444, 50.35527], [2.7646, 50.35529], [2.76493, 50.35527], [2.76581, 50.35511], [2.76601, 50.35508], [2.76617, 50.35509], [2.76631, 50.35511], [2.76675, 50.35521], [2.76758, 50.35549], [2.76781, 50.35554], [2.76804, 50.35554], [2.76819, 50.35552], [2.7683, 50.35549], [2.76901, 50.3552], [2.76952, 50.35504], [2.76978, 50.35499], [2.76987, 50.35498], [2.77017, 50.35494], [2.77086, 50.35491], [2.77182, 50.35486], [2.77292, 50.35479], [2.7737, 50.35476], [2.77404, 50.35474], [2.7743, 50.35473], [2.77463, 50.35475], [2.7751, 50.35479], [2.77524, 50.35479], [2.77583, 50.35485], [2.776, 50.35487], [2.77616, 50.35488], [2.77645, 50.35492], [2.77708, 50.35499], [2.77792, 50.35502], [2.77811, 50.35504], [2.77845, 50.35504], [2.77886, 50.35503], [2.78022, 50.35504], [2.78069, 50.35504], [2.78166, 50.35504], [2.78302, 50.35504], [2.78359, 50.35504], [2.78424, 50.35503], [2.78479, 50.35503], [2.78592, 50.35504], [2.78633, 50.35506], [2.78653, 50.35509], [2.78692, 50.35516], [2.78745, 50.35525], [2.78793, 50.35534], [2.78954, 50.35564], [2.78962, 50.35565], [2.7897, 50.35565], [2.79036, 50.35562], [2.79076, 50.3556], [2.79128, 50.35558], [2.79165, 50.35556], [2.79175, 50.35555], [2.79363, 50.35545], [2.79379, 50.35545], [2.79408, 50.35541], [2.79477, 50.35526], [2.79524, 50.35516], [2.79557, 50.3551], [2.79664, 50.35499], [2.79767, 50.35487], [2.79777, 50.35486], [2.79788, 50.35485], [2.79943, 50.35468], [2.79968, 50.35466], [2.8, 50.35463], [2.80032, 50.35462], [2.80037, 50.35462], [2.80046, 50.35461], [2.80077, 50.35458], [2.80102, 50.35451], [2.8011, 50.35447], [2.8012, 50.35441], [2.80137, 50.35427], [2.80147, 50.35419], [2.8015, 50.35416], [2.80154, 50.3541], [2.80155, 50.35409], [2.80152, 50.35408], [2.80149, 50.35404], [2.8015, 50.35402], [2.80152, 50.35401], [2.80154, 50.354], [2.80156, 50.35399], [2.80161, 50.35398], [2.80169, 50.35394], [2.80178, 50.35391], [2.80183, 50.35389], [2.80198, 50.35383], [2.80215, 50.35378], [2.80222, 50.35376], [2.80292, 50.35355], [2.8032, 50.35346], [2.80424, 50.35313], [2.80465, 50.35299], [2.80582, 50.35262], [2.80664, 50.35239], [2.80782, 50.35211], [2.80816, 50.35202], [2.80878, 50.35186], [2.80966, 50.35164], [2.81173, 50.35109], [2.81177, 50.35108], [2.81193, 50.35102], [2.81221, 50.35094], [2.81245, 50.35089], [2.81278, 50.3508], [2.81313, 50.35071], [2.81381, 50.35057], [2.81415, 50.35051], [2.81662, 50.35006], [2.81738, 50.34989], [2.81975, 50.34921], [2.81979, 50.34924], [2.81991, 50.34938], [2.81999, 50.34953], [2.82005, 50.34975], [2.82009, 50.35003], [2.82021, 50.35148], [2.82026, 50.35167], [2.82034, 50.35179], [2.82047, 50.35191], [2.82087, 50.35212], [2.82121, 50.35226], [2.82159, 50.35242], [2.82217, 50.35264], [2.82259, 50.35282], [2.82376, 50.35316], [2.82428, 50.35339], [2.82484, 50.35367], [2.82504, 50.35381], [2.82519, 50.35392], [2.82521, 50.35377], [2.82528, 50.35363], [2.8253, 50.35348], [2.8253, 50.35328], [2.82486, 50.35264], [2.82484, 50.35223], [2.82477, 50.35213], [2.82447, 50.35186], [2.82416, 50.35152], [2.82415, 50.35142], [2.82418, 50.35133], [2.82448, 50.35102], [2.82476, 50.35077], [2.82515, 50.3505], [2.82516, 50.35049], [2.82515, 50.3505], [2.82476, 50.35077], [2.82448, 50.35102], [2.82418, 50.35133], [2.82415, 50.35142], [2.82416, 50.35152], [2.82447, 50.35186], [2.82477, 50.35213], [2.82484, 50.35223], [2.82486, 50.35264], [2.8253, 50.35328], [2.8253, 50.35348], [2.82528, 50.35363], [2.82521, 50.35377], [2.82519, 50.35392], [2.82504, 50.35381], [2.82484, 50.35367], [2.82428, 50.35339], [2.82376, 50.35316], [2.82259, 50.35282], [2.82217, 50.35264], [2.82159, 50.35242], [2.82121, 50.35226], [2.82087, 50.35212], [2.82047, 50.35191], [2.82034, 50.35179], [2.82026, 50.35167], [2.82021, 50.35148], [2.82009, 50.35003], [2.82005, 50.34975], [2.81999, 50.34953], [2.81991, 50.34938], [2.81979, 50.34924], [2.81975, 50.34921], [2.81982, 50.3492], [2.82035, 50.34904], [2.82224, 50.3485], [2.82266, 50.34838], [2.82364, 50.34811], [2.82581, 50.34748], [2.82763, 50.3469], [2.82786, 50.34683], [2.82783, 50.34672], [2.82756, 50.34556], [2.82724, 50.3444], [2.82814, 50.34264], [2.82951, 50.33997], [2.82979, 50.33937], [2.82965, 50.33936], [2.82871, 50.33926], [2.82787, 50.33914], [2.82633, 50.33883], [2.82555, 50.33864], [2.82539, 50.33859], [2.82217, 50.33686], [2.82163, 50.33657], [2.82158, 50.3365], [2.82158, 50.33647], [2.82162, 50.33643], [2.83062, 50.3306], [2.83072, 50.33054], [2.8308, 50.33053], [2.83091, 50.33055], [2.83104, 50.33063], [2.83116, 50.33071], [2.83122, 50.33068], [2.83089, 50.33037], [2.83026, 50.32975], [2.83014, 50.32964], [2.82876, 50.32828], [2.82838, 50.32793], [2.82837, 50.32792], [2.82796, 50.32749], [2.82715, 50.32672], [2.82685, 50.32649], [2.82621, 50.32607], [2.82592, 50.32587], [2.82489, 50.32523], [2.82471, 50.3251], [2.82442, 50.32491], [2.82314, 50.32424], [2.82145, 50.32326], [2.82113, 50.32308], [2.82067, 50.32283], [2.81955, 50.32235], [2.81891, 50.32203], [2.81821, 50.32159], [2.817, 50.32083], [2.81691, 50.32078], [2.81436, 50.31977], [2.81163, 50.31887], [2.81088, 50.31856], [2.80871, 50.31761], [2.80786, 50.31723], [2.80643, 50.31645], [2.80596, 50.31612], [2.80575, 50.31593], [2.8056, 50.31578], [2.8054, 50.31549], [2.80529, 50.31532], [2.80511, 50.31492], [2.8049, 50.31432], [2.80486, 50.31421], [2.805, 50.31416], [2.80509, 50.31408], [2.80611, 50.31309], [2.80626, 50.31297], [2.80649, 50.31284], [2.8069, 50.31266], [2.80941, 50.31164], [2.81051, 50.31123], [2.81077, 50.31089], [2.81087, 50.3108], [2.81106, 50.31068], [2.81138, 50.31046], [2.81165, 50.3102], [2.81172, 50.31008], [2.81183, 50.30985], [2.81206, 50.30998], [2.81218, 50.31009], [2.8123, 50.31029], [2.81255, 50.31056], [2.81374, 50.31137], [2.81418, 50.31166], [2.81439, 50.31184], [2.81471, 50.31215], [2.81556, 50.31285], [2.81572, 50.31296], [2.8155, 50.31332], [2.81535, 50.31366], [2.81514, 50.31398], [2.81509, 50.31424], [2.81527, 50.3146], [2.81545, 50.31489], [2.81617, 50.3157], [2.81649, 50.31594], [2.81676, 50.3164], [2.81743, 50.31707], [2.81801, 50.31794], [2.81805, 50.31803], [2.81801, 50.31794], [2.81743, 50.31707], [2.81676, 50.3164], [2.81649, 50.31594], [2.81617, 50.3157], [2.81545, 50.31489], [2.81527, 50.3146], [2.81509, 50.31424], [2.81514, 50.31398], [2.81535, 50.31366], [2.8155, 50.31332], [2.81572, 50.31296], [2.81556, 50.31285], [2.81471, 50.31215], [2.81439, 50.31184], [2.81418, 50.31166], [2.81374, 50.31137], [2.81255, 50.31056], [2.8123, 50.31029], [2.81218, 50.31009], [2.81206, 50.30998], [2.81183, 50.30985], [2.81172, 50.31008], [2.81165, 50.3102], [2.81138, 50.31046], [2.81106, 50.31068], [2.81087, 50.3108], [2.81077, 50.31089], [2.81051, 50.31123], [2.80941, 50.31164], [2.8069, 50.31266], [2.80649, 50.31284], [2.80626, 50.31297], [2.80611, 50.31309], [2.80509, 50.31408], [2.805, 50.31416], [2.80486, 50.31421], [2.80479, 50.31401], [2.80378, 50.31126], [2.80358, 50.31078], [2.80355, 50.31072], [2.80341, 50.3105], [2.80316, 50.30996], [2.80305, 50.30975], [2.80295, 50.30963], [2.80276, 50.30945], [2.80254, 50.30931], [2.80246, 50.30927], [2.8024, 50.30926], [2.80235, 50.30924], [2.80225, 50.30923], [2.80161, 50.30916], [2.80143, 50.30911], [2.80127, 50.30905], [2.80105, 50.30891], [2.80061, 50.30848], [2.80043, 50.30838], [2.80029, 50.30833], [2.80014, 50.30831], [2.79988, 50.3083], [2.79894, 50.30834], [2.79868, 50.30834], [2.79676, 50.3085], [2.79475, 50.30867], [2.79391, 50.30873], [2.79286, 50.30873], [2.79235, 50.3087], [2.79187, 50.30865], [2.79144, 50.30861], [2.7909, 50.30852], [2.78984, 50.30829], [2.78906, 50.30812], [2.78777, 50.30785], [2.7868, 50.30764], [2.7865, 50.30758], [2.78606, 50.30754], [2.78557, 50.30752], [2.78509, 50.30756], [2.78468, 50.30763], [2.78426, 50.30774], [2.78382, 50.3079], [2.78332, 50.30806], [2.78116, 50.30899], [2.77992, 50.30953], [2.77969, 50.30963], [2.77945, 50.30974], [2.77895, 50.30999], [2.77858, 50.31021], [2.77817, 50.31047], [2.77768, 50.31085], [2.77725, 50.31122], [2.77709, 50.31138], [2.77695, 50.31152], [2.77667, 50.31185], [2.77644, 50.31215], [2.77623, 50.31248], [2.77588, 50.31317], [2.77571, 50.31355], [2.77558, 50.31384], [2.77538, 50.31429], [2.77537, 50.3144], [2.77535, 50.31454], [2.77513, 50.31516], [2.77509, 50.31531], [2.77506, 50.31549], [2.77496, 50.31654], [2.77491, 50.31681], [2.77483, 50.31699], [2.77461, 50.31725], [2.7744, 50.31739], [2.77412, 50.31754], [2.77377, 50.31769], [2.77346, 50.31778], [2.77303, 50.31795], [2.77047, 50.3191], [2.76931, 50.3196], [2.76708, 50.32061], [2.76626, 50.32099], [2.76607, 50.32107], [2.76549, 50.32134], [2.76528, 50.32143], [2.76483, 50.32164], [2.76419, 50.32193], [2.76379, 50.3221], [2.76335, 50.3223], [2.76138, 50.3232], [2.7606, 50.32355], [2.76038, 50.32366], [2.75987, 50.32375], [2.75966, 50.32379], [2.75962, 50.32386], [2.75954, 50.32396], [2.75943, 50.32406], [2.75924, 50.32419], [2.75911, 50.32427], [2.75899, 50.32434], [2.75874, 50.32447], [2.75854, 50.32455], [2.7584, 50.32457], [2.75813, 50.32458], [2.75795, 50.32456], [2.75777, 50.32453], [2.75744, 50.32448], [2.7572, 50.32443], [2.7569, 50.32434], [2.75669, 50.32424], [2.75659, 50.32417], [2.75638, 50.32409], [2.75598, 50.32395], [2.7559, 50.32392], [2.75577, 50.32389], [2.75545, 50.32384], [2.75523, 50.32382], [2.73785, 50.32343], [2.7368, 50.32338], [2.73613, 50.32332], [2.73589, 50.32329], [2.73527, 50.3232], [2.73463, 50.32312], [2.73421, 50.32305], [2.73343, 50.32287], [2.73194, 50.32237], [2.73176, 50.32231], [2.73163, 50.32229], [2.73155, 50.32228], [2.73149, 50.3223], [2.73143, 50.3223], [2.73136, 50.32229], [2.73126, 50.32232], [2.73115, 50.32236], [2.73097, 50.32245], [2.73082, 50.32253], [2.73035, 50.32275], [2.72522, 50.32592], [2.72401, 50.32666], [2.72326, 50.32712], [2.72315, 50.32719], [2.7231, 50.32723], [2.72305, 50.32725], [2.72293, 50.32732], [2.72028, 50.32898], [2.71787, 50.33046], [2.71773, 50.33055], [2.71767, 50.33064], [2.71763, 50.33066], [2.71763, 50.33068], [2.71761, 50.3307], [2.71755, 50.33072], [2.71752, 50.33072], [2.7175, 50.33071], [2.71734, 50.33079], [2.71721, 50.33087], [2.71675, 50.33115], [2.71629, 50.33143], [2.71452, 50.33253], [2.71379, 50.33299], [2.71319, 50.33337], [2.71243, 50.33384], [2.71175, 50.33427], [2.71073, 50.33489], [2.71004, 50.33533], [2.70749, 50.33692], [2.70699, 50.33724], [2.70601, 50.33785], [2.70558, 50.33812], [2.70509, 50.33843], [2.70445, 50.33882], [2.70403, 50.3391], [2.69759, 50.34314], [2.69451, 50.345], [2.69428, 50.34514], [2.69423, 50.34513], [2.69385, 50.34506], [2.69329, 50.3449], [2.6931, 50.34478], [2.69233, 50.34438], [2.69216, 50.34433], [2.69201, 50.3443], [2.69185, 50.3443], [2.69081, 50.34436], [2.69054, 50.34433], [2.69001, 50.34425], [2.68956, 50.34423], [2.68934, 50.34426], [2.6889, 50.34436], [2.68847, 50.34446], [2.68801, 50.34454], [2.68761, 50.34458]], "type": "LineString"}, "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("DD MMM YY");
+                }
+            });
+            map_ad0cc6b621c2b2d4fd6d517380790856.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": false, "loopButton": true, "maxSpeed": 1, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": true}
+            );
+            map_ad0cc6b621c2b2d4fd6d517380790856.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.772279, 50.334998]}, "properties": {"time": "2017-04-02 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.6648582, 50.3628699]}, "properties": {"time": "2017-04-06 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.762072, 50.337177]}, "properties": {"time": "2117-04-08 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.768605, 50.333978]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.769806, 50.336462]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.767196, 50.337659]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.763356, 50.337195]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.793623, 50.344805]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.793117, 50.340686]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.798498, 50.343144]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.800784, 50.342024]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.809807, 50.345106]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.803447, 50.343088]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.780545, 50.341954]}, "properties": {"time": "2117-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.813433, 50.358024]}, "properties": {"time": "2017-04-10 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.817261, 50.358897]}, "properties": {"time": "2017-04-11 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.762044, 50.337999]}, "properties": {"time": "2017-04-12 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.717459, 50.328328]}, "properties": {"time": "2017-04-16 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.826633, 50.35135]}, "properties": {"time": "2017-04-22 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.81955, 50.317733]}, "properties": {"time": "2117-04-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.687707, 50.344954]}, "properties": {"time": "2017-04-29 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_f0d1f969efa6379634a02cc66110cf89 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: "P1D",
+                }
+            ).addTo(map_ad0cc6b621c2b2d4fd6d517380790856);
+        
+    
+            var mouse_position_edecedd8877da6764230d9209f4c4b35 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "Mouse:", "separator": " | "}
+            );
+            mouse_position_edecedd8877da6764230d9209f4c4b35.options["latFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            mouse_position_edecedd8877da6764230d9209f4c4b35.options["lngFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            map_ad0cc6b621c2b2d4fd6d517380790856.addControl(mouse_position_edecedd8877da6764230d9209f4c4b35);
+        
+    
+            var tile_layer_844b5ecee33c836f222caf7e0d699a20 = L.tileLayer(
+                "http://localhost:55831/api/tiles/{z}/{x}/{y}.png?\u0026filename=c%3A%5Cpython%5Cdata%5Cmaps%5CMap_VimyRidge.tif\u0026n_colors=255\u0026projection=EPSG%3A3857",
+                {"attribution": "Raster file served by \u003ca href=\u0027https://github.com/banesullivan/localtileserver\u0027 target=\u0027_blank\u0027\u003elocaltileserver\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 0.9, "subdomains": "abc", "tms": false}
+            ).addTo(map_ad0cc6b621c2b2d4fd6d517380790856);
+        
+    
+            L.Control.geocoder(
+                {"collapsed": "True", "defaultMarkGeocode": true, "position": "topright"}
+            ).on('markgeocode', function(e) {
+                map_ad0cc6b621c2b2d4fd6d517380790856.setView(e.geocode.center, 11);
+            }).addTo(map_ad0cc6b621c2b2d4fd6d517380790856);
+
+        
+    
+            var layer_control_3fcb5c7997f75d9db4b65736703b14a1 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_fdad149ff541c3301c6c6e75b5d201ff,
+                },
+                overlays :  {
+                    "1stCdnBttn" : feature_group_423dae769b5c52942d93de1cc742fbd8,
+                    "1stBttnCEFVimy Route" : geo_json_d6e03ea1a382da23a3fe8492d1496723,
+                    "Map_VimyRidge" : tile_layer_844b5ecee33c836f222caf7e0d699a20,
+                },
+            };
+            L.control.layers(
+                layer_control_3fcb5c7997f75d9db4b65736703b14a1.base_layers,
+                layer_control_3fcb5c7997f75d9db4b65736703b14a1.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_ad0cc6b621c2b2d4fd6d517380790856);
+        
+    
+            var measure_control_a54b2de2d1d821b35ae407a50e1c75a5 = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "kilometers", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_ad0cc6b621c2b2d4fd6d517380790856.addControl(measure_control_a54b2de2d1d821b35ae407a50e1c75a5);
+
+        
+    
+            var tile_layer_f88acd171338ccea8147a40f73e7ff3b = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_3c1508dc50abd5f791bec4802d79a2ee = new L.Control.MiniMap(
+                tile_layer_f88acd171338ccea8147a40f73e7ff3b,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_ad0cc6b621c2b2d4fd6d517380790856.addControl(mini_map_3c1508dc50abd5f791bec4802d79a2ee);
+        
+</script>
+</html>

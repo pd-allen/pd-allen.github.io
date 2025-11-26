@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3f3c458c1ff04a859b4fc69f1c8f27eb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 96.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>    
+    
+                   <h3 align="center" style="font-size:16px"><b>Argyll and Sutherland Highlanders of Canada Jul 1944-Nov 1945</b></h3>
+                 
+    
+            <div class="folium-map" id="map_3f3c458c1ff04a859b4fc69f1c8f27eb" ></div>
+        
+</body>
+<script>    
+    
+            var map_3f3c458c1ff04a859b4fc69f1c8f27eb = L.map(
+                "map_3f3c458c1ff04a859b4fc69f1c8f27eb",
+                {
+                    center: [49.847163, 2.829567],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+
+            
+
+        
+    
+            var tile_layer_fc8399e9a68e496684f60fd271a05cd5 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+        
+    
+            var tile_layer_54704fc1bddc42ec8554dcdfaa0f637f = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+        
+    
+            var tile_layer_1043899ec2eb49ab9b0cf2738f0a093f = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+        
+    
+            var tile_layer_dac2cd21a7c84cbebe8434653ccb1d07 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+        
+    
+            var tile_layer_a7e20fb324a346809bd43d318e027063 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+        
+    
+            var tile_layer_3514d808eae948ed8344777b58c18802 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+        
+    
+            var feature_group_ee06d4c087704e409eb24515e9cc2ef0 = L.featureGroup(
+                {}
+            ).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                }
+            });
+            map_3f3c458c1ff04a859b4fc69f1c8f27eb.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": true, "loopButton": false, "maxSpeed": 10, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "timeSliderDragUpdate": false}
+            );
+            map_3f3c458c1ff04a859b4fc69f1c8f27eb.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "LineString", "coordinates": [[-0.5749092, 49.3141695], [-0.5451435, 49.2973218], [-0.39213, 49.13934], [-0.3560046, 49.1444907], [-0.1498689, 49.1868508], [-0.721557, 49.1893162], [-0.3174475, 49.0644017], [-0.3746912, 48.9525368], [-0.1231794, 49.0129285], [-0.18603, 48.9688827], [-0.1626195, 48.9561507], [-0.1420606, 48.9223792], [-0.1162859, 48.8311414], [0.0582345, 48.8294347], [0.1303467, 48.8577494], [0.3036814, 48.8868307], [0.6706275, 49.1124942], [0.6846135, 49.0596002], [1.1160955, 49.3249082], [1.1696344, 49.3761603], [1.290797, 49.519325], [0.962317, 49.310763], [1.8469891, 49.9966744], [1.8938984, 50.0923102], [1.93633, 50.1014], [2.2297536, 50.767317], [3.3226, 51.179484], [3.30943, 51.16776], [3.34358, 51.23206], [3.61711, 51.17153], [3.78288, 51.17622], [3.79996, 51.2119], [3.7192657, 51.2702029], [3.60387, 51.2493691], [4.66561, 51.27769], [4.53147, 51.26698], [4.45569, 51.34593], [4.46866, 51.36608], [4.46286, 51.4289], [4.44723, 51.44648], [4.43885, 51.46335], [4.41758, 51.47896], [4.34485, 51.460433], [4.32599, 51.4701], [4.2876, 51.50231], [4.2862, 51.54096], [4.31507, 51.54088], [4.34434, 51.5552], [5.14324, 51.69731], [5.34979, 51.64849], [5.14324, 51.69732], [5.34979, 51.64848], [4.85597, 51.59098], [4.91947, 51.59157], [5.06853, 51.68759], [5.13721, 51.70167], [5.07768, 51.62843], [5.33405, 51.58883], [6.17421, 51.76262], [6.12571, 51.78266], [6.2596, 51.71964], [6.28795, 51.69212], [6.31016, 51.6753], [6.36171, 51.64354], [6.37324, 51.64457], [5.29236, 51.61318], [6.12143, 51.78081], [6.36448, 51.79548], [6.42535, 52.15743], [6.52514, 52.14049], [6.66231, 52.33403], [6.85939, 52.5359], [7.23033, 52.68974], [7.29971, 52.69718], [7.67789, 52.85147], [7.7952, 52.97355], [7.86374, 53.02197], [7.92196, 53.06318], [7.92804, 53.091], [7.95209, 53.13224], [7.9776, 53.15912], [7.99575, 53.20036], [8.11578, 53.25748], [6.45459, 52.36797], [10.3765719, 52.2432106], [13.28811, 52.4807], [6.45459, 52.36797], [5.16617, 52.22826], [4.28505, 51.49773], [5.16617, 52.22826]]}, "properties": {"times": ["2044-07-25 00:00:00", "2044-07-26 00:00:00", "2044-07-29 00:00:00", "2044-07-31 00:00:00", "2044-08-01 00:00:00", "2044-08-08 00:00:00", "2044-08-09 00:00:00", "2044-08-10 00:00:00", "2044-08-12 00:00:00", "2044-08-14 00:00:00", "2044-08-15 00:00:00", "2044-08-16 00:00:00", "2044-08-17 00:00:00", "2044-08-19 00:00:00", "2044-08-22 00:00:00", "2044-08-23 00:00:00", "2044-08-24 00:00:00", "2044-08-25 00:00:00", "2044-08-27 00:00:00", "2044-08-29 00:00:00", "2044-08-31 00:00:00", "2044-09-01 00:00:00", "2044-09-02 00:00:00", "2044-09-03 00:00:00", "2044-09-04 00:00:00", "2044-09-07 00:00:00", "2044-09-08 00:00:00", "2044-09-14 00:00:00", "2044-09-15 00:00:00", "2044-09-16 00:00:00", "2044-09-17 00:00:00", "2044-09-18 00:00:00", "2044-09-21 00:00:00", "2044-10-02 00:00:00", "2044-10-16 00:00:00", "2044-10-17 00:00:00", "2044-10-19 00:00:00", "2044-10-20 00:00:00", "2044-10-21 00:00:00", "2044-10-22 00:00:00", "2044-10-23 00:00:00", "2044-10-24 00:00:00", "2044-10-26 00:00:00", "2044-10-27 00:00:00", "2044-10-28 00:00:00", "2044-11-01 00:00:00", "2044-11-02 00:00:00", "2044-11-03 00:00:00", "2044-11-09 00:00:00", "2044-11-25 00:00:00", "2044-12-04 00:00:00", "2044-12-21 00:00:00", "2044-12-25 00:00:00", "2044-12-31 00:00:00", "2045-01-09 00:00:00", "2045-02-17 00:00:00", "2045-02-18 00:00:00", "2045-02-20 00:00:00", "2045-02-22 00:00:00", "2045-02-24 00:00:00", "2045-02-26 00:00:00", "2045-02-27 00:00:00", "2045-03-01 00:00:00", "2045-03-05 00:00:00", "2045-03-06 00:00:00", "2045-03-13 00:00:00", "2045-03-30 00:00:00", "2045-03-31 00:00:00", "2045-04-03 00:00:00", "2045-04-01 00:00:00", "2045-04-05 00:00:00", "2045-04-06 00:00:00", "2045-04-07 00:00:00", "2045-04-08 00:00:00", "2045-04-11 00:00:00", "2045-04-13 00:00:00", "2045-04-14 00:00:00", "2045-04-18 00:00:00", "2045-04-21 00:00:00", "2045-04-25 00:00:00", "2045-04-30 00:00:00", "2045-05-02 00:00:00", "2045-05-04 00:00:00", "2045-05-12 00:00:00", "2045-06-19 00:00:00", "2045-07-04 00:00:00", "2045-07-28 00:00:00", "2045-09-24 00:00:00", "2045-10-27 00:00:00", "2045-10-28 00:00:00"], "style": {"color": "crimson"}, "icon": "marker", "prefix": "fa", "iconstyle": {"iconUrl": "plane_90.svg", "iconSize": [48, 48], "fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20, "weight": 5, "popupAnchor": [1, -17], "popup": "Popup "}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_d1c8574bc39d485eb4dc28f86c8929a4 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+        
+    
+            var mouse_position_fbb45d8ef1624fc7a69414edecf6aa60 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "Mouse:", "separator": " | "}
+            );
+            mouse_position_fbb45d8ef1624fc7a69414edecf6aa60.options["latFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            mouse_position_fbb45d8ef1624fc7a69414edecf6aa60.options["lngFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            map_3f3c458c1ff04a859b4fc69f1c8f27eb.addControl(mouse_position_fbb45d8ef1624fc7a69414edecf6aa60);
+        
+    
+            L.Control.geocoder(
+                {"collapsed": "True", "defaultMarkGeocode": true, "position": "topright"}
+            ).on('markgeocode', function(e) {
+                map_3f3c458c1ff04a859b4fc69f1c8f27eb.setView(e.geocode.center, 11);
+            }).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+
+        
+    
+            var layer_control_be27403832e34ab9ab82899132e3c21b = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_fc8399e9a68e496684f60fd271a05cd5,
+                },
+                overlays :  {
+                    "Google Maps" : tile_layer_54704fc1bddc42ec8554dcdfaa0f637f,
+                    "Google Hybrid" : tile_layer_1043899ec2eb49ab9b0cf2738f0a093f,
+                    "Google Satellite" : tile_layer_dac2cd21a7c84cbebe8434653ccb1d07,
+                    "Google Terrain" : tile_layer_a7e20fb324a346809bd43d318e027063,
+                    "Esri Satellite" : tile_layer_3514d808eae948ed8344777b58c18802,
+                    "Argylls" : feature_group_ee06d4c087704e409eb24515e9cc2ef0,
+                },
+            };
+            L.control.layers(
+                layer_control_be27403832e34ab9ab82899132e3c21b.base_layers,
+                layer_control_be27403832e34ab9ab82899132e3c21b.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_3f3c458c1ff04a859b4fc69f1c8f27eb);
+            tile_layer_54704fc1bddc42ec8554dcdfaa0f637f.remove();
+            tile_layer_1043899ec2eb49ab9b0cf2738f0a093f.remove();
+            tile_layer_dac2cd21a7c84cbebe8434653ccb1d07.remove();
+            tile_layer_a7e20fb324a346809bd43d318e027063.remove();
+            tile_layer_3514d808eae948ed8344777b58c18802.remove();
+        
+    
+            var measure_control_ed1b96985d9e49ec9cda6e2b2ada0417 = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "kilometers", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_3f3c458c1ff04a859b4fc69f1c8f27eb.addControl(measure_control_ed1b96985d9e49ec9cda6e2b2ada0417);
+
+        
+    
+            var tile_layer_bdd8138129994d5995c2a48f6f99014f = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_2a9fd6bfc18c4e9cbfc7f587740df074 = new L.Control.MiniMap(
+                tile_layer_bdd8138129994d5995c2a48f6f99014f,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_3f3c458c1ff04a859b4fc69f1c8f27eb.addControl(mini_map_2a9fd6bfc18c4e9cbfc7f587740df074);
+        
+</script>

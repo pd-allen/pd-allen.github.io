@@ -1,0 +1,2740 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b6b9a98c916b4a089f143def21ee8ebe {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+               <h3 align="center" style="font-size:16px"><b>2nd Battalion Suffolk Regiment 15 Aug - 05 Sep 1914</b></h3>
+             
+    
+            <div class="folium-map" id="map_b6b9a98c916b4a089f143def21ee8ebe" ></div>
+        
+</body>
+<script>    
+    
+            var map_b6b9a98c916b4a089f143def21ee8ebe = L.map(
+                "map_b6b9a98c916b4a089f143def21ee8ebe",
+                {
+                    center: [49.847163, 2.829567],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+
+            
+
+        
+    
+            var tile_layer_7652d606d7b1460daccb0e90903a613b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var marker_6ac8fa3dadc9417da6404decb08b7d00 = L.marker(
+                [49.48944, 0.117733],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_0f53c23576eb420eb7fe7b4690e85294 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6ac8fa3dadc9417da6404decb08b7d00.setIcon(icon_0f53c23576eb420eb7fe7b4690e85294);
+        
+    
+        var popup_df469c9b3a564768a28401d8982bfb8d = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_278e880975a84e02a88c8b342feb4103 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMiBGZWIgMTY8YnI+TGUgSGF2cmU8YnI+QXJyaXZlZCBmcm9tIFNvdXRoSGFtcHRvbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_df469c9b3a564768a28401d8982bfb8d.setContent(i_frame_278e880975a84e02a88c8b342feb4103);
+        
+
+        marker_6ac8fa3dadc9417da6404decb08b7d00.bindPopup(popup_df469c9b3a564768a28401d8982bfb8d)
+        ;
+
+        
+    
+    
+            marker_6ac8fa3dadc9417da6404decb08b7d00.bindTooltip(
+                `<div>
+                     22 Feb 16<br>Le Havre<br>Arrived from SouthHampton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f2d38a841ab44c5b64d45e2da8529e1 = L.marker(
+                [50.7969835, 2.6249192],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_cf5bc9f1f9564374ac71deb5df45a005 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9f2d38a841ab44c5b64d45e2da8529e1.setIcon(icon_cf5bc9f1f9564374ac71deb5df45a005);
+        
+    
+        var popup_4e4893665a67474ebc0c3a150d9c3bf1 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_1ad2dcd35d644f54bbd6876e5cdcc16e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMyBGZWIgMTY8YnI+R29kZXdhZXJzdmVsZGU8YnI+VHJhaW4gZnJvbSBMZSBIYXZyZQ==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_4e4893665a67474ebc0c3a150d9c3bf1.setContent(i_frame_1ad2dcd35d644f54bbd6876e5cdcc16e);
+        
+
+        marker_9f2d38a841ab44c5b64d45e2da8529e1.bindPopup(popup_4e4893665a67474ebc0c3a150d9c3bf1)
+        ;
+
+        
+    
+    
+            marker_9f2d38a841ab44c5b64d45e2da8529e1.bindTooltip(
+                `<div>
+                     23 Feb 16<br>Godewaersvelde<br>Train from Le Havre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9273640b90d14e82bc209ef729de38fe = L.marker(
+                [50.7767871, 2.5412338],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_d9ece822909e4858948601a603265085 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9273640b90d14e82bc209ef729de38fe.setIcon(icon_d9ece822909e4858948601a603265085);
+        
+    
+        var popup_ff3eab5cb33346ea8e628a8bdecabe10 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_e934186c963c4c3fbd524434dfd22ede = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMCBNYXIgMTY8YnI+U3QgU3lsdmVzdHJlIENhcHBlbDxicj4gVHJhaW5pbmcgYXQgQWxkZXJzaG90IEh1dHM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_ff3eab5cb33346ea8e628a8bdecabe10.setContent(i_frame_e934186c963c4c3fbd524434dfd22ede);
+        
+
+        marker_9273640b90d14e82bc209ef729de38fe.bindPopup(popup_ff3eab5cb33346ea8e628a8bdecabe10)
+        ;
+
+        
+    
+    
+            marker_9273640b90d14e82bc209ef729de38fe.bindTooltip(
+                `<div>
+                     10 Mar 16<br>St Sylvestre Cappel<br> Training at Aldershot Huts
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_55fe59fa770c4e078d24bf04d1f83a6c = L.marker(
+                [50.764785, 2.63665],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_d30eb663c6554f80b4dd2f1f898c504f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_55fe59fa770c4e078d24bf04d1f83a6c.setIcon(icon_d30eb663c6554f80b4dd2f1f898c504f);
+        
+    
+        var popup_3147f75ac3054b43bc319bd9949a14b2 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_c375ae8cc8cf4a10b4129a84b9a29a72 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMSBNYXIgMTY8YnI+RmxldHJlPGJyPkJvbWJpbmcgQ2xhc3Nlcw==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_3147f75ac3054b43bc319bd9949a14b2.setContent(i_frame_c375ae8cc8cf4a10b4129a84b9a29a72);
+        
+
+        marker_55fe59fa770c4e078d24bf04d1f83a6c.bindPopup(popup_3147f75ac3054b43bc319bd9949a14b2)
+        ;
+
+        
+    
+    
+            marker_55fe59fa770c4e078d24bf04d1f83a6c.bindTooltip(
+                `<div>
+                     11 Mar 16<br>Fletre<br>Bombing Classes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b2d37c87f76745ab88df87308fe47a66 = L.marker(
+                [50.783438, 2.619096],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_ecb3ce1c942d42a58d4718de14c3ed9c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b2d37c87f76745ab88df87308fe47a66.setIcon(icon_ecb3ce1c942d42a58d4718de14c3ed9c);
+        
+    
+        var popup_3acd38b704724ebe825331d5415d798f = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_185ae4929dc74cf1afcb14fb59ca5543 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNSBNYXIgMTY8YnI+VGhpZXVzdG91Y2s8YnI+bmFu" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_3acd38b704724ebe825331d5415d798f.setContent(i_frame_185ae4929dc74cf1afcb14fb59ca5543);
+        
+
+        marker_b2d37c87f76745ab88df87308fe47a66.bindPopup(popup_3acd38b704724ebe825331d5415d798f)
+        ;
+
+        
+    
+    
+            marker_b2d37c87f76745ab88df87308fe47a66.bindTooltip(
+                `<div>
+                     15 Mar 16<br>Thieustouck<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ee3d5f241a7d4ec09a0362656fee3782 = L.marker(
+                [50.774432, 2.31721],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_4c30744d6d0f4226a95fe7c74f863185 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ee3d5f241a7d4ec09a0362656fee3782.setIcon(icon_4c30744d6d0f4226a95fe7c74f863185);
+        
+    
+        var popup_1b2c79880645400d921975e3b24a76f9 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_c298b4dcba6a40f2a186f5470aa2976a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNiBNYXIgMTY8YnI+TG9jcmU8YnI+bmFu" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_1b2c79880645400d921975e3b24a76f9.setContent(i_frame_c298b4dcba6a40f2a186f5470aa2976a);
+        
+
+        marker_ee3d5f241a7d4ec09a0362656fee3782.bindPopup(popup_1b2c79880645400d921975e3b24a76f9)
+        ;
+
+        
+    
+    
+            marker_ee3d5f241a7d4ec09a0362656fee3782.bindTooltip(
+                `<div>
+                     16 Mar 16<br>Locre<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_39a678a656cc4b92afe8c091a9c0f76f = L.marker(
+                [50.800459, 2.774776],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_391749d13cb940c294a2b46f5a37a0d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_39a678a656cc4b92afe8c091a9c0f76f.setIcon(icon_391749d13cb940c294a2b46f5a37a0d3);
+        
+    
+        var popup_ba27307442c74d08b94aa0ad1c71c834 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_431894ac90354727afaeb46a42498591 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNyBNYXIgMTY8YnI+VmllcnN0cmFhdDxicj5CYXR0YWxpb24gaW4gdGhlIFRyZW5jaGVzICg3MCBtIGZyb20gZW5lbXkp" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_ba27307442c74d08b94aa0ad1c71c834.setContent(i_frame_431894ac90354727afaeb46a42498591);
+        
+
+        marker_39a678a656cc4b92afe8c091a9c0f76f.bindPopup(popup_ba27307442c74d08b94aa0ad1c71c834)
+        ;
+
+        
+    
+    
+            marker_39a678a656cc4b92afe8c091a9c0f76f.bindTooltip(
+                `<div>
+                     17 Mar 16<br>Vierstraat<br>Battalion in the Trenches (70 m from enemy)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9228c48bd09a4aba8e82587a4b748264 = L.marker(
+                [50.800459, 2.774776],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_efec7125f32f4d0a900cac2404dfc583 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9228c48bd09a4aba8e82587a4b748264.setIcon(icon_efec7125f32f4d0a900cac2404dfc583);
+        
+    
+        var popup_fa1a41518a9045ac81c162da1484a935 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_4e926ab969904902932dbece0e769508 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMiBNYXIgMTY8YnI+VmllcnN0cmFhdDxicj5CYXR0YWxpb24gaW4gdGhlIFRyZW5jaGVzICg3MCBtIGZyb20gZW5lbXkp" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_fa1a41518a9045ac81c162da1484a935.setContent(i_frame_4e926ab969904902932dbece0e769508);
+        
+
+        marker_9228c48bd09a4aba8e82587a4b748264.bindPopup(popup_fa1a41518a9045ac81c162da1484a935)
+        ;
+
+        
+    
+    
+            marker_9228c48bd09a4aba8e82587a4b748264.bindTooltip(
+                `<div>
+                     22 Mar 16<br>Vierstraat<br>Battalion in the Trenches (70 m from enemy)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6ddc7ec5e7dc46e08028b4a24948aec3 = L.marker(
+                [50.774432, 2.31721],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_fde3d480480243d99ffcfc60a821e816 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6ddc7ec5e7dc46e08028b4a24948aec3.setIcon(icon_fde3d480480243d99ffcfc60a821e816);
+        
+    
+        var popup_f554a49941824d42bcf5e2e5065e69aa = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_d8f4f40629bc4cd1a61d896e423e48cd = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMyBNYXIgMTY8YnI+TG9jcmU8YnI+T3V0IG9mIHRoZSBmcm9udCBsaW5l" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_f554a49941824d42bcf5e2e5065e69aa.setContent(i_frame_d8f4f40629bc4cd1a61d896e423e48cd);
+        
+
+        marker_6ddc7ec5e7dc46e08028b4a24948aec3.bindPopup(popup_f554a49941824d42bcf5e2e5065e69aa)
+        ;
+
+        
+    
+    
+            marker_6ddc7ec5e7dc46e08028b4a24948aec3.bindTooltip(
+                `<div>
+                     23 Mar 16<br>Locre<br>Out of the front line
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e406646abd504e2584e52363ebfc7b7b = L.marker(
+                [50.848104, 2.771203],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_2e3db4cf3a0d4ba9ad5f8169c396c73c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e406646abd504e2584e52363ebfc7b7b.setIcon(icon_2e3db4cf3a0d4ba9ad5f8169c396c73c);
+        
+    
+        var popup_2e823b7acf654c4ba41c03a9bd4cead7 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_3f910ce240a549fab565872441f9e8ff = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyNCBNYXIgMTY8YnI+Q2FtcCBGPGJyPm5hbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_2e823b7acf654c4ba41c03a9bd4cead7.setContent(i_frame_3f910ce240a549fab565872441f9e8ff);
+        
+
+        marker_e406646abd504e2584e52363ebfc7b7b.bindPopup(popup_2e823b7acf654c4ba41c03a9bd4cead7)
+        ;
+
+        
+    
+    
+            marker_e406646abd504e2584e52363ebfc7b7b.bindTooltip(
+                `<div>
+                     24 Mar 16<br>Camp F<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bf62ab2a9c214920b6bb33e4301626fa = L.marker(
+                [50.835514, 2.782672],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_b3a55ebae8954be29f7165283627e262 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bf62ab2a9c214920b6bb33e4301626fa.setIcon(icon_b3a55ebae8954be29f7165283627e262);
+        
+    
+        var popup_b8cce819c247483bb2749717b223ee63 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_e2fc7ff6b1b14a49944435fb8da1df99 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyNiBNYXIgMTY8YnI+Q2FtcCBEPGJyPm5hbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_b8cce819c247483bb2749717b223ee63.setContent(i_frame_e2fc7ff6b1b14a49944435fb8da1df99);
+        
+
+        marker_bf62ab2a9c214920b6bb33e4301626fa.bindPopup(popup_b8cce819c247483bb2749717b223ee63)
+        ;
+
+        
+    
+    
+            marker_bf62ab2a9c214920b6bb33e4301626fa.bindTooltip(
+                `<div>
+                     26 Mar 16<br>Camp D<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bc4212053c9d4f648dc548febec8dc7f = L.marker(
+                [50.833524, 2.948305],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_35fabc8bfddb49b0bb076c0bf48d7f56 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bc4212053c9d4f648dc548febec8dc7f.setIcon(icon_35fabc8bfddb49b0bb076c0bf48d7f56);
+        
+    
+        var popup_65040405818d4ad7a56b521638c716ae = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_a3c5eb152cf0402b9e41d494cc41b22d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyOSBNYXIgMTY8YnI+UmFpbHdheSBEdWdvdXRzPGJyPm5hbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_65040405818d4ad7a56b521638c716ae.setContent(i_frame_a3c5eb152cf0402b9e41d494cc41b22d);
+        
+
+        marker_bc4212053c9d4f648dc548febec8dc7f.bindPopup(popup_65040405818d4ad7a56b521638c716ae)
+        ;
+
+        
+    
+    
+            marker_bc4212053c9d4f648dc548febec8dc7f.bindTooltip(
+                `<div>
+                     29 Mar 16<br>Railway Dugouts<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_261364996c424d82811798984575cb93 = L.marker(
+                [50.839736, 2.952013],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_beb48745f31c4bdb8ab29be35d428d7f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_261364996c424d82811798984575cb93.setIcon(icon_beb48745f31c4bdb8ab29be35d428d7f);
+        
+    
+        var popup_2d60b502a7254be2baf513b9c9c76049 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_be932561420a44e0b2db79422e3c1b60 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAzMSBNYXIgMTY8YnI+WXByZXMgU2FsaWVudCBGcm9udCBMaW5lczxicj5uYW4=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_2d60b502a7254be2baf513b9c9c76049.setContent(i_frame_be932561420a44e0b2db79422e3c1b60);
+        
+
+        marker_261364996c424d82811798984575cb93.bindPopup(popup_2d60b502a7254be2baf513b9c9c76049)
+        ;
+
+        
+    
+    
+            marker_261364996c424d82811798984575cb93.bindTooltip(
+                `<div>
+                     31 Mar 16<br>Ypres Salient Front Lines<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ae6c1a2cf50542c8a64e0e4005f3d90e = L.marker(
+                [50.837008, 2.802102],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_a24f568d9d2c40ecb22b1e54b5762c9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ae6c1a2cf50542c8a64e0e4005f3d90e.setIcon(icon_a24f568d9d2c40ecb22b1e54b5762c9b);
+        
+    
+        var popup_d7039cce35bc420bb10c9ff488d93a90 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_a50834bf75d24450bbf1257f81eb8b7d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwNiBBcHIgMTY8YnI+Q2FtcCBFIDxicj5uYW4=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_d7039cce35bc420bb10c9ff488d93a90.setContent(i_frame_a50834bf75d24450bbf1257f81eb8b7d);
+        
+
+        marker_ae6c1a2cf50542c8a64e0e4005f3d90e.bindPopup(popup_d7039cce35bc420bb10c9ff488d93a90)
+        ;
+
+        
+    
+    
+            marker_ae6c1a2cf50542c8a64e0e4005f3d90e.bindTooltip(
+                `<div>
+                     06 Apr 16<br>Camp E <br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b753e86d1e5a4b0cb7e8c4633772cb1a = L.marker(
+                [50.839736, 2.952013],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_6ec179425a52416c8aee587c6ec346fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b753e86d1e5a4b0cb7e8c4633772cb1a.setIcon(icon_6ec179425a52416c8aee587c6ec346fd);
+        
+    
+        var popup_f22b028b3fb240d08691f143d8f406d3 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_d952eda51cf84baab44fcf66c65546f2 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwOSBBcHIgMTY8YnI+WXByZXMgU2FsaWVudCBGcm9udCBMaW5lczxicj5uYW4=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_f22b028b3fb240d08691f143d8f406d3.setContent(i_frame_d952eda51cf84baab44fcf66c65546f2);
+        
+
+        marker_b753e86d1e5a4b0cb7e8c4633772cb1a.bindPopup(popup_f22b028b3fb240d08691f143d8f406d3)
+        ;
+
+        
+    
+    
+            marker_b753e86d1e5a4b0cb7e8c4633772cb1a.bindTooltip(
+                `<div>
+                     09 Apr 16<br>Ypres Salient Front Lines<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b0da6a23cf4a4f0a89417af63d06e694 = L.marker(
+                [50.847299, 2.77253],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_48f317bb60e74d31af71df5f3834ae70 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b0da6a23cf4a4f0a89417af63d06e694.setIcon(icon_48f317bb60e74d31af71df5f3834ae70);
+        
+    
+        var popup_63ea3815eebc42e283d992f58abf014d = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_dea56c57a91743969c3eef0c6ecae65b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNCBBcHIgMTY8YnI+Q2FtcCBCPGJyPlJlbGlldmVkIGJ5IDEgQ2RuIE1vdW50ZWQgUmlmbGVz" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_63ea3815eebc42e283d992f58abf014d.setContent(i_frame_dea56c57a91743969c3eef0c6ecae65b);
+        
+
+        marker_b0da6a23cf4a4f0a89417af63d06e694.bindPopup(popup_63ea3815eebc42e283d992f58abf014d)
+        ;
+
+        
+    
+    
+            marker_b0da6a23cf4a4f0a89417af63d06e694.bindTooltip(
+                `<div>
+                     14 Apr 16<br>Camp B<br>Relieved by 1 Cdn Mounted Rifles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e0e87cb8a85148c8966d2f7136432ec8 = L.marker(
+                [50.836267, 2.937184],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_6cd469f77ed24ca1a04974eef04da897 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e0e87cb8a85148c8966d2f7136432ec8.setIcon(icon_6cd469f77ed24ca1a04974eef04da897);
+        
+    
+        var popup_318c356e16e64d108ad84d72d78437b2 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_9630dd720647453aa3ef9a21ecd5242c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMSBBcHIgMTY8YnI+WmlsbGViZWtlIEJ1bmQ8YnI+bmFu" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_318c356e16e64d108ad84d72d78437b2.setContent(i_frame_9630dd720647453aa3ef9a21ecd5242c);
+        
+
+        marker_e0e87cb8a85148c8966d2f7136432ec8.bindPopup(popup_318c356e16e64d108ad84d72d78437b2)
+        ;
+
+        
+    
+    
+            marker_e0e87cb8a85148c8966d2f7136432ec8.bindTooltip(
+                `<div>
+                     21 Apr 16<br>Zillebeke Bund<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_07f3d9cd0dc84f75afa09395ef5764d9 = L.marker(
+                [50.843008, 2.950615],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_b472bf12b36e44969ceb151f043ec290 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_07f3d9cd0dc84f75afa09395ef5764d9.setIcon(icon_b472bf12b36e44969ceb151f043ec290);
+        
+    
+        var popup_ff776b218c394426beba8bc53e80a2b7 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_165d9cdad4ad481788c8f876cff916af = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyOSBBcHIgMTY8YnI+RnJvbnQgTGluZSBSaWdodCBTZWN0b3Igb2YgSG9vZ2UgVHJlbmNoPGJyPlJlcGxhY2VkIDQzcmQgQmF0dGFsaW9u" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_ff776b218c394426beba8bc53e80a2b7.setContent(i_frame_165d9cdad4ad481788c8f876cff916af);
+        
+
+        marker_07f3d9cd0dc84f75afa09395ef5764d9.bindPopup(popup_ff776b218c394426beba8bc53e80a2b7)
+        ;
+
+        
+    
+    
+            marker_07f3d9cd0dc84f75afa09395ef5764d9.bindTooltip(
+                `<div>
+                     29 Apr 16<br>Front Line Right Sector of Hooge Trench<br>Replaced 43rd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c37d931caa8f4983ae741b96c8a50ad0 = L.marker(
+                [50.835514, 2.782672],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_863bd30cca5a4cc296efc0b43be475cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c37d931caa8f4983ae741b96c8a50ad0.setIcon(icon_863bd30cca5a4cc296efc0b43be475cb);
+        
+    
+        var popup_bb1c748a448b4e6bb28c9fe1eceba2a5 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_ff444e4dc7394b589605198390cfc143 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwOCBNYXkgMTY8YnI+Q2FtcCBEPGJyPlJlbGlldmVkIGJ5IDQzcmQgQmF0dGFsaW9u" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_bb1c748a448b4e6bb28c9fe1eceba2a5.setContent(i_frame_ff444e4dc7394b589605198390cfc143);
+        
+
+        marker_c37d931caa8f4983ae741b96c8a50ad0.bindPopup(popup_bb1c748a448b4e6bb28c9fe1eceba2a5)
+        ;
+
+        
+    
+    
+            marker_c37d931caa8f4983ae741b96c8a50ad0.bindTooltip(
+                `<div>
+                     08 May 16<br>Camp D<br>Relieved by 43rd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ae088f6c0364f5ab15994fe25d8f9c0 = L.marker(
+                [50.839736, 2.952013],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_0374e90f9ae5424cbaf529339b17ee19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5ae088f6c0364f5ab15994fe25d8f9c0.setIcon(icon_0374e90f9ae5424cbaf529339b17ee19);
+        
+    
+        var popup_f5facb0fdd314a94971cccb78920a661 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_1495343ffb1e495094c18b32964bfb29 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMyBNYXkgMTY8YnI+WXByZXMgU2FsaWVudCBGcm9udCBMaW5lczxicj5SZXBsYWNlZCA0M3JkIEJhdHRhbGlvbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_f5facb0fdd314a94971cccb78920a661.setContent(i_frame_1495343ffb1e495094c18b32964bfb29);
+        
+
+        marker_5ae088f6c0364f5ab15994fe25d8f9c0.bindPopup(popup_f5facb0fdd314a94971cccb78920a661)
+        ;
+
+        
+    
+    
+            marker_5ae088f6c0364f5ab15994fe25d8f9c0.bindTooltip(
+                `<div>
+                     23 May 16<br>Ypres Salient Front Lines<br>Replaced 43rd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bb4d9d0c0a5145749bd8d44dc6e7b40d = L.marker(
+                [50.844563, 2.783014],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_50c53e55935e444992b013ccc4b03ef6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bb4d9d0c0a5145749bd8d44dc6e7b40d.setIcon(icon_50c53e55935e444992b013ccc4b03ef6);
+        
+    
+        var popup_c17292f52c2b4ff98a6192da3ffca241 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_cdf38861977f47e28bb73df0d1627423 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwMSBKdW4gMTY8YnI+Q2FtcCBDPGJyPlJlbGlldmVkIGJ5IDEgQ2RuIE1vdW50ZWQgUmlmbGVz" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_c17292f52c2b4ff98a6192da3ffca241.setContent(i_frame_cdf38861977f47e28bb73df0d1627423);
+        
+
+        marker_bb4d9d0c0a5145749bd8d44dc6e7b40d.bindPopup(popup_c17292f52c2b4ff98a6192da3ffca241)
+        ;
+
+        
+    
+    
+            marker_bb4d9d0c0a5145749bd8d44dc6e7b40d.bindTooltip(
+                `<div>
+                     01 Jun 16<br>Camp C<br>Relieved by 1 Cdn Mounted Rifles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_67fef3a95dfe4bdc801125df962b5f5c = L.marker(
+                [50.837706, 2.855324],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_456607486e004a509440440a0a04cb74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_67fef3a95dfe4bdc801125df962b5f5c.setIcon(icon_456607486e004a509440440a0a04cb74);
+        
+    
+        var popup_30ebf8b0d55a405eaf9bc6a7641165c3 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_8ab492e58bc7460299b22fbc4e310de2 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwMiBKdW4gMTY8YnI+QmVsZ2lhbiBDaGF0ZWF1PGJyPiA=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_30ebf8b0d55a405eaf9bc6a7641165c3.setContent(i_frame_8ab492e58bc7460299b22fbc4e310de2);
+        
+
+        marker_67fef3a95dfe4bdc801125df962b5f5c.bindPopup(popup_30ebf8b0d55a405eaf9bc6a7641165c3)
+        ;
+
+        
+    
+    
+            marker_67fef3a95dfe4bdc801125df962b5f5c.bindTooltip(
+                `<div>
+                     02 Jun 16<br>Belgian Chateau<br> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b70593fe6c104ad0979a32e6e56a167e = L.marker(
+                [50.836495, 2.922243],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_460d89c0c8b744f4a88a32fa1789b3eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b70593fe6c104ad0979a32e6e56a167e.setIcon(icon_460d89c0c8b744f4a88a32fa1789b3eb);
+        
+    
+        var popup_df61506c9a5248c1a11c5c1f750f65b8 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_de7097338c8f425ca00336545083f934 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwMyBKdW4gMTY8YnI+WmlsbGViZWtlIEJ1bmQ8YnI+QmF0dGxlIG9mIE1vbnQgU29ycmVs" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_df61506c9a5248c1a11c5c1f750f65b8.setContent(i_frame_de7097338c8f425ca00336545083f934);
+        
+
+        marker_b70593fe6c104ad0979a32e6e56a167e.bindPopup(popup_df61506c9a5248c1a11c5c1f750f65b8)
+        ;
+
+        
+    
+    
+            marker_b70593fe6c104ad0979a32e6e56a167e.bindTooltip(
+                `<div>
+                     03 Jun 16<br>Zillebeke Bund<br>Battle of Mont Sorrel
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d5b52758ae4545378f8a5c5ea37915e2 = L.marker(
+                [50.837706, 2.855324],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_2a6774518a824df1a0fff9f2e6125a4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d5b52758ae4545378f8a5c5ea37915e2.setIcon(icon_2a6774518a824df1a0fff9f2e6125a4c);
+        
+    
+        var popup_cd379330f83c48ddb3a99585cb393d44 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_d03103cc7be94a12b91e2d75d737f0ef = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMCBKdW4gMTY8YnI+QmVsZ2lhbiBDaGF0ZWF1PGJyPlJlbGlldmVkIGJ5IDQzcmQgQmF0dGFsaW9u" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_cd379330f83c48ddb3a99585cb393d44.setContent(i_frame_d03103cc7be94a12b91e2d75d737f0ef);
+        
+
+        marker_d5b52758ae4545378f8a5c5ea37915e2.bindPopup(popup_cd379330f83c48ddb3a99585cb393d44)
+        ;
+
+        
+    
+    
+            marker_d5b52758ae4545378f8a5c5ea37915e2.bindTooltip(
+                `<div>
+                     10 Jun 16<br>Belgian Chateau<br>Relieved by 43rd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_119121b23ff74f658f280b0feb6963ee = L.marker(
+                [50.836495, 2.922243],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_f840395f05474f25aac6bcedf9c97787 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_119121b23ff74f658f280b0feb6963ee.setIcon(icon_f840395f05474f25aac6bcedf9c97787);
+        
+    
+        var popup_438ce07875994291b99f4c2c842fc868 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_73796619f28944aaa5badc8df06c67be = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMSBKdW4gMTY8YnI+WmlsbGViZWtlIEJ1bmQ8YnI+bmFu" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_438ce07875994291b99f4c2c842fc868.setContent(i_frame_73796619f28944aaa5badc8df06c67be);
+        
+
+        marker_119121b23ff74f658f280b0feb6963ee.bindPopup(popup_438ce07875994291b99f4c2c842fc868)
+        ;
+
+        
+    
+    
+            marker_119121b23ff74f658f280b0feb6963ee.bindTooltip(
+                `<div>
+                     11 Jun 16<br>Zillebeke Bund<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_817d18956eb24b6faa58154decea1f62 = L.marker(
+                [50.836251, 2.935886],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_88387e14d9f246ec99ebd66dc5171678 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_817d18956eb24b6faa58154decea1f62.setIcon(icon_88387e14d9f246ec99ebd66dc5171678);
+        
+    
+        var popup_177e8ea3cde54fc1b338681a19486eef = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_e958739913534f5cb6e44bff5708db92 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMyBKdW4gMTY8YnI+TWFwbGUgQ29wc2U8YnI+bmFu" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_177e8ea3cde54fc1b338681a19486eef.setContent(i_frame_e958739913534f5cb6e44bff5708db92);
+        
+
+        marker_817d18956eb24b6faa58154decea1f62.bindPopup(popup_177e8ea3cde54fc1b338681a19486eef)
+        ;
+
+        
+    
+    
+            marker_817d18956eb24b6faa58154decea1f62.bindTooltip(
+                `<div>
+                     13 Jun 16<br>Maple Copse<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4626bb279eb444f4b2ef51cd545f3621 = L.marker(
+                [50.837706, 2.855324],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_c62c404bc0c944fcbf7bba7b9eb0d237 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4626bb279eb444f4b2ef51cd545f3621.setIcon(icon_c62c404bc0c944fcbf7bba7b9eb0d237);
+        
+    
+        var popup_06676d8212b54d478d46da4aa276b76f = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_59f2d21d91844f5a9674e11c47c0e3b0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNCBKdW4gMTY8YnI+QmVsZ2lhbiBDaGF0ZWF1PGJyPlJlbGlldmVkIGJ5IDYwIEJhdHRhbGlvbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_06676d8212b54d478d46da4aa276b76f.setContent(i_frame_59f2d21d91844f5a9674e11c47c0e3b0);
+        
+
+        marker_4626bb279eb444f4b2ef51cd545f3621.bindPopup(popup_06676d8212b54d478d46da4aa276b76f)
+        ;
+
+        
+    
+    
+            marker_4626bb279eb444f4b2ef51cd545f3621.bindTooltip(
+                `<div>
+                     14 Jun 16<br>Belgian Chateau<br>Relieved by 60 Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9be1e2f512c04be2a7e9e9a773d078b1 = L.marker(
+                [50.835514, 2.782672],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_a762158596fa47ffb700bdf6efc74049 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9be1e2f512c04be2a7e9e9a773d078b1.setIcon(icon_a762158596fa47ffb700bdf6efc74049);
+        
+    
+        var popup_20ed1d09a0c9469ebb769a6027e641d5 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_26780b5091f64e178f15d021b3a2064d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxOSBKdW4gMTY8YnI+Q2FtcCBEPGJyPlJlcGxhY2VtZW50cyByZWNlaXZlZCwgaW5jbHVkaW5nIFdpbGxpYW0gSm9obnN0b24=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_20ed1d09a0c9469ebb769a6027e641d5.setContent(i_frame_26780b5091f64e178f15d021b3a2064d);
+        
+
+        marker_9be1e2f512c04be2a7e9e9a773d078b1.bindPopup(popup_20ed1d09a0c9469ebb769a6027e641d5)
+        ;
+
+        
+    
+    
+            marker_9be1e2f512c04be2a7e9e9a773d078b1.bindTooltip(
+                `<div>
+                     19 Jun 16<br>Camp D<br>Replacements received, including William Johnston
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_acbda843a1f64204a52bc940e809a8a5 = L.marker(
+                [50.836495, 2.922243],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_52468334d98c4543b8a56ebaa92cdcc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_acbda843a1f64204a52bc940e809a8a5.setIcon(icon_52468334d98c4543b8a56ebaa92cdcc3);
+        
+    
+        var popup_dfb04f720ebf45d89f8fd67639f5b2e4 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_90fda6a608864f11b05c635e1813defa = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAzMCBKdW4gMTY8YnI+WmlsbGViZWtlIEJ1bmQ8YnI+UmVwbGFjZSA0Mm5kIEJhdHRhbGlvbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_dfb04f720ebf45d89f8fd67639f5b2e4.setContent(i_frame_90fda6a608864f11b05c635e1813defa);
+        
+
+        marker_acbda843a1f64204a52bc940e809a8a5.bindPopup(popup_dfb04f720ebf45d89f8fd67639f5b2e4)
+        ;
+
+        
+    
+    
+            marker_acbda843a1f64204a52bc940e809a8a5.bindTooltip(
+                `<div>
+                     30 Jun 16<br>Zillebeke Bund<br>Replace 42nd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8b94a21037444c949a7327a76c440a87 = L.marker(
+                [50.839736, 2.952013],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_020635cfb72244668efa047ac7954fd7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8b94a21037444c949a7327a76c440a87.setIcon(icon_020635cfb72244668efa047ac7954fd7);
+        
+    
+        var popup_75e4f2d05852401585bed68719f2f3a8 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_f124c67d2ea341c19078d6532913cda9 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwNCBKdWwgMTY8YnI+WXByZXMgU2FsaWVudCBGcm9udCBMaW5lczxicj5SZXBsYWNlIDQybmQgQmF0dGFsaW9u" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_75e4f2d05852401585bed68719f2f3a8.setContent(i_frame_f124c67d2ea341c19078d6532913cda9);
+        
+
+        marker_8b94a21037444c949a7327a76c440a87.bindPopup(popup_75e4f2d05852401585bed68719f2f3a8)
+        ;
+
+        
+    
+    
+            marker_8b94a21037444c949a7327a76c440a87.bindTooltip(
+                `<div>
+                     04 Jul 16<br>Ypres Salient Front Lines<br>Replace 42nd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_998d6139fd9641a1b97620bbc9b4c551 = L.marker(
+                [50.836495, 2.922243],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_56f640f2a8f440fda5c4f5fe09723e1c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_998d6139fd9641a1b97620bbc9b4c551.setIcon(icon_56f640f2a8f440fda5c4f5fe09723e1c);
+        
+    
+        var popup_93ee80a936bc4414ab950c491a5ed4a9 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_ff4963e2eec040298506c58f5a2def6c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwOSBKdWwgMTY8YnI+WmlsbGViZWtlIEJ1bmQ8YnI+UmVsaWV2ZWQgYnkgNDNyZCBCYXR0YWxpb24=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_93ee80a936bc4414ab950c491a5ed4a9.setContent(i_frame_ff4963e2eec040298506c58f5a2def6c);
+        
+
+        marker_998d6139fd9641a1b97620bbc9b4c551.bindPopup(popup_93ee80a936bc4414ab950c491a5ed4a9)
+        ;
+
+        
+    
+    
+            marker_998d6139fd9641a1b97620bbc9b4c551.bindTooltip(
+                `<div>
+                     09 Jul 16<br>Zillebeke Bund<br>Relieved by 43rd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_40a5bd17c2d84b518f9c7068e72270e7 = L.marker(
+                [50.811245, 2.581711],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_473810031b9e49e7b049a56f5883dd92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_40a5bd17c2d84b518f9c7068e72270e7.setIcon(icon_473810031b9e49e7b049a56f5883dd92);
+        
+    
+        var popup_7762bc364ffd46a7b00a8b45e587c1b1 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_96f2f0e1ccd143b0a406dc7e974b7eda = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMyBKdWwgMTY8YnI+U3RlZW52b29yZGUsIEZSPGJyPkV4dGVuZGVkIHRyYWluaW5n" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_7762bc364ffd46a7b00a8b45e587c1b1.setContent(i_frame_96f2f0e1ccd143b0a406dc7e974b7eda);
+        
+
+        marker_40a5bd17c2d84b518f9c7068e72270e7.bindPopup(popup_7762bc364ffd46a7b00a8b45e587c1b1)
+        ;
+
+        
+    
+    
+            marker_40a5bd17c2d84b518f9c7068e72270e7.bindTooltip(
+                `<div>
+                     13 Jul 16<br>Steenvoorde, FR<br>Extended training
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_83ca96ed4d71450686984f3f9c594075 = L.marker(
+                [50.836495, 2.922243],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_f33570ac10b44c5fba4583ae38692a8f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_83ca96ed4d71450686984f3f9c594075.setIcon(icon_f33570ac10b44c5fba4583ae38692a8f);
+        
+    
+        var popup_562dc9052e1a4cdd9b4ee0aa15c84ba1 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_cfd7e4fb53dd4bdc9f9328a51e4af8ec = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyNiBKdWwgMTY8YnI+WmlsbGViZWtlIEJ1bmQ8YnI+UmVwbGFjZSA1dGggQ2RuIE1vdW50ZWQgUmlmbGVz" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_562dc9052e1a4cdd9b4ee0aa15c84ba1.setContent(i_frame_cfd7e4fb53dd4bdc9f9328a51e4af8ec);
+        
+
+        marker_83ca96ed4d71450686984f3f9c594075.bindPopup(popup_562dc9052e1a4cdd9b4ee0aa15c84ba1)
+        ;
+
+        
+    
+    
+            marker_83ca96ed4d71450686984f3f9c594075.bindTooltip(
+                `<div>
+                     26 Jul 16<br>Zillebeke Bund<br>Replace 5th Cdn Mounted Rifles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9a5a5da30f694c70bf76d57f6257668f = L.marker(
+                [50.839736, 2.952013],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_ba073e724d5143b3846b3a72b5300426 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9a5a5da30f694c70bf76d57f6257668f.setIcon(icon_ba073e724d5143b3846b3a72b5300426);
+        
+    
+        var popup_26021244a66d4c85b202d8d6fc91f7cd = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_2d89352e618b412ebf5640ad3732e79c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyNyBKdWwgMTY8YnI+WXByZXMgU2FsaWVudCBGcm9udCBMaW5lczxicj5SZXBsYWNlIDR0aCBDZG4gTW91bnRlZCBSaWZsZXM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_26021244a66d4c85b202d8d6fc91f7cd.setContent(i_frame_2d89352e618b412ebf5640ad3732e79c);
+        
+
+        marker_9a5a5da30f694c70bf76d57f6257668f.bindPopup(popup_26021244a66d4c85b202d8d6fc91f7cd)
+        ;
+
+        
+    
+    
+            marker_9a5a5da30f694c70bf76d57f6257668f.bindTooltip(
+                `<div>
+                     27 Jul 16<br>Ypres Salient Front Lines<br>Replace 4th Cdn Mounted Rifles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4853803c9dad4168ac071ac904a95c19 = L.marker(
+                [50.845518, 2.887544],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_df884780636445cd801ce096ba9be83a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4853803c9dad4168ac071ac904a95c19.setIcon(icon_df884780636445cd801ce096ba9be83a);
+        
+    
+        var popup_50c5b7699409410e96deef0c59a2bde6 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_cc77b67eafee4c41a17e8c2e70f37fe7 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwNCBBdWcgMTY8YnI+Q2F2YWxyeSBCYXJyYWNrcyBZcHJlczxicj5SZWxpZXZlZCBieSA0OXRoIEJhdHRhbGlvbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_50c5b7699409410e96deef0c59a2bde6.setContent(i_frame_cc77b67eafee4c41a17e8c2e70f37fe7);
+        
+
+        marker_4853803c9dad4168ac071ac904a95c19.bindPopup(popup_50c5b7699409410e96deef0c59a2bde6)
+        ;
+
+        
+    
+    
+            marker_4853803c9dad4168ac071ac904a95c19.bindTooltip(
+                `<div>
+                     04 Aug 16<br>Cavalry Barracks Ypres<br>Relieved by 49th Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dab418f7f188483eb100d094bd286a36 = L.marker(
+                [50.837706, 2.855324],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_498631da2e3b4994b6186b7adca1336f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dab418f7f188483eb100d094bd286a36.setIcon(icon_498631da2e3b4994b6186b7adca1336f);
+        
+    
+        var popup_91f8ec57368841b58671691f772dbeca = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_da6460169fba4cd7a552b81d641338c4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwNSBBdWcgMTY8YnI+QmVsZ2lhbiBDaGF0ZWF1PGJyPm5hbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_91f8ec57368841b58671691f772dbeca.setContent(i_frame_da6460169fba4cd7a552b81d641338c4);
+        
+
+        marker_dab418f7f188483eb100d094bd286a36.bindPopup(popup_91f8ec57368841b58671691f772dbeca)
+        ;
+
+        
+    
+    
+            marker_dab418f7f188483eb100d094bd286a36.bindTooltip(
+                `<div>
+                     05 Aug 16<br>Belgian Chateau<br>nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_205ecc5c447b442ba13c5a27c7c0e682 = L.marker(
+                [50.826846, 2.940069],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_a5715de58463464bae8566b9af29488e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_205ecc5c447b442ba13c5a27c7c0e682.setIcon(icon_a5715de58463464bae8566b9af29488e);
+        
+    
+        var popup_6655f8607356439ba9c342989676fdf3 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_d0cbaee925a742848c0530281f725bb8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNiBBdWcgMTY8YnI+WXByZXMgU2FsaWVudCBNb250IFNvcnJlbCBTZWN0b3I8YnI+UmVwbGFjZWQgNDNyZCBCYXR0YWxpb24=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_6655f8607356439ba9c342989676fdf3.setContent(i_frame_d0cbaee925a742848c0530281f725bb8);
+        
+
+        marker_205ecc5c447b442ba13c5a27c7c0e682.bindPopup(popup_6655f8607356439ba9c342989676fdf3)
+        ;
+
+        
+    
+    
+            marker_205ecc5c447b442ba13c5a27c7c0e682.bindTooltip(
+                `<div>
+                     16 Aug 16<br>Ypres Salient Mont Sorrel Sector<br>Replaced 43rd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7aaad88ae39842d5a8fd22227b9befbd = L.marker(
+                [50.836495, 2.922243],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_373a1eabdfc04a02875d7817ff8db792 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7aaad88ae39842d5a8fd22227b9befbd.setIcon(icon_373a1eabdfc04a02875d7817ff8db792);
+        
+    
+        var popup_bbdeb11562304011ae0e44c11ba6a042 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_b1177e6e060641a68e4a12bdb6cbef91 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMCBBdWcgMTY8YnI+WmlsbGViZWtlIEJ1bmQ8YnI+UmVsaWV2ZWQgYnkgNDNyZCBCYXR0YWxpb24uIFJlcGxhY2UgNjAgQmF0dGFsaW9uIGFzIFJlc2VydmU=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_bbdeb11562304011ae0e44c11ba6a042.setContent(i_frame_b1177e6e060641a68e4a12bdb6cbef91);
+        
+
+        marker_7aaad88ae39842d5a8fd22227b9befbd.bindPopup(popup_bbdeb11562304011ae0e44c11ba6a042)
+        ;
+
+        
+    
+    
+            marker_7aaad88ae39842d5a8fd22227b9befbd.bindTooltip(
+                `<div>
+                     20 Aug 16<br>Zillebeke Bund<br>Relieved by 43rd Battalion. Replace 60 Battalion as Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_08a68ac87f054072953ef07dac419604 = L.marker(
+                [50.852678, 2.7323801],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_fb7d0e2e3ad541b2a55b41f43bed1d28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_08a68ac87f054072953ef07dac419604.setIcon(icon_fb7d0e2e3ad541b2a55b41f43bed1d28);
+        
+    
+        var popup_43df427808334fc28db880f015ac30c0 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_9a09295b542b4bb09146695a7c25b9e6 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMyBBdWcgMTY8YnI+UG9wZXJpbmdoZTxicj5SZWxpZXZlZCBieSAxc3QgUm95YWwgV2Fyd2ljaHNoaXJlLCBQb3BlcmluZ2hlIGJ5IHRyYWlu" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_43df427808334fc28db880f015ac30c0.setContent(i_frame_9a09295b542b4bb09146695a7c25b9e6);
+        
+
+        marker_08a68ac87f054072953ef07dac419604.bindPopup(popup_43df427808334fc28db880f015ac30c0)
+        ;
+
+        
+    
+    
+            marker_08a68ac87f054072953ef07dac419604.bindTooltip(
+                `<div>
+                     23 Aug 16<br>Poperinghe<br>Relieved by 1st Royal Warwichshire, Poperinghe by train
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cb5962c9288c4070acb159b75bab26f6 = L.marker(
+                [50.801354, 2.607395],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_b0d7154843fb43e799fc9bd32437a73e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cb5962c9288c4070acb159b75bab26f6.setIcon(icon_b0d7154843fb43e799fc9bd32437a73e);
+        
+    
+        var popup_4ee52c38a77a46f5be2f6ba4014da127 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_ac77c9b92b1847ca81d06454f096eb48 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyNyBBdWcgMTY8YnI+U3RlZW52b29yZGU8YnI+VHJhaW5pbmcgdXAgdG8gQnJpZ2FkZSBMZXZlbA==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_4ee52c38a77a46f5be2f6ba4014da127.setContent(i_frame_ac77c9b92b1847ca81d06454f096eb48);
+        
+
+        marker_cb5962c9288c4070acb159b75bab26f6.bindPopup(popup_4ee52c38a77a46f5be2f6ba4014da127)
+        ;
+
+        
+    
+    
+            marker_cb5962c9288c4070acb159b75bab26f6.bindTooltip(
+                `<div>
+                     27 Aug 16<br>Steenvoorde<br>Training up to Brigade Level
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8766c8171c9f453f877e21e973e2921a = L.marker(
+                [50.7388442, 2.3002051],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_bb413636a3c34a8290680039c455d31e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8766c8171c9f453f877e21e973e2921a.setIcon(icon_bb413636a3c34a8290680039c455d31e);
+        
+    
+        var popup_1aeb636abe7e4e3c97f79b87de24dd71 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_9d612e11f7ff43aab04438b39c6422f0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwNyBTZXAgMTY8YnI+QXJxdWVzIFN0YXRpb248YnI+TWFyY2gsIHRydWNrIHRvIFN0YXRpb24gZm9yIHRyYWluIHRvIFNvbW1l" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_1aeb636abe7e4e3c97f79b87de24dd71.setContent(i_frame_9d612e11f7ff43aab04438b39c6422f0);
+        
+
+        marker_8766c8171c9f453f877e21e973e2921a.bindPopup(popup_1aeb636abe7e4e3c97f79b87de24dd71)
+        ;
+
+        
+    
+    
+            marker_8766c8171c9f453f877e21e973e2921a.bindTooltip(
+                `<div>
+                     07 Sep 16<br>Arques Station<br>March, truck to Station for train to Somme
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_83c21cc8c94b4ecab3e9cf0397be05f2 = L.marker(
+                [50.2366005, 2.0823386],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_809d34c0eb21495da7d8eb5f8441a096 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_83c21cc8c94b4ecab3e9cf0397be05f2.setIcon(icon_809d34c0eb21495da7d8eb5f8441a096);
+        
+    
+        var popup_7c8ad31fb4db4726a23f79fdaea790e3 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_cf12627d17444f43943f16f63451a5c4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwOCBTZXAgMTY8YnI+QXV4aSBsZSBDaGF0ZWF1PGJyPlRyYWluIDM2IG1lbiB0byB0aGUgYm94IGNhcg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_7c8ad31fb4db4726a23f79fdaea790e3.setContent(i_frame_cf12627d17444f43943f16f63451a5c4);
+        
+
+        marker_83c21cc8c94b4ecab3e9cf0397be05f2.bindPopup(popup_7c8ad31fb4db4726a23f79fdaea790e3)
+        ;
+
+        
+    
+    
+            marker_83c21cc8c94b4ecab3e9cf0397be05f2.bindTooltip(
+                `<div>
+                     08 Sep 16<br>Auxi le Chateau<br>Train 36 men to the box car
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a2bdc8f952284a2aaf5b9d2b25b1117a = L.marker(
+                [50.1558933, 1.952961],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_e5121988f67d41f1bcadfb3c18f52220 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a2bdc8f952284a2aaf5b9d2b25b1117a.setIcon(icon_e5121988f67d41f1bcadfb3c18f52220);
+        
+    
+        var popup_31ef65d656574e96a16f026bc89f4a1d = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_d9c6ad832330470490225ad75dd58963 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwOSBTZXAgMTY8YnI+TWFpc29uIFJvbGxhbmQ8YnI+Um91dGUgTWFyY2ggMTAgTWlsZXM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_31ef65d656574e96a16f026bc89f4a1d.setContent(i_frame_d9c6ad832330470490225ad75dd58963);
+        
+
+        marker_a2bdc8f952284a2aaf5b9d2b25b1117a.bindPopup(popup_31ef65d656574e96a16f026bc89f4a1d)
+        ;
+
+        
+    
+    
+            marker_a2bdc8f952284a2aaf5b9d2b25b1117a.bindTooltip(
+                `<div>
+                     09 Sep 16<br>Maison Rolland<br>Route March 10 Miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a8f975e10d8d4f54a69ae3cd25774419 = L.marker(
+                [50.0498637, 2.1956582],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_ed1d5c0ecd944f03990bb923323a8465 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a8f975e10d8d4f54a69ae3cd25774419.setIcon(icon_ed1d5c0ecd944f03990bb923323a8465);
+        
+    
+        var popup_6dbc7bc8f52a45469c41b707b6882ad6 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_f6ba721593c849acac58f411be7de26b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMCBTZXAgMTY8YnI+U3QgTGVnZXItTGVzLURvbWFydDxicj5Sb3V0ZSBNYXJjaCAxMSBNaWxlcw==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_6dbc7bc8f52a45469c41b707b6882ad6.setContent(i_frame_f6ba721593c849acac58f411be7de26b);
+        
+
+        marker_a8f975e10d8d4f54a69ae3cd25774419.bindPopup(popup_6dbc7bc8f52a45469c41b707b6882ad6)
+        ;
+
+        
+    
+    
+            marker_a8f975e10d8d4f54a69ae3cd25774419.bindTooltip(
+                `<div>
+                     10 Sep 16<br>St Leger-Les-Domart<br>Route March 11 Miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3ee6f81fd9014e6f85d688caf670016f = L.marker(
+                [50.0650878, 2.309602],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_999821894f4548629686beff80d80f24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3ee6f81fd9014e6f85d688caf670016f.setIcon(icon_999821894f4548629686beff80d80f24);
+        
+    
+        var popup_a34b22bd31df497db78734a53e40f7bf = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_5b38bc2bfdc94343b7782d3d1730f40e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMSBTZXAgMTY8YnI+TGEgVmljb2duZTxicj5Sb3V0ZSBNYXJjaCAxMSBNaWxlcw==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_a34b22bd31df497db78734a53e40f7bf.setContent(i_frame_5b38bc2bfdc94343b7782d3d1730f40e);
+        
+
+        marker_3ee6f81fd9014e6f85d688caf670016f.bindPopup(popup_a34b22bd31df497db78734a53e40f7bf)
+        ;
+
+        
+    
+    
+            marker_3ee6f81fd9014e6f85d688caf670016f.bindTooltip(
+                `<div>
+                     11 Sep 16<br>La Vicogne<br>Route March 11 Miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9928a3cded2d4656adc87bacbd42c515 = L.marker(
+                [50.0270229, 2.4045783],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_78539dd3962345d2b8deceedb7aaaa92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9928a3cded2d4656adc87bacbd42c515.setIcon(icon_78539dd3962345d2b8deceedb7aaaa92);
+        
+    
+        var popup_422885f3d68d48528775536d18d25a8d = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_684dcf5ae28f42bca1fed29da1d541a5 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMiBTZXAgMTY8YnI+SGVycmlzYXJ0PGJyPlJvdXRlIE1hcmNoIDYgTWlsZXM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_422885f3d68d48528775536d18d25a8d.setContent(i_frame_684dcf5ae28f42bca1fed29da1d541a5);
+        
+
+        marker_9928a3cded2d4656adc87bacbd42c515.bindPopup(popup_422885f3d68d48528775536d18d25a8d)
+        ;
+
+        
+    
+    
+            marker_9928a3cded2d4656adc87bacbd42c515.bindTooltip(
+                `<div>
+                     12 Sep 16<br>Herrisart<br>Route March 6 Miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_25e4b83d632144eeb2f4ea6c34b005b3 = L.marker(
+                [50.0209268, 2.4372524],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_4e36554c379845ea9733b504a5777c40 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_25e4b83d632144eeb2f4ea6c34b005b3.setIcon(icon_4e36554c379845ea9733b504a5777c40);
+        
+    
+        var popup_07a1fcb7ffa64fefb44f02f5d14a7b2b = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_e37310a17da34160adfafc12edfd5e95 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMyBTZXAgMTY8YnI+VmFkZW5jb3VydCBXb29kPGJyPlJvdXRlIE1hcmNoIDQgTWlsZXM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_07a1fcb7ffa64fefb44f02f5d14a7b2b.setContent(i_frame_e37310a17da34160adfafc12edfd5e95);
+        
+
+        marker_25e4b83d632144eeb2f4ea6c34b005b3.bindPopup(popup_07a1fcb7ffa64fefb44f02f5d14a7b2b)
+        ;
+
+        
+    
+    
+            marker_25e4b83d632144eeb2f4ea6c34b005b3.bindTooltip(
+                `<div>
+                     13 Sep 16<br>Vadencourt Wood<br>Route March 4 Miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f518215f011545368a1081023be6172b = L.marker(
+                [50.0129153, 2.5377833],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_e09defc382f34c67ad7d16af5d9d9d3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f518215f011545368a1081023be6172b.setIcon(icon_e09defc382f34c67ad7d16af5d9d9d3d);
+        
+    
+        var popup_1383cdfe312e4daeaa81e22a2bc91fd2 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_aabbb56883414eec9bea90921c5c4a7d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNCBTZXAgMTY8YnI+QWxiZXJ0PGJyPlJvdXRlIE1hcmNoIDkgTWlsZXM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_1383cdfe312e4daeaa81e22a2bc91fd2.setContent(i_frame_aabbb56883414eec9bea90921c5c4a7d);
+        
+
+        marker_f518215f011545368a1081023be6172b.bindPopup(popup_1383cdfe312e4daeaa81e22a2bc91fd2)
+        ;
+
+        
+    
+    
+            marker_f518215f011545368a1081023be6172b.bindTooltip(
+                `<div>
+                     14 Sep 16<br>Albert<br>Route March 9 Miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c39a8825ecde4bb281fe78464ec2b84e = L.marker(
+                [50.017995, 2.681535],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_822fb500c52b4087b6a7c7bf5aee4a07 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c39a8825ecde4bb281fe78464ec2b84e.setIcon(icon_822fb500c52b4087b6a7c7bf5aee4a07);
+        
+    
+        var popup_f88dfb1f1c5a47d68acc69ae7411d9c0 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_1dbbe5dab03140afbee2ba50ab729bf5 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNSBTZXAgMTY8YnI+VXNuYSBIaWxsIG5lYXIgTGEgQm9pc2VsbGU8YnI+UmVhZHkgdG8gZW50ZXIgQmF0dGxlIG9mIENvdXJjZWxldHRl" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_f88dfb1f1c5a47d68acc69ae7411d9c0.setContent(i_frame_1dbbe5dab03140afbee2ba50ab729bf5);
+        
+
+        marker_c39a8825ecde4bb281fe78464ec2b84e.bindPopup(popup_f88dfb1f1c5a47d68acc69ae7411d9c0)
+        ;
+
+        
+    
+    
+            marker_c39a8825ecde4bb281fe78464ec2b84e.bindTooltip(
+                `<div>
+                     15 Sep 16<br>Usna Hill near La Boiselle<br>Ready to enter Battle of Courcelette
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cd017864b6f449b3a97f6077387d06a1 = L.marker(
+                [50.054835, 2.726871],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_060561f88ed44bbcbce565bbccb2d3ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cd017864b6f449b3a97f6077387d06a1.setIcon(icon_060561f88ed44bbcbce565bbccb2d3ff);
+        
+    
+        var popup_5bb4cddf031f4563aea60246a2267f6d = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_d2ccf0d0b2c243bb9210413d0b4b7877 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNiBTZXAgMTY8YnI+Q2hhbGsgUGl0cyBTRSBvZiBDb3VyY2VsZXR0ZTxicj5Gcm9udCBMaW5lIFJlYWR5IHRvIEVuZ2FnZSBhdCB6b2xsZXJuIFJlZG91YnQ=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_5bb4cddf031f4563aea60246a2267f6d.setContent(i_frame_d2ccf0d0b2c243bb9210413d0b4b7877);
+        
+
+        marker_cd017864b6f449b3a97f6077387d06a1.bindPopup(popup_5bb4cddf031f4563aea60246a2267f6d)
+        ;
+
+        
+    
+    
+            marker_cd017864b6f449b3a97f6077387d06a1.bindTooltip(
+                `<div>
+                     16 Sep 16<br>Chalk Pits SE of Courcelette<br>Front Line Ready to Engage at zollern Redoubt
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b15a820d3364cb0916995f72c7dc73d = L.marker(
+                [50.051316, 2.739765],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_a1d09aa0b81148469284c27b58c651e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5b15a820d3364cb0916995f72c7dc73d.setIcon(icon_a1d09aa0b81148469284c27b58c651e3);
+        
+    
+        var popup_4bc8b60b9aec442c8240a5be5f7d8f25 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_dec0ac78f0804714aa3d3def8653e569 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNyBTZXAgMTY8YnI+Wm9sbGVybiBHcmFiZW48YnI+UmVwb3NpdGlvbmVkLiBIZWF2dCBzaGVsbGluZy4gIEJpbGwgSm9obnN0b24gV291bmRlZC4g" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_4bc8b60b9aec442c8240a5be5f7d8f25.setContent(i_frame_dec0ac78f0804714aa3d3def8653e569);
+        
+
+        marker_5b15a820d3364cb0916995f72c7dc73d.bindPopup(popup_4bc8b60b9aec442c8240a5be5f7d8f25)
+        ;
+
+        
+    
+    
+            marker_5b15a820d3364cb0916995f72c7dc73d.bindTooltip(
+                `<div>
+                     17 Sep 16<br>Zollern Graben<br>Repositioned. Heavt shelling.  Bill Johnston Wounded. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d20fd2d6f78c4e8ab48380c00762fad5 = L.marker(
+                [50.058331, 2.741443],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_2e41147b0fab4a7dae89ad5dd9db9c5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d20fd2d6f78c4e8ab48380c00762fad5.setIcon(icon_2e41147b0fab4a7dae89ad5dd9db9c5a);
+        
+    
+        var popup_778c8ecba8ba46de96bcfe43e2245af2 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_0ca058d6ea944665a322de38219093d3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxOCBTZXAgMTY8YnI+RmFiZWNrIEdyYWJlbjxicj5SZXBsYWNlZCA1Mm5kIEJ0dG4gaW4gRnJvbnQgTGluZS4g" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_778c8ecba8ba46de96bcfe43e2245af2.setContent(i_frame_0ca058d6ea944665a322de38219093d3);
+        
+
+        marker_d20fd2d6f78c4e8ab48380c00762fad5.bindPopup(popup_778c8ecba8ba46de96bcfe43e2245af2)
+        ;
+
+        
+    
+    
+            marker_d20fd2d6f78c4e8ab48380c00762fad5.bindTooltip(
+                `<div>
+                     18 Sep 16<br>Fabeck Graben<br>Replaced 52nd Bttn in Front Line. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_105b091d6fa643f1b26f0c5d9df7a9a5 = L.marker(
+                [50.058204, 2.732505],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_cba4c5e3326540c0af6537e8e962a784 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_105b091d6fa643f1b26f0c5d9df7a9a5.setIcon(icon_cba4c5e3326540c0af6537e8e962a784);
+        
+    
+        var popup_3d0dfb7b4cab477da986be51d20e2c02 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_6a70fc42dcdd4ed797d473c01c0e78d7 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMCBTZXAgMTY8YnI+Q2hhbGsgTW91bmQ8YnI+R3JlbmFkZSBBdHRhY2tzIG9uIEdlcm1hbiBUcmVuY2hlcy4gVmVyeSBIZWF2eSBmaWdodGluZw==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_3d0dfb7b4cab477da986be51d20e2c02.setContent(i_frame_6a70fc42dcdd4ed797d473c01c0e78d7);
+        
+
+        marker_105b091d6fa643f1b26f0c5d9df7a9a5.bindPopup(popup_3d0dfb7b4cab477da986be51d20e2c02)
+        ;
+
+        
+    
+    
+            marker_105b091d6fa643f1b26f0c5d9df7a9a5.bindTooltip(
+                `<div>
+                     20 Sep 16<br>Chalk Mound<br>Grenade Attacks on German Trenches. Very Heavy fighting
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e7efac01f0084ec995e35b530240151e = L.marker(
+                [50.008243, 2.634017],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_b78b2cc3903f429b86cf7a658f469167 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e7efac01f0084ec995e35b530240151e.setIcon(icon_b78b2cc3903f429b86cf7a658f469167);
+        
+    
+        var popup_c35839a6e6404ed89d598dd4ceb0ee58 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_00632d9c946e4852bdeb750a63d93abe = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMiBTZXAgMTY8YnI+QnJpY2tmaWVsZCBOZWFyIEFsYmVydDxicj5SZWxpZXZlZCBieSA1Mm5kIEJhdHRhbGlvbi4gIDggbWlsZSBtYXJjaCB0byBBbGJlcnQu" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_c35839a6e6404ed89d598dd4ceb0ee58.setContent(i_frame_00632d9c946e4852bdeb750a63d93abe);
+        
+
+        marker_e7efac01f0084ec995e35b530240151e.bindPopup(popup_c35839a6e6404ed89d598dd4ceb0ee58)
+        ;
+
+        
+    
+    
+            marker_e7efac01f0084ec995e35b530240151e.bindTooltip(
+                `<div>
+                     22 Sep 16<br>Brickfield Near Albert<br>Relieved by 52nd Battalion.  8 mile march to Albert.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ddaeedefc2c465b9b81f96337edfe56 = L.marker(
+                [50.0145688, 2.4524854],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_3d54af8b26f24494a35e3a74333afdaf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5ddaeedefc2c465b9b81f96337edfe56.setIcon(icon_3d54af8b26f24494a35e3a74333afdaf);
+        
+    
+        var popup_81c1aaaa858e4858b09cefad13436f8f = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_9e57394b9b0545f39920ce904a4c8503 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyNCBTZXAgMTY8YnI+V2FybG95PGJyPlJlaW5mb3JjZW1lbnRzIGpvaW5lZCB0aGUgQmF0dGFsaW9u" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_81c1aaaa858e4858b09cefad13436f8f.setContent(i_frame_9e57394b9b0545f39920ce904a4c8503);
+        
+
+        marker_5ddaeedefc2c465b9b81f96337edfe56.bindPopup(popup_81c1aaaa858e4858b09cefad13436f8f)
+        ;
+
+        
+    
+    
+            marker_5ddaeedefc2c465b9b81f96337edfe56.bindTooltip(
+                `<div>
+                     24 Sep 16<br>Warloy<br>Reinforcements joined the Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c423a627a71447399721945df02ca011 = L.marker(
+                [50.0270229, 2.4045783],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_1a0697d582c64e5ba1e239007ae770da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c423a627a71447399721945df02ca011.setIcon(icon_1a0697d582c64e5ba1e239007ae770da);
+        
+    
+        var popup_d5c538d435b745d8870c9f5d164ba3f9 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_1d96f8eed2fd452689e0c4e6bce1493b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyNSBTZXAgMTY8YnI+SGVyaXNzYXJ0PGJyPkJhdHRhbGlvbiBSZW9yZ2FuaXphdGlvbi4=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_d5c538d435b745d8870c9f5d164ba3f9.setContent(i_frame_1d96f8eed2fd452689e0c4e6bce1493b);
+        
+
+        marker_c423a627a71447399721945df02ca011.bindPopup(popup_d5c538d435b745d8870c9f5d164ba3f9)
+        ;
+
+        
+    
+    
+            marker_c423a627a71447399721945df02ca011.bindTooltip(
+                `<div>
+                     25 Sep 16<br>Herissart<br>Battalion Reorganization.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5e1ddc1e61ae48b7bf23f9de2a8ce321 = L.marker(
+                [50.0209268, 2.4372524],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_7b79138b664b446db722781872ffc659 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5e1ddc1e61ae48b7bf23f9de2a8ce321.setIcon(icon_7b79138b664b446db722781872ffc659);
+        
+    
+        var popup_9eae4359a2cb40868cdeb6f22dd2d64d = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_4c30a3aa46fc40d29ac48651e56df792 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyOCBTZXAgMTY8YnI+VmFkZW5jb3VydCBXb29kPGJyPkJhdGggYW5kIGNsZWFuIHVuZGVyd2Vhci4=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_9eae4359a2cb40868cdeb6f22dd2d64d.setContent(i_frame_4c30a3aa46fc40d29ac48651e56df792);
+        
+
+        marker_5e1ddc1e61ae48b7bf23f9de2a8ce321.bindPopup(popup_9eae4359a2cb40868cdeb6f22dd2d64d)
+        ;
+
+        
+    
+    
+            marker_5e1ddc1e61ae48b7bf23f9de2a8ce321.bindTooltip(
+                `<div>
+                     28 Sep 16<br>Vadencourt Wood<br>Bath and clean underwear.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9baefb7fa873434abcbe2c9620e1d840 = L.marker(
+                [49.9647251, 2.4427335],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_fb52eafea779426b81509347567c3b8f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9baefb7fa873434abcbe2c9620e1d840.setIcon(icon_fb52eafea779426b81509347567c3b8f);
+        
+    
+        var popup_aa32f56ae493425a83074d94cefa8c08 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_5a337a7cc1df4ec7a87ee0f084e4fa68 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyOSBTZXAgMTY8YnI+Qm91emVuY291cnQ8YnI+U2VwdCBzdW1tYXJ5IDQ4IEtpbGxlZCwgMTkgTXFpc3NpbmcsIDE5OCBXb3VuZGVk" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_aa32f56ae493425a83074d94cefa8c08.setContent(i_frame_5a337a7cc1df4ec7a87ee0f084e4fa68);
+        
+
+        marker_9baefb7fa873434abcbe2c9620e1d840.bindPopup(popup_aa32f56ae493425a83074d94cefa8c08)
+        ;
+
+        
+    
+    
+            marker_9baefb7fa873434abcbe2c9620e1d840.bindTooltip(
+                `<div>
+                     29 Sep 16<br>Bouzencourt<br>Sept summary 48 Killed, 19 Mqissing, 198 Wounded
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f8f3fea612446c6b291048a2823bd0a = L.marker(
+                [50.008243, 2.634017],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_962abd670e1c45bcb13855b210b3f2df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9f8f3fea612446c6b291048a2823bd0a.setIcon(icon_962abd670e1c45bcb13855b210b3f2df);
+        
+    
+        var popup_f7109b770791437b809f40de71110b05 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_fbc09d469afe4c918a2479e745514162 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwMiBPY3QgMTY8YnI+QnJpY2tmaWVsZCBOZWFyIEFsYmVydDxicj5SZXR1cm5pbmcgdG8gdGhlIEZyb250IExpbmVz" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_f7109b770791437b809f40de71110b05.setContent(i_frame_fbc09d469afe4c918a2479e745514162);
+        
+
+        marker_9f8f3fea612446c6b291048a2823bd0a.bindPopup(popup_f7109b770791437b809f40de71110b05)
+        ;
+
+        
+    
+    
+            marker_9f8f3fea612446c6b291048a2823bd0a.bindTooltip(
+                `<div>
+                     02 Oct 16<br>Brickfield Near Albert<br>Returning to the Front Lines
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c6a74ab975f46dc80885341effc1343 = L.marker(
+                [50.068276, 2.746857],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_fcb622c0e58c4538a9b9e57d90546133 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2c6a74ab975f46dc80885341effc1343.setIcon(icon_fcb622c0e58c4538a9b9e57d90546133);
+        
+    
+        var popup_d5784077973c46e682e554b2882d1ccf = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_4dc8371bc1b8407bac427b4f64d84d43 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwMyBPY3QgMTY8YnI+TWlyYW1vbnQgUm9hZDxicj5SZWxpZXZpbmcgMTh0aCBCYXR0YWxpb24=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_d5784077973c46e682e554b2882d1ccf.setContent(i_frame_4dc8371bc1b8407bac427b4f64d84d43);
+        
+
+        marker_2c6a74ab975f46dc80885341effc1343.bindPopup(popup_d5784077973c46e682e554b2882d1ccf)
+        ;
+
+        
+    
+    
+            marker_2c6a74ab975f46dc80885341effc1343.bindTooltip(
+                `<div>
+                     03 Oct 16<br>Miramont Road<br>Relieving 18th Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c92e3c0e592d43d1b4e8fc95930f00b0 = L.marker(
+                [50.00247, 2.632949],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_a70da4d73c59469aa669e44857d02324 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c92e3c0e592d43d1b4e8fc95930f00b0.setIcon(icon_a70da4d73c59469aa669e44857d02324);
+        
+    
+        var popup_5eac7dde64e143a3b4742b1271ed6c90 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_122fd083f3be45ca86fe73f44988baad = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwNSBPY3QgMTY8YnI+VGFyYSBIaWxsPGJyPlJlcGxhY2VkIGJ5IDE1IEJhdHRhbGlvbi4gUmV0dXJuIHRvIHJlc3QgYXJlYS4=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_5eac7dde64e143a3b4742b1271ed6c90.setContent(i_frame_122fd083f3be45ca86fe73f44988baad);
+        
+
+        marker_c92e3c0e592d43d1b4e8fc95930f00b0.bindPopup(popup_5eac7dde64e143a3b4742b1271ed6c90)
+        ;
+
+        
+    
+    
+            marker_c92e3c0e592d43d1b4e8fc95930f00b0.bindTooltip(
+                `<div>
+                     05 Oct 16<br>Tara Hill<br>Replaced by 15 Battalion. Return to rest area.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a4645db7e20c48359064619f31e5d2f6 = L.marker(
+                [50.068757, 2.751896],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_bcd9c389494d438690ff4836c431def9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a4645db7e20c48359064619f31e5d2f6.setIcon(icon_bcd9c389494d438690ff4836c431def9);
+        
+    
+        var popup_6b832723444b4b65a88dc1ffbb13aa8d = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_345fb49546e0497faf5994ce09dec3f4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwNyBPY3QgMTY8YnI+RWFzdCBNaXJhdW1vbnQgUm9hZDxicj5SZWxpZXZpbmcgNTJuZCBCYXR0YWxpb24=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_6b832723444b4b65a88dc1ffbb13aa8d.setContent(i_frame_345fb49546e0497faf5994ce09dec3f4);
+        
+
+        marker_a4645db7e20c48359064619f31e5d2f6.bindPopup(popup_6b832723444b4b65a88dc1ffbb13aa8d)
+        ;
+
+        
+    
+    
+            marker_a4645db7e20c48359064619f31e5d2f6.bindTooltip(
+                `<div>
+                     07 Oct 16<br>East Miraumont Road<br>Relieving 52nd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8d35a6f52d2f4862a3b1f75a861cd489 = L.marker(
+                [50.06897, 2.75004],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_68b8389765cf4318a69eada417fba18a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8d35a6f52d2f4862a3b1f75a861cd489.setIcon(icon_68b8389765cf4318a69eada417fba18a);
+        
+    
+        var popup_f869ba3acac34e7aa164eea9ee6228ba = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_938911fb28f44ed6906f18c8aabaaede = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwOCBPY3QgMTY8YnI+SnVtcGluZyBPZmYgVHJlbmNoPGJyPkFzc2F1bHQgb24gUmVnaW5hIFRyZW5jaC4gNTh0aCBtYWRlIGl0IHRvIHRoZSB0cmVuY2gsIGJ1dCB3YXMgZm9yY2VkIGJhY2s=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_f869ba3acac34e7aa164eea9ee6228ba.setContent(i_frame_938911fb28f44ed6906f18c8aabaaede);
+        
+
+        marker_8d35a6f52d2f4862a3b1f75a861cd489.bindPopup(popup_f869ba3acac34e7aa164eea9ee6228ba)
+        ;
+
+        
+    
+    
+            marker_8d35a6f52d2f4862a3b1f75a861cd489.bindTooltip(
+                `<div>
+                     08 Oct 16<br>Jumping Off Trench<br>Assault on Regina Trench. 58th made it to the trench, but was forced back
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16dd67a2188d4f68b20069436e503c21 = L.marker(
+                [50.00247, 2.632949],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_433b3d74f2d04fd0a361c047cef10b40 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_16dd67a2188d4f68b20069436e503c21.setIcon(icon_433b3d74f2d04fd0a361c047cef10b40);
+        
+    
+        var popup_23f15ddedb6e45c991fe99773a014df5 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_cb80fca9cc2c42faa66b2660c34d8bc3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwOSBPY3QgMTY8YnI+VGFyYSBIaWxsPGJyPlJlcGxhY2VkIGJ5IDV0aCBDTVIuICAzMCBLaWxlZCwgMTExIE1pc3NpbmcsIDE0MSBXb3VuZGVkLg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_23f15ddedb6e45c991fe99773a014df5.setContent(i_frame_cb80fca9cc2c42faa66b2660c34d8bc3);
+        
+
+        marker_16dd67a2188d4f68b20069436e503c21.bindPopup(popup_23f15ddedb6e45c991fe99773a014df5)
+        ;
+
+        
+    
+    
+            marker_16dd67a2188d4f68b20069436e503c21.bindTooltip(
+                `<div>
+                     09 Oct 16<br>Tara Hill<br>Replaced by 5th CMR.  30 Kiled, 111 Missing, 141 Wounded.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5d5957914674498b9d213b39e6749501 = L.marker(
+                [50.008243, 2.634017],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_74f854d968f343c9a55491eb94f0e6bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5d5957914674498b9d213b39e6749501.setIcon(icon_74f854d968f343c9a55491eb94f0e6bc);
+        
+    
+        var popup_0fa8800733f440309bb5c2516b2f9e61 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_c3c089bc0283418495cdee7bc85bc2a9 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMCBPY3QgMTY8YnI+QnJpY2tmaWVsZCBOZWFyIEFsYmVydDxicj4xMiBvZiAxNiBPZmZpY2VycyBLTSBvciBX" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_0fa8800733f440309bb5c2516b2f9e61.setContent(i_frame_c3c089bc0283418495cdee7bc85bc2a9);
+        
+
+        marker_5d5957914674498b9d213b39e6749501.bindPopup(popup_0fa8800733f440309bb5c2516b2f9e61)
+        ;
+
+        
+    
+    
+            marker_5d5957914674498b9d213b39e6749501.bindTooltip(
+                `<div>
+                     10 Oct 16<br>Brickfield Near Albert<br>12 of 16 Officers KM or W
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e504a735291e42b784e58e03cfe02dc0 = L.marker(
+                [50.0133081, 2.5529988],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_1cd82cacc93347c7b01f36e0c0764950 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e504a735291e42b784e58e03cfe02dc0.setIcon(icon_1cd82cacc93347c7b01f36e0c0764950);
+        
+    
+        var popup_1f9f0c294e0b44b79e3af5de00282da4 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_fb93de62beeb44af990a434399397c65 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMiBPY3QgMTY8YnI+V29ybG95PGJyPlJvdXRlIE1hcmNoIDUgbWlsZXM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_1f9f0c294e0b44b79e3af5de00282da4.setContent(i_frame_fb93de62beeb44af990a434399397c65);
+        
+
+        marker_e504a735291e42b784e58e03cfe02dc0.bindPopup(popup_1f9f0c294e0b44b79e3af5de00282da4)
+        ;
+
+        
+    
+    
+            marker_e504a735291e42b784e58e03cfe02dc0.bindTooltip(
+                `<div>
+                     12 Oct 16<br>Worloy<br>Route March 5 miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b61c267d05a4a9b97557c3cf0a1aa53 = L.marker(
+                [50.0650878, 2.309602],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_e426d48d55ba437db0342a4c5001a60a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4b61c267d05a4a9b97557c3cf0a1aa53.setIcon(icon_e426d48d55ba437db0342a4c5001a60a);
+        
+    
+        var popup_2d5d3589afa649ab9e889705b5f402d2 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_d1de45fc41fd47e78e638646f76d916e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMyBPY3QgMTY8YnI+TGEgVmljb2duZTxicj5Sb3V0ZSBNYXJjaCAxNSBNaWxlcw==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_2d5d3589afa649ab9e889705b5f402d2.setContent(i_frame_d1de45fc41fd47e78e638646f76d916e);
+        
+
+        marker_4b61c267d05a4a9b97557c3cf0a1aa53.bindPopup(popup_2d5d3589afa649ab9e889705b5f402d2)
+        ;
+
+        
+    
+    
+            marker_4b61c267d05a4a9b97557c3cf0a1aa53.bindTooltip(
+                `<div>
+                     13 Oct 16<br>La Vicogne<br>Route March 15 Miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9980ff60c18f4ba3966dbcf8424409ed = L.marker(
+                [50.1334546, 2.108772],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_9be0f5ca8ffd4a51a34c0e94b84bed96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9980ff60c18f4ba3966dbcf8424409ed.setIcon(icon_9be0f5ca8ffd4a51a34c0e94b84bed96);
+        
+    
+        var popup_86efd1b0d2d34200b046778c9e3f48d0 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_e5b8c621d34a4d449c751998f06cc010 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNCBPY3QgMTY8YnI+TW9udHJlbGV0PGJyPlJvdXRlIE1hcmNoIDggbWlsZXM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_86efd1b0d2d34200b046778c9e3f48d0.setContent(i_frame_e5b8c621d34a4d449c751998f06cc010);
+        
+
+        marker_9980ff60c18f4ba3966dbcf8424409ed.bindPopup(popup_86efd1b0d2d34200b046778c9e3f48d0)
+        ;
+
+        
+    
+    
+            marker_9980ff60c18f4ba3966dbcf8424409ed.bindTooltip(
+                `<div>
+                     14 Oct 16<br>Montrelet<br>Route March 8 miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_afc414ee206e47dcb51b6d77fa0ecbd4 = L.marker(
+                [50.1778691, 2.1270354],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_8a1aff3d42104cd8934b11c3907e946a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_afc414ee206e47dcb51b6d77fa0ecbd4.setIcon(icon_8a1aff3d42104cd8934b11c3907e946a);
+        
+    
+        var popup_6009cca9c7cf453998c5c53b21983265 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_5ead04fae4754fafb8ce7a6782f4666c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNiBPY3QgMTY8YnI+TW9udGlnbnktbGVzLUpvbmdsZXVyczxicj5Sb3V0ZSBNYXJjaCAxMCBtaWxlcyB0aGVuIDMgZGF5cyB0cmFpbmluZy4=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_6009cca9c7cf453998c5c53b21983265.setContent(i_frame_5ead04fae4754fafb8ce7a6782f4666c);
+        
+
+        marker_afc414ee206e47dcb51b6d77fa0ecbd4.bindPopup(popup_6009cca9c7cf453998c5c53b21983265)
+        ;
+
+        
+    
+    
+            marker_afc414ee206e47dcb51b6d77fa0ecbd4.bindTooltip(
+                `<div>
+                     16 Oct 16<br>Montigny-les-Jongleurs<br>Route March 10 miles then 3 days training.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0777c2662ce74e40bb15a2495fcf4e4c = L.marker(
+                [50.2582425, 2.2215561],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_285a4305d6c34026b2aaa77b98445db3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0777c2662ce74e40bb15a2495fcf4e4c.setIcon(icon_285a4305d6c34026b2aaa77b98445db3);
+        
+    
+        var popup_b6b33b66979b4182b7bd9424a1a5b435 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_918181b915ef4054b0154aa1fc0ec2a2 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMCBPY3QgMTY8YnI+Rm9ydGVsPGJyPkhlYWRpbmcgYmFjayB0byB0aGUgZnJvbnQu" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_b6b33b66979b4182b7bd9424a1a5b435.setContent(i_frame_918181b915ef4054b0154aa1fc0ec2a2);
+        
+
+        marker_0777c2662ce74e40bb15a2495fcf4e4c.bindPopup(popup_b6b33b66979b4182b7bd9424a1a5b435)
+        ;
+
+        
+    
+    
+            marker_0777c2662ce74e40bb15a2495fcf4e4c.bindTooltip(
+                `<div>
+                     20 Oct 16<br>Fortel<br>Heading back to the front.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_005c3e63c538483b949414c67fc47a4f = L.marker(
+                [50.2951483, 2.3675246],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_5946c25d884244cbb759f5bc71cd57a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_005c3e63c538483b949414c67fc47a4f.setIcon(icon_5946c25d884244cbb759f5bc71cd57a8);
+        
+    
+        var popup_2555d030f62a4f93b56c4b511caa89fa = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_a6f9265827aa42578c28ee27f6123995 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMSBPY3QgMTY8YnI+SG91dmluPGJyPlJvdXRlIE1hcmNoIDYgbWlsZXM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_2555d030f62a4f93b56c4b511caa89fa.setContent(i_frame_a6f9265827aa42578c28ee27f6123995);
+        
+
+        marker_005c3e63c538483b949414c67fc47a4f.bindPopup(popup_2555d030f62a4f93b56c4b511caa89fa)
+        ;
+
+        
+    
+    
+            marker_005c3e63c538483b949414c67fc47a4f.bindTooltip(
+                `<div>
+                     21 Oct 16<br>Houvin<br>Route March 6 miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_abc736e4fa3444deb0130f5686afa747 = L.marker(
+                [50.3317839, 2.4798255],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_aa3f9886f2fd43c8aed8e76efc96c622 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_abc736e4fa3444deb0130f5686afa747.setIcon(icon_aa3f9886f2fd43c8aed8e76efc96c622);
+        
+    
+        var popup_8047469f1f9d45828ccff6ab16f3e5d5 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_043c5bdbbb6b4970854e2652fb17b21b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMiBPY3QgMTY8YnI+UGVuaW48YnI+Um91dGUgTWFyY2ggNiBtaWxlcw==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_8047469f1f9d45828ccff6ab16f3e5d5.setContent(i_frame_043c5bdbbb6b4970854e2652fb17b21b);
+        
+
+        marker_abc736e4fa3444deb0130f5686afa747.bindPopup(popup_8047469f1f9d45828ccff6ab16f3e5d5)
+        ;
+
+        
+    
+    
+            marker_abc736e4fa3444deb0130f5686afa747.bindTooltip(
+                `<div>
+                     22 Oct 16<br>Penin<br>Route March 6 miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f744f1142c1428db16538ad7792fc5f = L.marker(
+                [50.3741508, 2.5224491],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_87ad3ab4dbb34d78818f83efd07d8025 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9f744f1142c1428db16538ad7792fc5f.setIcon(icon_87ad3ab4dbb34d78818f83efd07d8025);
+        
+    
+        var popup_c7446fdc39f047c79663ae414cdbae70 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_5f6aafef6acd4e85a771a460152bac83 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyMyBPY3QgMTY8YnI+VmlsbGVycyBCcnVsaW48YnI+Um91dGUgTWFyY2ggMTAgbWlsZXM=" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_c7446fdc39f047c79663ae414cdbae70.setContent(i_frame_5f6aafef6acd4e85a771a460152bac83);
+        
+
+        marker_9f744f1142c1428db16538ad7792fc5f.bindPopup(popup_c7446fdc39f047c79663ae414cdbae70)
+        ;
+
+        
+    
+    
+            marker_9f744f1142c1428db16538ad7792fc5f.bindTooltip(
+                `<div>
+                     23 Oct 16<br>Villers Brulin<br>Route March 10 miles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b99e287d9b5c41cb855c8f9fd2b2a4be = L.marker(
+                [50.3380174, 2.6865276],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_b6efd06d301b46029f35d7d65c35f178 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b99e287d9b5c41cb855c8f9fd2b2a4be.setIcon(icon_b6efd06d301b46029f35d7d65c35f178);
+        
+    
+        var popup_b3ba78f4783748f68ce40403c8eb38be = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_3ef54fcb780c45faae001d3b3306780e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyNSBPY3QgMTY8YnI+QnJheTxicj5UcmFpbmluZw==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_b3ba78f4783748f68ce40403c8eb38be.setContent(i_frame_3ef54fcb780c45faae001d3b3306780e);
+        
+
+        marker_b99e287d9b5c41cb855c8f9fd2b2a4be.bindPopup(popup_b3ba78f4783748f68ce40403c8eb38be)
+        ;
+
+        
+    
+    
+            marker_b99e287d9b5c41cb855c8f9fd2b2a4be.bindTooltip(
+                `<div>
+                     25 Oct 16<br>Bray<br>Training
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_42d54fe03e6a42b88107048edbcab654 = L.marker(
+                [50.4106241, 2.705909],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_697e8d0d86a3499390fe44fa8c57d11f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_42d54fe03e6a42b88107048edbcab654.setIcon(icon_697e8d0d86a3499390fe44fa8c57d11f);
+        
+    
+        var popup_aeb5cfa504f547e7aa39e891438d2181 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_3f9f4b1d05644757a0a88229ed1c62ad = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyOSBPY3QgMTY8YnI+SGVybWF2aWxsZTxicj5QcmVwYXJpbmcgdG8gRW50ZXIgRnJvbnQgTGluZQ==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_aeb5cfa504f547e7aa39e891438d2181.setContent(i_frame_3f9f4b1d05644757a0a88229ed1c62ad);
+        
+
+        marker_42d54fe03e6a42b88107048edbcab654.bindPopup(popup_aeb5cfa504f547e7aa39e891438d2181)
+        ;
+
+        
+    
+    
+            marker_42d54fe03e6a42b88107048edbcab654.bindTooltip(
+                `<div>
+                     29 Oct 16<br>Hermaville<br>Preparing to Enter Front Line
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cbab847c61c04ca4ad0dc9b8f3069bfd = L.marker(
+                [50.357965, 2.778725],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_c0974d65b78641608bd760a57a773959 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cbab847c61c04ca4ad0dc9b8f3069bfd.setIcon(icon_c0974d65b78641608bd760a57a773959);
+        
+    
+        var popup_9466be4fdf824ef2b38b0d06491d8d24 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_9b7683acafaa4b1cb840e9b95006ef98 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAzMCBPY3QgMTY8YnI+TmV1dmlsbGUgU3QgVmFhc3Q8YnI+UmVsaWV2ZWQgNDMgQmF0dGFsaW9u" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_9466be4fdf824ef2b38b0d06491d8d24.setContent(i_frame_9b7683acafaa4b1cb840e9b95006ef98);
+        
+
+        marker_cbab847c61c04ca4ad0dc9b8f3069bfd.bindPopup(popup_9466be4fdf824ef2b38b0d06491d8d24)
+        ;
+
+        
+    
+    
+            marker_cbab847c61c04ca4ad0dc9b8f3069bfd.bindTooltip(
+                `<div>
+                     30 Oct 16<br>Neuville St Vaast<br>Relieved 43 Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7bcc75e4825c480d8ff39ae69cdd6a2d = L.marker(
+                [50.3380174, 2.6865276],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_3ff1287aef32461292333ed450dcf378 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7bcc75e4825c480d8ff39ae69cdd6a2d.setIcon(icon_3ff1287aef32461292333ed450dcf378);
+        
+    
+        var popup_ebaa4511d64b4889aa23fb1ae0a58be3 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_880116c2f6344e2ca0503732e02fcf1d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAwNiBOb3YgMTY8YnI+QnJheTxicj5SZXBsYWNlZCBieSA0M3JkIEJhdHRhbGlvbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_ebaa4511d64b4889aa23fb1ae0a58be3.setContent(i_frame_880116c2f6344e2ca0503732e02fcf1d);
+        
+
+        marker_7bcc75e4825c480d8ff39ae69cdd6a2d.bindPopup(popup_ebaa4511d64b4889aa23fb1ae0a58be3)
+        ;
+
+        
+    
+    
+            marker_7bcc75e4825c480d8ff39ae69cdd6a2d.bindTooltip(
+                `<div>
+                     06 Nov 16<br>Bray<br>Replaced by 43rd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_23fbd8a1a4174051ad48b11c6988dc8a = L.marker(
+                [50.357965, 2.778725],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_db67ab7c16cf41acbc6837c3a4699592 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_23fbd8a1a4174051ad48b11c6988dc8a.setIcon(icon_db67ab7c16cf41acbc6837c3a4699592);
+        
+    
+        var popup_a96bcff99f094cc99b37486ffc1f2969 = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_51bfa96d3a13465cb8da2311b1e4f05a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxMiBOb3YgMTY8YnI+TmV1dmlsbGUgU3QgVmFhc3Q8YnI+UmVsaWV2ZWQgNDMgQmF0dGFsaW9u" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_a96bcff99f094cc99b37486ffc1f2969.setContent(i_frame_51bfa96d3a13465cb8da2311b1e4f05a);
+        
+
+        marker_23fbd8a1a4174051ad48b11c6988dc8a.bindPopup(popup_a96bcff99f094cc99b37486ffc1f2969)
+        ;
+
+        
+    
+    
+            marker_23fbd8a1a4174051ad48b11c6988dc8a.bindTooltip(
+                `<div>
+                     12 Nov 16<br>Neuville St Vaast<br>Relieved 43 Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3665906b004f48a69423f96500d5224d = L.marker(
+                [50.3380174, 2.6865276],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_3c52c2b01bc14c8796d73085745a9772 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3665906b004f48a69423f96500d5224d.setIcon(icon_3c52c2b01bc14c8796d73085745a9772);
+        
+    
+        var popup_fdd0ab569c344d99965b83ef7e7cdebc = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_7767412c1176472dac7a2b0f014d7459 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAxNiBOb3YgMTY8YnI+QnJheTxicj5SZXBsYWNlZCBieSA0M3JkIEJhdHRhbGlvbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_fdd0ab569c344d99965b83ef7e7cdebc.setContent(i_frame_7767412c1176472dac7a2b0f014d7459);
+        
+
+        marker_3665906b004f48a69423f96500d5224d.bindPopup(popup_fdd0ab569c344d99965b83ef7e7cdebc)
+        ;
+
+        
+    
+    
+            marker_3665906b004f48a69423f96500d5224d.bindTooltip(
+                `<div>
+                     16 Nov 16<br>Bray<br>Replaced by 43rd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0b634e5cb5734153a5bf43d2c2658b32 = L.marker(
+                [50.357965, 2.778725],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_6cca7f45ed5140fb9bcd0d9963fd5aa4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0b634e5cb5734153a5bf43d2c2658b32.setIcon(icon_6cca7f45ed5140fb9bcd0d9963fd5aa4);
+        
+    
+        var popup_d04f4315a42a4a549b66b4b02b34ab3c = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_3f84295cf6864a1d961b4412a27e971d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAyNCBOb3YgMTY8YnI+TmV1dmlsbGUgU3QgVmFhc3Q8YnI+UmVsaWV2ZWQgNDMgQmF0dGFsaW9u" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_d04f4315a42a4a549b66b4b02b34ab3c.setContent(i_frame_3f84295cf6864a1d961b4412a27e971d);
+        
+
+        marker_0b634e5cb5734153a5bf43d2c2658b32.bindPopup(popup_d04f4315a42a4a549b66b4b02b34ab3c)
+        ;
+
+        
+    
+    
+            marker_0b634e5cb5734153a5bf43d2c2658b32.bindTooltip(
+                `<div>
+                     24 Nov 16<br>Neuville St Vaast<br>Relieved 43 Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e0762129c6b54c558ac381e65dc8a27c = L.marker(
+                [50.3380174, 2.6865276],
+                {"radius": 20}
+            ).addTo(map_b6b9a98c916b4a089f143def21ee8ebe);
+        
+    
+            var icon_ac3c28e3cbf14dfc89892ba6141cb33c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e0762129c6b54c558ac381e65dc8a27c.setIcon(icon_ac3c28e3cbf14dfc89892ba6141cb33c);
+        
+    
+        var popup_bb0c1fad251a4b03a2ee9383ef4a314a = L.popup({"maxWidth": 140});
+
+        
+            var i_frame_67aaf9994e394032a613f5a422d958eb = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAzMCBOb3YgMTY8YnI+QnJheTxicj5SZXBsYWNlZCBieSA0M3JkIEJhdHRhbGlvbg==" width="140" style="border:none !important;" height="80"></iframe>`)[0];
+            popup_bb0c1fad251a4b03a2ee9383ef4a314a.setContent(i_frame_67aaf9994e394032a613f5a422d958eb);
+        
+
+        marker_e0762129c6b54c558ac381e65dc8a27c.bindPopup(popup_bb0c1fad251a4b03a2ee9383ef4a314a)
+        ;
+
+        
+    
+    
+            marker_e0762129c6b54c558ac381e65dc8a27c.bindTooltip(
+                `<div>
+                     30 Nov 16<br>Bray<br>Replaced by 43rd Battalion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

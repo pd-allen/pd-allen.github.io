@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPyWidget export</title>
+</head>
+<body>
+
+
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+<script type="application/vnd.jupyter.widget-state+json">
+{
+  "version_major": 2,
+  "version_minor": 0,
+  "state": {
+    "24df961495d742df88f16db3a912105c": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "attribution": "Raster file served by <a href='https://github.com/banesullivan/localtileserver' target='_blank'>localtileserver</a>.",
+        "max_native_zoom": 19,
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms"
+        ],
+        "url": "http://localhost:64136/api/tiles/{z}/{x}/{y}.png?&filename=c%3A%5Cpython%5Cdata%5CMap62NE.tif&projection=EPSG%3A3857&n_colors=255"
+      }
+    },
+    "8ac7048c7414424282772d7933c3ddb2": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {}
+    },
+    "fb44c9e022254af38d46e49eed9a7991": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "cursor": "move"
+      }
+    },
+    "85a522c73e5f4d8881edbd380d578e51": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        "base": true,
+        "max_zoom": 19,
+        "min_zoom": 1,
+        "name": "OpenStreetMap.Mapnik",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms"
+        ],
+        "url": "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      }
+    },
+    "e1a876711831493b89e2df6e0545512e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "326cf54a7efb4eada4d3084033a97c33": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {}
+    },
+    "0a0368976ae04e5d9a01e8d327d528fb": {
+      "model_name": "LeafletMapModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "_dom_classes": [],
+        "bottom": 356827.0,
+        "center": [
+          49.77705632410427,
+          2.6473565717148846
+        ],
+        "controls": [
+          "IPY_MODEL_f83b852b94e04f09b69a7afefaa26879",
+          "IPY_MODEL_aae26a8b63434008886cff9f9e66d877"
+        ],
+        "crs": {
+          "name": "EPSG3857",
+          "custom": false
+        },
+        "default_style": "IPY_MODEL_8ac7048c7414424282772d7933c3ddb2",
+        "dragging_style": "IPY_MODEL_fb44c9e022254af38d46e49eed9a7991",
+        "east": 2.8155899047851567,
+        "layers": [
+          "IPY_MODEL_85a522c73e5f4d8881edbd380d578e51",
+          "IPY_MODEL_24df961495d742df88f16db3a912105c"
+        ],
+        "layout": "IPY_MODEL_e1a876711831493b89e2df6e0545512e",
+        "left": 531509.0,
+        "north": 49.82137261922289,
+        "options": [
+          "bounce_at_zoom_limits",
+          "box_zoom",
+          "center",
+          "close_popup_on_click",
+          "double_click_zoom",
+          "dragging",
+          "fullscreen",
+          "inertia",
+          "inertia_deceleration",
+          "inertia_max_speed",
+          "interpolation",
+          "keyboard",
+          "keyboard_pan_offset",
+          "keyboard_zoom_offset",
+          "max_zoom",
+          "min_zoom",
+          "prefer_canvas",
+          "scroll_wheel_zoom",
+          "tap",
+          "tap_tolerance",
+          "touch_zoom",
+          "world_copy_jump",
+          "zoom",
+          "zoom_animation_threshold",
+          "zoom_delta",
+          "zoom_snap",
+          "zoom_start"
+        ],
+        "right": 532489.0,
+        "south": 49.73269048724684,
+        "style": "IPY_MODEL_326cf54a7efb4eada4d3084033a97c33",
+        "top": 356427.0,
+        "west": 2.4791336059570317,
+        "window_url": "http://localhost:8888/notebooks/FoliumLocalTile.ipynb"
+      }
+    },
+    "f83b852b94e04f09b69a7afefaa26879": {
+      "model_name": "LeafletZoomControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "options": [
+          "position",
+          "zoom_in_text",
+          "zoom_in_title",
+          "zoom_out_text",
+          "zoom_out_title"
+        ]
+      }
+    },
+    "aae26a8b63434008886cff9f9e66d877": {
+      "model_name": "LeafletAttributionControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "options": [
+          "position",
+          "prefix"
+        ],
+        "position": "bottomright"
+      }
+    },
+    "a04b53c00a1c4f489721c8dd530d9181": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "attribution": "Raster file served by <a href='https://github.com/banesullivan/localtileserver' target='_blank'>localtileserver</a>.",
+        "max_native_zoom": 19,
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms"
+        ],
+        "url": "http://localhost:64136/api/tiles/{z}/{x}/{y}.png?&filename=c%3A%5Cpython%5Cdata%5CMap62NE.tif&projection=EPSG%3A3857&n_colors=255"
+      }
+    },
+    "65dddeaa844a4fc7bf4ab869666f080e": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {}
+    },
+    "7df9b82461324f938527debb1b1fd6ef": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "cursor": "move"
+      }
+    },
+    "424b02082d374688a2cc97e713c4647d": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        "base": true,
+        "max_zoom": 19,
+        "min_zoom": 1,
+        "name": "OpenStreetMap.Mapnik",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms"
+        ],
+        "url": "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      }
+    },
+    "b7c1c9c089014771af61cde663feb95f": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "b996e91589d54925bfb7a5115ac5cc5a": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {}
+    },
+    "ff7c8db02f76483eac067551f00d909c": {
+      "model_name": "LeafletMapModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "_dom_classes": [],
+        "center": [
+          49.77705632410427,
+          2.6473565717148846
+        ],
+        "controls": [
+          "IPY_MODEL_5bd5330a32f7486f9d52a74c853e839b",
+          "IPY_MODEL_b3533751760c45b7af5b2e0b61fdbc3f"
+        ],
+        "crs": {
+          "name": "EPSG3857",
+          "custom": false
+        },
+        "default_style": "IPY_MODEL_65dddeaa844a4fc7bf4ab869666f080e",
+        "dragging_style": "IPY_MODEL_7df9b82461324f938527debb1b1fd6ef",
+        "layers": [
+          "IPY_MODEL_424b02082d374688a2cc97e713c4647d",
+          "IPY_MODEL_a04b53c00a1c4f489721c8dd530d9181"
+        ],
+        "layout": "IPY_MODEL_b7c1c9c089014771af61cde663feb95f",
+        "options": [
+          "bounce_at_zoom_limits",
+          "box_zoom",
+          "center",
+          "close_popup_on_click",
+          "double_click_zoom",
+          "dragging",
+          "fullscreen",
+          "inertia",
+          "inertia_deceleration",
+          "inertia_max_speed",
+          "interpolation",
+          "keyboard",
+          "keyboard_pan_offset",
+          "keyboard_zoom_offset",
+          "max_zoom",
+          "min_zoom",
+          "prefer_canvas",
+          "scroll_wheel_zoom",
+          "tap",
+          "tap_tolerance",
+          "touch_zoom",
+          "world_copy_jump",
+          "zoom",
+          "zoom_animation_threshold",
+          "zoom_delta",
+          "zoom_snap",
+          "zoom_start"
+        ],
+        "style": "IPY_MODEL_b996e91589d54925bfb7a5115ac5cc5a"
+      }
+    },
+    "5bd5330a32f7486f9d52a74c853e839b": {
+      "model_name": "LeafletZoomControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "options": [
+          "position",
+          "zoom_in_text",
+          "zoom_in_title",
+          "zoom_out_text",
+          "zoom_out_title"
+        ]
+      }
+    },
+    "b3533751760c45b7af5b2e0b61fdbc3f": {
+      "model_name": "LeafletAttributionControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "options": [
+          "position",
+          "prefix"
+        ],
+        "position": "bottomright"
+      }
+    },
+    "391872333f9a47da98e95ad8955a6fdb": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "attribution": "Raster file served by <a href='https://github.com/banesullivan/localtileserver' target='_blank'>localtileserver</a>.",
+        "max_native_zoom": 19,
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms"
+        ],
+        "url": "http://localhost:64136/api/tiles/{z}/{x}/{y}.png?&filename=c%3A%5Cpython%5Cdata%5CMap62NE.tif&projection=EPSG%3A3857&n_colors=255"
+      }
+    },
+    "fa1228bd32b74e6da5792978006ea8f4": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {}
+    },
+    "030bc78c2059484ab17f2589802e479e": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "cursor": "move"
+      }
+    },
+    "8365f89029514274bd0c66d554585137": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        "base": true,
+        "max_zoom": 19,
+        "min_zoom": 1,
+        "name": "OpenStreetMap.Mapnik",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms"
+        ],
+        "url": "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      }
+    },
+    "671241018c144900a7574e772d227d28": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "50d5763304464c6ca008adc475df247a": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {}
+    },
+    "13e01c17d8564ca1b1a4eded8a2dc7ba": {
+      "model_name": "LeafletMapModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "_dom_classes": [],
+        "bottom": 356827.0,
+        "center": [
+          49.77705632410427,
+          2.6473565717148846
+        ],
+        "controls": [
+          "IPY_MODEL_9ac6f32ad0704721b19a0b3862575ad9",
+          "IPY_MODEL_45bd09473579432db160e976d5606270",
+          "IPY_MODEL_e6e5df15e9e44bdeb6f7df101ad6c8a6",
+          "IPY_MODEL_b0d1187fd2e14238966814fa9639f3e8"
+        ],
+        "crs": {
+          "name": "EPSG3857",
+          "custom": false
+        },
+        "default_style": "IPY_MODEL_fa1228bd32b74e6da5792978006ea8f4",
+        "dragging_style": "IPY_MODEL_030bc78c2059484ab17f2589802e479e",
+        "east": 2.8155899047851567,
+        "layers": [
+          "IPY_MODEL_8365f89029514274bd0c66d554585137",
+          "IPY_MODEL_391872333f9a47da98e95ad8955a6fdb"
+        ],
+        "layout": "IPY_MODEL_671241018c144900a7574e772d227d28",
+        "left": 531509.0,
+        "north": 49.82137261922289,
+        "options": [
+          "bounce_at_zoom_limits",
+          "box_zoom",
+          "center",
+          "close_popup_on_click",
+          "double_click_zoom",
+          "dragging",
+          "fullscreen",
+          "inertia",
+          "inertia_deceleration",
+          "inertia_max_speed",
+          "interpolation",
+          "keyboard",
+          "keyboard_pan_offset",
+          "keyboard_zoom_offset",
+          "max_zoom",
+          "min_zoom",
+          "prefer_canvas",
+          "scroll_wheel_zoom",
+          "tap",
+          "tap_tolerance",
+          "touch_zoom",
+          "world_copy_jump",
+          "zoom",
+          "zoom_animation_threshold",
+          "zoom_delta",
+          "zoom_snap",
+          "zoom_start"
+        ],
+        "right": 532489.0,
+        "south": 49.73269048724684,
+        "style": "IPY_MODEL_50d5763304464c6ca008adc475df247a",
+        "top": 356427.0,
+        "west": 2.4791336059570317,
+        "window_url": "http://localhost:8888/notebooks/FoliumLocalTile.ipynb"
+      }
+    },
+    "9ac6f32ad0704721b19a0b3862575ad9": {
+      "model_name": "LeafletZoomControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "options": [
+          "position",
+          "zoom_in_text",
+          "zoom_in_title",
+          "zoom_out_text",
+          "zoom_out_title"
+        ]
+      }
+    },
+    "45bd09473579432db160e976d5606270": {
+      "model_name": "LeafletAttributionControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "options": [
+          "position",
+          "prefix"
+        ],
+        "position": "bottomright"
+      }
+    },
+    "e6e5df15e9e44bdeb6f7df101ad6c8a6": {
+      "model_name": "LeafletScaleControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "options": [
+          "imperial",
+          "max_width",
+          "metric",
+          "position",
+          "update_when_idle"
+        ],
+        "position": "bottomleft"
+      }
+    },
+    "b0d1187fd2e14238966814fa9639f3e8": {
+      "model_name": "LeafletFullScreenControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.16.0",
+      "state": {
+        "options": [
+          "position"
+        ]
+      }
+    }
+  }
+}
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "13e01c17d8564ca1b1a4eded8a2dc7ba"}
+</script>
+
+</body>
+</html>

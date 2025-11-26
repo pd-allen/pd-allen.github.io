@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2c4b4756ee9043fabd4fc48c0e0af8e6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 96.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>    
+    
+                   <h3 align="center" style="font-size:16px"><b>Earle Woods Halifax Bomber 78 Sqn</b></h3>
+                 
+    
+            <div class="folium-map" id="map_2c4b4756ee9043fabd4fc48c0e0af8e6" ></div>
+        
+</body>
+<script>    
+    
+            var map_2c4b4756ee9043fabd4fc48c0e0af8e6 = L.map(
+                "map_2c4b4756ee9043fabd4fc48c0e0af8e6",
+                {
+                    center: [50.5, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    overlay: "false",
+                    fullscreenControl: true,
+                }
+            );
+            L.control.scale().addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+
+            
+
+        
+    
+            var tile_layer_3c88edb92c6148e6937e32754fc136ca = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+        
+    
+            var tile_layer_6a641655c21f42839c69277031c81fdd = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+        
+    
+            var tile_layer_8404c743ae1d4c9ca3891402176ff6a0 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+        
+    
+            var tile_layer_20de9fb8f40340fd861bff11c6880bbc = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+        
+    
+            var tile_layer_5620838fb8f347d687d542bb2cea7e45 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+        
+    
+            var tile_layer_402969faf32c46f5bc057915713b54f9 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+        
+    
+            var feature_group_8abf92372a5f4c2eab1fae3241b47e2e = L.featureGroup(
+                {}
+            ).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+        
+    
+            var marker_6c4301a919314187be95140ccfcbcca0 = L.marker(
+                [53.8023801, -0.9215148],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_ca24c3b3f3964e7091cf60ec2c6c13e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6c4301a919314187be95140ccfcbcca0.setIcon(icon_ca24c3b3f3964e7091cf60ec2c6c13e5);
+        
+    
+        var popup_7cd9a7e588c24992a478d91d94ea6749 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_1d1c770457d34780a272e52aae7c5079 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjMgTWFyIDQ0PGJyPlJBRiBCcmVpZ2h0b248YnI+PGJyPjc4IFNxdWFkcm9uIEhvbWUgQmFzZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_7cd9a7e588c24992a478d91d94ea6749.setContent(i_frame_1d1c770457d34780a272e52aae7c5079);
+        
+
+        marker_6c4301a919314187be95140ccfcbcca0.bindPopup(popup_7cd9a7e588c24992a478d91d94ea6749)
+        ;
+
+        
+    
+    
+            marker_6c4301a919314187be95140ccfcbcca0.bindTooltip(
+                `<div>
+                     23 Mar 44<br>RAF Breighton<br><br>78 Squadron Home Base
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_58dd41094b884d689cd2fff68320179b = L.marker(
+                [50.5798742, 3.2108608],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_ebe7a3429f654b789e9ab3c75c12b30b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_58dd41094b884d689cd2fff68320179b.setIcon(icon_ebe7a3429f654b789e9ab3c75c12b30b);
+        
+    
+        var popup_4f327887ba604dd28db22d13453606cc = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_78a10ff34efc401f9eb2ea6fa83b34ff = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgQXByIDQ0PGJyPkxpbGxlLCBGUjxicj48YnI+MTYgQWlyY3JhZnQgZnJvbSA3OCBTcW4gYm9tYmVkIExpbGxlLCBGUiBhdCAwMDQyaHJzIGZyb20gMTUsMDAwIGZ0LjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_4f327887ba604dd28db22d13453606cc.setContent(i_frame_78a10ff34efc401f9eb2ea6fa83b34ff);
+        
+
+        marker_58dd41094b884d689cd2fff68320179b.bindPopup(popup_4f327887ba604dd28db22d13453606cc)
+        ;
+
+        
+    
+    
+            marker_58dd41094b884d689cd2fff68320179b.bindTooltip(
+                `<div>
+                     09 Apr 44<br>Lille, FR<br><br>16 Aircraft from 78 Sqn bombed Lille, FR at 0042hrs from 15,000 ft.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_360d346803ad4672babd3dca0916e300 = L.polyline(
+                [[53.8023801, -0.9215148], [50.5798742, 3.2108608]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_7e571273e36b4c898a9dcf17886eaac1 = L.marker(
+                [49.6561521, 3.2773812],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_69aefcbd1b894c9b85c1ff7455eaf018 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7e571273e36b4c898a9dcf17886eaac1.setIcon(icon_69aefcbd1b894c9b85c1ff7455eaf018);
+        
+    
+        var popup_6b40697412fe4878b1998be321b6c141 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_efb02cc643b940229b7b8a909498086a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTAgQXByIDQ0PGJyPlRlcmduaWVyLCBGUjxicj48YnI+MTcgQWlyY3JhZnQgZnJvbSA3OCBTcW4sIHBhcnQgb2YgYSAxNTYgc3Ryb25nIGZvcmNlLCBib21iZWQgVGVyZ25pZXIsIEZSIFJhaWwgeWFyZHMgKDgwIG1pbGVzIE5FIG9mIFBhcmlzKSBhdCAwMDAyaHJzIGZyb20gOSwyMDAgZnQuPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_6b40697412fe4878b1998be321b6c141.setContent(i_frame_efb02cc643b940229b7b8a909498086a);
+        
+
+        marker_7e571273e36b4c898a9dcf17886eaac1.bindPopup(popup_6b40697412fe4878b1998be321b6c141)
+        ;
+
+        
+    
+    
+            marker_7e571273e36b4c898a9dcf17886eaac1.bindTooltip(
+                `<div>
+                     10 Apr 44<br>Tergnier, FR<br><br>17 Aircraft from 78 Sqn, part of a 156 strong force, bombed Tergnier, FR Rail yards (80 miles NE of Paris) at 0002hrs from 9,200 ft.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_da8e60a379d9409ab461e15a291ceab2 = L.polyline(
+                [[53.8023801, -0.9215148], [49.6561521, 3.2773812]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_089b911fea3f4695aa5a2aac99aab783 = L.marker(
+                [48.770334, 2.4291189],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_371472da8526411a9b1e4847b1865698 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_089b911fea3f4695aa5a2aac99aab783.setIcon(icon_371472da8526411a9b1e4847b1865698);
+        
+    
+        var popup_2ccd7b139608463499ebd9d30c1fd841 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_e982237758364e8f987525140dfe219e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjYgQXByIDQ0PGJyPlZpbGxlbmV1dmUgU3QgR2Vvcmdlczxicj48YnI+MjIgQWlyY3JhZnQgZnJvbSA3OCBTcW4gYm9tYmVkIFZpbGxlbmV1dmUgU3QgR2VvcmdlcyByYWlsIHlhcmRzIChqdXN0IFNvdXRoZWFzdCBvZiBQYXJpcykgYXQgMDA1MGhycyBmcm9tIDExLDQwMCBmdC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_2ccd7b139608463499ebd9d30c1fd841.setContent(i_frame_e982237758364e8f987525140dfe219e);
+        
+
+        marker_089b911fea3f4695aa5a2aac99aab783.bindPopup(popup_2ccd7b139608463499ebd9d30c1fd841)
+        ;
+
+        
+    
+    
+            marker_089b911fea3f4695aa5a2aac99aab783.bindTooltip(
+                `<div>
+                     26 Apr 44<br>Villeneuve St Georges<br><br>22 Aircraft from 78 Sqn bombed Villeneuve St Georges rail yards (just Southeast of Paris) at 0050hrs from 11,400 ft.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_05ddcf9d9a984f6286c2938b47d6c403 = L.polyline(
+                [[53.8023801, -0.9215148], [48.770334, 2.4291189]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_ab9bd88720584d8482ac9fdc1bd3cb8f = L.marker(
+                [50.7075784, 5.9575629],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_d138bd0bc2c24fa2806bba64262e21f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ab9bd88720584d8482ac9fdc1bd3cb8f.setIcon(icon_d138bd0bc2c24fa2806bba64262e21f4);
+        
+    
+        var popup_c24f31b4c82e41fc9bca7fd06dde8fbe = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_1922d6b8a65249c187188c6d9d44732d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgQXByIDQ0PGJyPk1vbnR6ZW4sIEJFIDxicj48YnI+MjAgQWlyY3JhZnQgZnJvbSA3OCBTcW4gYm9tYmVkIE1vbnR6ZW4sIEJFIChuZWFyIHRoZSBHZXJtYW4gQm9yZGVyIHdlc3Qgb2YgQnJ1c3NlbHMpIGF0IDAxMzhocnMgZnJvbSAxNCw1MDAgZnQuPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_c24f31b4c82e41fc9bca7fd06dde8fbe.setContent(i_frame_1922d6b8a65249c187188c6d9d44732d);
+        
+
+        marker_ab9bd88720584d8482ac9fdc1bd3cb8f.bindPopup(popup_c24f31b4c82e41fc9bca7fd06dde8fbe)
+        ;
+
+        
+    
+    
+            marker_ab9bd88720584d8482ac9fdc1bd3cb8f.bindTooltip(
+                `<div>
+                     27 Apr 44<br>Montzen, BE <br><br>20 Aircraft from 78 Sqn bombed Montzen, BE (near the German Border west of Brussels) at 0138hrs from 14,500 ft.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5cd36e55c4854747b33e566cc9305e57 = L.polyline(
+                [[53.8023801, -0.9215148], [50.7075784, 5.9575629]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_3054dd3aefbe435388b4ee4b6fc3e03e = L.marker(
+                [48.967766, 2.096675],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_1b9e916c61ee4537b8e1d89e35331c23 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3054dd3aefbe435388b4ee4b6fc3e03e.setIcon(icon_1b9e916c61ee4537b8e1d89e35331c23);
+        
+    
+        var popup_8f7ba64afdc7419aaa615848f9c1e5fb = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_a73bbac8d17b467e899b752552f12e78 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MzAgQXByIDQ0PGJyPkFjaGVyZXMsIEZSIChORSBvZiBQYXJpczxicj48YnI+MTggQWlyY3JhZnQgZnJvbSA3OCBTcW4gYm9tYmVkIEFjaGVyZXMsIEZSIChORSBvZiBQYXJpcykgYXQgMDAwMGhycyBmcm9tIDEzLDAwMCBmdC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_8f7ba64afdc7419aaa615848f9c1e5fb.setContent(i_frame_a73bbac8d17b467e899b752552f12e78);
+        
+
+        marker_3054dd3aefbe435388b4ee4b6fc3e03e.bindPopup(popup_8f7ba64afdc7419aaa615848f9c1e5fb)
+        ;
+
+        
+    
+    
+            marker_3054dd3aefbe435388b4ee4b6fc3e03e.bindTooltip(
+                `<div>
+                     30 Apr 44<br>Acheres, FR (NE of Paris<br><br>18 Aircraft from 78 Sqn bombed Acheres, FR (NE of Paris) at 0000hrs from 13,000 ft.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a626fe9059714cd18fc19c620de12014 = L.polyline(
+                [[53.8023801, -0.9215148], [48.967766, 2.096675]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_5e6d0d27b9684eceba37c3211b17c500 = L.marker(
+                [51.0347659, 4.4245431],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_a7b78634110c40109aff246f93e31833 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5e6d0d27b9684eceba37c3211b17c500.setIcon(icon_a7b78634110c40109aff246f93e31833);
+        
+    
+        var popup_c01c3f3d526d49538da16cbb41d6746a = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_cc93b088f2c2466ab5612da9e866f607 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDEgTWF5IDQ0PGJyPk1hbGluZXMsIEJFPGJyPjxicj4xNyBBaXJjcmFmdCBmcm9tIDc4IFNxbiBib21iZWQgTWFsaW5lcywgQkUsIHJhaWwgeWFyZHMgMjAgbWlsZXMgbm9ydGggb2YgQnJ1c3NlbHMgYXQgMDI0OGhycyBmcm9tIDEzLDAwMGZ0LjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_c01c3f3d526d49538da16cbb41d6746a.setContent(i_frame_cc93b088f2c2466ab5612da9e866f607);
+        
+
+        marker_5e6d0d27b9684eceba37c3211b17c500.bindPopup(popup_c01c3f3d526d49538da16cbb41d6746a)
+        ;
+
+        
+    
+    
+            marker_5e6d0d27b9684eceba37c3211b17c500.bindTooltip(
+                `<div>
+                     01 May 44<br>Malines, BE<br><br>17 Aircraft from 78 Sqn bombed Malines, BE, rail yards 20 miles north of Brussels at 0248hrs from 13,000ft.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_fe78b427973045d4a0b805f7700b934e = L.polyline(
+                [[53.8023801, -0.9215148], [51.0347659, 4.4245431]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_1de8c3f7ccc24dc987bec0df7cd98aeb = L.marker(
+                [49.9537512, 1.1797466],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_6bfa84b68b8349adb8099a6196ba026d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1de8c3f7ccc24dc987bec0df7cd98aeb.setIcon(icon_6bfa84b68b8349adb8099a6196ba026d);
+        
+    
+        var popup_93262b214f434844b3ff3aab257954be = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_8d746e1ef7c04c4d94bd5faacbbd54cc = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgTWF5IDQ0PGJyPkJlcm5ldmFsIHJhaWwgeWFyZHMgRlI8YnI+PGJyPjE2IEFpcmNyYWZ0IGZyb20gNzggU3FuIGJvbWJlZCBCZXJuZXZhbCwgcmFpbCB5YXJkc0ZSLCBqdXN0IG5vcnRoIG9mIERpZXBwZSwgYXQgMjM1OWhycyA4LDYwMCBmdC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_93262b214f434844b3ff3aab257954be.setContent(i_frame_8d746e1ef7c04c4d94bd5faacbbd54cc);
+        
+
+        marker_1de8c3f7ccc24dc987bec0df7cd98aeb.bindPopup(popup_93262b214f434844b3ff3aab257954be)
+        ;
+
+        
+    
+    
+            marker_1de8c3f7ccc24dc987bec0df7cd98aeb.bindTooltip(
+                `<div>
+                     09 May 44<br>Berneval rail yards FR<br><br>16 Aircraft from 78 Sqn bombed Berneval, rail yardsFR, just north of Dieppe, at 2359hrs 8,600 ft.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_fc509af7861f4724bc180bb1799f0f04 = L.polyline(
+                [[53.8023801, -0.9215148], [49.9537512, 1.1797466]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_74eb1e2670244555af502d3c8e7f0d3a = L.marker(
+                [50.7303154, 1.5886807],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_d2a282c4a5084eda90cc40316e22253c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_74eb1e2670244555af502d3c8e7f0d3a.setIcon(icon_d2a282c4a5084eda90cc40316e22253c);
+        
+    
+        var popup_7e219f5b5b9f44ec8927254f5a443262 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_3d291f3b2e57417ea3582d8301a147ae = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTkgTWF5IDQ0PGJyPkJvdWxvbmduZSwgRlI8YnI+PGJyPjE4IEFpcmNyYWZ0IGZyb20gNzggU3FuIGJvbWJlZCBCb3Vsb25nbmUsIEZSIHJhaWwgeWFyZHMgYXQgMDEwNWhycyBmcm9tIDEzLDgwMCBmdC4gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_7e219f5b5b9f44ec8927254f5a443262.setContent(i_frame_3d291f3b2e57417ea3582d8301a147ae);
+        
+
+        marker_74eb1e2670244555af502d3c8e7f0d3a.bindPopup(popup_7e219f5b5b9f44ec8927254f5a443262)
+        ;
+
+        
+    
+    
+            marker_74eb1e2670244555af502d3c8e7f0d3a.bindTooltip(
+                `<div>
+                     19 May 44<br>Boulongne, FR<br><br>18 Aircraft from 78 Sqn bombed Boulongne, FR rail yards at 0105hrs from 13,800 ft. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1c37f4831dd94a678523746487ff1b38 = L.polyline(
+                [[53.8023801, -0.9215148], [50.7303154, 1.5886807]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_f09719626dca4de5b7326e2b9f6791d5 = L.marker(
+                [47.8734119, 1.8771952],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_e2d74e564d9c48fabc62afc741010bc6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f09719626dca4de5b7326e2b9f6791d5.setIcon(icon_e2d74e564d9c48fabc62afc741010bc6);
+        
+    
+        var popup_0674e78738544feaa005ae24eff6edd5 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_77a2b8ff019a4f77a50159d601e4fcd7 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjIgTWF5IDQ0PGJyPk9ybGVhbnMsIEZSPGJyPjxicj4xNiBBaXJjcmFmdCBmcm9tIDc4IFNxbiBib21iZWQgT3JsZWFucywgRlIgcmFpbCB5YXJkcyBhdCAwMjE2aHJzIGZyb20gMTAsMDAwIGZ0LjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_0674e78738544feaa005ae24eff6edd5.setContent(i_frame_77a2b8ff019a4f77a50159d601e4fcd7);
+        
+
+        marker_f09719626dca4de5b7326e2b9f6791d5.bindPopup(popup_0674e78738544feaa005ae24eff6edd5)
+        ;
+
+        
+    
+    
+            marker_f09719626dca4de5b7326e2b9f6791d5.bindTooltip(
+                `<div>
+                     22 May 44<br>Orleans, FR<br><br>16 Aircraft from 78 Sqn bombed Orleans, FR rail yards at 0216hrs from 10,000 ft.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ff103c6703394dfdbb9b6823777afe24 = L.polyline(
+                [[53.8023801, -0.9215148], [47.8734119, 1.8771952]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_2e6b0b7e4b2144af83723c6a0b3742d2 = L.marker(
+                [46.8836723, -4.2855456],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_3b66561da06d44a4a3533afbc783d6e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2e6b0b7e4b2144af83723c6a0b3742d2.setIcon(icon_3b66561da06d44a4a3533afbc783d6e5);
+        
+    
+        var popup_a2eec17830214c61bc9f365f248d3e39 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_975a04e2a5a84920a06091c9fa931964 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgTWF5IDQ0PGJyPlNlYSBNaW5lcyBqdXN0IG9mZiBOYW50ZXMsIEZSLjxicj48YnI+MTQgQWlyY3JhZnQgZnJvbSA3OCBTcW4gcGxhbnRlZCBTZWEgTWluZXMganVzdCBvZmYgTmFudGVzLCBGUi4gR2FyZGVuaW5nLCB2ZWdldGFibGVzIHBsYW50ZWQgYXQgMDEzM2hycyBmcm9tIGhlaWdodCBvZiAyMSwwMDAgZnQuIE5vIHBhcmFjaHV0ZXMgc2VlbiB0byBvcGVuLiA0NyAwN04vMDIgMjcuNVc8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_a2eec17830214c61bc9f365f248d3e39.setContent(i_frame_975a04e2a5a84920a06091c9fa931964);
+        
+
+        marker_2e6b0b7e4b2144af83723c6a0b3742d2.bindPopup(popup_a2eec17830214c61bc9f365f248d3e39)
+        ;
+
+        
+    
+    
+            marker_2e6b0b7e4b2144af83723c6a0b3742d2.bindTooltip(
+                `<div>
+                     27 May 44<br>Sea Mines just off Nantes, FR.<br><br>14 Aircraft from 78 Sqn planted Sea Mines just off Nantes, FR. Gardening, vegetables planted at 0133hrs from height of 21,000 ft. No parachutes seen to open. 47 07N/02 27.5W
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b72b6066c6cf44f0ad7d62aa2db1482d = L.polyline(
+                [[53.8023801, -0.9215148], [46.8836723, -4.2855456]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_08016e3b679a4491a1370330aa4a9bec = L.marker(
+                [49.1122705, -1.117107],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_9dbe275377d441f884b2aff2704a3f1e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_08016e3b679a4491a1370330aa4a9bec.setIcon(icon_9dbe275377d441f884b2aff2704a3f1e);
+        
+    
+        var popup_949cd26903d342be98a38f969443d151 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_106e489ac7af41cbadd2b9564a6ba2e0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDYgSnVuIDQ0PGJyPlNhaW50IExvLCBGUjxicj48YnI+MjYgQWlyY3JhZnQgZnJvbSA3OCBTcXVhZHJvbiBib21iZWQgU2FpbnQgTG8sIEZSICgyMCBtaWxlcyBTb3V0aGVhc3Qgb2YgQmF5ZWF1eCkgYXQgMDA1NmhycyBmcm9tIDIwMDAgZnQuPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_949cd26903d342be98a38f969443d151.setContent(i_frame_106e489ac7af41cbadd2b9564a6ba2e0);
+        
+
+        marker_08016e3b679a4491a1370330aa4a9bec.bindPopup(popup_949cd26903d342be98a38f969443d151)
+        ;
+
+        
+    
+    
+            marker_08016e3b679a4491a1370330aa4a9bec.bindTooltip(
+                `<div>
+                     06 Jun 44<br>Saint Lo, FR<br><br>26 Aircraft from 78 Squadron bombed Saint Lo, FR (20 miles Southeast of Bayeaux) at 0056hrs from 2000 ft.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_77228b5569f84133bde0391ad09b29cc = L.polyline(
+                [[53.8023801, -0.9215148], [49.1122705, -1.117107]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var marker_aac899bf76f14d54bb4f41e6170df441 = L.marker(
+                [48.6854237, 2.3586933],
+                {"radius": 2}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            var icon_ae3a6ddb1fdb48749eb68a26c01b6c95 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_aac899bf76f14d54bb4f41e6170df441.setIcon(icon_ae3a6ddb1fdb48749eb68a26c01b6c95);
+        
+    
+        var popup_68018eff3b024fc0a350a2383e2cddcc = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_c61f8ee14efc4761b5816e25e7f1bf7a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDcgSnVuIDQ0PGJyPkp1dmlzeSBSYWlsIFlhcmRzIHNvdXRoIG9mIFBhcmlzPGJyPjxicj4xNiBBaXJjcmFmdCBmcm9tIDc4IFNxdWFkcm9uIGJvbWJlZCB0aGUgSnV2aXN5IFJhaWwgWWFyZHMgc291dGggb2YgUGFyaXMsIDMgZGlkIG5vdCByZXR1cm4sIEluY2x1ZGluZyBNWjU3NyB3aXRoIEVhcmxlIFdvb2RzLiBUaGV5IHdlcmUgc2NoZWR1bGVkIHRvIGRyb3AgYm9tYnMgYXQgIDAxMTUgaHJzIGZyb20gMywwMDAgZnQuIFRoZWlyIGFpcmNyYWZ0IHdhcyBoaXQsIGFuZCBjcmFzaGVkIDRrbSBzb3V0aCBvZiBMaWV1c2FpbnQsIEZSIDEwIG1pbGVzIGZyb20gdGhlaXIgdGFyZ2V0LjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_68018eff3b024fc0a350a2383e2cddcc.setContent(i_frame_c61f8ee14efc4761b5816e25e7f1bf7a);
+        
+
+        marker_aac899bf76f14d54bb4f41e6170df441.bindPopup(popup_68018eff3b024fc0a350a2383e2cddcc)
+        ;
+
+        
+    
+    
+            marker_aac899bf76f14d54bb4f41e6170df441.bindTooltip(
+                `<div>
+                     07 Jun 44<br>Juvisy Rail Yards south of Paris<br><br>16 Aircraft from 78 Squadron bombed the Juvisy Rail Yards south of Paris, 3 did not return, Including MZ577 with Earle Woods. They were scheduled to drop bombs at  0115 hrs from 3,000 ft. Their aircraft was hit, and crashed 4km south of Lieusaint, FR 10 miles from their target.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_020e28e193f24cb69db7b1c0c477209a = L.polyline(
+                [[53.8023801, -0.9215148], [48.6854237, 2.3586933]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8abf92372a5f4c2eab1fae3241b47e2e);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("DD MMM YY");
+                }
+            });
+            map_2c4b4756ee9043fabd4fc48c0e0af8e6.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": false, "loopButton": true, "maxSpeed": 1, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "timeSliderDragUpdate": true}
+            );
+            map_2c4b4756ee9043fabd4fc48c0e0af8e6.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.9215148, 53.8023801]}, "properties": {"time": "2044-03-23 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [3.2108608, 50.5798742]}, "properties": {"time": "2044-04-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [3.2773812, 49.6561521]}, "properties": {"time": "2044-04-10 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.4291189, 48.770334]}, "properties": {"time": "2044-04-26 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [5.9575629, 50.7075784]}, "properties": {"time": "2044-04-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.096675, 48.967766]}, "properties": {"time": "2044-04-30 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [4.4245431, 51.0347659]}, "properties": {"time": "2044-05-01 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.1797466, 49.9537512]}, "properties": {"time": "2044-05-09 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.5886807, 50.7303154]}, "properties": {"time": "2044-05-19 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.8771952, 47.8734119]}, "properties": {"time": "2044-05-22 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-4.2855456, 46.8836723]}, "properties": {"time": "2044-05-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.117107, 49.1122705]}, "properties": {"time": "2044-06-06 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.3586933, 48.6854237]}, "properties": {"time": "2044-06-07 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_2e620433b59f4cb1b35e1944d71473e1 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: "P1D",
+                }
+            ).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+        
+    
+            var mouse_position_3c83bdc95d884492b6b3b12922fa831a = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "Mouse:", "separator": " | "}
+            );
+            mouse_position_3c83bdc95d884492b6b3b12922fa831a.options["latFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            mouse_position_3c83bdc95d884492b6b3b12922fa831a.options["lngFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            map_2c4b4756ee9043fabd4fc48c0e0af8e6.addControl(mouse_position_3c83bdc95d884492b6b3b12922fa831a);
+        
+    
+            L.Control.geocoder(
+                {"collapsed": "True", "defaultMarkGeocode": true, "position": "topright"}
+            ).on('markgeocode', function(e) {
+                map_2c4b4756ee9043fabd4fc48c0e0af8e6.setView(e.geocode.center, 11);
+            }).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+
+        
+    
+            var layer_control_39d932ab9aaa4453a6b20ad5f670b21f = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_3c88edb92c6148e6937e32754fc136ca,
+                },
+                overlays :  {
+                    "Google Maps" : tile_layer_6a641655c21f42839c69277031c81fdd,
+                    "Google Hybrid" : tile_layer_8404c743ae1d4c9ca3891402176ff6a0,
+                    "Google Satellite" : tile_layer_20de9fb8f40340fd861bff11c6880bbc,
+                    "Google Terrain" : tile_layer_5620838fb8f347d687d542bb2cea7e45,
+                    "Esri Satellite" : tile_layer_402969faf32c46f5bc057915713b54f9,
+                    "78Sqn" : feature_group_8abf92372a5f4c2eab1fae3241b47e2e,
+                },
+            };
+            L.control.layers(
+                layer_control_39d932ab9aaa4453a6b20ad5f670b21f.base_layers,
+                layer_control_39d932ab9aaa4453a6b20ad5f670b21f.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_2c4b4756ee9043fabd4fc48c0e0af8e6);
+            tile_layer_6a641655c21f42839c69277031c81fdd.remove();
+            tile_layer_8404c743ae1d4c9ca3891402176ff6a0.remove();
+            tile_layer_20de9fb8f40340fd861bff11c6880bbc.remove();
+            tile_layer_5620838fb8f347d687d542bb2cea7e45.remove();
+            tile_layer_402969faf32c46f5bc057915713b54f9.remove();
+        
+    
+            var measure_control_62a49525bc85466b828ad0ebf19b99c8 = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "kilometers", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_2c4b4756ee9043fabd4fc48c0e0af8e6.addControl(measure_control_62a49525bc85466b828ad0ebf19b99c8);
+
+        
+    
+            var tile_layer_5c4ff493a6754c6db21523d858f6498e = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_fa2635156fc642fab29aa186bd5dfd6c = new L.Control.MiniMap(
+                tile_layer_5c4ff493a6754c6db21523d858f6498e,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_2c4b4756ee9043fabd4fc48c0e0af8e6.addControl(mini_map_fa2635156fc642fab29aa186bd5dfd6c);
+        
+</script>

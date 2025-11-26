@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0deda1a41b220718e9db62b56d6e5bb4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 96.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+</head>
+<body>
+    
+    
+                   <h3 align="center" style="font-size:16px"><b>438 Squadron in France</b></h3>
+                 
+    
+            <div class="folium-map" id="map_0deda1a41b220718e9db62b56d6e5bb4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0deda1a41b220718e9db62b56d6e5bb4 = L.map(
+                "map_0deda1a41b220718e9db62b56d6e5bb4",
+                {
+                    center: [50.5, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    overlay: "false",
+                    fullscreenControl: true,
+                }
+            );
+            L.control.scale().addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+
+            
+
+        
+    
+            var tile_layer_7fea307e28f07b3b03702df55adafff2 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+    
+            var tile_layer_394ab21efc2d58943d20a30780b40ae3 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+    
+            var tile_layer_0bcf9b73f8901638252d7a65f356a358 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+    
+            var tile_layer_22898bbab7533c78eb85fc215f6343dc = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+    
+            var tile_layer_43fdd123c60f22ab7cb5b52274abb79a = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+    
+            var tile_layer_e6312dc3dfd8b97d1031da3bfb0af675 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+    
+            var feature_group_c7dc5b5b54b89caf7581e8a1db03a550 = L.featureGroup(
+                {}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+    
+            var marker_490e6a1549f7f98078110bc460346a5f = L.marker(
+                [49.27156, -0.54247],
+                {"radius": 2}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var icon_01e821b3d4e766ec399d9ce9c9abd41e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_490e6a1549f7f98078110bc460346a5f.setIcon(icon_01e821b3d4e766ec399d9ce9c9abd41e);
+        
+    
+        var popup_f562839cfbf95ad3e9af27c98275965f = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_72eac56056751ad9125384a17f39efe3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgSnVuIDQ0PGJyPkxhbnRoZXVpbCBBaXJmaWVsZCBCOTxicj48YnI+TGFudGhldWlsIEFpcmZpZWxkIEZvcndhcmQgT3BlcmF0aW5nIEJhc2U8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_f562839cfbf95ad3e9af27c98275965f.setContent(i_frame_72eac56056751ad9125384a17f39efe3);
+        
+
+        marker_490e6a1549f7f98078110bc460346a5f.bindPopup(popup_f562839cfbf95ad3e9af27c98275965f)
+        ;
+
+        
+    
+    
+            marker_490e6a1549f7f98078110bc460346a5f.bindTooltip(
+                `<div>
+                     27 Jun 44<br>Lantheuil Airfield B9<br><br>Lantheuil Airfield Forward Operating Base
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bbfc16a98a089fa0db9f106d64870398 = L.marker(
+                [49.17148, -0.36509],
+                {"radius": 2}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var icon_ccae0740a598c66f71d824addba3f479 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_bbfc16a98a089fa0db9f106d64870398.setIcon(icon_ccae0740a598c66f71d824addba3f479);
+        
+    
+        var popup_13d9df9733022a57928e00d42a872a44 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_211181bbea495b0209e2c67be3952956 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgSnVuIDQ0PGJyPkNhZW48YnI+PGJyPjggQm9tYnBob29ucyBhbmQgMSBmaWdodGVyIHdlcmUgZGV0YWlsZWQgdG8gYXR0YWNrIDIgYnJpZGdlcyBvdmVyIHRoZSBSaXZlciBPcm5lIGluIENhZW4gd2l0aCAxNiB4IDEsMDAwIGxiIE1DIGJvbWJzLiBUaGUgdGFyZ2V0IHdhcyBhdHRhY2tlZCBmcm9tIDEwLDAwMCB0byA1LDAwMCBmdCBmcm9tIFdlc3QgdG8gRWFzdC4gMiBkaXJlY3QgaGl0cyB3ZXJlIHNlZW4gb24gdGhlIEVhc3QgZW5kIG9mIHRoZSBtb3N0IGVhc3Rlcmx5IGJyaWRnZSwgbWFueSBuZWFyIG1pc3NlcyBvYnNlcnZlZCBvbiB0aGUgb3RoZXIgYnJpZGdlLiA8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_13d9df9733022a57928e00d42a872a44.setContent(i_frame_211181bbea495b0209e2c67be3952956);
+        
+
+        marker_bbfc16a98a089fa0db9f106d64870398.bindPopup(popup_13d9df9733022a57928e00d42a872a44)
+        ;
+
+        
+    
+    
+            marker_bbfc16a98a089fa0db9f106d64870398.bindTooltip(
+                `<div>
+                     27 Jun 44<br>Caen<br><br>8 Bombphoons and 1 fighter were detailed to attack 2 bridges over the River Orne in Caen with 16 x 1,000 lb MC bombs. The target was attacked from 10,000 to 5,000 ft from West to East. 2 direct hits were seen on the East end of the most easterly bridge, many near misses observed on the other bridge. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_56dbaf520c6147ad40c7bc43f583e09a = L.polyline(
+                [[49.27156, -0.54247], [49.17148, -0.36509]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var marker_1d3c498ac12f5abcf40bfe78f0547242 = L.marker(
+                [49.17892, -0.35451],
+                {"radius": 2}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var icon_aa63cfbc466ddcdc9b4b342e1e16c374 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_1d3c498ac12f5abcf40bfe78f0547242.setIcon(icon_aa63cfbc466ddcdc9b4b342e1e16c374);
+        
+    
+        var popup_46cf246d9201d6129edba8ea83a75c8f = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_a6a45451f42fad54200970e967ae86e2 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgSnVuIDQ0PGJyPkNhZW48YnI+PGJyPjQgQm9tYnBob29ucyB3ZXJlIGRldGFpbGVkIHRvIGF0dGFjayB0aGUgYnJpZGdlIG92ZXIgdGhlIFJpdmVyIE9ybmUgIGluIENhZW4sIGJ1dCB0aGUgc29ydGllIHdhcyBhYm9ydGVkIGR1ZSB0byAxMC8xMCBjbG91ZCBmcm9tIDUvMTEsMDAwIGZ0LiBObyBCb21icyB3ZXJlIGRyb3BwZWQuPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_46cf246d9201d6129edba8ea83a75c8f.setContent(i_frame_a6a45451f42fad54200970e967ae86e2);
+        
+
+        marker_1d3c498ac12f5abcf40bfe78f0547242.bindPopup(popup_46cf246d9201d6129edba8ea83a75c8f)
+        ;
+
+        
+    
+    
+            marker_1d3c498ac12f5abcf40bfe78f0547242.bindTooltip(
+                `<div>
+                     27 Jun 44<br>Caen<br><br>4 Bombphoons were detailed to attack the bridge over the River Orne  in Caen, but the sortie was aborted due to 10/10 cloud from 5/11,000 ft. No Bombs were dropped.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_079e8afef350c88d9f1e5f46ce948ad3 = L.polyline(
+                [[49.27156, -0.54247], [49.17892, -0.35451]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var marker_cabc1d260964b98236e759f5b1124ef9 = L.marker(
+                [49.1624975, -0.5024302],
+                {"radius": 2}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var icon_7f751ac1ac759328fa4ebf9785889244 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_cabc1d260964b98236e759f5b1124ef9.setIcon(icon_7f751ac1ac759328fa4ebf9785889244);
+        
+    
+        var popup_b7bbf0f15e4ddb6a1c0680f704749168 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_0dd1269608e00869380a21da73ac5d65 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjggSnVuIDQ0PGJyPlZlcnNvbjxicj48YnI+MTcgQm9tYnBob29ucyB3ZXJlIGRldGFpbGVkIHRvIGF0dGFjayBhIGNvbmNlbnRyYXRpb24gb2YgZW5lbXkgdHJvb3BzIGluIFZlcnNvbiwganVzdCBTb3V0aHdlc3Qgb2YgQ2Flbi4gVGhleSBhdHRhY2tlZCB0aGUgdGFyZ2V0IHdpdGggNTAwIGxiLCBNQyAuMDI1IGJvbWJzPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_b7bbf0f15e4ddb6a1c0680f704749168.setContent(i_frame_0dd1269608e00869380a21da73ac5d65);
+        
+
+        marker_cabc1d260964b98236e759f5b1124ef9.bindPopup(popup_b7bbf0f15e4ddb6a1c0680f704749168)
+        ;
+
+        
+    
+    
+            marker_cabc1d260964b98236e759f5b1124ef9.bindTooltip(
+                `<div>
+                     28 Jun 44<br>Verson<br><br>17 Bombphoons were detailed to attack a concentration of enemy troops in Verson, just Southwest of Caen. They attacked the target with 500 lb, MC .025 bombs
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a1ff146bd955f7dbd278eec8bf148dce = L.polyline(
+                [[49.27156, -0.54247], [49.1624975, -0.5024302]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var marker_38c2d46caafe9773246923570b86182e = L.marker(
+                [49.03408, -0.4657],
+                {"radius": 2}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var icon_d564b78990fdd661f4a3a0bcf896880d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_38c2d46caafe9773246923570b86182e.setIcon(icon_d564b78990fdd661f4a3a0bcf896880d);
+        
+    
+        var popup_755a7bb5cba8f923853662597dde6b37 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_fb6a09482fd61175e4e5f99b0b3b1658 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDUgSnVsIDQ0PGJyPlNvdXRoV2VzdCBvZiBDYWVuPGJyPjxicj44IEJvbWJwaG9vbiBBaXJjcmFmdCBkZXRhaWxlZCB0byBhdHRhY2sgdGFyZ2V0IFNvdXRod2VzdCBvZiBDYWVuLCBob3dldmVyLCB0aGUgZW50aXJlIGZsaWdodCB3YXMgYWJvcnRlZCBkdWUgdG8gdGhlIDUwMCBsYiBib21icyBiZWluZyBpbXByb3Blcmx5IGZ1c2VkPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_755a7bb5cba8f923853662597dde6b37.setContent(i_frame_fb6a09482fd61175e4e5f99b0b3b1658);
+        
+
+        marker_38c2d46caafe9773246923570b86182e.bindPopup(popup_755a7bb5cba8f923853662597dde6b37)
+        ;
+
+        
+    
+    
+            marker_38c2d46caafe9773246923570b86182e.bindTooltip(
+                `<div>
+                     05 Jul 44<br>SouthWest of Caen<br><br>8 Bombphoon Aircraft detailed to attack target Southwest of Caen, however, the entire flight was aborted due to the 500 lb bombs being improperly fused
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_122a1d472d0282c2c872bc59e5bddfe0 = L.polyline(
+                [[49.27156, -0.54247], [49.03408, -0.4657]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var marker_f750678b037131cbbf011298dc4e46d6 = L.marker(
+                [49.1234, -0.70386],
+                {"radius": 2}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var icon_b267971797653557c891f447854d0030 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f750678b037131cbbf011298dc4e46d6.setIcon(icon_b267971797653557c891f447854d0030);
+        
+    
+        var popup_0393e3eeb669dcaa8d79ca021a887ecb = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_dd824f61a6a21a6a9f20ae68807b1650 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDkgSnVsIDQ0PGJyPlNvdXRoV2VzdCBvZiBDYWVuPGJyPjxicj44IEJvbWJwaG9vbnMgQWlyY3JhZnQgZGV0YWlsZWQgdG8gYXR0YWNrIHRhcmdldCBhc291dGh3ZXN0IG9mIENhZW4uIEFpcmNyYWZ0IGFybWVkIHdpdGggNTAwIGxiIGJvbWJzLCBpbnN0YW50YW5lb3VzIG5vc2UsIC4wMjUgdGFpbC4gQWlyY3JhZnQgdW5hYmxlIHRvIGxvY2F0ZSB0YXJnZXQsIG9ubHkgb25lIGFpcmNyYWZ0IGRyb3BwaW5nIGJvbWJzIGluIHdvb2RzLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_0393e3eeb669dcaa8d79ca021a887ecb.setContent(i_frame_dd824f61a6a21a6a9f20ae68807b1650);
+        
+
+        marker_f750678b037131cbbf011298dc4e46d6.bindPopup(popup_0393e3eeb669dcaa8d79ca021a887ecb)
+        ;
+
+        
+    
+    
+            marker_f750678b037131cbbf011298dc4e46d6.bindTooltip(
+                `<div>
+                     09 Jul 44<br>SouthWest of Caen<br><br>8 Bombphoons Aircraft detailed to attack target asouthwest of Caen. Aircraft armed with 500 lb bombs, instantaneous nose, .025 tail. Aircraft unable to locate target, only one aircraft dropping bombs in woods.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1fe8b02c836f85ceecf16b6d47751f0b = L.polyline(
+                [[49.27156, -0.54247], [49.1234, -0.70386]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var marker_a5896a2405943916a656e17d940d6569 = L.marker(
+                [49.085558, -0.424503],
+                {"radius": 2}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var icon_b1523cefa826d58a4d0da833199c6754 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a5896a2405943916a656e17d940d6569.setIcon(icon_b1523cefa826d58a4d0da833199c6754);
+        
+    
+        var popup_82e29953f5ebb1bc1192539b3eb4e15c = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_a319b271fcd3163d5d809b74cee9b63f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTggSnVsIDQ0PGJyPkFtYXllLXN1ci1Pcm5lPGJyPjxicj44IEJvbWJwaG9vbiBBaXJjcmFmdCBkZXRhaWxlZCB0byBhdHRhY2sgYnJpZGdlIGFjcm9zcyB0aGUgUml2ZXIgT3JuZS4gQnJpZGdlIHdhcyBhdHRhY2tlZCBkaXZlIGJvbWJpbmcgZnJvbSA4LDAwMCB0byAyLDAwMCBmdCBXZXN0IHRvIEVhc3QuIDQgYm9tYnMgb24gdGhlIG5vcnRoIGFwcHJvYWNoIG9mIHRoZSBicmlkZ2UsIDIgcHJvYmFibGUgaGl0cy4gUmVzdWx0cyBub3Qgc2VlbiBkdWUgdG8gc21va2UgYW5kIGRlYnJpcy4gMSwwMDAgbGIgYm9tYnMgdXNlZC4gSW50ZW5zZSwgYWNjdXJhdGUgZmxhayBleHBlcmllbmNlZCBvdmVyIHRhcmdldC4gT25lIFBpbG90IEYvTCBSLk0gTWNLZW56aWUgaGl0IGJ5IGZsYWsgb24gdGhlIHN0YXJ0IG9mIGJvbWJpbmcgcnVuIGFuZCB3YXMgc2VlbiB0byBjcmFzaCBpbnRvIHRoZSBncm91bmQgd2hlbiBoaXMgYWlyY3JhZnQgd2VudCBpbnRvIGEgc3BpbiBmcm9tIHdoaWNoIGhlIHdhcyB1bmFibGUgdG8gcmVjb3Zlci48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_82e29953f5ebb1bc1192539b3eb4e15c.setContent(i_frame_a319b271fcd3163d5d809b74cee9b63f);
+        
+
+        marker_a5896a2405943916a656e17d940d6569.bindPopup(popup_82e29953f5ebb1bc1192539b3eb4e15c)
+        ;
+
+        
+    
+    
+            marker_a5896a2405943916a656e17d940d6569.bindTooltip(
+                `<div>
+                     18 Jul 44<br>Amaye-sur-Orne<br><br>8 Bombphoon Aircraft detailed to attack bridge across the River Orne. Bridge was attacked dive bombing from 8,000 to 2,000 ft West to East. 4 bombs on the north approach of the bridge, 2 probable hits. Results not seen due to smoke and debris. 1,000 lb bombs used. Intense, accurate flak experienced over target. One Pilot F/L R.M McKenzie hit by flak on the start of bombing run and was seen to crash into the ground when his aircraft went into a spin from which he was unable to recover.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_73d2f8da1c8350a82717db4d14f19e29 = L.polyline(
+                [[49.27156, -0.54247], [49.085558, -0.424503]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c7dc5b5b54b89caf7581e8a1db03a550);
+        
+    
+            var feature_group_52f972ac3304a15f05eabf37cb78c4c7 = L.featureGroup(
+                {}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+    
+            var marker_54699d98521e0c6029e702898e7ccb2a = L.marker(
+                [50.7826164, -1.8489403],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_55766e2a24c8c9bc4ef4679f20a69d18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_54699d98521e0c6029e702898e7ccb2a.setIcon(icon_55766e2a24c8c9bc4ef4679f20a69d18);
+        
+    
+        var popup_bbe56071d13f787d798052a3399cca40 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_7b02473ef378a0c6647e72e1bfc80c42 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgTWFyIDQ0PGJyPlJBRiBIdXJuPGJyPjxicj40MzggT3BlcmF0aW9uYWwgQmFzZTwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_bbe56071d13f787d798052a3399cca40.setContent(i_frame_7b02473ef378a0c6647e72e1bfc80c42);
+        
+
+        marker_54699d98521e0c6029e702898e7ccb2a.bindPopup(popup_bbe56071d13f787d798052a3399cca40)
+        ;
+
+        
+    
+    
+            marker_54699d98521e0c6029e702898e7ccb2a.bindTooltip(
+                `<div>
+                     27 Mar 44<br>RAF Hurn<br><br>438 Operational Base
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6c853b77e8bf1572bf00e8b4c322e22 = L.marker(
+                [49.5797993, -2.8157138],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_2c733d05a0af4b12ea75bec8b6a1a9c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b6c853b77e8bf1572bf00e8b4c322e22.setIcon(icon_2c733d05a0af4b12ea75bec8b6a1a9c3);
+        
+    
+        var popup_ab417a4ab2e773ddfa51353fd8b983ec = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_913ce0e3107051fd131c2e9d8225c171 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MzAgTWFyIDQ0PGJyPkNoYW5uZWwgSXNsYW5kczxicj48YnI+RmlnaHRlciBzd2VlcCB0byBDaGFubmVsIElzbGFuZHMgPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_ab417a4ab2e773ddfa51353fd8b983ec.setContent(i_frame_913ce0e3107051fd131c2e9d8225c171);
+        
+
+        marker_b6c853b77e8bf1572bf00e8b4c322e22.bindPopup(popup_ab417a4ab2e773ddfa51353fd8b983ec)
+        ;
+
+        
+    
+    
+            marker_b6c853b77e8bf1572bf00e8b4c322e22.bindTooltip(
+                `<div>
+                     30 Mar 44<br>Channel Islands<br><br>Fighter sweep to Channel Islands 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_808e1f8bbd993f4a3aa1060c906ebae7 = L.polyline(
+                [[50.7826164, -1.8489403], [49.5797993, -2.8157138]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_6fbd7c0d15077362a448a92d73e85fb8 = L.marker(
+                [49.192276, -1.2383399],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_51823f5e9f1602693ee54fc0891fb386 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6fbd7c0d15077362a448a92d73e85fb8.setIcon(icon_51823f5e9f1602693ee54fc0891fb386);
+        
+    
+        var popup_1673e05ebf212c1ce67c1b5cfe951342 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_2c92a2f2d8358560d2428cdb3eb8338b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjUgQXByIDQ0PGJyPkNvdXRhbmNlcywgRlI8YnI+PGJyPjI0IEJvbWJwaG9vbnMgd2l0aCA0OCB4IDUwMCBsYiBNQyBJbnN0YW50YW5lb3VzLiBSZXBlYXRlZCBhdHRhY2sgYWdhaW5zdCBicmlkZ2U8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_1673e05ebf212c1ce67c1b5cfe951342.setContent(i_frame_2c92a2f2d8358560d2428cdb3eb8338b);
+        
+
+        marker_6fbd7c0d15077362a448a92d73e85fb8.bindPopup(popup_1673e05ebf212c1ce67c1b5cfe951342)
+        ;
+
+        
+    
+    
+            marker_6fbd7c0d15077362a448a92d73e85fb8.bindTooltip(
+                `<div>
+                     25 Apr 44<br>Coutances, FR<br><br>24 Bombphoons with 48 x 500 lb MC Instantaneous. Repeated attack against bridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_61daa1e5ecd4d40e21473e4a83fd972d = L.polyline(
+                [[50.7826164, -1.8489403], [49.192276, -1.2383399]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_b661c1e9497c2ae8179dd1433cc4782a = L.marker(
+                [49.6683243, -1.693036],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_cfb3612120db9e243cb6fc5e5f347c3c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b661c1e9497c2ae8179dd1433cc4782a.setIcon(icon_cfb3612120db9e243cb6fc5e5f347c3c);
+        
+    
+        var popup_3f3c1c2adfc1be1721715b7d882ebc40 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_398f24a7ebb7cd43140c112ecb0134b6 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgQXByIDQ0PGJyPkNoZXJib3VyZywgRlI8YnI+PGJyPk9wZXJhdGlvbmFsIHNjcmFtYmxlIHRvIHRoZSBDaGVyYm91cmcgYXJlYSB3YXMgdW5ldmVudGZ1bC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_3f3c1c2adfc1be1721715b7d882ebc40.setContent(i_frame_398f24a7ebb7cd43140c112ecb0134b6);
+        
+
+        marker_b661c1e9497c2ae8179dd1433cc4782a.bindPopup(popup_3f3c1c2adfc1be1721715b7d882ebc40)
+        ;
+
+        
+    
+    
+            marker_b661c1e9497c2ae8179dd1433cc4782a.bindTooltip(
+                `<div>
+                     27 Apr 44<br>Cherbourg, FR<br><br>Operational scramble to the Cherbourg area was uneventful.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ca88ea2e8d9d8991c5a9d10af069d5c3 = L.polyline(
+                [[50.7826164, -1.8489403], [49.6683243, -1.693036]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_745e56ccf6d04bbc60e4fc389ba3cabb = L.marker(
+                [49.2997238, -1.3218456],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_86bccb5a1eb848b6623a07829c340e5f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_745e56ccf6d04bbc60e4fc389ba3cabb.setIcon(icon_86bccb5a1eb848b6623a07829c340e5f);
+        
+    
+        var popup_b703cd36244b5ebe5f719fee232b20b9 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_cbbf3c43f4bf12808c08b9a47a67f445 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjcgQXByIDQ0PGJyPkJhdXB0ZSwgRlI8YnI+PGJyPjE4IEJvbWJwaG9vbnMgZnJvbSA0MzggYW5kIDQ0IFNxIHdpdGggMzYgeDUwMCBsYiBib21icyBhdHRhY2tlZCB0aGUgcmFpbHJvYWQgYnJpZGdlIG5lYXIgQmF1cHRlIHdpdGggc29tZSBkaXJlY3QgaGl0cyDigJMgb3RoZXJzIGluIHRoZSBuZWFyIHZpY2luaXR5LiBHcm91bmQgc3RyYWZpbmcgd2FzIGNhcnJpZWQgb3V0IGFmdGVyIHRoZSBib21iaW5nIHJ1bi4gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_b703cd36244b5ebe5f719fee232b20b9.setContent(i_frame_cbbf3c43f4bf12808c08b9a47a67f445);
+        
+
+        marker_745e56ccf6d04bbc60e4fc389ba3cabb.bindPopup(popup_b703cd36244b5ebe5f719fee232b20b9)
+        ;
+
+        
+    
+    
+            marker_745e56ccf6d04bbc60e4fc389ba3cabb.bindTooltip(
+                `<div>
+                     27 Apr 44<br>Baupte, FR<br><br>18 Bombphoons from 438 and 44 Sq with 36 x500 lb bombs attacked the railroad bridge near Baupte with some direct hits – others in the near vicinity. Ground strafing was carried out after the bombing run. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_2f3d01f3cab31237148615a62ccfaca9 = L.polyline(
+                [[50.7826164, -1.8489403], [49.2997238, -1.3218456]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_50acaee278071d9212ff2594a72d430a = L.marker(
+                [49.3456666, 1.0575819],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_ea470409e61aba39cfaf7f8b14dd055c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_50acaee278071d9212ff2594a72d430a.setIcon(icon_ea470409e61aba39cfaf7f8b14dd055c);
+        
+    
+        var popup_90b69fee2ce0a221f7120db6a74fd92c = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_03b4e4e7fdb4a6ef15f48719a802c220 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDcgTWF5IDQ0PGJyPk9pc3NlbCwgRlI8YnI+PGJyPjI0IFR5cGhvb25zIGZyb20gNDM4LCA0MzkgYW5kIDQ0MCBTcW5zLCB3aXRoIHR3byByZXR1cm5pbmcgZHVlIHRvIGxvdyBvaWwgcHJlc3N1cmUsIGRyb3BwZWQgMjJ4NTAwIE1DIC4wMjUgb24gYSBicmlkZ2UgYXQgT2lzc2VsIGJldHdlZW4gUm91ZW4gYW5kIENhZW4gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_90b69fee2ce0a221f7120db6a74fd92c.setContent(i_frame_03b4e4e7fdb4a6ef15f48719a802c220);
+        
+
+        marker_50acaee278071d9212ff2594a72d430a.bindPopup(popup_90b69fee2ce0a221f7120db6a74fd92c)
+        ;
+
+        
+    
+    
+            marker_50acaee278071d9212ff2594a72d430a.bindTooltip(
+                `<div>
+                     07 May 44<br>Oissel, FR<br><br>24 Typhoons from 438, 439 and 440 Sqns, with two returning due to low oil pressure, dropped 22x500 MC .025 on a bridge at Oissel between Rouen and Caen 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b77f51202442d6ed61770aef38ee7799 = L.polyline(
+                [[50.7826164, -1.8489403], [49.3456666, 1.0575819]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_e2593e041a9ca165d6688bb5c8f06bbd = L.marker(
+                [50.0560153, 1.9538772],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_30cb4fb07bc73b81e5d77fd168a8fe03 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e2593e041a9ca165d6688bb5c8f06bbd.setIcon(icon_30cb4fb07bc73b81e5d77fd168a8fe03);
+        
+    
+        var popup_2a3cb9d35173ba57817dd634cdfeacab = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_19a57062550d8cc6a7a02962cbb1c93c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTAgTWF5IDQ0PGJyPkxvbmcsIEZSPGJyPjxicj40MzggU3F1YWRyb24gd2l0aCAxMCBCb21icGhvb25zIGFuZCAyIGZpZ2h0ZXJzIGJvbWJlZCBicmlkZ2UgYXQgTG9uZywgRnJhbmNlLiBObyBkaXJlY3QgaGl0cyBvbiB0aGUgYnJpZGdlLCBhbGwgbmVhciBtaXNzZXMgZWl0aGVyIG92ZXJzaG9vdGluZyBvciB1bmRlcnNob290aW5nLiAgPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_2a3cb9d35173ba57817dd634cdfeacab.setContent(i_frame_19a57062550d8cc6a7a02962cbb1c93c);
+        
+
+        marker_e2593e041a9ca165d6688bb5c8f06bbd.bindPopup(popup_2a3cb9d35173ba57817dd634cdfeacab)
+        ;
+
+        
+    
+    
+            marker_e2593e041a9ca165d6688bb5c8f06bbd.bindTooltip(
+                `<div>
+                     10 May 44<br>Long, FR<br><br>438 Squadron with 10 Bombphoons and 2 fighters bombed bridge at Long, France. No direct hits on the bridge, all near misses either overshooting or undershooting.  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_05adb565edabefc1a356d0ead107c64c = L.polyline(
+                [[50.7826164, -1.8489403], [50.0560153, 1.9538772]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_05f1bbe75890fb6338177605c5e2416e = L.marker(
+                [50.0161715, 1.9568342],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_19cd83a46969421ba916ff5feba62af5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_05f1bbe75890fb6338177605c5e2416e.setIcon(icon_19cd83a46969421ba916ff5feba62af5);
+        
+    
+        var popup_68e3f70824c4ed877c9e03dbc1502caf = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_df2121703a20bb0f07bfddf30a12aa32 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTEgTWF5IDQ0PGJyPkxvbmcsIEZSPGJyPjxicj5TZXZlbiBUeXBob29uIEJvbWJlcnMgY2FycnlpbmcgMTRYMTAwMCBsYiBNQyBib21icyBhdHRhY2tlZCB0aGUgYnJpZGdlIGF0IExvbmcgRnJhbmNlLiBObyBkaXJlY3QgaGl0cyB3ZXJlIHNjb3JlZCBvbiB0aGUgYnJpZGdlLjwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_68e3f70824c4ed877c9e03dbc1502caf.setContent(i_frame_df2121703a20bb0f07bfddf30a12aa32);
+        
+
+        marker_05f1bbe75890fb6338177605c5e2416e.bindPopup(popup_68e3f70824c4ed877c9e03dbc1502caf)
+        ;
+
+        
+    
+    
+            marker_05f1bbe75890fb6338177605c5e2416e.bindTooltip(
+                `<div>
+                     11 May 44<br>Long, FR<br><br>Seven Typhoon Bombers carrying 14X1000 lb MC bombs attacked the bridge at Long France. No direct hits were scored on the bridge.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ffcca2f179b0d3577d665695a0d2bd4f = L.polyline(
+                [[50.7826164, -1.8489403], [50.0161715, 1.9568342]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_6e924901e356d31851ec1fe139a7ffce = L.marker(
+                [49.7200953, 1.5258587],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_2537692d0ce0b12bbc9e815945939e2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6e924901e356d31851ec1fe139a7ffce.setIcon(icon_2537692d0ce0b12bbc9e815945939e2b);
+        
+    
+        var popup_46f24599a3f1265e774006915352ce8e = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_dce159810088f88a7e28cc64fae45148 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTIgTWF5IDQ0PGJyPkNoYXRlYXUgZGUgQm9zbWVsZXQ8YnI+PGJyPjQzOCBhbmQgNDQwIHNxdWFkcm9ucyB3aXRoIDE1IEJvbWJwaG9vbnMgYXR0YWNrZWQgQ2hhdGVhdSBkZSBCb3NtZWxldCBzb3V0aCBvZiBEaWVwcGUuIFRoZSBib21iaW5nIHdhcyBleGNlbGxlbnQg4oCTIDE2IHggNTAwIE1DIC4wMjUgY29uY2VudHJhdGVkIGluIHRoZSBjZW50cmUgb2YgdGFyZ2V0IGFyZWEuIDwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_46f24599a3f1265e774006915352ce8e.setContent(i_frame_dce159810088f88a7e28cc64fae45148);
+        
+
+        marker_6e924901e356d31851ec1fe139a7ffce.bindPopup(popup_46f24599a3f1265e774006915352ce8e)
+        ;
+
+        
+    
+    
+            marker_6e924901e356d31851ec1fe139a7ffce.bindTooltip(
+                `<div>
+                     12 May 44<br>Chateau de Bosmelet<br><br>438 and 440 squadrons with 15 Bombphoons attacked Chateau de Bosmelet south of Dieppe. The bombing was excellent – 16 x 500 MC .025 concentrated in the centre of target area. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_8ac4540478430065f8f3abfe7cc58d0a = L.polyline(
+                [[50.7826164, -1.8489403], [49.7200953, 1.5258587]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_f084ad3eb5fe930d8b44fe331967219d = L.marker(
+                [51.1429821, 3.6808185],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_4301b9a6ad0c8c1b163ea15ffb7fa738 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f084ad3eb5fe930d8b44fe331967219d.setIcon(icon_4301b9a6ad0c8c1b163ea15ffb7fa738);
+        
+    
+        var popup_974a788f93e3acb78fb43d0e2a69e7cf = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_c10675ca0d95eb9d9ac4b62e50ddc84e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTkgTWF5IDQ0PGJyPkV2ZXJndW0sIEJFPGJyPjxicj40MzggYW5kIDQ0MCBzcW4g4oCTIHdpdGggMTggQm9tYnBob29ucyBhdHRhY2tlZCBhIHRhbmsgY29uY2VudHJhdGlvbiBhdCBFdmVyZ2VtLCBCZWxnaXVtIDwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_974a788f93e3acb78fb43d0e2a69e7cf.setContent(i_frame_c10675ca0d95eb9d9ac4b62e50ddc84e);
+        
+
+        marker_f084ad3eb5fe930d8b44fe331967219d.bindPopup(popup_974a788f93e3acb78fb43d0e2a69e7cf)
+        ;
+
+        
+    
+    
+            marker_f084ad3eb5fe930d8b44fe331967219d.bindTooltip(
+                `<div>
+                     19 May 44<br>Evergum, BE<br><br>438 and 440 sqn – with 18 Bombphoons attacked a tank concentration at Evergem, Belgium 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_72b34257121b26865238c02f82421658 = L.polyline(
+                [[50.7826164, -1.8489403], [51.1429821, 3.6808185]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_6c9ba2fc5f0df899ef7e564bce81cdf4 = L.marker(
+                [49.4958157, 0.096175],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_74e7eaaebee2c696f7d27508e1effdd0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6c9ba2fc5f0df899ef7e564bce81cdf4.setIcon(icon_74e7eaaebee2c696f7d27508e1effdd0);
+        
+    
+        var popup_ddb62033ab4249de7aa7d25ac231a68d = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_224bd77117af6b82e520a0dd2dc8afc7 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDIgSnVuIDQ0PGJyPkNhcCBkZSBsYSBIYXZyZTxicj48YnI+MTIgQm9tYnBob29ucyBhdHRhY2tlZCB0YXJnZXQg4oCTIEEyMS8yNCBSYWRhciBTaXRlIExlIEhhdnJlL0NhcCBkZSBMYSBIYXZyZSA8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_ddb62033ab4249de7aa7d25ac231a68d.setContent(i_frame_224bd77117af6b82e520a0dd2dc8afc7);
+        
+
+        marker_6c9ba2fc5f0df899ef7e564bce81cdf4.bindPopup(popup_ddb62033ab4249de7aa7d25ac231a68d)
+        ;
+
+        
+    
+    
+            marker_6c9ba2fc5f0df899ef7e564bce81cdf4.bindTooltip(
+                `<div>
+                     02 Jun 44<br>Cap de la Havre<br><br>12 Bombphoons attacked target – A21/24 Radar Site Le Havre/Cap de La Havre 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a14cb063b16f6683b84afb46c1a61933 = L.polyline(
+                [[50.7826164, -1.8489403], [49.4958157, 0.096175]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_58b6ced5aefa8160b9a9ebb0a4ee55df = L.marker(
+                [49.4957988, 0.0594374],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_188be529bfa4c670a186e9ba9694bbae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_58b6ced5aefa8160b9a9ebb0a4ee55df.setIcon(icon_188be529bfa4c670a186e9ba9694bbae);
+        
+    
+        var popup_1ae4f86f71293a8cddbeff7f55cac47d = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_e1f7d946be121fc7bca597044a3736d1 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDMgSnVuIDQ0PGJyPkxhIEhhdnJlPGJyPjxicj4xMiBCb21icGhvb25zIGF0dGFja2VkIFRhcmdldCBBMjEvMzUgUmFkYXIgU2l0ZSAgbmVhciBMZSBIYXZyZSA8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_1ae4f86f71293a8cddbeff7f55cac47d.setContent(i_frame_e1f7d946be121fc7bca597044a3736d1);
+        
+
+        marker_58b6ced5aefa8160b9a9ebb0a4ee55df.bindPopup(popup_1ae4f86f71293a8cddbeff7f55cac47d)
+        ;
+
+        
+    
+    
+            marker_58b6ced5aefa8160b9a9ebb0a4ee55df.bindTooltip(
+                `<div>
+                     03 Jun 44<br>La Havre<br><br>12 Bombphoons attacked Target A21/35 Radar Site  near Le Havre 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_3f99dc307d4e314f1084495923d4c461 = L.polyline(
+                [[50.7826164, -1.8489403], [49.4957988, 0.0594374]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_cf85ff988b9441342c10616f224d27c9 = L.marker(
+                [49.4958157, 0.096175],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_59b71264e746f74631a74cf26fc72909 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cf85ff988b9441342c10616f224d27c9.setIcon(icon_59b71264e746f74631a74cf26fc72909);
+        
+    
+        var popup_dbfb3d1c603ed3adf0bbe0c5c1a74710 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_d96b7b85dbb098df85c4610323035392 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDUgSnVuIDQ0PGJyPkNhcCBkZSBsYSBIYXZyZTxicj48YnI+MTEgQm9tYnBob29ucyBhdHRhY2tlZCBUYXJnZXQ6IFJhZGFyIG5lYXIgQ2FwIGRlIExlIEhhdnJlL0xlIEhhdnJlIDwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_dbfb3d1c603ed3adf0bbe0c5c1a74710.setContent(i_frame_d96b7b85dbb098df85c4610323035392);
+        
+
+        marker_cf85ff988b9441342c10616f224d27c9.bindPopup(popup_dbfb3d1c603ed3adf0bbe0c5c1a74710)
+        ;
+
+        
+    
+    
+            marker_cf85ff988b9441342c10616f224d27c9.bindTooltip(
+                `<div>
+                     05 Jun 44<br>Cap de la Havre<br><br>11 Bombphoons attacked Target: Radar near Cap de Le Havre/Le Havre 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_df1f554976d38568559b90dfa17d2a63 = L.polyline(
+                [[50.7826164, -1.8489403], [49.4958157, 0.096175]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_e75e0d1b788c4f7b83882a1c04e13601 = L.marker(
+                [49.34341, -0.58386],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_2a21cdd38b1a471f1e2884da6373d5d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e75e0d1b788c4f7b83882a1c04e13601.setIcon(icon_2a21cdd38b1a471f1e2884da6373d5d9);
+        
+    
+        var popup_319c37dd559053afe9e1982e0ec8abe6 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_1aa7089513f4f00f59f94f2a5aab67b3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDYgSnVuIDQ0PGJyPkFzbmVsbGVzLXN1ci1NZXI8YnI+PGJyPk5vLiA0MzggU3F1YWRyb24gd2FzIGFzc2lnbmVkIHRoZSB0YXNrIG9mIGRpdmUgYm9tYmluZyB0d28gY29uY3JldGUgYmxvY2sgaG91c2VzIG92ZXJsb29raW5nIHRoZSBiZWFjaCBvbiB3aGljaCB0aGUgNTB0aCBCcml0aXNoIERpdmlzaW9uIHdhcyB0byBsYW5kIHRhbmtzLiBUaGlzIG9wZXJhdGlvbiBoYWQgdG8gYmUgcGVyZm9ybWVkIGp1c3QgYXMgdGhlIHRhbmtzIGxhbmRpbmcgY3JhZnQgbG93ZXJlZCB0aGVpciByYW1wcy4gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_319c37dd559053afe9e1982e0ec8abe6.setContent(i_frame_1aa7089513f4f00f59f94f2a5aab67b3);
+        
+
+        marker_e75e0d1b788c4f7b83882a1c04e13601.bindPopup(popup_319c37dd559053afe9e1982e0ec8abe6)
+        ;
+
+        
+    
+    
+            marker_e75e0d1b788c4f7b83882a1c04e13601.bindTooltip(
+                `<div>
+                     06 Jun 44<br>Asnelles-sur-Mer<br><br>No. 438 Squadron was assigned the task of dive bombing two concrete block houses overlooking the beach on which the 50th British Division was to land tanks. This operation had to be performed just as the tanks landing craft lowered their ramps. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_55609ab197b1d58ed8e093c0d597e85c = L.polyline(
+                [[50.7826164, -1.8489403], [49.34341, -0.58386]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_8327f77288f75f40c52fca8ad262e182 = L.marker(
+                [50.5670518, -2.0348655],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_9596d3a2903787b30b2b43828b73f5fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8327f77288f75f40c52fca8ad262e182.setIcon(icon_9596d3a2903787b30b2b43828b73f5fc);
+        
+    
+        var popup_a00bf1515a7f379af159062a3974acc8 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_66cfa53492ddfffbba970cbd5fe63fa2 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDcgSnVuIDQ0PGJyPlN0IEFsYmFuJ3MgSGVhZDxicj48YnI+MiBTdGFuZGJ5IGFpcmNyYWZ0IHNjcmFtYmxlZCB0byBwYXRyb2wgYSBjb252b3kgYXBwcm94aW1hdGVseSAxMCBtaWxlcyBzb3V0aCBvZiBTdCBBbGJhbuKAmXMgSGVhZC4gVGhlIHBhdHJvbCB3YXMgdW5ldmVudGZ1bC48L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_a00bf1515a7f379af159062a3974acc8.setContent(i_frame_66cfa53492ddfffbba970cbd5fe63fa2);
+        
+
+        marker_8327f77288f75f40c52fca8ad262e182.bindPopup(popup_a00bf1515a7f379af159062a3974acc8)
+        ;
+
+        
+    
+    
+            marker_8327f77288f75f40c52fca8ad262e182.bindTooltip(
+                `<div>
+                     07 Jun 44<br>St Alban's Head<br><br>2 Standby aircraft scrambled to patrol a convoy approximately 10 miles south of St Alban’s Head. The patrol was uneventful.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_573b7c2d8d45dad656d2686e7d9e84f0 = L.polyline(
+                [[50.7826164, -1.8489403], [50.5670518, -2.0348655]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_2f9a3c8e8b4220ce5f7d94e90c24adb1 = L.marker(
+                [49.30343, -0.09714],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_574e5c1d181d38de0c8d1fe598f6e384 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2f9a3c8e8b4220ce5f7d94e90c24adb1.setIcon(icon_574e5c1d181d38de0c8d1fe598f6e384);
+        
+    
+        var popup_04a9e454bc2b55dce6612f435c1151bc = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_08e4c8263f42f1525b402f2bfc3faa02 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MDggSnVuIDQ0PGJyPkNhZW4gIDxicj48YnI+OCBCb21iZXJzIGFuZCAyIEZpZ2h0ZXJzIHdlcmUgZGV0YWlsZWQgdG8gcGF0cm9sIHNvdXRoIG9mIENhZW4uIDQgTUUxMDkgR2VybWFuIGZpZ2h0ZXJzIHNlZW4gYXQgNSw1MDAgZnQgYXQgVS4yMzgxICg0OS4zMDM0M04sIDAuMDk3MTRXKSBhbmQgd2VyZSBlbmdhZ2VkIGJ5IFNwaXRmaXJlcy4gTm90aGluZyBmdXJ0aGVyIHNlZW4sIGJvbWJzIGJyb3VnaHQgYmFjay4gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_04a9e454bc2b55dce6612f435c1151bc.setContent(i_frame_08e4c8263f42f1525b402f2bfc3faa02);
+        
+
+        marker_2f9a3c8e8b4220ce5f7d94e90c24adb1.bindPopup(popup_04a9e454bc2b55dce6612f435c1151bc)
+        ;
+
+        
+    
+    
+            marker_2f9a3c8e8b4220ce5f7d94e90c24adb1.bindTooltip(
+                `<div>
+                     08 Jun 44<br>Caen  <br><br>8 Bombers and 2 Fighters were detailed to patrol south of Caen. 4 ME109 German fighters seen at 5,500 ft at U.2381 (49.30343N, 0.09714W) and were engaged by Spitfires. Nothing further seen, bombs brought back. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_464cc84c39cf228361ab498ead78f760 = L.polyline(
+                [[50.7826164, -1.8489403], [49.30343, -0.09714]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_16f06748f003402251787feec30eeeaa = L.marker(
+                [48.99109, -0.73814],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_2b6ce655ff7b73449e496bb04bacba56 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_16f06748f003402251787feec30eeeaa.setIcon(icon_2b6ce655ff7b73449e496bb04bacba56);
+        
+    
+        var popup_39ad1c4f789756098aacedc9f3e2669f = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_9481a3093c0243ed5ded950e6cbd0bb8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTQgSnVuIDQ0PGJyPlZpbGxpZXJzLUJvY2FnZTxicj48YnI+OCBCb21iZXJzIGFuZCAyIEZpZ2h0ZXJzIGRldGFpbGVkIHRvIGF0dGFjayBhIFRhcmdldCBvZiBBcm1lZCBSZWNjZSBpbiB0aGUgQ2Flbi1WaWxsaWVycy1Cb2NhZ2UgYXJlYSAgOHg1MDAgbGIgTUMgYm9tYnMgd2VyZSBkcm9wcGVkIG9uIDYgYXJtb3VyZWQgdmVoaWNsZXMgPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_39ad1c4f789756098aacedc9f3e2669f.setContent(i_frame_9481a3093c0243ed5ded950e6cbd0bb8);
+        
+
+        marker_16f06748f003402251787feec30eeeaa.bindPopup(popup_39ad1c4f789756098aacedc9f3e2669f)
+        ;
+
+        
+    
+    
+            marker_16f06748f003402251787feec30eeeaa.bindTooltip(
+                `<div>
+                     14 Jun 44<br>Villiers-Bocage<br><br>8 Bombers and 2 Fighters detailed to attack a Target of Armed Recce in the Caen-Villiers-Bocage area  8x500 lb MC bombs were dropped on 6 armoured vehicles 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_110a22cda172fdf32726bb963d2a2c22 = L.polyline(
+                [[50.7826164, -1.8489403], [48.99109, -0.73814]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_6b870a7e595ccde770663a311dbe72ca = L.marker(
+                [49.22795, -0.13463],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_c6f943e467a25bde70ee96449e55d261 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6b870a7e595ccde770663a311dbe72ca.setIcon(icon_c6f943e467a25bde70ee96449e55d261);
+        
+    
+        var popup_da11e219466c31011630f7672da13c46 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_33d6e7ee2086f6e0b65f03d1ace2ba40 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTQgSnVuIDQ0PGJyPkJhdmVudDxicj48YnI+OCBCb21icGhvb25zIGZyb20gNDM4IFNxbiBwbHVzIDE2IEJvbWJwaG9vbnMgYW5kIDQgRmlnaHRlcnMgZnJvbSA0MzkgYW5kIDQ0MCBTcW4gYW5kIDggQm9tYnBob29ucyBhbmQgMiBmaWdodGVycyBmcm9tIDI0NyBTcW4gd2VyZSBhaXJib3JuZSBhdCAyMTQ1IHRvIGF0dGFjayBhIEJyaWRnZSBvbiB0aGUgRGl2ZXMgUml2ZXIgZWFzdCBvZiBCYXZlbnQgYW5kIE1haW4gQmF0dGxlIFRhbmtzIChNQlQpIG1vdmluZyBvbiByb2FkcyBpbiB0aGUgdmljaW5pdHkuIDwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_da11e219466c31011630f7672da13c46.setContent(i_frame_33d6e7ee2086f6e0b65f03d1ace2ba40);
+        
+
+        marker_6b870a7e595ccde770663a311dbe72ca.bindPopup(popup_da11e219466c31011630f7672da13c46)
+        ;
+
+        
+    
+    
+            marker_6b870a7e595ccde770663a311dbe72ca.bindTooltip(
+                `<div>
+                     14 Jun 44<br>Bavent<br><br>8 Bombphoons from 438 Sqn plus 16 Bombphoons and 4 Fighters from 439 and 440 Sqn and 8 Bombphoons and 2 fighters from 247 Sqn were airborne at 2145 to attack a Bridge on the Dives River east of Bavent and Main Battle Tanks (MBT) moving on roads in the vicinity. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_642ea404308f18f137e90c99064cbb41 = L.polyline(
+                [[50.7826164, -1.8489403], [49.22795, -0.13463]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_07b06985dc7c744032b9b2d7c4aba4fd = L.marker(
+                [49.085671, -0.425275],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_e18b641161870877e7112e96fc85639f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_07b06985dc7c744032b9b2d7c4aba4fd.setIcon(icon_e18b641161870877e7112e96fc85639f);
+        
+    
+        var popup_59f28947b96aa14797e94e30aee7ba73 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_defcef42b76da7c31c19c23f7ba3fc3e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTUgSnVuIDQ0PGJyPkFtYXllLXN1ci1Pcm5lPGJyPjxicj44IEJvbWJwaG9vbnMgYW5kIDIgZmlnaHRlcnMgd2VyZSBhZ2FpbiBvcmRlcmVkIHRvIGF0dGFjaCB0aGUgZG91YmxlIGJyaWRnZSBvdmVyIHRoZSBSaXZlciBPcm5lLCAxNng1MDAgbGIgTS5DLiAsMDI1IGJvbWJzIHdlcmUgYWxsIGRlbGl2ZXJlZCB2ZXJ5IGNsb3NlIHRvIHRoZSB0YXJnZXQgd2hpY2ggd2FzIGJlbGlldmVkIGRhbWFnZWQgYnV0IG5vdCBkZXN0cm95ZWQuIDwvaDE+" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_59f28947b96aa14797e94e30aee7ba73.setContent(i_frame_defcef42b76da7c31c19c23f7ba3fc3e);
+        
+
+        marker_07b06985dc7c744032b9b2d7c4aba4fd.bindPopup(popup_59f28947b96aa14797e94e30aee7ba73)
+        ;
+
+        
+    
+    
+            marker_07b06985dc7c744032b9b2d7c4aba4fd.bindTooltip(
+                `<div>
+                     15 Jun 44<br>Amaye-sur-Orne<br><br>8 Bombphoons and 2 fighters were again ordered to attach the double bridge over the River Orne, 16x500 lb M.C. ,025 bombs were all delivered very close to the target which was believed damaged but not destroyed. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_8f3af2b05ed572c80357a90f6c005023 = L.polyline(
+                [[50.7826164, -1.8489403], [49.085671, -0.425275]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_df7ca0d947a778ad4300623207ec7f6a = L.marker(
+                [49.25901, -0.11282],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_9b0ae3e1dc96ca310c62dd8fe81ba75c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_df7ca0d947a778ad4300623207ec7f6a.setIcon(icon_9b0ae3e1dc96ca310c62dd8fe81ba75c);
+        
+    
+        var popup_f5337426c32b2c9753cea544c1dfaf95 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_c8f37732bc18221c176b145e60dac0df = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTcgSnVuIDQ0PGJyPkRpdmVzLXN1ci1NZXJlPGJyPjxicj45IEJvbWJwaG9vbnMgYW5kIDEgZmlnaHRlciB3ZXJlIGRldGFpbGVkIHRvIGF0dGFjayBicmlkZ2VzIG9uIHRoZSBEaXZlcyBSaXZlciBzb3V0aCBvZiBEaXZlcy1zdXItTWVyZSwgYW5kIG9uIHRoZSBHcmFuZCBDYW5hbCBzb3V0aCBvZiBEaXZlcy1zdXItTWVyZSwgPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_f5337426c32b2c9753cea544c1dfaf95.setContent(i_frame_c8f37732bc18221c176b145e60dac0df);
+        
+
+        marker_df7ca0d947a778ad4300623207ec7f6a.bindPopup(popup_f5337426c32b2c9753cea544c1dfaf95)
+        ;
+
+        
+    
+    
+            marker_df7ca0d947a778ad4300623207ec7f6a.bindTooltip(
+                `<div>
+                     17 Jun 44<br>Dives-sur-Mere<br><br>9 Bombphoons and 1 fighter were detailed to attack bridges on the Dives River south of Dives-sur-Mere, and on the Grand Canal south of Dives-sur-Mere, 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_63c2a28afc4d5903d4a82217c7db33b1 = L.polyline(
+                [[50.7826164, -1.8489403], [49.25901, -0.11282]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_3da2749da818c77d1e8e744cbf318a80 = L.marker(
+                [49.20219, -0.32145],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_0a36e036a1bdc778efe2ef9e64c978f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3da2749da818c77d1e8e744cbf318a80.setIcon(icon_0a36e036a1bdc778efe2ef9e64c978f0);
+        
+    
+        var popup_7f4760b1bcaa51475ee26437600b778c = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_fe4e86ff668160985e747c87823b8e54 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MTggSnVuIDQ0PGJyPkNhZW4gQ2FuYWw8YnI+PGJyPjggQm9tYnBob29ucyBhbmQgMSBmaWdodGVyIHdlcmUgZGV0YWlsZWQgdG8gYXR0YWNrIHRhcmdldCBicmlkZ2VzICBvdmVyIHRoZSBDYWVuIENhbmFsLCBlYXN0IG9mIENhZW4uIFRoZSBhdHRhY2sgd2FzIG1hZGUgZnJvbSA3LjAwMCB0byAyLDAwMCBmdCB3aXRoIHRoZSBmb2xsb3dpbmcgcmVzdWx0czogMngxLDAwMCBsYnMgTUMgLjAyNSBvbiBFYXN0IGVuZCBvZiBicmlkZ2UsIDJ4MTAwMCBsYiBNQyAuMDI1IG9uIFdlc3QgZW5kIG9mIGJyaWRnZSwgYW5kIDEgeCAxLDAwMCBsYiBNQyAuMDI1IGJlbGlldmVkIGhpdCBvbiB0aGUgY2VudHJlIG9mIGJyaWRnZSBhbmQgZXhwbG9kZWQgdW5kZXJuZWF0aC4gRWFzdCBwaWVyIG1pc3NlZC4gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_7f4760b1bcaa51475ee26437600b778c.setContent(i_frame_fe4e86ff668160985e747c87823b8e54);
+        
+
+        marker_3da2749da818c77d1e8e744cbf318a80.bindPopup(popup_7f4760b1bcaa51475ee26437600b778c)
+        ;
+
+        
+    
+    
+            marker_3da2749da818c77d1e8e744cbf318a80.bindTooltip(
+                `<div>
+                     18 Jun 44<br>Caen Canal<br><br>8 Bombphoons and 1 fighter were detailed to attack target bridges  over the Caen Canal, east of Caen. The attack was made from 7.000 to 2,000 ft with the following results: 2x1,000 lbs MC .025 on East end of bridge, 2x1000 lb MC .025 on West end of bridge, and 1 x 1,000 lb MC .025 believed hit on the centre of bridge and exploded underneath. East pier missed. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_15e36a755d01d01287021266fb5b85cd = L.polyline(
+                [[50.7826164, -1.8489403], [49.20219, -0.32145]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_cef4d02342f1423aa8a59f2fff2a50e3 = L.marker(
+                [49.12967, -0.05979],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_9dde1eac65033f507883b7d12bacc480 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cef4d02342f1423aa8a59f2fff2a50e3.setIcon(icon_9dde1eac65033f507883b7d12bacc480);
+        
+    
+        var popup_808cb576f45607b589ff2fc13d024cd9 = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_95b12ab4d7bebca3074247f686066bbe = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjAgSnVuIDQ0PGJyPkJlbGxlIFZpZSBlbiBhdWdlPGJyPjxicj42IEJvbWJwaG9vbnMgYW5kIDIgZmlnaHRlcnMgYXR0YWNrZWQgYSB0YXJnZXQgZW1iYW5rbWVudCA0OTAwLzcvMzEuIFRhcmdldCBhdHRhY2tlZCB3aXRoIDEyIHggNTAwIE1DIC4xMSBzZWMgYm9tYnMuIDQgZGlyZWN0IGhpdHMgd2VyZSBzY29yZWQgb24gdGhlIHRhcmdldCB3aXRoIHRoZSByZXN1bHRzIG9ic2N1cmVkIGJ5IHNtb2tlIGFuZCBkdXN0LiAyIGJvbWJzIG92ZXJzaG90LiA8L2gxPg==" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_808cb576f45607b589ff2fc13d024cd9.setContent(i_frame_95b12ab4d7bebca3074247f686066bbe);
+        
+
+        marker_cef4d02342f1423aa8a59f2fff2a50e3.bindPopup(popup_808cb576f45607b589ff2fc13d024cd9)
+        ;
+
+        
+    
+    
+            marker_cef4d02342f1423aa8a59f2fff2a50e3.bindTooltip(
+                `<div>
+                     20 Jun 44<br>Belle Vie en auge<br><br>6 Bombphoons and 2 fighters attacked a target embankment 4900/7/31. Target attacked with 12 x 500 MC .11 sec bombs. 4 direct hits were scored on the target with the results obscured by smoke and dust. 2 bombs overshot. 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c11f7a2ca3fd97c14eabc295740a2d41 = L.polyline(
+                [[50.7826164, -1.8489403], [49.12967, -0.05979]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var marker_d7072132e5622ce2c2516d3df8d5f183 = L.marker(
+                [48.39808, 0.82241],
+                {"radius": 2}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            var icon_0162939651861cf8aa70955a5460179b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d7072132e5622ce2c2516d3df8d5f183.setIcon(icon_0162939651861cf8aa70955a5460179b);
+        
+    
+        var popup_859b25213af3415c22003d2f5f7b225d = L.popup({"maxWidth": 800});
+
+        
+            var i_frame_6f12c7bf6f125b47b11f255603a5f9f0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aDE+MjIgSnVuIDQ0PGJyPkdvcnJvbjxicj48YnI+OCBCb21icGhvb25zIGFuZCAyIGZpZ2h0ZXJzIGJvbWJlZCBtYXJzaGFsbGluZyB5YXJkcyBhdCBHb3Jyb24gPC9oMT4=" width="800" style="border:none !important;" height="600"></iframe>`)[0];
+            popup_859b25213af3415c22003d2f5f7b225d.setContent(i_frame_6f12c7bf6f125b47b11f255603a5f9f0);
+        
+
+        marker_d7072132e5622ce2c2516d3df8d5f183.bindPopup(popup_859b25213af3415c22003d2f5f7b225d)
+        ;
+
+        
+    
+    
+            marker_d7072132e5622ce2c2516d3df8d5f183.bindTooltip(
+                `<div>
+                     22 Jun 44<br>Gorron<br><br>8 Bombphoons and 2 fighters bombed marshalling yards at Gorron 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_e39632127c1c9fdd138235f2e7d4cea6 = L.polyline(
+                [[50.7826164, -1.8489403], [48.39808, 0.82241]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_52f972ac3304a15f05eabf37cb78c4c7);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("DD MMM YY");
+                }
+            });
+            map_0deda1a41b220718e9db62b56d6e5bb4.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": false, "loopButton": true, "maxSpeed": 1, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "timeSliderDragUpdate": true}
+            );
+            map_0deda1a41b220718e9db62b56d6e5bb4.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.8489403, 50.7826164]}, "properties": {"time": "2044-03-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.8157138, 49.5797993]}, "properties": {"time": "2044-03-30 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.2383399, 49.192276]}, "properties": {"time": "2044-04-25 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.693036, 49.6683243]}, "properties": {"time": "2044-04-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.3218456, 49.2997238]}, "properties": {"time": "2044-04-27 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.0575819, 49.3456666]}, "properties": {"time": "2044-05-07 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.9538772, 50.0560153]}, "properties": {"time": "2044-05-10 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.9568342, 50.0161715]}, "properties": {"time": "2044-05-11 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.5258587, 49.7200953]}, "properties": {"time": "2044-05-12 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [3.6808185, 51.1429821]}, "properties": {"time": "2044-05-19 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [0.096175, 49.4958157]}, "properties": {"time": "2044-06-02 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [0.0594374, 49.4957988]}, "properties": {"time": "2044-06-03 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [0.096175, 49.4958157]}, "properties": {"time": "2044-06-05 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.58386, 49.34341]}, "properties": {"time": "2044-06-06 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.0348655, 50.5670518]}, "properties": {"time": "2044-06-07 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.09714, 49.30343]}, "properties": {"time": "2044-06-08 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.73814, 48.99109]}, "properties": {"time": "2044-06-14 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.13463, 49.22795]}, "properties": {"time": "2044-06-14 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.425275, 49.085671]}, "properties": {"time": "2044-06-15 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.11282, 49.25901]}, "properties": {"time": "2044-06-17 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.32145, 49.20219]}, "properties": {"time": "2044-06-18 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.05979, 49.12967]}, "properties": {"time": "2044-06-20 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [0.82241, 48.39808]}, "properties": {"time": "2044-06-22 00:00:00", "style": {"color": "crimson"}, "icon": "circle", "iconstyle": {"fillColor": "crimson", "fillOpacity": 0.25, "stroke": "true", "radius": 20}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_b681fef5d42d94558adabfaa5733be84 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: "P1D",
+                }
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+    
+            var mouse_position_3341f915303a837238c657614d4e1b1c = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "Mouse:", "separator": " | "}
+            );
+            mouse_position_3341f915303a837238c657614d4e1b1c.options["latFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            mouse_position_3341f915303a837238c657614d4e1b1c.options["lngFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' ? ';};;
+            map_0deda1a41b220718e9db62b56d6e5bb4.addControl(mouse_position_3341f915303a837238c657614d4e1b1c);
+        
+    
+            L.Control.geocoder(
+                {"collapsed": "True", "defaultMarkGeocode": true, "position": "topright"}
+            ).on('markgeocode', function(e) {
+                map_0deda1a41b220718e9db62b56d6e5bb4.setView(e.geocode.center, 11);
+            }).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+
+        
+    
+            var layer_control_1e9cb0c8056538b3bb3be996380417ab = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_7fea307e28f07b3b03702df55adafff2,
+                },
+                overlays :  {
+                    "Google Maps" : tile_layer_394ab21efc2d58943d20a30780b40ae3,
+                    "Google Hybrid" : tile_layer_0bcf9b73f8901638252d7a65f356a358,
+                    "Google Satellite" : tile_layer_22898bbab7533c78eb85fc215f6343dc,
+                    "Google Terrain" : tile_layer_43fdd123c60f22ab7cb5b52274abb79a,
+                    "Esri Satellite" : tile_layer_e6312dc3dfd8b97d1031da3bfb0af675,
+                    "438SqnFrance" : feature_group_c7dc5b5b54b89caf7581e8a1db03a550,
+                    "438Sqn" : feature_group_52f972ac3304a15f05eabf37cb78c4c7,
+                },
+            };
+            L.control.layers(
+                layer_control_1e9cb0c8056538b3bb3be996380417ab.base_layers,
+                layer_control_1e9cb0c8056538b3bb3be996380417ab.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+            tile_layer_394ab21efc2d58943d20a30780b40ae3.remove();
+            tile_layer_0bcf9b73f8901638252d7a65f356a358.remove();
+            tile_layer_22898bbab7533c78eb85fc215f6343dc.remove();
+            tile_layer_43fdd123c60f22ab7cb5b52274abb79a.remove();
+            tile_layer_e6312dc3dfd8b97d1031da3bfb0af675.remove();
+        
+    
+            var measure_control_ae2544c9c6d6764a0b723c308fc86351 = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "kilometers", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_0deda1a41b220718e9db62b56d6e5bb4.addControl(measure_control_ae2544c9c6d6764a0b723c308fc86351);
+
+        
+    
+            var tile_layer_dddc2cfad528d0d40d48733ca3d0818e = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_4b272ddb00ca1e7aeec82f50e908cc75 = new L.Control.MiniMap(
+                tile_layer_dddc2cfad528d0d40d48733ca3d0818e,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_0deda1a41b220718e9db62b56d6e5bb4.addControl(mini_map_4b272ddb00ca1e7aeec82f50e908cc75);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": false, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_0deda1a41b220718e9db62b56d6e5bb4);
+        
+</script>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1447871d23a340b78340db27e59378f6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 96.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+               <h3 align="center" style="font-size:16px"><b>Unit Routes WWI and WWII</b></h3>
+             
+    
+            <div class="folium-map" id="map_1447871d23a340b78340db27e59378f6" ></div>
+        
+</body>
+<script>    
+    
+            var map_1447871d23a340b78340db27e59378f6 = L.map(
+                "map_1447871d23a340b78340db27e59378f6",
+                {
+                    center: [49.847163, 2.829567],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_1447871d23a340b78340db27e59378f6);
+
+            
+
+        
+    
+            var tile_layer_3fb4af6e9d8b4d5e82743635b60585c8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1447871d23a340b78340db27e59378f6);
+        
+    
+            var tile_layer_a6aa784d0197488abfac90303e592dc2 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1447871d23a340b78340db27e59378f6);
+        
+    
+            var tile_layer_3a9a6ace7ab240cc97e9d17877819dcc = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1447871d23a340b78340db27e59378f6);
+        
+    
+            var tile_layer_19d42fdfac894459894320b465b986ac = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1447871d23a340b78340db27e59378f6);
+        
+    
+            var tile_layer_b340a6deb41a488d852bd286258a99a9 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1447871d23a340b78340db27e59378f6);
+        
+    
+            var tile_layer_632f07b615ad4d6eaf20feb614b127f8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1447871d23a340b78340db27e59378f6);
+        
+    
+            var feature_group_6509f8c5d0074b6f816bd2f67fab3c46 = L.featureGroup(
+                {}
+            ).addTo(map_1447871d23a340b78340db27e59378f6);
+        
+    
+            var poly_line_5c354a87bd2f41909c9760792afc9918 = L.polyline(
+                [[49.476963, 0.141894], [50.0910511, 3.5383812], [50.1170622, 3.6490208], [50.3032896, 3.7296874], [50.430477, 3.761068], [50.4475964, 3.7089613], [50.3756677, 3.8070989], [50.102672, 3.527483], [50.0456304, 3.4266328], [49.8476282, 3.2440443], [49.7529551, 3.052378], [49.4249271, 3.0263335], [49.3252923, 2.8986666], [49.027088, 2.749837], [48.96976, 2.7383946], [48.8386318, 2.7206491]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": "20", "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": "3"}
+            ).addTo(feature_group_6509f8c5d0074b6f816bd2f67fab3c46);
+        
+    
+            var layer_control_6601e5e622ed4b01ac7cd7ed7d83d093 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_632f07b615ad4d6eaf20feb614b127f8,
+                    "cartodbpositron" : tile_layer_a6aa784d0197488abfac90303e592dc2,
+                    "Esri Satellite" : tile_layer_3a9a6ace7ab240cc97e9d17877819dcc,
+                    "stamenterrain" : tile_layer_19d42fdfac894459894320b465b986ac,
+                    "stamenwatercolor" : tile_layer_b340a6deb41a488d852bd286258a99a9,
+                },
+                overlays :  {
+                    "2nd Suffolks" : feature_group_6509f8c5d0074b6f816bd2f67fab3c46,
+                },
+            };
+            L.control.layers(
+                layer_control_6601e5e622ed4b01ac7cd7ed7d83d093.base_layers,
+                layer_control_6601e5e622ed4b01ac7cd7ed7d83d093.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_1447871d23a340b78340db27e59378f6);
+            tile_layer_a6aa784d0197488abfac90303e592dc2.remove();
+            tile_layer_3a9a6ace7ab240cc97e9d17877819dcc.remove();
+            tile_layer_19d42fdfac894459894320b465b986ac.remove();
+            tile_layer_b340a6deb41a488d852bd286258a99a9.remove();
+            tile_layer_632f07b615ad4d6eaf20feb614b127f8.remove();
+        
+</script>

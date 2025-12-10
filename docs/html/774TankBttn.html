@@ -1022,6 +1022,11 @@
         "raster-opacity": 1.0
       }
     },
+    "Hurtgen Forest": {
+      "id": "Hurtgen Forest",
+      "type": "raster",
+      "source": "Hurtgen Forest_source"
+    },
     "774TankBttn Route": {
       "id": "774TankBttn Route",
       "type": "line",
@@ -1054,6 +1059,14 @@
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
       ],
       "tileSize": 256
+    },
+    "Hurtgen Forest_source": {
+      "type": "raster",
+      "tiles": [
+        "http://localhost:53008/api/tiles/{z}/{x}/{y}.png?&filename=C%3A%5Cpython%5CJupyter%5CStrass_modified.tif"
+      ],
+      "tileSize": 256,
+      "overwrite": true
     },
     "774TankBttn Route_source": {
       "type": "geojson",
@@ -58436,6 +58449,12 @@
             "name": "OpenStreetMap.Mapnik",
             "type": "raster"
           },
+          "Hurtgen Forest": {
+            "visible": true,
+            "opacity": 1.0,
+            "name": "Hurtgen Forest",
+            "type": "raster"
+          },
           "774TankBttn Route": {
             "visible": true,
             "opacity": 1.0,
@@ -58466,7 +58485,7 @@
         "collapsed": false
       }
     },
-    "widget_panel_route-colors-cdf9a9": {
+    "widget_panel_route-colors-a5e9d1": {
       "type": "widget_panel",
       "position": "bottom-right",
       "options": {
@@ -58480,8 +58499,8 @@
         "autoWidth": true,
         "headerBg": null,
         "headerTextColor": null,
-        "control_id": "route-colors-cdf9a9",
-        "widget_model_id": "286343a4a25b47a2a4cf54ce42243345",
+        "control_id": "route-colors-a5e9d1",
+        "widget_model_id": "c3b3fca3a955409ea77e6b16323871e8",
         "maxHeight": "380px"
       }
     }
@@ -58561,6 +58580,12 @@
               "visible": true,
               "opacity": 1.0,
               "name": "OpenStreetMap.Mapnik",
+              "type": "raster"
+            },
+            "Hurtgen Forest": {
+              "visible": true,
+              "opacity": 1.0,
+              "name": "Hurtgen Forest",
               "type": "raster"
             },
             "774TankBttn Route": {
@@ -58730,6 +58755,75 @@
     },
     {
       "id": 16,
+      "method": "addSource",
+      "args": [
+        "Hurtgen Forest_source",
+        {
+          "type": "raster",
+          "tiles": [
+            "http://localhost:53008/api/tiles/{z}/{x}/{y}.png?&filename=C%3A%5Cpython%5CJupyter%5CStrass_modified.tif"
+          ],
+          "tileSize": 256,
+          "overwrite": true
+        }
+      ],
+      "kwargs": {}
+    },
+    {
+      "id": 17,
+      "method": "addLayer",
+      "args": [
+        {
+          "id": "Hurtgen Forest",
+          "type": "raster",
+          "source": "Hurtgen Forest_source"
+        },
+        null
+      ],
+      "kwargs": {}
+    },
+    {
+      "id": 18,
+      "method": "setLayoutProperty",
+      "args": [
+        "Hurtgen Forest",
+        "visibility",
+        "visible"
+      ],
+      "kwargs": {}
+    },
+    {
+      "id": 19,
+      "method": "setPaintProperty",
+      "args": [
+        "Hurtgen Forest",
+        "raster-opacity",
+        1.0
+      ],
+      "kwargs": {}
+    },
+    {
+      "id": 20,
+      "method": "fitBounds",
+      "args": [
+        [
+          [
+            6.331875,
+            50.698543
+          ],
+          [
+            6.49975,
+            50.798558
+          ]
+        ],
+        {
+          "padding": 50
+        }
+      ],
+      "kwargs": {}
+    },
+    {
+      "id": 21,
       "method": "addSource",
       "args": [
         "774TankBttn Route_source",
@@ -116063,7 +116157,7 @@
       "kwargs": {}
     },
     {
-      "id": 17,
+      "id": 22,
       "method": "addLayer",
       "args": [
         {
@@ -116080,7 +116174,7 @@
       "kwargs": {}
     },
     {
-      "id": 18,
+      "id": 23,
       "method": "setLayoutProperty",
       "args": [
         "774TankBttn Route",
@@ -116090,7 +116184,7 @@
       "kwargs": {}
     },
     {
-      "id": 19,
+      "id": 24,
       "method": "setPaintProperty",
       "args": [
         "774TankBttn Route",
@@ -116100,7 +116194,7 @@
       "kwargs": {}
     },
     {
-      "id": 20,
+      "id": 25,
       "method": "fitBounds",
       "args": [
         [
@@ -116120,7 +116214,7 @@
       "kwargs": {}
     },
     {
-      "id": 21,
+      "id": 26,
       "method": "addMarkerGroup",
       "args": [
         {
@@ -116129,7 +116223,7 @@
             {
               "lng": -74.1443095,
               "lat": 40.6972846,
-              "popup": "\n                    <div style=\"text-align: center; max-width: 600px;\">\n                        <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">New York<br>01 Jul 44 </h2>\n                        <div style=\"text-align: left; padding: 0 10px;\">\n                            <p>01 July boarded the troopship Domininion Monarch, to the strains of music by a WAC band. The Battalion arrived in Scotland on 12 July, after being trailed the last few miles by enemy U-boats,</p>\n                        </div>\n                    </div>\n                    ",
+              "popup": "\n                    <div style=\"text-align: center; max-width: 600px;\">\n                        <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">New York<br>01 Jul 44 </h2>\n                        <div style=\"text-align: left; padding: 0 10px;\">\n                            <p>01 July boarded the troopship Dominion Monarch, to the strains of music by a WAC band. The Battalion arrived in Scotland on 12 July, after being trailed the last few miles by enemy U-boats,</p>\n                        </div>\n                    </div>\n                    ",
               "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>New York<br>01 Jul 44<br></h2>\n                    </div>\n                    ",
               "popup_max_width": "500px",
               "options": {
@@ -116228,8 +116322,8 @@
             {
               "lng": 6.36484,
               "lat": 49.46216,
-              "popup": "\n                    <div style=\"text-align: center; max-width: 600px;\">\n                        <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Dalheim<br>15 Oct 44 </h2>\n                        <div style=\"text-align: left; padding: 0 10px;\">\n                            <p>Continuing to fire on German positions on the East Bank of the Moselle.</p>\n                        </div>\n                    </div>\n                    ",
-              "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Dalheim<br>15 Oct 44<br></h2>\n                    </div>\n                    ",
+              "popup": "\n                    <div style=\"text-align: center; max-width: 600px;\">\n                        <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Schengen<br>15 Oct 44 </h2>\n                        <div style=\"text-align: left; padding: 0 10px;\">\n                            <p>Continuing to fire on German positions on the East Bank of the Moselle.</p>\n                        </div>\n                    </div>\n                    ",
+              "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Schengen<br>15 Oct 44<br></h2>\n                    </div>\n                    ",
               "popup_max_width": "500px",
               "options": {
                 "color": "red",
@@ -116398,7 +116492,7 @@
       "kwargs": {}
     },
     {
-      "id": 22,
+      "id": 27,
       "method": "addControl",
       "args": [
         "widget_panel",
@@ -116413,8 +116507,8 @@
           "autoWidth": true,
           "headerBg": null,
           "headerTextColor": null,
-          "control_id": "route-colors-cdf9a9",
-          "widget_model_id": "286343a4a25b47a2a4cf54ce42243345",
+          "control_id": "route-colors-a5e9d1",
+          "widget_model_id": "c3b3fca3a955409ea77e6b16323871e8",
           "maxHeight": "380px"
         }
       ],

@@ -1022,11 +1022,6 @@
         "raster-opacity": 1.0
       }
     },
-    "Hurtgen Forest": {
-      "id": "Hurtgen Forest",
-      "type": "raster",
-      "source": "Hurtgen Forest_source"
-    },
     "774TankBttn Route": {
       "id": "774TankBttn Route",
       "type": "line",
@@ -1035,6 +1030,11 @@
         "line-color": "red",
         "line-width": 3
       }
+    },
+    "HurtgenForest": {
+      "id": "HurtgenForest",
+      "type": "raster",
+      "source": "HurtgenForest_source"
     }
   },
   "_sources": {
@@ -1059,14 +1059,6 @@
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
       ],
       "tileSize": 256
-    },
-    "Hurtgen Forest_source": {
-      "type": "raster",
-      "tiles": [
-        "http://localhost:53008/api/tiles/{z}/{x}/{y}.png?&filename=C%3A%5Cpython%5CJupyter%5CStrass_modified.tif"
-      ],
-      "tileSize": 256,
-      "overwrite": true
     },
     "774TankBttn Route_source": {
       "type": "geojson",
@@ -58393,6 +58385,11 @@
           50.82914
         ]
       }
+    },
+    "HurtgenForest_source": {
+      "type": "raster",
+      "url": "cog://https://storage.googleapis.com/wfamaps/Strass_modified_cog.tif",
+      "tileSize": 256
     }
   },
   "_controls": {
@@ -58449,12 +58446,6 @@
             "name": "OpenStreetMap.Mapnik",
             "type": "raster"
           },
-          "Hurtgen Forest": {
-            "visible": true,
-            "opacity": 1.0,
-            "name": "Hurtgen Forest",
-            "type": "raster"
-          },
           "774TankBttn Route": {
             "visible": true,
             "opacity": 1.0,
@@ -58466,6 +58457,12 @@
             "opacity": 1.0,
             "name": "774TankBttn",
             "type": "marker-group"
+          },
+          "HurtgenForest": {
+            "visible": true,
+            "opacity": 1.0,
+            "name": "HurtgenForest",
+            "type": "raster"
           }
         }
       }
@@ -58485,7 +58482,7 @@
         "collapsed": false
       }
     },
-    "widget_panel_route-colors-a5e9d1": {
+    "widget_panel_route-colors-d4e4f9": {
       "type": "widget_panel",
       "position": "bottom-right",
       "options": {
@@ -58499,8 +58496,8 @@
         "autoWidth": true,
         "headerBg": null,
         "headerTextColor": null,
-        "control_id": "route-colors-a5e9d1",
-        "widget_model_id": "c3b3fca3a955409ea77e6b16323871e8",
+        "control_id": "route-colors-d4e4f9",
+        "widget_model_id": "3227f6004fb04278917306b00550e53d",
         "maxHeight": "380px"
       }
     }
@@ -58582,12 +58579,6 @@
               "name": "OpenStreetMap.Mapnik",
               "type": "raster"
             },
-            "Hurtgen Forest": {
-              "visible": true,
-              "opacity": 1.0,
-              "name": "Hurtgen Forest",
-              "type": "raster"
-            },
             "774TankBttn Route": {
               "visible": true,
               "opacity": 1.0,
@@ -58599,6 +58590,12 @@
               "opacity": 1.0,
               "name": "774TankBttn",
               "type": "marker-group"
+            },
+            "HurtgenForest": {
+              "visible": true,
+              "opacity": 1.0,
+              "name": "HurtgenForest",
+              "type": "raster"
             }
           }
         }
@@ -58755,75 +58752,6 @@
     },
     {
       "id": 16,
-      "method": "addSource",
-      "args": [
-        "Hurtgen Forest_source",
-        {
-          "type": "raster",
-          "tiles": [
-            "http://localhost:53008/api/tiles/{z}/{x}/{y}.png?&filename=C%3A%5Cpython%5CJupyter%5CStrass_modified.tif"
-          ],
-          "tileSize": 256,
-          "overwrite": true
-        }
-      ],
-      "kwargs": {}
-    },
-    {
-      "id": 17,
-      "method": "addLayer",
-      "args": [
-        {
-          "id": "Hurtgen Forest",
-          "type": "raster",
-          "source": "Hurtgen Forest_source"
-        },
-        null
-      ],
-      "kwargs": {}
-    },
-    {
-      "id": 18,
-      "method": "setLayoutProperty",
-      "args": [
-        "Hurtgen Forest",
-        "visibility",
-        "visible"
-      ],
-      "kwargs": {}
-    },
-    {
-      "id": 19,
-      "method": "setPaintProperty",
-      "args": [
-        "Hurtgen Forest",
-        "raster-opacity",
-        1.0
-      ],
-      "kwargs": {}
-    },
-    {
-      "id": 20,
-      "method": "fitBounds",
-      "args": [
-        [
-          [
-            6.331875,
-            50.698543
-          ],
-          [
-            6.49975,
-            50.798558
-          ]
-        ],
-        {
-          "padding": 50
-        }
-      ],
-      "kwargs": {}
-    },
-    {
-      "id": 21,
       "method": "addSource",
       "args": [
         "774TankBttn Route_source",
@@ -116157,7 +116085,7 @@
       "kwargs": {}
     },
     {
-      "id": 22,
+      "id": 17,
       "method": "addLayer",
       "args": [
         {
@@ -116174,7 +116102,7 @@
       "kwargs": {}
     },
     {
-      "id": 23,
+      "id": 18,
       "method": "setLayoutProperty",
       "args": [
         "774TankBttn Route",
@@ -116184,7 +116112,7 @@
       "kwargs": {}
     },
     {
-      "id": 24,
+      "id": 19,
       "method": "setPaintProperty",
       "args": [
         "774TankBttn Route",
@@ -116194,7 +116122,7 @@
       "kwargs": {}
     },
     {
-      "id": 25,
+      "id": 20,
       "method": "fitBounds",
       "args": [
         [
@@ -116214,7 +116142,7 @@
       "kwargs": {}
     },
     {
-      "id": 26,
+      "id": 21,
       "method": "addMarkerGroup",
       "args": [
         {
@@ -116492,6 +116420,72 @@
       "kwargs": {}
     },
     {
+      "id": 22,
+      "method": "addSource",
+      "args": [
+        "HurtgenForest_source",
+        {
+          "type": "raster",
+          "url": "cog://https://storage.googleapis.com/wfamaps/Strass_modified_cog.tif",
+          "tileSize": 256
+        }
+      ],
+      "kwargs": {}
+    },
+    {
+      "id": 23,
+      "method": "addLayer",
+      "args": [
+        {
+          "id": "HurtgenForest",
+          "type": "raster",
+          "source": "HurtgenForest_source"
+        },
+        null
+      ],
+      "kwargs": {}
+    },
+    {
+      "id": 24,
+      "method": "setLayoutProperty",
+      "args": [
+        "HurtgenForest",
+        "visibility",
+        "visible"
+      ],
+      "kwargs": {}
+    },
+    {
+      "id": 25,
+      "method": "setPaintProperty",
+      "args": [
+        "HurtgenForest",
+        "raster-opacity",
+        1.0
+      ],
+      "kwargs": {}
+    },
+    {
+      "id": 26,
+      "method": "fitBounds",
+      "args": [
+        [
+          [
+            6.331875470434797,
+            50.69854305088829
+          ],
+          [
+            6.499750423936877,
+            50.7985582149677
+          ]
+        ],
+        {
+          "padding": 50
+        }
+      ],
+      "kwargs": {}
+    },
+    {
       "id": 27,
       "method": "addControl",
       "args": [
@@ -116507,8 +116501,8 @@
           "autoWidth": true,
           "headerBg": null,
           "headerTextColor": null,
-          "control_id": "route-colors-a5e9d1",
-          "widget_model_id": "c3b3fca3a955409ea77e6b16323871e8",
+          "control_id": "route-colors-d4e4f9",
+          "widget_model_id": "3227f6004fb04278917306b00550e53d",
           "maxHeight": "380px"
         }
       ],
@@ -116526,12 +116520,12 @@
   },
   "_initial_fit_bounds": [
     [
-      -1.99446,
-      47.43479
+      6.331875470434797,
+      50.69854305088829
     ],
     [
-      6.60286,
-      50.82914
+      6.499750423936877,
+      50.7985582149677
     ]
   ],
   "_initial_fit_bounds_options": {

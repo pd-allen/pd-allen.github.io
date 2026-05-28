@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traces Across Flanders</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            margin: 0;
+            min-height: 100vh;
+            
+            /* Background Image Setup */
+            background-image: url('https://pd-allen.github.io/docs/images/Background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.4);
+            padding: 10px 30px;
+            border-radius: 10px;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        button {
+            padding: 15px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background-color: #34495e;
+            transform: translateY(-2px);
+        }
+
+        /* --- New Description Textbox --- */
+        .description-box {
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.85); /* More opaque for readability */
+            padding: 25px;
+            border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-top: none; /* Merges it with the grid above */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .description-box h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .description-box p {
+            line-height: 1.6;
+            color: #34495e;
+            margin-bottom: 0;
+            max-height: 300px; /* Limits height and adds scroll if text is too long */
+            overflow-y: auto;
+        }
+
+        @media (max-width: 500px) {
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Traces Across Flanders</h1>
+
+    <div class="button-grid">
+        <button onclick="openStory('https://pd-allen.github.io/docs/html/Fred&Percy_260320.html')">Fred and Percy Fowler</button>
+        <button onclick="openStory('https://pd-allen.github.io/docs/html/WilliamSmith_260528.html')">William Smith</button>
+        <button onclick="openStory('https://pd-allen.github.io/docs/html/Sidney Fowler_260528.html')">Sidney Fowler</button>
+        <button onclick="openStory('https://pd-allen.github.io/docs/html/Roses Family Escape_260528.html')">Rose's Family Escape</button>
+        <button onclick="openStory('https://pd-allen.github.io/docs/html/James Saves Grandmas Property_260528.html')">James Finds the GrandMotherland</button>
+        <button onclick="openStory('story6.html')">Story 6</button>
+        <button onclick="openStory('story7.html')">Story 7</button>
+        <button onclick="openStory('story8.html')">Story 8</button>
+        <button onclick="openStory('story9.html')">Story 9</button>
+        <button onclick="openStory('story10.html')">Story 10</button>
+    </div>
+
+    <div class="description-box">
+        <h2>About this Journey</h2>
+        <p>
+            This map highlights the significant routes and locations tied to our family history across 
+            Flanders. Each point on the map represents a story waiting to be told. <br>
+            Click on the buttons above to explore specific chapters and view original documents and photos related to each area.
+        </p>
+    </div>
+
+    <script>
+        function openStory(fileName) {
+            window.open(fileName, '_blank');
+        }
+    </script>
+
+</body>
+</html>

@@ -31,16 +31,35 @@
         // Map state from Python
         const state = {
   "center": [
-    0.7106,
-    52.0685
+    0.6199,
+    51.4612
   ],
-  "zoom": 5.5,
+  "zoom": 5.0,
   "style": "https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json",
   "bearing": 0.0,
   "pitch": 0.0,
   "width": "100%",
   "height": "700px",
   "layers": {
+    "DrummondFamily Route": {
+      "id": "DrummondFamily Route",
+      "type": "line",
+      "source": "DrummondFamily Route-source",
+      "paint": {
+        "line-color": "red",
+        "line-width": 3
+      }
+    },
+    "DrummondFamily Family": {
+      "id": "DrummondFamily Family",
+      "type": "markers",
+      "count": 13
+    },
+    "DrummondFamily": {
+      "id": "DrummondFamily",
+      "type": "markers",
+      "count": 1
+    },
     "Rose's Family Escape Route": {
       "id": "Rose's Family Escape Route",
       "type": "line",
@@ -90,14 +109,24 @@
       "bookmarkOptions": {
         "bookmarks": [
           {
-            "id": "bookmark-jvtdtwd",
-            "name": "Ypres",
-            "lng": 2.8427850887994737,
-            "lat": 50.85448449521974,
-            "zoom": 12.28959307647897,
+            "id": "bookmark-9x876gg",
+            "name": "Overview",
+            "lng": 2.581429874963419,
+            "lat": 51.930037811912115,
+            "zoom": 6.053572337789156,
             "pitch": 0,
             "bearing": 0,
-            "createdAt": 1772976779745
+            "createdAt": 1780236777894
+          },
+          {
+            "id": "bookmark-rj175r7",
+            "name": "Escape Route",
+            "lng": 2.628955000000019,
+            "lat": 51.09955389152981,
+            "zoom": 8.817796814957749,
+            "pitch": 0,
+            "bearing": 0,
+            "createdAt": 1780236748875
           }
         ]
       }
@@ -106,9 +135,11 @@
       "type": "legend",
       "title": "Unit Routes",
       "labels": [
+        "Family",
         "Rose's Family"
       ],
       "colors": [
+        "#ff0000",
         "#0000ff"
       ],
       "position": "bottom-right",
@@ -182,6 +213,191 @@
     },
     {
       "id": 7,
+      "method": "addGeoJSON",
+      "args": [],
+      "kwargs": {
+        "data": {
+          "type": "FeatureCollection",
+          "features": [
+            {
+              "id": "0",
+              "type": "Feature",
+              "properties": {},
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    2.93755,
+                    50.84674
+                  ],
+                  [
+                    2.93755,
+                    50.84674
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        "name": "DrummondFamily Route",
+        "layerType": "line",
+        "paint": {
+          "line-color": "red",
+          "line-width": 3
+        },
+        "fitBounds": true,
+        "bounds": [
+          2.93755,
+          50.84674,
+          2.93755,
+          50.84674
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "method": "addMarkers",
+      "args": [],
+      "kwargs": {
+        "id": "DrummondFamily Family",
+        "markers": [
+          {
+            "lngLat": [
+              2.937535,
+              50.84667
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">The Culvert<br>08 Jun 16<br> Pte. William Smith, brother of Emily Drummond, my paternal grandmother, killed 08 June 1916, apparently by shrapnel from artillery.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Pte William Smith.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'At the link, stretcher bearer Pte. Frost's 10 June diary entry and the prior sentence in the article indicate William was one of the three soldiers killed by shrapnel.  Records show Cpl Horace Campbell was killed the same day as William and Pte. Howard Brindley (grave behind William's in the photo) by artillery the day before.  They are the only 29th Bn fatalities immediately prior to 10 June.  <br></p>\n                        <a href=\"https://cdbe6920-b060-4736-bf2a-58f92dcfee21.filesusr.com/ugd/\n5273e0_2584d68363ec4e5f92b1113810499370.pdf\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://cdbe6920-b060-4736-bf2a-58f92dcfee21.filesusr.com/ugd/\n5273e0_2584d68363ec4e5f92b1113810499370.pdf</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>The Culvert<br>08 Jun 16<br></h2>\n                        <p>Pte. William Smith, brother of Emily Drummond, my paternal grandmother, killed 08 June 1916, apparently by shrapnel from artillery.<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.75991,
+              50.81703
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Reninghelst New Military Cemetery<br>09 Jun 16<br> Pte. William Smith is buried at Reninghelst New Military Cemetery, plot I.H.5.  His name is on Page 165 of the First World War Book of Remembrance displayed in the Memorial Chamber of the Peace Tower in Ottawa.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/William Smith Grave 1916.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Pte. Brindley kia 07 June is buried directly behind William and Cpl Campbell kia 08 June is buried in the row in front of him.<br></p>\n                        <a href=\"https://www.cwgc.org/find-records/find-war-dead/casualty-details/153071/william-smith/\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.cwgc.org/find-records/find-war-dead/casualty-details/153071/william-smith/</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Reninghelst New Military Cemetery<br>09 Jun 16<br></h2>\n                        <p>Pte. William Smith is buried at Reninghelst New Military Cemetery, plot I.H.5.  His name is on Page 165 of the First World War Book of Remembrance displayed in the Memorial Chamber of the Peace Tower in Ottawa.<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.847528,
+              50.912771
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Het Sas<br>21 Jul 16<br> Belgian Army engineer Pte. Fran\u00e7ois Lecour sufferered bullet wound to the arm at \"Het Sas\" (The Lock).  He returned to service after six months recovery.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Aerial Photo Het Sas 28 Apr 1916 1MBtrim.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Belgians took over the area west of the canal from the French Army in June 1916, extending their line south from the canal crossing at Steenstraete.  Germans held the east side of the canal, making the area very dangerous.  Many corpses remained from fighting here in late April 1915 during the 2nd Battle of Ypres, some incorporated into trench structures leading to naming one of the trenches, \"Boyau des Cr\u00e2nes\" - Trench of Skulls.  <br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Het Sas<br>21 Jul 16<br></h2>\n                        <p>Belgian Army engineer Pte. Fran\u00e7ois Lecour sufferered bullet wound to the arm at \"Het Sas\" (The Lock).  He returned to service after six months recovery.<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.843469,
+              50.919964
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Steenstraete<br>22 Jul 16<br> The Belgian and French lines joined here until June 1916 when the Belgians took over the French area south along the canal.  After Belgian liberation in September 1940, Fran\u00e7ois Lecour's son, and Nicole's father, Norbert, enlisted in the army and served in the Steenstraete Brigade, named for Belgian army defense of this position during the April 1915 German attack.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Norbert Lecour Army 1945.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Norbert Lecour, Steenstraete Brigade.  On 22 April 1915, the German Army launced an offensive on the northern stretch of the Ypres Salient, using poison (chlorine) gas for the first time on the Western Front.  The Germans crossed the Yser Canal between Het Sas lock and Steenstraete, pushing French troops back to Lizerne.  Belgian forces formed a defensive flank from Steenstraete to Lizerne.  The Germans were pushed back across the canal on 15 May.   <br></p>\n                        <a href=\"http://www.greatwar.co.uk/battles/second-ypres-1915/gravenstafel-ridge/belgian-6div.htm\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">http://www.greatwar.co.uk/battles/second-ypres-1915/gravenstafel-ridge/belgian-6div.htm</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Steenstraete<br>22 Jul 16<br></h2>\n                        <p>The Belgian and French lines joined here until June 1916 when the Belgians took over the French area south along the canal.  After Belgian liberation in September 1940, Fran\u00e7ois Lecour's son, and Nicole's father, Norbert, enlisted in the army and served in the Steenstraete Brigade, named for Belgian army defense of this position during the April 1915 German attack.<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.811261,
+              50.01774
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Between Trones Wood & Guillemont<br>14 Aug 16<br> 14 Aug Pte Fred Fowler suffered gun shot wounds to his right thigh and arm.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Fred Fowler Postman.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'While out of front-line trench performing communication trench digging and supply carrying parties 14-16 Aug, 8th Buffs 1 officer/10 OR wounded, including Pte. Fred Fowler.  Percy visited his brother in field hospital and wrote home that Fred will be ok.<br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Between Trones Wood & Guillemont<br>14 Aug 16<br></h2>\n                        <p>14 Aug Pte Fred Fowler suffered gun shot wounds to his right thigh and arm.<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.68569,
+              50.05081
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Thiepval Memorial<br>18 Aug 16<br> With no known graves, Percy and Leonard are among the 72,311 British & South Africans named on the Thiepval Memorial to the Missing of the Somme.  90% of those commemorated died between July-November 1916.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Corporal Percy Fowler - CWGC Certificate.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>' <br></p>\n                        <a href=\"https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/80800/thiepval-memorial/\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/80800/thiepval-memorial/</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Thiepval Memorial<br>18 Aug 16<br></h2>\n                        <p>With no known graves, Percy and Leonard are among the 72,311 British & South Africans named on the Thiepval Memorial to the Missing of the Somme.  90% of those commemorated died between July-November 1916.<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.835529,
+              50.403049
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Avion east of Vimy<br>29 Jul 18<br> Pte. Sidney (Jack) Fowler injured serving with 12th Bn The Rifle Brigade 29 July 1918 while the battalion is in Souris Trench in Avion, France within sight of Vimy Ridge.  He likely joined the battalion in the field in Apr 18.  War Diary indicates the battalion came under artillery fire 29 Jul, including artillery-delivered gas, so he might have been injured by debris.  It is not known if he returned to duty at the front. </h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Souris Trench Aerial Photo.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'In the photo, Souris Trench starts from the junction with 3 other trenches at the base of the rectangle and stetches toward \"5 o'clock\" where it meets \"Support Access\" and \"Actress\" trenches shown on the map.  Today, Souris Trench is Rue Charles Helle from where it meets Bd Anatole France. <br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Avion east of Vimy<br>29 Jul 18<br></h2>\n                        <p>Pte. Sidney (Jack) Fowler injured serving with 12th Bn The Rifle Brigade 29 July 1918 while the battalion is in Souris Trench in Avion, France within sight of Vimy Ridge.  He likely joined the battalion in the field in Apr 18.  War Diary indicates the battalion came under artillery fire 29 Jul, including artillery-delivered gas, so he might have been injured by debris.  It is not known if he returned to duty at the front. <br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              3.08384,
+              50.899334
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Moorslede<br>01 Oct 18<br> Cpl Fran\u00e7ois Lecour severly wounded in the hip and internally by shrapnel while returning to Moorslede from supporting an infantry attack.  </h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Franc\u0327ois Lecour 21-7-1970.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'The King of Belgium greets the \"grands bless\u00e9s\" on the National Day, 21 July 1970.\u00a0 Fran\u00e7ois is at the right of the man shaking the king's hand.<br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Moorslede<br>01 Oct 18<br></h2>\n                        <p>Cpl Fran\u00e7ois Lecour severly wounded in the hip and internally by shrapnel while returning to Moorslede from supporting an infantry attack.  <br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              -0.797227,
+              51.165951
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">St Mary the Virgin Church, Frensham<br>26 Mar 19<br> Canadian Army Staff Sgt. Fred Cope and Dorothy Fowler are married at the Frensham Parish Church 26 March 1919.  The couple's first address is 24 Water St., Rhyl, North Wales while Fred is stationed at nearby Kinmel Park Camp, where thousands of Canadian troops await repatriation, before they move to Alberta and Fred is demobilized.  </h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Frederick Cope & Dorothy Fowler 26 Mar 19.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'During the 1918 Influenza Pandemic, the Canadian Army established a Segregation Camp on Frensham Common.  L/Cpl (at the time) Cope, stationed about 8kms south at Bramshott Camp, was transferred to help administer the Segregation Camp from mid-June until end-Nov.  The story goes that the people of Frensham held a picnic for Canadian camp staff and that Dorothy shared her sandwich with Fred.  He walked Dorothy home, not realizing the distance and got in a little trouble returning to the camp after dark.  Note that the wedding party photo is taken at the entrance to Westgate Cottage, a recent photo of which is at the 01 Sep 14 Pin of the Fred & Percy Story Map -  the entrance structure is unchanged more than 100 years later.  Also note between Fred and Dorothy can be seen in the shadow a gentleman with a white mustache, who must be Dorothy's father, James Seymour Fowler.<br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>St Mary the Virgin Church, Frensham<br>26 Mar 19<br></h2>\n                        <p>Canadian Army Staff Sgt. Fred Cope and Dorothy Fowler are married at the Frensham Parish Church 26 March 1919.  The couple's first address is 24 Water St., Rhyl, North Wales while Fred is stationed at nearby Kinmel Park Camp, where thousands of Canadian troops await repatriation, before they move to Alberta and Fred is demobilized.  <br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              1.976958,
+              50.855808
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Ardres<br>31 May 40<br> #57 rue Philippe Mallet, Ardres, possibly where Rose Mester (Lecour) and her parents stayed awaiting permission to return home after attempting to escape from the German invasion 10 May 1940.  Rose said, \"As we travelled west, the sound of gunfire was behind us, then to our left.  When it came from in front of us, my father said it was time to stop.\"</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/57 rue Philippe Mallet, Ardres.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Note the small building behind the house seen in this Google Steet View Oct 2012 photo.  Inside this shed could be where Rose's mother (Jeanne/Bobonne) discovered a British soldier hidlng after the British Army evacuated from nearby Dunkirk.  Google Street View photos of Apr 2023 and Aug 2025 show this structure has been removed.<br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Ardres<br>31 May 40<br></h2>\n                        <p>#57 rue Philippe Mallet, Ardres, possibly where Rose Mester (Lecour) and her parents stayed awaiting permission to return home after attempting to escape from the German invasion 10 May 1940.  Rose said, \"As we travelled west, the sound of gunfire was behind us, then to our left.  When it came from in front of us, my father said it was time to stop.\"<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              3.288554,
+              50.94764
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Meulebeke<br>17 Mar 45<br> \"..on March 17, 1945, when the Westminsters were located in the small Belgian town of Meulebeke, a warning order was received that the unit was on 48 hours notice to move into action.  Advance parties were to leave first thing next morning.\"  pg. 182, \"The Westminsters' War Diary\" by Major J.E. Oldfield, M.C.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Staghound Holland 1945.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'This Canadian Army photo was taken on Eykhovenstraat, Dreumel, the Netherlands between 19 and 21 March 1945 at a meeting between members of the Westminster Regiment (Motor) and the XII Manitoba Dragoons/18th Armoured Car Regiment.  Pte. S.N. Drummond is standing in front of the armoured car.<br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Meulebeke<br>17 Mar 45<br></h2>\n                        <p>\"..on March 17, 1945, when the Westminsters were located in the small Belgian town of Meulebeke, a warning order was received that the unit was on 48 hours notice to move into action.  Advance parties were to leave first thing next morning.\"  pg. 182, \"The Westminsters' War Diary\" by Major J.E. Oldfield, M.C.<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              7.041171,
+              53.294142
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Termunten<br>07 May 45<br> The Westminster Regiment (Motor) with Ptes. Stan and Don Drummond are near Termunten, the Netherlands when World War II ends.  The Netherlands liberated 5 May 45, Germany surrendered to western allies 7 May effective 8 May. </h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Pte. Stanley Drummond.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Pivate Stanley Norman Drummond of the Westminster Regiment (Motor), 5th Canadian Armoured Division (re-designated The Royal Westminster Regiment 9 December 1966).<br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Termunten<br>07 May 45<br></h2>\n                        <p>The Westminster Regiment (Motor) with Ptes. Stan and Don Drummond are near Termunten, the Netherlands when World War II ends.  The Netherlands liberated 5 May 45, Germany surrendered to western allies 7 May effective 8 May. <br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.680975,
+              51.129568
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Jasmijnweg, Koksijde<br>28 Feb 20<br> \"Lost\" property in Koksijde, Belgium purchased in the 1940s by Jeanne van Laeren (Bobonne) & her husband Victor Jules Mester.  Their daughter, Rose Lecour is represented by her grandson, James Drummond for sale of the property to the Flemish government at the notary office in Zwevegem, 28 February 2020.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Koksijde Belgium Property.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'In August 2018, Rose received a document providing the opportunity to comment on a neighbour's planned exterior renovations to their house in Koksijde, thus \"rediscovering\" the property.  James booked time off work and took the train to Lille, then drove to the notary office in Zwevegem.  After signing the sale documents on behalf of his grandmother, he drove to visit the property.  When Rose passed in May 2022, letters she and her husband Norbert had written to Belgian authorities about the property were discovered in her closet.    <br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Jasmijnweg, Koksijde<br>28 Feb 20<br></h2>\n                        <p>\"Lost\" property in Koksijde, Belgium purchased in the 1940s by Jeanne van Laeren (Bobonne) & her husband Victor Jules Mester.  Their daughter, Rose Lecour is represented by her grandson, James Drummond for sale of the property to the Flemish government at the notary office in Zwevegem, 28 February 2020.<br></p>\n                    </div>\n                    "
+          }
+        ],
+        "color": "#ff0000",
+        "scale": 1.0,
+        "popupMaxWidth": "600px",
+        "tooltipMaxWidth": "240px",
+        "draggable": false
+      }
+    },
+    {
+      "id": 9,
+      "method": "addMarkers",
+      "args": [],
+      "kwargs": {
+        "id": "DrummondFamily",
+        "markers": [
+          {
+            "lngLat": [
+              2.68569,
+              50.05081
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Thiepval Memorial<br>18 Aug 16<br> With no known graves, Percy and Leonard are among the 72,311 British & South Africans named on the Thiepval Memorial to the Missing of the Somme.  90% of those commemorated died between July-November 1916.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Corporal Percy Fowler - CWGC Certificate.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>' <br></p>\n                        <a href=\"https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/80800/thiepval-memorial/\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/80800/thiepval-memorial/</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Thiepval Memorial<br>18 Aug 16<br></h2>\n                        <p>With no known graves, Percy and Leonard are among the 72,311 British & South Africans named on the Thiepval Memorial to the Missing of the Somme.  90% of those commemorated died between July-November 1916.<br></p>\n                    </div>\n                    "
+          }
+        ],
+        "color": "red",
+        "scale": 0.65,
+        "popupMaxWidth": "600px",
+        "tooltipMaxWidth": "240px",
+        "draggable": false
+      }
+    },
+    {
+      "id": 10,
       "method": "addGeoJSON",
       "args": [],
       "kwargs": {
@@ -10248,7 +10464,7 @@
       }
     },
     {
-      "id": 8,
+      "id": 11,
       "method": "addMarkers",
       "args": [],
       "kwargs": {
@@ -10295,13 +10511,17 @@
       }
     },
     {
-      "id": 9,
+      "id": 12,
       "method": "addLegend",
       "args": [],
       "kwargs": {
         "id": "legend-0",
         "title": "Unit Routes",
         "items": [
+          {
+            "label": "Family",
+            "color": "#ff0000"
+          },
           {
             "label": "Rose's Family",
             "color": "#0000ff"
@@ -10312,7 +10532,7 @@
       }
     },
     {
-      "id": 10,
+      "id": 13,
       "method": "addControlGrid",
       "args": [],
       "kwargs": {
@@ -10340,17 +10560,43 @@
         "bookmarkOptions": {
           "bookmarks": [
             {
-              "id": "bookmark-jvtdtwd",
-              "name": "Ypres",
-              "lng": 2.8427850887994737,
-              "lat": 50.85448449521974,
-              "zoom": 12.28959307647897,
+              "id": "bookmark-9x876gg",
+              "name": "Overview",
+              "lng": 2.581429874963419,
+              "lat": 51.930037811912115,
+              "zoom": 6.053572337789156,
               "pitch": 0,
               "bearing": 0,
-              "createdAt": 1772976779745
+              "createdAt": 1780236777894
+            },
+            {
+              "id": "bookmark-rj175r7",
+              "name": "Escape Route",
+              "lng": 2.628955000000019,
+              "lat": 51.09955389152981,
+              "zoom": 8.817796814957749,
+              "pitch": 0,
+              "bearing": 0,
+              "createdAt": 1780236748875
             }
           ]
         }
+      }
+    },
+    {
+      "id": 14,
+      "method": "fitBounds",
+      "args": [
+        [
+          -9.594,
+          47.8989,
+          9.1752,
+          54.4994
+        ]
+      ],
+      "kwargs": {
+        "padding": 50,
+        "duration": 1000
       }
     }
   ]

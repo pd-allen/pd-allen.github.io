@@ -1,0 +1,2848 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BattlefieldTourHistory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- MapLibre GL JS -->
+    <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css" rel="stylesheet" />
+    <!-- deck.gl -->
+    <script src="https://unpkg.com/deck.gl@9/dist.min.js"></script>
+    <!-- PMTiles (loaded via ESM import below) -->
+    <!-- maplibre-gl-layer-control CSS -->
+    <link href="https://unpkg.com/maplibre-gl-layer-control@0.14.1/dist/maplibre-gl-layer-control.css" rel="stylesheet" />
+    <!-- maplibre-gl-components CSS -->
+    <link href="https://unpkg.com/maplibre-gl-components@0.16.2/dist/maplibre-gl-components.css" rel="stylesheet" />
+    <!-- maplibre-gl-geoagent CSS -->
+    <link href="https://unpkg.com/maplibre-gl-geoagent@0.4.1/dist/maplibre-gl-geoagent.css" rel="stylesheet" />
+    <!-- Geoman for drawing -->
+    <script src="https://cdn.jsdelivr.net/npm/@geoman-io/maplibre-geoman-free@0.6.1/dist/maplibre-geoman.umd.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@geoman-io/maplibre-geoman-free@0.6.1/dist/maplibre-geoman.css" rel="stylesheet" />
+    <!-- GeoEditor for drawing UI -->
+    <link href="https://cdn.jsdelivr.net/npm/maplibre-gl-geo-editor@0.7.3/dist/maplibre-gl-geo-editor.css" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script type="module">
+        // Map state from Python
+        const state = {
+  "center": [
+    2.05,
+    50.5
+  ],
+  "zoom": 7.0,
+  "style": "https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json",
+  "bearing": 0.0,
+  "pitch": 0.0,
+  "width": "100%",
+  "height": "700px",
+  "layers": {
+    "BattlefieldTourHistory Family": {
+      "id": "BattlefieldTourHistory Family",
+      "type": "markers",
+      "count": 10
+    },
+    "BattlefieldTourHistory": {
+      "id": "BattlefieldTourHistory",
+      "type": "markers",
+      "count": 19
+    }
+  },
+  "sources": {},
+  "controls": {
+    "layer-control": {
+      "layers": [],
+      "position": "top-right",
+      "collapsed": true
+    },
+    "control-grid": {
+      "position": "top-right",
+      "collapsed": false,
+      "collapsible": true,
+      "defaultControls": [
+        "fullscreen",
+        "north",
+        "terrain",
+        "search",
+        "basemap",
+        "measure",
+        "bookmark",
+        "viewState",
+        "vectorDataset",
+        "inspect",
+        "minimap",
+        "geoEditor"
+      ],
+      "rows": 4,
+      "columns": 3,
+      "bookmarkOptions": {
+        "bookmarks": [
+          {
+            "id": "bookmark-jvtdtwd",
+            "name": "Ypres",
+            "lng": 2.8427850887994737,
+            "lat": 50.85448449521974,
+            "zoom": 12.28959307647897,
+            "pitch": 0,
+            "bearing": 0,
+            "createdAt": 1772976779745
+          }
+        ]
+      }
+    },
+    "legend-0": {
+      "type": "legend",
+      "title": "Unit Routes",
+      "labels": [
+        "Tour Stops"
+      ],
+      "colors": [
+        "#0000ff"
+      ],
+      "position": "bottom-right",
+      "opacity": 1.0
+    },
+    "coordinates": {
+      "type": "coordinates",
+      "position": "top-right"
+    }
+  },
+  "max_pitch": 85.0,
+  "js_calls": [
+    {
+      "id": 1,
+      "method": "addLayerControl",
+      "args": [],
+      "kwargs": {
+        "layers": [],
+        "position": "top-right",
+        "collapsed": true
+      }
+    },
+    {
+      "id": 2,
+      "method": "addControlGrid",
+      "args": [],
+      "kwargs": {
+        "position": "top-right",
+        "collapsed": true,
+        "collapsible": true,
+        "showRowColumnControls": true,
+        "gap": 2
+      }
+    },
+    {
+      "id": 3,
+      "method": "addBasemap",
+      "args": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "kwargs": {
+        "attribution": "Tiles (C) Esri -- Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+        "name": "Esri.WorldImagery"
+      }
+    },
+    {
+      "id": 4,
+      "method": "addBasemap",
+      "args": [
+        "https://api.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=21d9ff8861f94570b6ffd0cd315301b3"
+      ],
+      "kwargs": {
+        "attribution": "",
+        "name": "custom-basemap"
+      }
+    },
+    {
+      "id": 5,
+      "method": "addCoordinatesControl",
+      "args": [],
+      "kwargs": {
+        "position": "bottom-left",
+        "precision": 6
+      }
+    },
+    {
+      "id": 6,
+      "method": "addMarkers",
+      "args": [],
+      "kwargs": {
+        "id": "BattlefieldTourHistory Family",
+        "markers": [
+          {
+            "lngLat": [
+              3.1173759,
+              48.9562499
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">La Ferte Sous Jouarre Memorial<br>26 Aug 14<br> Henry Goodfellow Memorial Stone 9</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/la-ferte-jouarre-mem.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'The monument honours 3,700 British and Irish Soldiers who were killed between Aug and Oct 1914 and have no known grave. Henry Goodfellow, 2nd Suffolks was killed at the Battle of Le Cateau on 26 Aug 1914.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/pre-season-tour-la-fert\u00e9-sous-jouarre-memorial-to-the-missing/\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/pre-season-tour-la-fert\u00e9-sous-jouarre-memorial-to-the-missing/</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>La Ferte Sous Jouarre Memorial<br>26 Aug 14<br></h2>\n                        <p>Henry Goodfellow Memorial Stone 9<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              3.527526,
+              50.102668
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Suffolk Hill Memorial<br>26 Aug 14<br> 2nd Suffolks Memorial Henry Goodfellow </h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/suffolkmemorial.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'A memorial was dedicated by Gen Smith-Dorrien on 26 May 1926 at the site at the centre of the Suffolk Regiment stand. The memorial is dedicated to all units who supported the Suffolks during the battle but is generally known as the Suffolk Memorial. The memorial denotes the members of the 2nd Battalion Suffolk Regiment, 2nd Battalion Manchester Regiment, 2nd Battalion Argyll and Sutherland Highlander Regiment and Royal Regiment of Artillery who were killed at Le Cateau. 75 members of the 2nd Suffolks with no known grave are honoured on this memorial.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/lance-sgt-6537henry-goodfellow\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/lance-sgt-6537henry-goodfellow</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Suffolk Hill Memorial<br>26 Aug 14<br></h2>\n                        <p>2nd Suffolks Memorial Henry Goodfellow <br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              3.1841254,
+              50.2213462
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Sancourt British Cemetery<br>10 Sep 14<br> Robert Connelly Plot 1, Row B, Grave 11</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/SancourtBritishCemetery.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Robert joined the 1st Battalion after the Canadians suffered heavy casualties in Jun 1916. He fought at Vimy, Hill 70 and Passchendaele where he won the Military Medal. He was killed at the Battle of Canal du Nord  on 30 Sep 1918.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/sgt-robert-connelly-1\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/sgt-robert-connelly-1</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/sancourt-british-cemetery\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/sancourt-british-cemetery</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Sancourt British Cemetery<br>10 Sep 14<br></h2>\n                        <p>Robert Connelly Plot 1, Row B, Grave 11<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.726479,
+              50.0582535
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Courcelette<br>16 Sep 16<br> William Johnston Wounded</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Courcelette15Sep1916.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Bill joined the 58th Battalion after the Canadians suffered heavy casualties in Jun 1916. He was wounded at Courcelette on 16 Sep 1916. He spent the rest of the war in England around Folkestone. He met and married his wife Annie. <br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/following-grandfather-s-footsteps\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/following-grandfather-s-footsteps</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Courcelette<br>16 Sep 16<br></h2>\n                        <p>William Johnston Wounded<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.7687267,
+              50.4601614
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Loos Memorial<br>03 Nov 15<br> Walter Goodfellow Memorial Panel 37 and 38</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/LoosMemorial.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'The Loos Memorial to the missing commemorates more than 20,000 names of  soldiers killed between 25 Sep 1915 and the End of the War in the region for the River Lys to Grenay near Lens, with no known Grave. Walter Goodfellow 7th Suffolks was killed at the Hohenzollern Redoubt on 3 Nov 1915.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/walter-james-goodfellow-7th-battalion-suffolk-regiment\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/walter-james-goodfellow-7th-battalion-suffolk-regiment</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/dud-corner-cemetery-walter-goodfellow\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/dud-corner-cemetery-walter-goodfellow</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/goodfellow-brothers-last-stand\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/goodfellow-brothers-last-stand</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Loos Memorial<br>03 Nov 15<br></h2>\n                        <p>Walter Goodfellow Memorial Panel 37 and 38<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.8889439,
+              50.8519971
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Menin Gate<br>08 May 15<br> Ernest Goodfellow - Panel 21</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/MeninGate.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'55,000 names are commemorated on this magnicent structure, covering the Ypres Salient up to 15 Aug 1917.  Ernest Goodfellow, 1st Suffolks,  was killed 8 May 1915 at the Battle of Frezenberg Ridge.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/ernest-goodfellow-1st-battalion-suffolk-regiment\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/ernest-goodfellow-1st-battalion-suffolk-regiment</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/canadians-at-second-battle-of-ypres-april-1915\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/canadians-at-second-battle-of-ypres-april-1915</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/goodfellow-brothers-last-stand\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/goodfellow-brothers-last-stand</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Menin Gate<br>08 May 15<br></h2>\n                        <p>Ernest Goodfellow - Panel 21<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              -0.2584432,
+              49.2311045
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Ranville Military Cemetery<br>18 Jul 44<br> F/L Robert McKenzie</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/RobertMcKenzieGraveMarker.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Family Member Robert McKenzie, 438 Squadron Typhoon Pilot  was killed in action during a dive-bombing attack on a bridge over the River Orne, France. His aircraft, Typhoon MN 707, was hit with flak (anti-aircraft fire), went into a spiral and crashed. <br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/final-flight-for-robert-mckenzie\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/final-flight-for-robert-mckenzie</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Ranville Military Cemetery<br>18 Jul 44<br></h2>\n                        <p>F/L Robert McKenzie<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              3.52006,
+              51.39237
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Closing the Breskens Pocket<br>27 Oct 44<br> Christopher Cadeau Killed</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/ChristopherCadeau.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'The Coys began what was to prove to be a very difficult day. \"A\" Coy had kept on but were now enduring painfully heavy shelling. Allwent well until suddenly 9 Pl found itself fired on by machine guns at point-blank range. They were travelling along a road at the foot of a dyke and were met by a hail of fire from all sides. The enemy had allowed them to pass through and had then closed in. It was a well-planned and well-executed manoeuvre by the defending Paratroopers of the German Army. 9 Pl's runner, Pte Bowling, was sent back to warn Coy HQ of the situation.  A bloody battle ensued with every ounce of fighting energy that the gallant \"A\" Coy men possessed. 4 CanScots were killed including Christoper Cadeau, 5 wounded and 40 missing.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/joseph-christopher-raymond-cadeau\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/joseph-christopher-raymond-cadeau</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Closing the Breskens Pocket<br>27 Oct 44<br></h2>\n                        <p>Christopher Cadeau Killed<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              -0.290456,
+              49.06356
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Operation Totalize<br>08 Aug 44<br> Les Allen Wounded</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/LesAllenSoldier.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'At approx 0830 hrs, the enemy counter-attacked with tanks. Panther tanks moved up the CAEN\u2013FALAISE Highway, and we were also fired on by tanks from the far side of CRAMESNIL. One Panther tank penetrated our positions and approached within about 25 yds of Bn HQ. Heavy casualties, both in personnel and vehicles, were suffered by the fire of MMGs [Medium Machine Guns] attached to the Bn. Our 3@ Mortar Pln also suffered heavily, losing four carriers complete with ammunition that were burned out and two mortars. Three mortarmen were wounded. The Royal Regiment of Canada\u2019s mortar line and that of the supporting platoon of Toronto Scots\u2019 4.2in mortars had been caught while they were still digging in, and the single tank in the area was knocked out with the carriers suffering the same fate one by one. Both of these mortar platoons were necessarily much further forward than the artillery because of their relatively short range.3 The Torontos also lost medium machine guns to enemy fire before the German attack petered out.  At 1400 the Battalion moved forward to take Gaumesnil.  The RRC advanced more than 9 km in a single day. 2 officers wounded, 3 OR killed, 33 wounded including Cpl Leslie Allen who was seriously wounded.  <br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/uncle-les-allen-in-operation-totalize\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/uncle-les-allen-in-operation-totalize</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Operation Totalize<br>08 Aug 44<br></h2>\n                        <p>Les Allen Wounded<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              6.567779,
+              53.219955
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Eelde<br>08 May 45<br> 8th Hussars in Eelde after the war ended.</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/norm.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'\u00a0At 2230 hrs the long awaited for message was received from rear 5 Cdn Arnd Bde, \"Cancel all offensive operations, cease fire at 0800 hrs 5 May 45\"  The jubilation of the Dutch people was tremendous and celebrations took place all day. A service was held in the EELDE (215048) protestant church.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/sergeant-norm-kightley-8th-hussars\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/sergeant-norm-kightley-8th-hussars</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/breaking-the-gothic-line\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/breaking-the-gothic-line</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/the-river-battles-italy-1944\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/the-river-battles-italy-1944</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Eelde<br>08 May 45<br></h2>\n                        <p>8th Hussars in Eelde after the war ended.<br></p>\n                    </div>\n                    "
+          }
+        ],
+        "color": "#ff0000",
+        "scale": 1.0,
+        "popupMaxWidth": "600px",
+        "tooltipMaxWidth": "240px",
+        "draggable": false
+      }
+    },
+    {
+      "id": 7,
+      "method": "addMarkers",
+      "args": [],
+      "kwargs": {
+        "id": "BattlefieldTourHistory",
+        "markers": [
+          {
+            "lngLat": [
+              2.6973836,
+              50.0155739
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Lochnagar Crater<br>01 Jul 16<br> Largest Crater in WWI</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Lochnagar.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'The largest crater in WWI was blown on the first day of the Battle of the Somme.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/rachel-tours-the-somme\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/rachel-tours-the-somme</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Lochnagar Crater<br>01 Jul 16<br></h2>\n                        <p>Largest Crater in WWI<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.6869944,
+              50.0486431
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Thiepval Memorial<br>01 Jul 16<br> Monument to the Missing</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/thiepval-memorial.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'The Thiepval Memorial has over 72,000 name of British and South African Soldiers with no known grave who were killed between 1915 and 20 Mar 1918. The largest memorial to the missing.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/rachel-tours-the-somme\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/rachel-tours-the-somme</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Thiepval Memorial<br>01 Jul 16<br></h2>\n                        <p>Monument to the Missing<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.6460766,
+              50.0738377
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Beaumont-Hamel<br>01 Jul 16<br> Royal Newfoundland Regiment Memorial</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/newf_caribou2.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Site of the disasterous first day of the Battle of the Somme where 90% of the Newfoundland Regiment became casualties.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/following-the-caribou\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/following-the-caribou</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/corporal-william-sullivan-royal-newfoundland-regiment\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/corporal-william-sullivan-royal-newfoundland-regiment</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/private-wallace-pike-royal-newfoundland-regiment\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/private-wallace-pike-royal-newfoundland-regiment</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Beaumont-Hamel<br>01 Jul 16<br></h2>\n                        <p>Royal Newfoundland Regiment Memorial<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.7717847,
+              50.3795913
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Vimy Memorial<br>09 Apr 17<br> Canadian Memorial</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/vimy.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'The maginificent Vimy Memorial commemorates 11,285 Canadians who were killed in France and have no known Grave<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/vimy-and-the-canadian-memorials\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/vimy-and-the-canadian-memorials</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/in-search-of-the-lost-vimy-models\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/in-search-of-the-lost-vimy-models</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/vimy-and-the-drummond-family\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/vimy-and-the-drummond-family</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/vimy-memorial\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/vimy-memorial</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/rachel-tours-arras\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/rachel-tours-arras</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Vimy Memorial<br>09 Apr 17<br></h2>\n                        <p>Canadian Memorial<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.7983763,
+              50.4528335
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Hill 70 Memorial<br>15 Aug 17<br> Canadian Memorial</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/hill70.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'The modern memorial the the Battle of Hill 70, the first action where the Canadian Corps fought under a Canadian Commander.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/focused-on-lens\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/focused-on-lens</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Hill 70 Memorial<br>15 Aug 17<br></h2>\n                        <p>Canadian Memorial<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.93811328253,
+              50.8996125
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">The Brooding Soldier<br>22 Apr 15<br> Canadian Memorial site of first gas attacks</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Broodingsoldier.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'One of the 8 Canadian memorials from WWI. The design was the runner up to the Vimy memorial, and was originally going to be placed at the other 7 sites, but it was so powerful it was decided that St Julien would be the only location with this statue.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/in-and-around-ypres\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/in-and-around-ypres</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/langemark-german-cemetery\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/langemark-german-cemetery</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>The Brooding Soldier<br>22 Apr 15<br></h2>\n                        <p>Canadian Memorial site of first gas attacks<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.9857155,
+              50.9002321
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Passchendale<br>10 Nov 17<br> Canadian Battle</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/passchendaele.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Site of the Battle of Passchendaele, commemorated by a granite block.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/canadians-at-passchendaele-oct-nov-1917\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/canadians-at-passchendaele-oct-nov-1917</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Passchendale<br>10 Nov 17<br></h2>\n                        <p>Canadian Battle<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.3730862,
+              51.0308158
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Dunkirk<br>26 May 40<br> Dunkirk Evacuation 1940</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/dunkirk.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'After the May Blitzkreig, the Brits were forced back to Dunkirk, more than 330,000 soldiers were rescued with a mix of naval ships and personal water craft.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/dunkirk-and-the-atlantic-wall\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/dunkirk-and-the-atlantic-wall</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Dunkirk<br>26 May 40<br></h2>\n                        <p>Dunkirk Evacuation 1940<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              1.0659799,
+              49.9200491
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Dieppe<br>19 Aug 42<br> Canadian Failed Landing WW2</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/Dieppe.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Disasterous Raid at Dieppe. Canadians suffered 907 killed, 568 wounded and 1,946 taken Prisoner.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/disaster-at-dieppe\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/disaster-at-dieppe</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Dieppe<br>19 Aug 42<br></h2>\n                        <p>Canadian Failed Landing WW2<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              -0.4713532,
+              49.3377821
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Normandy Beaches<br>06 Jun 44<br> D Day Landings</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/JunoBeach.png\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Canadian Landing Beach for the D-Day invasion 6 Jun 1944. 381 Canadians killed during the attack<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/d-day-juno-beach\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/d-day-juno-beach</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/d-day-sword-beach\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/d-day-sword-beach</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/d-day-gold-beach\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/d-day-gold-beach</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/d-day-the-us-beaches\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/d-day-the-us-beaches</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/normandy-defensive-installations\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/normandy-defensive-installations</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/mulberry-harbour\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/mulberry-harbour</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/queen-s-own-rifles-on-d-day\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/queen-s-own-rifles-on-d-day</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Normandy Beaches<br>06 Jun 44<br></h2>\n                        <p>D Day Landings<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              2.421321,
+              49.852439
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Last 100 Days<br>08 Aug 18<br> Canadian Battles in the Last 100 Days</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/BourlonWoods.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Canadian Victories at Amiens, Arras, Cambrai and the final battle in Mons<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/last-100-days-amiens-08-aug-1918\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/last-100-days-amiens-08-aug-1918</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/last-100-days-arras-26-aug-1918\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/last-100-days-arras-26-aug-1918</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/last-100-days-cambrai-27-sep-1918\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/last-100-days-cambrai-27-sep-1918</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Last 100 Days<br>08 Aug 18<br></h2>\n                        <p>Canadian Battles in the Last 100 Days<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              3.47203,
+              51.2494
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Leopold Canal<br>10 Oct 44<br> Percy Mervyn Killed</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/PercyMervyn.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'During the morning A Coy assisted the Regina Rif in destroying an enemy held pill box. Another C Coy patrol to GRAFF JAN failed to contact the enemy but rescued a wounded B Coy man who had been left when his coy withdrew on the previous day. Enemy shelling was slightly less intense than during the first three days, SA fire continued to make it extremely difficult and dangerous to move about. Supplies the Canal. Capt H.C. Chadderton of Coy and Lt L. Mendels of B Coy were among the numerous cas for the day. Percy Mervyn was killed.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/private-percy-mervyn-at-the-leopold-canal\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/private-percy-mervyn-at-the-leopold-canal</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Leopold Canal<br>10 Oct 44<br></h2>\n                        <p>Percy Mervyn Killed<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              1.63079,
+              50.73201
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Boulogne<br>17 Sep 44<br> Thomas Easton Killed</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/ThomasEaston.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'The Queen's Own Rifles advanced through Wicandenne then Marlbotouch. They captured the crossroads to completely sew up a possible chance of the enemy trying to get out of Boulogne. LSgt Thomas Easton Killed 17 Sep<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/lance-sgt-thomas-easton\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/lance-sgt-thomas-easton</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Boulogne<br>17 Sep 44<br></h2>\n                        <p>Thomas Easton Killed<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              6.34966,
+              51.61104
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">George Johnston POW<br>07 Mar 45<br> George Johnston taken as a Prisoner of War</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/GeorgeJohnstonUnit.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'In the afternoon B and C Coys advanced along the main road as far as the crossroads at 106354 (4304) where they were pinned down by MG fire. One tank was knocked out by enemy 88mmAP at this point. After last light, B Coy supported by tanks, advanced into the Southern part of the little town. At dawn they were in shallow pits and dominated by German fire from 3 sides. Movement was impossible and the ammunition used up, so Capt Perry surrendered his force. A total of 31 members were taken prisoner including Lts Maxwell and Steward who were both severely wounded, and our great Uncle George Johnston. Lt Stewart later died of his wounds and was buried by the Germans in Veen.  In the picture, George is in the third row second from the right.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/uncle-george-johnston\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/uncle-george-johnston</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>George Johnston POW<br>07 Mar 45<br></h2>\n                        <p>George Johnston taken as a Prisoner of War<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              18.5854219,
+              54.4290155
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Gdansk<br>01 Sep 39<br> First Shots of WW2</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/gdansk.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Gdansk has been a key port on the Baltic Sea since the 10th Century due to its natural harbour and the Vistuala River system which provides a route throughout Poland. On the surface, Gdansk looks like a standard Dutch/Flemish influenced Medieval town with tall, narrow houses. <br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/gdansk-the-first-shots-of-the-second-world-war\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/gdansk-the-first-shots-of-the-second-world-war</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Gdansk<br>01 Sep 39<br></h2>\n                        <p>First Shots of WW2<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              14.510299,
+              35.8982954
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Malta<br>11 Jun 40<br> Most heavily bomber country of WW2</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/malta.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Malta is located 60 miles south of Sicily and 160 miles north of Africa, so is a key location for controlling shipping in the Mediterranean. Its key location has seen the occupation of the islands for millennia.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/historic-malta\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/historic-malta</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/the-siege-of-malta\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/the-siege-of-malta</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Malta<br>11 Jun 40<br></h2>\n                        <p>Most heavily bomber country of WW2<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              13.5444548,
+              46.2643605
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Slovenia<br>23 Jun 15<br> From the sea to the Apls</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/lakebled.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Slovenia had been inhabited since prehistoric times and claims to have the oldest musical instrument in the world, a 60,000-year-old flute made of the femur of a cave bear. On 23 June 1915, Italy launched the first attack with a frontal assault with 225,000 troops. Despite being outnumber 3 to 1, the Austro-Hungarians, having used the month to build substantial defences, mowed down the Italian troops with machine guns as the Italians had to attack up steep hills with little supporting Italian artillery fire. This was the first of 12 battles of the Isonzo River.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/remind-me-where-slovenia-is\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/remind-me-where-slovenia-is</a><br><a href=\"https://www.paulsbattlefieldtours.com/post/slovenia-in-wwi\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/slovenia-in-wwi</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Slovenia<br>23 Jun 15<br></h2>\n                        <p>From the sea to the Apls<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              5.8069236,
+              50.8192222
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Margraten US Cemetery<br>12 Dec 44<br> Pfc James Loterbaugh is found</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/margraten.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>' James Loterbaugh was assigned to Company C, 774th Tank Battalion, as a crewmember on an M4 \u201cSherman\u201d tank. On Dec. 11, his platoon became separated from the rest of the company during a battle with German forces near Strass, Germany, in the H\u00fcrtgen Forest. The enemy surrounded Strass and by mid-day the entire platoon, including Loterbaugh\u2019s tank, was reported Missing in Action.<br></p>\n                        <a href=\"https://www.paulsbattlefieldtours.com/post/pfc-james-loterbaugh-us-army\" target=\"_blank\" style=\"color: blue; font-weight: bold; text-decoration: underline;\">https://www.paulsbattlefieldtours.com/post/pfc-james-loterbaugh-us-army</a>\n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Margraten US Cemetery<br>12 Dec 44<br></h2>\n                        <p>Pfc James Loterbaugh is found<br></p>\n                    </div>\n                    "
+          },
+          {
+            "lngLat": [
+              16.4376005,
+              43.5082685
+            ],
+            "popup": "\n                <div style=\"text-align: center; max-width:  600px\">\n                    <h2 style=\"margin: 0 0 10px 0; color: #2c3e50;\">Split<br>23 Dec 23<br> Diocletian's Palace</h2>\n                    <img src=\"https://pd-allen.github.io/docs/images/split.jpg\" width=\"550px\" style=\"border-radius:8px;\">\n                    <div style=\"text-align: left; padding: 0 10px;\">\n                       <p>'Diocletian, a former Roman emperor, retired to his home town at Split Crotia in 305AD and built his palace.<br></p>\n                        \n                    </div>\n                </div>\n                    ",
+            "tooltip": "\n                    <div style=\"text-align: center;\">\n                        <h2>Split<br>23 Dec 23<br></h2>\n                        <p>Diocletian's Palace<br></p>\n                    </div>\n                    "
+          }
+        ],
+        "color": "blue",
+        "scale": 0.65,
+        "popupMaxWidth": "600px",
+        "tooltipMaxWidth": "240px",
+        "draggable": false
+      }
+    },
+    {
+      "id": 8,
+      "method": "addLegend",
+      "args": [],
+      "kwargs": {
+        "id": "legend-0",
+        "title": "Unit Routes",
+        "items": [
+          {
+            "label": "Tour Stops",
+            "color": "#0000ff"
+          }
+        ],
+        "position": "bottom-right",
+        "opacity": 1.0
+      }
+    },
+    {
+      "id": 9,
+      "method": "addControlGrid",
+      "args": [],
+      "kwargs": {
+        "position": "top-right",
+        "collapsed": true,
+        "collapsible": true,
+        "showRowColumnControls": true,
+        "gap": 2,
+        "defaultControls": [
+          "fullscreen",
+          "search",
+          "basemap",
+          "bookmark",
+          "measure"
+        ],
+        "rows": 4,
+        "columns": 3
+      }
+    },
+    {
+      "id": 10,
+      "method": "addControl",
+      "args": [
+        "coordinates"
+      ],
+      "kwargs": {
+        "position": "top-right"
+      }
+    },
+    {
+      "id": 11,
+      "method": "addControlGrid",
+      "args": [],
+      "kwargs": {
+        "position": "top-right",
+        "collapsed": false,
+        "collapsible": true,
+        "showRowColumnControls": true,
+        "gap": 2,
+        "visible": true,
+        "defaultControls": [
+          "fullscreen",
+          "north",
+          "terrain",
+          "search",
+          "basemap",
+          "measure",
+          "bookmark",
+          "viewState",
+          "vectorDataset",
+          "inspect",
+          "minimap",
+          "geoEditor"
+        ],
+        "rows": 4,
+        "columns": 3,
+        "bookmarkOptions": {
+          "bookmarks": [
+            {
+              "id": "bookmark-jvtdtwd",
+              "name": "Ypres",
+              "lng": 2.8427850887994737,
+              "lat": 50.85448449521974,
+              "zoom": 12.28959307647897,
+              "pitch": 0,
+              "bearing": 0,
+              "createdAt": 1772976779745
+            }
+          ]
+        }
+      }
+    }
+  ]
+};
+
+        // Track added layers for layer control
+        const addedLayers = [];
+        let layerControlConfig = null;
+        let drawControlConfig = null;
+        let controlGridConfig = null;
+        let geoAgentControlConfig = null;
+        let controlGridAdded = false;
+        let layerControlAdded = false;
+        let geoAgentControl = null;
+        let timeSliderContainer = null;
+
+        // Route animation state
+        const animations = new Map();
+
+        // Load optional dependencies in parallel (non-blocking)
+        let LayerControl = null;
+        let addControlGridFn = null;
+        let GeoEditorClass = null;
+        let GeoAgentControlClass = null;
+
+        const lcPromise = import('https://esm.sh/maplibre-gl-layer-control@0.14.1')
+            .then(mod => { LayerControl = mod.LayerControl; })
+            .catch(() => console.warn('LayerControl library unavailable — layer control will be skipped'));
+
+        const cgPromise = import('https://esm.sh/maplibre-gl-components@0.16.2')
+            .then(mod => { addControlGridFn = mod.addControlGrid; })
+            .catch(() => console.warn('ControlGrid library unavailable — control grid will be skipped'));
+
+        const gePromise = import('https://esm.sh/maplibre-gl-geo-editor@0.7.3')
+            .then(mod => { GeoEditorClass = mod.GeoEditor; })
+            .catch(() => console.warn('GeoEditor library unavailable — falling back to Geoman'));
+
+        const gaPromise = import('https://esm.sh/maplibre-gl-geoagent@0.4.1')
+            .then(mod => { GeoAgentControlClass = mod.GeoAgentControl; })
+            .catch(() => console.warn('GeoAgent library unavailable — GeoAgent control will be skipped'));
+
+        // Inline route animation helpers (Haversine-based, no CDN dependency)
+        function _haversineDistance(a, b) {
+            const toRad = x => x * Math.PI / 180;
+            const R = 6371; // Earth radius in km
+            const dLat = toRad(b[1] - a[1]);
+            const dLon = toRad(b[0] - a[0]);
+            const lat1 = toRad(a[1]);
+            const lat2 = toRad(b[1]);
+            const s = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+            return R * 2 * Math.atan2(Math.sqrt(s), Math.sqrt(1 - s));
+        }
+
+        function _lineLength(coords) {
+            let total = 0;
+            for (let i = 1; i < coords.length; i++) {
+                total += _haversineDistance(coords[i - 1], coords[i]);
+            }
+            return total;
+        }
+
+        function _pointAlong(coords, distKm) {
+            let traveled = 0;
+            for (let i = 1; i < coords.length; i++) {
+                const segLen = _haversineDistance(coords[i - 1], coords[i]);
+                if (traveled + segLen >= distKm) {
+                    const t = (distKm - traveled) / segLen;
+                    return [
+                        coords[i - 1][0] + t * (coords[i][0] - coords[i - 1][0]),
+                        coords[i - 1][1] + t * (coords[i][1] - coords[i - 1][1]),
+                    ];
+                }
+                traveled += segLen;
+            }
+            return coords[coords.length - 1];
+        }
+
+        // deck.gl COG layer support (lazy-loaded on first use)
+        let MapboxOverlay = null;
+        let COGLayer = null;
+        let COGLayerWithOpacity = null;
+        let geoKeysParser = null;
+        let deckOverlay = null;
+        const deckLayers = new Map();
+
+        async function ensureDeckGL() {
+            if (MapboxOverlay) return;
+            // Use the deck.gl version already loaded by maplibre-gl-components,
+            // or fall back to 9.2.6. All deck.gl packages must share one version
+            // to avoid the "multiple versions detected" error.
+            const V = (globalThis.deck && globalThis.deck.VERSION) || '9.2.6';
+            const [cogModule, deckMapbox, geokeysModule] = await Promise.all([
+                import(`https://esm.sh/@developmentseed/deck.gl-geotiff@0.2.0?deps=@deck.gl/core@${V},@deck.gl/layers@${V},@deck.gl/geo-layers@${V},@deck.gl/mesh-layers@${V},@deck.gl/extensions@${V}`),
+                import(`https://esm.sh/@deck.gl/mapbox@${V}?deps=@deck.gl/core@${V}`),
+                import('https://esm.sh/geotiff-geokeys-to-proj4@2024.4.13'),
+            ]);
+            COGLayer = cogModule.COGLayer;
+            MapboxOverlay = deckMapbox.MapboxOverlay;
+            const toProj4 = geokeysModule.toProj4;
+            const proj = cogModule.proj;
+            geoKeysParser = async (geoKeys) => {
+                const projDef = toProj4(geoKeys);
+                return {
+                    def: projDef.proj4,
+                    parsed: proj.parseCrs(projDef.proj4),
+                    coordinatesUnits: projDef.coordinatesUnits,
+                };
+            };
+
+            // Define COGLayerWithOpacity subclass after COGLayer is loaded
+            // This wrapper propagates opacity to sublayers since the base COGLayer
+            // does not pass opacity to its RasterLayer/PathLayer sublayers.
+            COGLayerWithOpacity = class extends COGLayer {
+                _renderSubLayers(...args) {
+                    const layers = super._renderSubLayers(...args);
+                    const opacity = this.props.opacity;
+                    if (opacity === undefined || opacity === null) {
+                        return layers;
+                    }
+                    const clamped = Math.max(0, Math.min(1, opacity));
+                    return this._applyOpacity(layers, clamped);
+                }
+                _applyOpacity(layers, opacity) {
+                    if (!layers) return layers;
+                    if (Array.isArray(layers)) {
+                        return layers.map(layer => this._applyOpacity(layer, opacity));
+                    }
+                    if (typeof layers.clone === 'function') {
+                        return layers.clone({ opacity });
+                    }
+                    return layers;
+                }
+            };
+        }
+
+        const DECK_SENTINEL_ID = '__deck-overlay-anchor';
+
+        function initDeckOverlay() {
+            if (deckOverlay) return;
+            const Overlay = MapboxOverlay || (globalThis.deck && globalThis.deck.MapboxOverlay);
+            if (!Overlay) { console.error('deck.gl MapboxOverlay not available'); return; }
+            deckOverlay = new Overlay({ interleaved: true, layers: [] });
+            map.addControl(deckOverlay);
+            // Add invisible sentinel layer as ordering anchor
+            if (!map.getLayer(DECK_SENTINEL_ID)) {
+                const sentinelSourceId = DECK_SENTINEL_ID + '-source';
+                if (!map.getSource(sentinelSourceId)) {
+                    map.addSource(sentinelSourceId, {
+                        type: 'geojson',
+                        data: { type: 'FeatureCollection', features: [] }
+                    });
+                }
+                // Insert sentinel below the first non-raster user overlay layer
+                // (skip basemap raster layers so COG renders above them)
+                const firstOverlay = addedLayers.find(l => l.type !== 'raster');
+                const sentinelBeforeId = firstOverlay ? firstOverlay.id : undefined;
+                map.addLayer({
+                    id: DECK_SENTINEL_ID,
+                    type: 'fill',
+                    source: sentinelSourceId,
+                    paint: { 'fill-opacity': 0 }
+                }, sentinelBeforeId);
+            }
+        }
+
+        function updateDeckOverlay(forceReanchor = false) {
+            if (!deckOverlay) return;
+            const hasSentinel = map.getLayer(DECK_SENTINEL_ID);
+            if (hasSentinel) {
+                for (const [id, layer] of deckLayers) {
+                    if (layer.clone && (forceReanchor || !layer.props || !layer.props.beforeId)) {
+                        deckLayers.set(id, layer.clone({ beforeId: DECK_SENTINEL_ID }));
+                    }
+                }
+            }
+            if (forceReanchor) {
+                deckOverlay.setProps({ layers: [] });
+            }
+            deckOverlay.setProps({ layers: Array.from(deckLayers.values()) });
+            map.triggerRepaint();
+            scheduleLayerControlOrderSync();
+        }
+
+        function setCOGVisibility(layerId, visible) {
+            const layer = deckLayers.get(layerId);
+            if (!layer) return;
+            deckLayers.set(layerId, layer.clone({ visible }));
+            updateDeckOverlay();
+        }
+
+        function setCOGOpacity(layerId, opacity) {
+            const layer = deckLayers.get(layerId);
+            if (!layer) return;
+            deckLayers.set(layerId, layer.clone({ opacity }));
+            updateDeckOverlay();
+        }
+
+        // COG layer display names for the adapter
+        const cogLayerNames = new Map();
+        const cogChangeCallbacks = [];
+
+        // CustomLayerAdapter for COG layers — used by maplibre-gl-layer-control
+        const cogLayerAdapter = {
+            type: 'cog',
+            getLayerIds() {
+                return Array.from(deckLayers.keys());
+            },
+            getLayerState(layerId) {
+                const layer = deckLayers.get(layerId);
+                if (!layer || !layer.props) return null;
+                return {
+                    visible: layer.props.visible !== false,
+                    opacity: layer.props.opacity ?? 1,
+                    name: cogLayerNames.get(layerId) || layerId,
+                };
+            },
+            setVisibility(layerId, visible) {
+                setCOGVisibility(layerId, visible);
+            },
+            setOpacity(layerId, opacity) {
+                setCOGOpacity(layerId, opacity);
+            },
+            getName(layerId) {
+                return cogLayerNames.get(layerId) || layerId;
+            },
+            getSymbolType() {
+                return 'cog';
+            },
+            onLayerChange(callback) {
+                cogChangeCallbacks.push(callback);
+                return () => {
+                    const idx = cogChangeCallbacks.indexOf(callback);
+                    if (idx >= 0) cogChangeCallbacks.splice(idx, 1);
+                };
+            },
+        };
+
+        // Marker layer tracking for layer control
+        const markerGroups = new Map();       // groupId -> Marker[]
+        const markerGroupNames = new Map();   // groupId -> display name
+        const markerGroupVisibility = new Map(); // groupId -> boolean
+        const markerGroupOpacity = new Map(); // groupId -> number
+        const markerChangeCallbacks = [];
+
+        const markerLayerAdapter = {
+            type: 'marker',
+            getLayerIds() {
+                return Array.from(markerGroups.keys());
+            },
+            getLayerState(layerId) {
+                if (!markerGroups.has(layerId)) return null;
+                return {
+                    visible: markerGroupVisibility.get(layerId) ?? true,
+                    opacity: markerGroupOpacity.get(layerId) ?? 1,
+                    name: this.getName(layerId),
+                };
+            },
+            setVisibility(layerId, visible) {
+                const markers = markerGroups.get(layerId);
+                if (!markers) return;
+                markerGroupVisibility.set(layerId, visible);
+                for (const m of markers) {
+                    if (visible) {
+                        m.addTo(map);
+                        const opacity = markerGroupOpacity.get(layerId) ?? 1;
+                        m.getElement().style.opacity = String(opacity);
+                    } else {
+                        m.remove();
+                    }
+                }
+            },
+            setOpacity(layerId, opacity) {
+                const markers = markerGroups.get(layerId);
+                if (!markers) return;
+                markerGroupOpacity.set(layerId, opacity);
+                const visible = markerGroupVisibility.get(layerId) ?? true;
+                if (visible) {
+                    for (const m of markers) {
+                        m.getElement().style.opacity = String(opacity);
+                    }
+                }
+            },
+            getName(layerId) {
+                const name = markerGroupNames.get(layerId);
+                if (name && name !== layerId) return name;
+                if (layerId.startsWith('markers-')) {
+                    const num = parseInt(layerId.slice('markers-'.length), 10);
+                    return isNaN(num) ? layerId : `Markers ${num + 1}`;
+                }
+                if (layerId.startsWith('marker-')) {
+                    const num = parseInt(layerId.slice('marker-'.length), 10);
+                    return isNaN(num) ? layerId : `Marker ${num + 1}`;
+                }
+                return layerId;
+            },
+            getSymbolType() {
+                return 'circle';
+            },
+            removeLayer(layerId) {
+                const markers = markerGroups.get(layerId);
+                if (markers) {
+                    for (const m of markers) m.remove();
+                }
+                markerGroups.delete(layerId);
+                markerGroupNames.delete(layerId);
+                markerGroupVisibility.delete(layerId);
+                markerGroupOpacity.delete(layerId);
+                markerChangeCallbacks.forEach(cb => cb('remove', layerId));
+            },
+            onLayerChange(callback) {
+                markerChangeCallbacks.push(callback);
+                return () => {
+                    const idx = markerChangeCallbacks.indexOf(callback);
+                    if (idx >= 0) markerChangeCallbacks.splice(idx, 1);
+                };
+            },
+        };
+
+        // Create map immediately (no imports needed)
+        const map = new maplibregl.Map({
+            container: 'map',
+            style: state.style,
+            center: state.center,
+            zoom: state.zoom,
+            bearing: state.bearing || 0,
+            pitch: state.pitch || 0,
+            maxPitch: state.max_pitch || 85
+        });
+
+        // Initialize PMTiles protocol (ESM import of v4)
+        const pmtilesModule = await import('https://esm.sh/pmtiles@4.4.0');
+        const pmtilesProtocol = new pmtilesModule.Protocol();
+        maplibregl.addProtocol("pmtiles", pmtilesProtocol.tile);
+        const PMTiles = pmtilesModule.PMTiles;
+
+        map.on('load', async function() {
+            // 1. Replay ALL js_calls first (markers, legends, GeoJSON, etc.)
+            for (const call of state.js_calls || []) {
+                try {
+                    await executeMethod(call.method, call.args, call.kwargs);
+                } catch (e) {
+                    console.error('Error executing', call.method, e);
+                }
+            }
+
+            // 2. Wait for optional imports to settle
+            await Promise.allSettled([lcPromise, cgPromise, gePromise, gaPromise]);
+
+            // 3. Add layer control if library loaded and configured
+            if (!layerControlAdded && (layerControlConfig || (state.controls && state.controls['layer-control']))) {
+                const config = layerControlConfig || state.controls['layer-control'];
+                if (LayerControl) {
+                    createLayerControl(config);
+                    layerControlAdded = true;
+                } else {
+                    console.warn('LayerControl not available — skipping layer control');
+                }
+            }
+
+            // 4. Add control grid if library loaded and configured
+            if (!controlGridAdded && (controlGridConfig || (state.controls && state.controls['control-grid']))) {
+                const config = controlGridConfig || state.controls['control-grid'];
+                if (addControlGridFn) {
+                    addControlGridFn(map, {
+                        position: config.position || 'top-right',
+                        defaultControls: config.defaultControls,
+                        exclude: config.exclude,
+                        rows: config.rows,
+                        columns: config.columns,
+                        collapsed: config.collapsed !== false,
+                        title: config.title,
+                        basemapStyleUrl: config.basemapStyleUrl,
+                        excludeLayers: config.excludeLayers,
+                        bookmarkOptions: config.bookmarkOptions
+                    });
+                    controlGridAdded = true;
+                } else {
+                    console.warn('ControlGrid not available — skipping control grid');
+                }
+            }
+
+            // 5. Add GeoAgent control if library loaded and configured
+            if (!geoAgentControl && (geoAgentControlConfig || (state.controls && state.controls['geoagent-control']))) {
+                const config = geoAgentControlConfig || state.controls['geoagent-control'];
+                createGeoAgentControl(config);
+            }
+
+            // 6. Add draw control if configured
+            if (drawControlConfig || (state.controls && state.controls['draw-control'])) {
+                createDrawControl(drawControlConfig || state.controls['draw-control']);
+            }
+        });
+
+        function makeAccessor(value, defaultProp, fallbackFn) {
+            if (typeof value === 'string') return d => d[value];
+            if (typeof value === 'function') return value;
+            if (value !== undefined && value !== null) return value;
+            return fallbackFn || (d => d[defaultProp]);
+        }
+
+        async function executeMethod(method, args, kwargs) {
+            switch (method) {
+                case 'addBasemap': {
+                    const url = args[0];
+                    const name = kwargs.name || 'basemap';
+                    const sourceId = 'basemap-' + name;
+                    const layerId = name;
+                    if (!map.getSource(sourceId)) {
+                        map.addSource(sourceId, {
+                            type: 'raster',
+                            tiles: [url],
+                            tileSize: 256,
+                            attribution: kwargs.attribution || ''
+                        });
+                    }
+                    if (!map.getLayer(layerId)) {
+                        // Insert basemap above background but below deck sentinel
+                        // and user overlay layers
+                        let effectiveBeforeId;
+                        if (map.getLayer(DECK_SENTINEL_ID)) {
+                            const styleLayers = map.getStyle()?.layers || [];
+                            const si = styleLayers.findIndex(l => l.id === DECK_SENTINEL_ID);
+                            let ii = si;
+                            for (let i = si - 1; i >= 0; i--) {
+                                if (styleLayers[i].id.startsWith('@@deck.gl')) { ii = i; } else { break; }
+                            }
+                            effectiveBeforeId = styleLayers[ii]?.id;
+                        }
+                        map.addLayer({
+                            id: layerId,
+                            type: 'raster',
+                            source: sourceId
+                        }, effectiveBeforeId);
+                        addedLayers.push({ id: layerId, name: name, type: 'raster' });
+                    }
+                    break;
+                }
+
+                case 'addGeoJSON': {
+                    const layerName = kwargs.name;
+                    const sourceId = layerName + '-source';
+                    if (!map.getSource(sourceId)) {
+                        map.addSource(sourceId, {
+                            type: 'geojson',
+                            data: kwargs.data
+                        });
+                    }
+                    if (!map.getLayer(layerName)) {
+                        const layerType = kwargs.layerType || 'circle';
+                        map.addLayer({
+                            id: layerName,
+                            type: layerType,
+                            source: sourceId,
+                            paint: kwargs.paint || getDefaultPaint(layerType)
+                        });
+                        addedLayers.push({ id: layerName, name: layerName, type: layerType });
+                    }
+                    if (kwargs.fitBounds && kwargs.bounds) {
+                        map.fitBounds([
+                            [kwargs.bounds[0], kwargs.bounds[1]],
+                            [kwargs.bounds[2], kwargs.bounds[3]]
+                        ], { padding: 50 });
+                    }
+                    break;
+                }
+
+                case 'addTileLayer': {
+                    const tileUrl = args[0];
+                    const tileName = kwargs.name;
+                    const tileSourceId = tileName + '-source';
+                    if (!map.getSource(tileSourceId)) {
+                        map.addSource(tileSourceId, {
+                            type: 'raster',
+                            tiles: [tileUrl],
+                            tileSize: 256,
+                            attribution: kwargs.attribution || ''
+                        });
+                    }
+                    if (!map.getLayer(tileName)) {
+                        map.addLayer({
+                            id: tileName,
+                            type: 'raster',
+                            source: tileSourceId
+                        });
+                        addedLayers.push({ id: tileName, name: tileName, type: 'raster' });
+                    }
+                    break;
+                }
+
+                case 'addControl': {
+                    const controlType = args[0];
+                    const position = kwargs.position || 'top-right';
+                    let control;
+                    switch (controlType) {
+                        case 'navigation':
+                            control = new maplibregl.NavigationControl();
+                            break;
+                        case 'scale':
+                            control = new maplibregl.ScaleControl();
+                            break;
+                        case 'fullscreen':
+                            control = new maplibregl.FullscreenControl();
+                            break;
+                        case 'geolocate':
+                            control = new maplibregl.GeolocateControl();
+                            break;
+                        case 'globe':
+                            control = new maplibregl.GlobeControl();
+                            break;
+                        case 'attribution':
+                            control = new maplibregl.AttributionControl({
+                                compact: kwargs.compact !== false
+                            });
+                            break;
+                        case 'geoagent':
+                        case 'geoagent-control':
+                            geoAgentControlConfig = kwargs;
+                            if (GeoAgentControlClass) {
+                                createGeoAgentControl(geoAgentControlConfig);
+                            }
+                            break;
+                    }
+                    if (control) {
+                        map.addControl(control, position);
+                    }
+                    break;
+                }
+
+                case 'addLayerControl': {
+                    // Store config for later (after all layers are added)
+                    layerControlConfig = kwargs;
+                    break;
+                }
+
+                case 'addDrawControl': {
+                    // Store config for later (after map is fully loaded)
+                    drawControlConfig = kwargs;
+                    break;
+                }
+
+                case 'addControlGrid': {
+                    // Store config for later (add after layer control)
+                    controlGridConfig = kwargs;
+                    break;
+                }
+
+                case 'addGeoAgentControl': {
+                    geoAgentControlConfig = kwargs;
+                    if (GeoAgentControlClass) {
+                        createGeoAgentControl(geoAgentControlConfig);
+                    }
+                    break;
+                }
+
+                case 'removeGeoAgentControl': {
+                    if (geoAgentControl) {
+                        map.removeControl(geoAgentControl);
+                        geoAgentControl = null;
+                    }
+                    break;
+                }
+
+                case 'setGeoAgentState': {
+                    if (geoAgentControl && typeof geoAgentControl.setState === 'function') {
+                        geoAgentControl.setState(kwargs);
+                    }
+                    break;
+                }
+
+                case 'addMarker': {
+                    const [lng, lat] = args;
+                    const markerId = kwargs.id || `marker-${Date.now()}`;
+                    const color = kwargs.color || '#3388ff';
+                    const scale = kwargs.scale || 1.0;
+                    const draggable = kwargs.draggable || false;
+                    const marker = new maplibregl.Marker({ color, scale, draggable })
+                        .setLngLat([lng, lat]);
+                    if (kwargs.popup) {
+                        const popupMaxWidth = kwargs.popupMaxWidth || '240px';
+                        marker.setPopup(new maplibregl.Popup({ maxWidth: popupMaxWidth }).setHTML(kwargs.popup));
+                    }
+                    marker.addTo(map);
+                    // Add tooltip on hover if provided
+                    if (kwargs.tooltip) {
+                        const tooltipMaxWidth = kwargs.tooltipMaxWidth || '240px';
+                        const tooltipPopup = new maplibregl.Popup({
+                            closeButton: false,
+                            closeOnClick: false,
+                            maxWidth: tooltipMaxWidth
+                        });
+                        const markerEl = marker.getElement();
+                        markerEl.addEventListener('mouseenter', () => {
+                            tooltipPopup.setLngLat([lng, lat]).setHTML(kwargs.tooltip).addTo(map);
+                        });
+                        markerEl.addEventListener('mouseleave', () => {
+                            tooltipPopup.remove();
+                        });
+                    }
+                    // Track for layer control
+                    markerGroups.set(markerId, [marker]);
+                    markerGroupNames.set(markerId, markerId);
+                    markerGroupVisibility.set(markerId, true);
+                    markerGroupOpacity.set(markerId, 1);
+                    break;
+                }
+
+                case 'addMarkers': {
+                    const markersGroupId = kwargs.id || `markers-${Date.now()}`;
+                    const markers = kwargs.markers || [];
+                    const color = kwargs.color || '#3388ff';
+                    const scale = kwargs.scale || 1.0;
+                    const draggable = kwargs.draggable || false;
+                    const popupMaxWidth = kwargs.popupMaxWidth || '240px';
+                    const tooltipMaxWidth = kwargs.tooltipMaxWidth || '240px';
+                    const groupMarkers = [];
+
+                    for (const m of markers) {
+                        const [lng, lat] = m.lngLat;
+                        const marker = new maplibregl.Marker({ color, scale, draggable })
+                            .setLngLat([lng, lat]);
+                        if (m.popup) {
+                            marker.setPopup(new maplibregl.Popup({ maxWidth: popupMaxWidth }).setHTML(m.popup));
+                        }
+                        marker.addTo(map);
+                        // Add tooltip on hover if provided
+                        if (m.tooltip) {
+                            const tooltipPopup = new maplibregl.Popup({
+                                closeButton: false,
+                                closeOnClick: false,
+                                maxWidth: tooltipMaxWidth
+                            });
+                            const markerEl = marker.getElement();
+                            markerEl.addEventListener('mouseenter', () => {
+                                tooltipPopup.setLngLat([lng, lat]).setHTML(m.tooltip).addTo(map);
+                            });
+                            markerEl.addEventListener('mouseleave', () => {
+                                tooltipPopup.remove();
+                            });
+                        }
+                        groupMarkers.push(marker);
+                    }
+                    // Track for layer control
+                    markerGroups.set(markersGroupId, groupMarkers);
+                    markerGroupNames.set(markersGroupId, markersGroupId);
+                    markerGroupVisibility.set(markersGroupId, true);
+                    markerGroupOpacity.set(markersGroupId, 1);
+                    break;
+                }
+
+                case 'addLegend': {
+                    const legendId = kwargs.id || 'legend';
+                    const title = kwargs.title || 'Legend';
+                    const items = kwargs.items || [];
+                    const position = kwargs.position || 'bottom-right';
+                    const opacity = kwargs.opacity !== undefined ? kwargs.opacity : 1.0;
+
+                    // Create legend container
+                    const legendDiv = document.createElement('div');
+                    legendDiv.id = legendId;
+                    legendDiv.className = 'maplibregl-ctrl legend-control';
+                    legendDiv.style.cssText = `
+                        background: rgba(255, 255, 255, ${opacity});
+                        padding: 10px 14px;
+                        border-radius: 4px;
+                        box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                        font-size: 12px;
+                        line-height: 1.4;
+                        max-width: 200px;
+                    `;
+
+                    // Add title
+                    const titleEl = document.createElement('div');
+                    titleEl.style.cssText = 'font-weight: bold; margin-bottom: 8px; font-size: 13px;';
+                    titleEl.textContent = title;
+                    legendDiv.appendChild(titleEl);
+
+                    // Add items
+                    for (const item of items) {
+                        const row = document.createElement('div');
+                        row.style.cssText = 'display: flex; align-items: center; margin-bottom: 4px;';
+
+                        const colorBox = document.createElement('span');
+                        colorBox.style.cssText = `
+                            width: 16px;
+                            height: 16px;
+                            background-color: ${item.color};
+                            margin-right: 8px;
+                            border-radius: 2px;
+                            flex-shrink: 0;
+                        `;
+                        row.appendChild(colorBox);
+
+                        const label = document.createElement('span');
+                        label.textContent = item.label;
+                        row.appendChild(label);
+
+                        legendDiv.appendChild(row);
+                    }
+
+                    // Get the appropriate control container
+                    const positionClass = 'maplibregl-ctrl-' + position;
+                    let container = document.querySelector('.' + positionClass);
+                    if (!container) {
+                        // Create container if it doesn't exist
+                        container = document.createElement('div');
+                        container.className = 'maplibregl-ctrl-' + position.split('-')[0] + ' ' + positionClass;
+                        document.querySelector('.maplibregl-control-container').appendChild(container);
+                    }
+                    // Insert at beginning so legend appears above attribution
+                    container.insertBefore(legendDiv, container.firstChild);
+                    break;
+                }
+
+                case 'addColorbar': {
+                    const cbId = kwargs.colorbarId || 'colorbar-0';
+                    const cbColormap = kwargs.colormap || 'viridis';
+                    const cbVmin = kwargs.vmin !== undefined ? kwargs.vmin : 0;
+                    const cbVmax = kwargs.vmax !== undefined ? kwargs.vmax : 1;
+                    const cbLabel = kwargs.label || '';
+                    const cbUnits = kwargs.units || '';
+                    const cbOrientation = kwargs.orientation || 'horizontal';
+                    const cbPosition = kwargs.position || 'bottom-right';
+                    const cbBarThickness = kwargs.barThickness || 20;
+                    const cbBarLength = kwargs.barLength || 250;
+                    const cbOpacity = kwargs.opacity !== undefined ? kwargs.opacity : 1.0;
+
+                    // Colormap gradients (CSS approximations)
+                    const colormapGradients = {
+                        'viridis': 'linear-gradient(to right, #440154, #482878, #3e4989, #31688e, #26828e, #1f9e89, #35b779, #6ece58, #b5de2b, #fde725)',
+                        'plasma': 'linear-gradient(to right, #0d0887, #46039f, #7201a8, #9c179e, #bd3786, #d8576b, #ed7953, #fb9f3a, #fdca26, #f0f921)',
+                        'inferno': 'linear-gradient(to right, #000004, #1b0c41, #4a0c6b, #781c6d, #a52c60, #cf4446, #ed6925, #fb9b06, #f7d13d, #fcffa4)',
+                        'magma': 'linear-gradient(to right, #000004, #180f3d, #440f76, #721f81, #9e2f7f, #cd4071, #f1605d, #fd9668, #feca8d, #fcfdbf)',
+                        'cividis': 'linear-gradient(to right, #00224e, #123570, #1f4b86, #2c6291, #3c7a91, #4f928c, #65ab7c, #84c267, #abd94f, #fdea45)',
+                        'coolwarm': 'linear-gradient(to right, #3b4cc0, #6788ee, #9abbff, #c9d7ef, #eddad5, #f7a789, #e36c51, #b40426)',
+                        'terrain': 'linear-gradient(to right, #333399, #00b2b2, #00ff00, #cccc00, #cc6600, #993300, #ffffff)',
+                        'jet': 'linear-gradient(to right, #00007f, #0000ff, #007fff, #00ffff, #7fff7f, #ffff00, #ff7f00, #ff0000, #7f0000)',
+                        'turbo': 'linear-gradient(to right, #30123b, #4662d7, #36aaf9, #1ae4b6, #72fe5e, #c8ef34, #faba39, #f66b19, #ca2a04, #7a0403)',
+                        'hot': 'linear-gradient(to right, #000000, #e60000, #ffa500, #ffff00, #ffffff)',
+                        'cool': 'linear-gradient(to right, #00ffff, #ff00ff)',
+                        'gray': 'linear-gradient(to right, #000000, #ffffff)',
+                        'rainbow': 'linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff)',
+                    };
+                    const isVertical = cbOrientation === 'vertical';
+                    const gradientDir = isVertical ? 'to top' : 'to right';
+                    let gradient = (colormapGradients[cbColormap] || colormapGradients['viridis']).replace('to right', gradientDir);
+
+                    // Build colorbar element
+                    const cbDiv = document.createElement('div');
+                    cbDiv.id = cbId;
+                    cbDiv.className = 'maplibregl-ctrl';
+                    cbDiv.style.cssText = `
+                        background: rgba(255, 255, 255, ${cbOpacity});
+                        padding: 8px 12px;
+                        border-radius: 4px;
+                        box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                        font-size: 11px;
+                    `;
+
+                    if (cbLabel) {
+                        const labelEl = document.createElement('div');
+                        labelEl.style.cssText = 'font-weight: bold; margin-bottom: 4px; font-size: 12px; text-align: center;';
+                        labelEl.textContent = cbLabel;
+                        cbDiv.appendChild(labelEl);
+                    }
+
+                    const barEl = document.createElement('div');
+                    barEl.style.cssText = isVertical
+                        ? `width: ${cbBarThickness}px; height: ${cbBarLength}px; background: ${gradient}; border: 1px solid #ccc; margin: 0 auto;`
+                        : `width: ${cbBarLength}px; height: ${cbBarThickness}px; background: ${gradient}; border: 1px solid #ccc;`;
+                    cbDiv.appendChild(barEl);
+
+                    // Tick labels
+                    const tickCount = 5;
+                    const ticksDiv = document.createElement('div');
+                    ticksDiv.style.cssText = isVertical
+                        ? `display: flex; flex-direction: column-reverse; justify-content: space-between; height: ${cbBarLength}px; position: absolute; right: -30px; top: 0; font-size: 10px;`
+                        : `display: flex; justify-content: space-between; margin-top: 2px; font-size: 10px;`;
+                    for (let i = 0; i < tickCount; i++) {
+                        const val = cbVmin + (cbVmax - cbVmin) * i / (tickCount - 1);
+                        const tickEl = document.createElement('span');
+                        tickEl.textContent = val.toFixed(val % 1 === 0 ? 0 : 1);
+                        ticksDiv.appendChild(tickEl);
+                    }
+                    if (!isVertical) {
+                        cbDiv.appendChild(ticksDiv);
+                    }
+
+                    if (cbUnits) {
+                        const unitsEl = document.createElement('div');
+                        unitsEl.style.cssText = 'text-align: center; margin-top: 2px; font-size: 10px; color: #666;';
+                        unitsEl.textContent = cbUnits;
+                        cbDiv.appendChild(unitsEl);
+                    }
+
+                    // Add to map control container
+                    const cbPosClass = 'maplibregl-ctrl-' + cbPosition;
+                    let cbContainer = document.querySelector('.' + cbPosClass);
+                    if (!cbContainer) {
+                        cbContainer = document.createElement('div');
+                        cbContainer.className = 'maplibregl-ctrl-' + cbPosition.split('-')[0] + ' ' + cbPosClass;
+                        document.querySelector('.maplibregl-control-container').appendChild(cbContainer);
+                    }
+                    cbContainer.insertBefore(cbDiv, cbContainer.firstChild);
+                    break;
+                }
+
+                case 'flyTo': {
+                    map.flyTo({
+                        center: [args[0], args[1]],
+                        zoom: kwargs.zoom,
+                        duration: kwargs.duration || 2000
+                    });
+                    break;
+                }
+
+                case 'fitBounds': {
+                    const bounds = args[0];
+                    map.fitBounds([
+                        [bounds[0], bounds[1]],
+                        [bounds[2], bounds[3]]
+                    ], {
+                        padding: kwargs.padding || 50,
+                        duration: kwargs.duration || 1000
+                    });
+                    break;
+                }
+
+                case 'setVisibility': {
+                    const [layerId, visible] = args;
+                    if (map.getLayer(layerId)) {
+                        map.setLayoutProperty(layerId, 'visibility', visible ? 'visible' : 'none');
+                    }
+                    if (deckLayers.has(layerId)) {
+                        setCOGVisibility(layerId, visible);
+                    }
+                    break;
+                }
+
+                case 'setOpacity': {
+                    const [layerId, opacity] = args;
+                    if (map.getLayer(layerId)) {
+                        const layer = map.getLayer(layerId);
+                        const opacityProp = getOpacityProperty(layer.type);
+                        if (opacityProp) {
+                            map.setPaintProperty(layerId, opacityProp, opacity);
+                        }
+                    }
+                    if (deckLayers.has(layerId)) {
+                        setCOGOpacity(layerId, opacity);
+                    }
+                    break;
+                }
+
+                case 'addPMTilesLayer': {
+                    const url = kwargs.url;
+                    const layerId = kwargs.id;
+                    const sourceType = kwargs.sourceType || 'vector';
+                    const opacity = kwargs.opacity || 1.0;
+                    const visible = kwargs.visible !== false;
+                    const style = kwargs.style || {};
+                    const prefix = kwargs.prefix || '';
+                    const popupConfig = kwargs.popup || null;
+                    const hasStyle = style && Object.keys(style).length > 0;
+
+                    // Prepare PMTiles URL with protocol
+                    const pmtilesUrl = url.startsWith('pmtiles://') ? url : `pmtiles://${url}`;
+
+                    // Add source
+                    const sourceId = `${layerId}-source`;
+                    if (!map.getSource(sourceId)) {
+                        map.addSource(sourceId, {
+                            type: sourceType,
+                            url: pmtilesUrl
+                        });
+                    }
+
+                    // Auto-discovery for vector PMTiles without explicit style
+                    if (sourceType === 'vector' && !hasStyle) {
+                        try {
+                            const pm = new PMTiles(url);
+                            const header = await pm.getHeader();
+                            const metadata = await pm.getMetadata();
+                            const vectorLayers = metadata.vector_layers || (metadata.tilestats && metadata.tilestats.layers) || [];
+
+                            if (vectorLayers.length > 0) {
+                                // Generate distinct colors
+                                const colors = vectorLayers.map((_, i) => {
+                                    const hue = (i * 137.508) % 360;
+                                    return `hsl(${hue}, 70%, 50%)`;
+                                });
+
+                                // Map geometry type to MapLibre layer type
+                                function geoToType(gt) {
+                                    if (!gt) return null;
+                                    const lower = gt.toLowerCase();
+                                    if (lower.includes('polygon')) return 'fill';
+                                    if (lower.includes('line')) return 'line';
+                                    if (lower.includes('point')) return 'circle';
+                                    return 'fill';
+                                }
+
+                                // Infer layer type from name when geometry_type is missing
+                                function inferFromName(name) {
+                                    const lower = name.toLowerCase();
+                                    const linePatterns = ['road','street','highway','path','route','rail','transit','boundary','boundaries','border','river','stream','canal','waterway','line','edge','track','ferry','bridge','tunnel','physical_line','transportation'];
+                                    const pointPatterns = ['poi','pois','point','place','places','marker','stop','station','node','peak','city','town','village','label','symbol','icon','address','physical_point','mountain_peak'];
+                                    for (const p of linePatterns) { if (lower === p || lower.includes(p)) return 'line'; }
+                                    for (const p of pointPatterns) { if (lower === p || lower.includes(p)) return 'circle'; }
+                                    return 'fill';
+                                }
+
+                                // Build paint for layer type
+                                function buildPaint(mlType, color, op) {
+                                    if (mlType === 'fill') return { 'fill-color': color, 'fill-opacity': op * 0.6, 'fill-outline-color': color };
+                                    if (mlType === 'line') return { 'line-color': color, 'line-width': 2, 'line-opacity': op };
+                                    return { 'circle-color': color, 'circle-radius': 2, 'circle-opacity': op, 'circle-stroke-color': color, 'circle-stroke-width': 0.5 };
+                                }
+
+                                const entries = vectorLayers.map((vl, i) => ({
+                                    vl,
+                                    color: colors[i],
+                                    mlType: vl.geometry_type ? geoToType(vl.geometry_type) : inferFromName(vl.id),
+                                }));
+
+                                // Sort: fill first, then line, then circle
+                                const order = { fill: 0, line: 1, circle: 2 };
+                                entries.sort((a, b) => (order[a.mlType] || 0) - (order[b.mlType] || 0));
+
+                                const subLayerIds = [];
+                                for (const { vl, color, mlType } of entries) {
+                                    const subId = prefix ? `${prefix}-${vl.id}` : vl.id;
+                                    if (!map.getLayer(subId)) {
+                                        map.addLayer({
+                                            id: subId,
+                                            type: mlType,
+                                            source: sourceId,
+                                            'source-layer': vl.id,
+                                            layout: { visibility: visible ? 'visible' : 'none' },
+                                            paint: buildPaint(mlType, color, opacity),
+                                        });
+                                        addedLayers.push({ id: subId, name: subId, type: mlType });
+                                        subLayerIds.push(subId);
+                                    }
+                                }
+
+                                // Register grouped popup
+                                if (popupConfig && popupConfig.enabled && subLayerIds.length > 0) {
+                                    const props = popupConfig.properties;
+                                    const tmpl = popupConfig.template;
+                                    map.on('click', (e) => {
+                                        const allFeatures = [];
+                                        for (const sid of subLayerIds) {
+                                            if (!map.getLayer(sid)) continue;
+                                            const feats = map.queryRenderedFeatures(e.point, { layers: [sid] });
+                                            if (feats.length > 0) {
+                                                allFeatures.push({ layer: feats[0].sourceLayer || sid, props: feats[0].properties || {} });
+                                            }
+                                        }
+                                        if (allFeatures.length === 0) return;
+
+                                        const popupCSS = `<style>
+                                            .anymap-pmtiles-popup table { border-collapse:collapse;font-size:13px;color:#333;width:100%;table-layout:fixed;background:#fff; }
+                                            .anymap-pmtiles-popup td { padding:4px 8px;border-bottom:1px solid #eee;color:#333;word-break:break-word;overflow-wrap:break-word; }
+                                            .anymap-pmtiles-popup tr:last-child td { border-bottom:none; }
+                                            .anymap-pmtiles-popup td:first-child { font-weight:600;color:#222;white-space:nowrap;width:40%; }
+                                            .anymap-pmtiles-popup td:last-child { color:#444;width:60%; }
+                                            .anymap-pmtiles-popup .section-header { font-weight:700;font-size:13px;color:#111;padding:6px 8px 4px 8px;text-transform:capitalize;background:#f0f0f0;border-bottom:1px solid #ddd; }
+                                        </style>`;
+
+                                        function buildHTML(p) {
+                                            if (tmpl) {
+                                                const replaced = tmpl.replace(/\{(\w+)\}/g, (m, k) => p[k] !== undefined ? String(p[k]) : m);
+                                                return `<div style="font-size:13px;color:#333;line-height:1.4;word-break:break-word;padding:4px 0;">${replaced}</div>`;
+                                            }
+                                            const keys = props || Object.keys(p);
+                                            const rows = keys.filter(k => p[k] !== undefined).map(k => `<tr><td>${k}</td><td>${p[k]}</td></tr>`).join('');
+                                            return `<table>${rows}</table>`;
+                                        }
+
+                                        const sections = [];
+                                        for (const { layer, props: fp } of allFeatures) {
+                                            if (allFeatures.length > 1) sections.push(`<div class="section-header">${layer.replace(/[-_]/g, ' ')}</div>`);
+                                            sections.push(buildHTML(fp));
+                                        }
+                                        new maplibregl.Popup({ maxWidth: '320px' })
+                                            .setLngLat(e.lngLat)
+                                            .setHTML(`${popupCSS}<div class="anymap-pmtiles-popup" style="max-height:300px;overflow-y:auto;">${sections.join('')}</div>`)
+                                            .addTo(map);
+                                    });
+                                    for (const sid of subLayerIds) {
+                                        map.on('mouseenter', sid, () => { map.getCanvas().style.cursor = 'pointer'; });
+                                        map.on('mouseleave', sid, () => { map.getCanvas().style.cursor = ''; });
+                                    }
+                                }
+
+                                // Fit bounds from header
+                                if (kwargs.fitBounds) {
+                                    map.fitBounds(
+                                        [[header.minLon, header.minLat], [header.maxLon, header.maxLat]],
+                                        { padding: 50, duration: 1000 }
+                                    );
+                                }
+                            }
+                        } catch (err) {
+                            console.warn('[anymap-ts] PMTiles auto-discovery failed:', err);
+                        }
+                    } else if (!map.getLayer(layerId)) {
+                        // Explicit style or raster
+                        if (sourceType === 'vector') {
+                            const layerStyle = {
+                                id: layerId,
+                                source: sourceId,
+                                type: style.type || 'fill',
+                                layout: { visibility: visible ? 'visible' : 'none' },
+                                paint: {},
+                            };
+                            if (style['source-layer']) layerStyle['source-layer'] = style['source-layer'];
+
+                            if (style.type === 'line') {
+                                layerStyle.paint = { 'line-opacity': opacity, 'line-color': '#3388ff', 'line-width': 2, ...style };
+                            } else if (style.type === 'circle') {
+                                layerStyle.paint = { 'circle-opacity': opacity, 'circle-color': '#3388ff', 'circle-radius': 5, ...style };
+                            } else {
+                                layerStyle.paint = { 'fill-opacity': opacity, 'fill-color': '#3388ff', ...style };
+                            }
+                            delete layerStyle.paint.type;
+                            delete layerStyle.paint['source-layer'];
+
+                            map.addLayer(layerStyle);
+                        } else {
+                            map.addLayer({
+                                id: layerId,
+                                type: 'raster',
+                                source: sourceId,
+                                layout: { visibility: visible ? 'visible' : 'none' },
+                                paint: { 'raster-opacity': opacity }
+                            });
+                        }
+                        addedLayers.push({
+                            id: layerId,
+                            name: kwargs.name || layerId,
+                            type: sourceType === 'vector' ? (style.type || 'fill') : 'raster'
+                        });
+
+                        if (kwargs.fitBounds) {
+                            try {
+                                const pm = new PMTiles(url);
+                                const header = await pm.getHeader();
+                                map.fitBounds(
+                                    [[header.minLon, header.minLat], [header.maxLon, header.maxLat]],
+                                    { padding: 50, duration: 1000 }
+                                );
+                            } catch (err) {
+                                console.warn('[anymap-ts] PMTiles fitBounds failed:', err);
+                            }
+                        }
+                    }
+
+                    break;
+                }
+
+                case 'removePMTilesLayer': {
+                    const rmLayerId = args[0];
+                    const rmSourceId = `${rmLayerId}-source`;
+                    // Remove all layers using this source (handles auto-discovered sub-layers)
+                    for (const layer of map.getStyle().layers || []) {
+                        if (layer.source === rmSourceId && map.getLayer(layer.id)) {
+                            map.removeLayer(layer.id);
+                            const idx = addedLayers.findIndex(l => l.id === layer.id);
+                            if (idx > -1) addedLayers.splice(idx, 1);
+                        }
+                    }
+                    if (map.getLayer(rmLayerId)) map.removeLayer(rmLayerId);
+                    if (map.getSource(rmSourceId)) map.removeSource(rmSourceId);
+                    const rmIdx = addedLayers.findIndex(l => l.id === rmLayerId);
+                    if (rmIdx > -1) addedLayers.splice(rmIdx, 1);
+                    break;
+                }
+
+                case 'setSky': {
+                    const skySpec = {};
+                    if (kwargs.skyColor !== undefined) skySpec['sky-color'] = kwargs.skyColor;
+                    if (kwargs.skyHorizonBlend !== undefined) skySpec['sky-horizon-blend'] = kwargs.skyHorizonBlend;
+                    if (kwargs.horizonColor !== undefined) skySpec['horizon-color'] = kwargs.horizonColor;
+                    if (kwargs.horizonFogBlend !== undefined) skySpec['horizon-fog-blend'] = kwargs.horizonFogBlend;
+                    if (kwargs.fogColor !== undefined) skySpec['fog-color'] = kwargs.fogColor;
+                    if (kwargs.fogGroundBlend !== undefined) skySpec['fog-ground-blend'] = kwargs.fogGroundBlend;
+                    if (kwargs.atmosphereBlend !== undefined) skySpec['atmosphere-blend'] = kwargs.atmosphereBlend;
+                    map.setSky(skySpec);
+                    break;
+                }
+
+                case 'removeSky': {
+                    map.setSky(undefined);
+                    break;
+                }
+
+                case 'addTerrain': {
+                    const terrainSource = kwargs.source;
+                    const terrainExaggeration = kwargs.exaggeration || 1.0;
+                    const terrainSourceId = 'terrain-dem';
+                    if (!map.getSource(terrainSourceId)) {
+                        map.addSource(terrainSourceId, {
+                            type: 'raster-dem',
+                            tiles: [terrainSource.url],
+                            tileSize: 256,
+                            encoding: terrainSource.encoding === 'mapbox' ? 'mapbox' : 'terrarium'
+                        });
+                    }
+                    map.setTerrain({
+                        source: terrainSourceId,
+                        exaggeration: terrainExaggeration
+                    });
+                    break;
+                }
+
+                case 'addImageLayer': {
+                    const imgId = kwargs.id || 'image-' + Date.now();
+                    const imgSourceId = imgId + '-source';
+                    const imgUrl = kwargs.url;
+                    const imgCoords = kwargs.coordinates;
+                    const imgOpacity = kwargs.opacity !== undefined ? kwargs.opacity : 1.0;
+                    if (imgUrl && imgCoords && imgCoords.length === 4) {
+                        if (!map.getSource(imgSourceId)) {
+                            map.addSource(imgSourceId, {
+                                type: 'image',
+                                url: imgUrl,
+                                coordinates: imgCoords
+                            });
+                        }
+                        if (!map.getLayer(imgId)) {
+                            map.addLayer({
+                                id: imgId,
+                                type: 'raster',
+                                source: imgSourceId,
+                                paint: { 'raster-opacity': imgOpacity }
+                            });
+                            addedLayers.push({ id: imgId, name: imgId, type: 'raster' });
+                        }
+                    }
+                    break;
+                }
+
+                case 'setFilter': {
+                    const filterLayerId = kwargs.layerId;
+                    const filterExpr = kwargs.filter || null;
+                    if (filterLayerId && map.getLayer(filterLayerId)) {
+                        map.setFilter(filterLayerId, filterExpr);
+                    }
+                    break;
+                }
+
+                case 'addVideoLayer': {
+                    const vidId = kwargs.id || 'video-' + Date.now();
+                    const vidSourceId = vidId + '-source';
+                    const vidUrls = kwargs.urls;
+                    const vidCoords = kwargs.coordinates;
+                    const vidOpacity = kwargs.opacity !== undefined ? kwargs.opacity : 1.0;
+                    if (vidUrls && vidCoords && vidCoords.length === 4) {
+                        if (!map.getSource(vidSourceId)) {
+                            map.addSource(vidSourceId, {
+                                type: 'video',
+                                urls: vidUrls,
+                                coordinates: vidCoords
+                            });
+                        }
+                        if (!map.getLayer(vidId)) {
+                            map.addLayer({
+                                id: vidId,
+                                type: 'raster',
+                                source: vidSourceId,
+                                paint: { 'raster-opacity': vidOpacity }
+                            });
+                            addedLayers.push({ id: vidId, name: vidId, type: 'raster' });
+                        }
+                    }
+                    break;
+                }
+
+                case 'playVideo': {
+                    const playSourceId = (kwargs.id || '') + '-source';
+                    const playSource = map.getSource(playSourceId);
+                    if (playSource && playSource.play) playSource.play();
+                    break;
+                }
+
+                case 'pauseVideo': {
+                    const pauseSourceId = (kwargs.id || '') + '-source';
+                    const pauseSource = map.getSource(pauseSourceId);
+                    if (pauseSource && pauseSource.pause) pauseSource.pause();
+                    break;
+                }
+
+                case 'addSplitMap': {
+                    const leftLayer = kwargs.leftLayer;
+                    const rightLayer = kwargs.rightLayer;
+                    const splitPos = kwargs.position || 50;
+                    if (!leftLayer || !rightLayer) break;
+
+                    // Hide right layer on primary map
+                    if (map.getLayer(rightLayer)) {
+                        map.setLayoutProperty(rightLayer, 'visibility', 'none');
+                    }
+
+                    // Create overlay container
+                    const mapEl = document.getElementById('map');
+                    const rightContainer = document.createElement('div');
+                    rightContainer.id = 'split-map-right';
+                    rightContainer.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;clip-path:inset(0 0 0 ' + splitPos + '%);pointer-events:none;';
+                    mapEl.appendChild(rightContainer);
+
+                    // Create right map
+                    const rightMap = new maplibregl.Map({
+                        container: rightContainer,
+                        style: state.style,
+                        center: map.getCenter(),
+                        zoom: map.getZoom(),
+                        bearing: map.getBearing(),
+                        pitch: map.getPitch(),
+                        interactive: false,
+                        attributionControl: false
+                    });
+
+                    rightMap.on('load', function() {
+                        // Replay layer-adding calls directly on rightMap
+                        for (const call of (state.js_calls || [])) {
+                            try {
+                                const k = call.kwargs || {};
+                                if (call.method === 'addTileLayer') {
+                                    const tileUrl = call.args[0];
+                                    const tileName = k.name;
+                                    const tileSourceId = tileName + '-source';
+                                    if (!rightMap.getSource(tileSourceId)) {
+                                        rightMap.addSource(tileSourceId, {
+                                            type: 'raster',
+                                            tiles: [tileUrl],
+                                            tileSize: 256,
+                                            attribution: k.attribution || ''
+                                        });
+                                    }
+                                    if (!rightMap.getLayer(tileName)) {
+                                        rightMap.addLayer({
+                                            id: tileName,
+                                            type: 'raster',
+                                            source: tileSourceId
+                                        });
+                                    }
+                                } else if (call.method === 'addBasemap') {
+                                    const bmUrl = call.args[0];
+                                    const bmName = k.name || 'basemap';
+                                    const bmSourceId = 'basemap-' + bmName;
+                                    const bmLayerId = bmName;
+                                    if (!rightMap.getSource(bmSourceId)) {
+                                        rightMap.addSource(bmSourceId, {
+                                            type: 'raster',
+                                            tiles: [bmUrl],
+                                            tileSize: 256,
+                                            attribution: k.attribution || ''
+                                        });
+                                    }
+                                    if (!rightMap.getLayer(bmLayerId)) {
+                                        rightMap.addLayer({
+                                            id: bmLayerId,
+                                            type: 'raster',
+                                            source: bmSourceId
+                                        });
+                                    }
+                                } else if (call.method === 'addGeoJSON') {
+                                    const gjName = k.name;
+                                    const gjSourceId = gjName + '-source';
+                                    if (!rightMap.getSource(gjSourceId)) {
+                                        rightMap.addSource(gjSourceId, {
+                                            type: 'geojson',
+                                            data: k.data
+                                        });
+                                    }
+                                    if (!rightMap.getLayer(gjName)) {
+                                        const gjType = k.layerType || 'circle';
+                                        rightMap.addLayer({
+                                            id: gjName,
+                                            type: gjType,
+                                            source: gjSourceId,
+                                            paint: k.paint || getDefaultPaint(gjType)
+                                        });
+                                    }
+                                } else if (call.method === 'addImageLayer') {
+                                    const iiId = k.id || 'image-' + Date.now();
+                                    const iiSourceId = iiId + '-source';
+                                    if (k.url && k.coordinates && k.coordinates.length === 4) {
+                                        if (!rightMap.getSource(iiSourceId)) {
+                                            rightMap.addSource(iiSourceId, {
+                                                type: 'image',
+                                                url: k.url,
+                                                coordinates: k.coordinates
+                                            });
+                                        }
+                                        if (!rightMap.getLayer(iiId)) {
+                                            rightMap.addLayer({
+                                                id: iiId,
+                                                type: 'raster',
+                                                source: iiSourceId,
+                                                paint: { 'raster-opacity': k.opacity !== undefined ? k.opacity : 1.0 }
+                                            });
+                                        }
+                                    }
+                                } else if (call.method === 'addVideoLayer') {
+                                    const vvId = k.id || 'video-' + Date.now();
+                                    const vvSourceId = vvId + '-source';
+                                    if (k.urls && k.coordinates && k.coordinates.length === 4) {
+                                        if (!rightMap.getSource(vvSourceId)) {
+                                            rightMap.addSource(vvSourceId, {
+                                                type: 'video',
+                                                urls: k.urls,
+                                                coordinates: k.coordinates
+                                            });
+                                        }
+                                        if (!rightMap.getLayer(vvId)) {
+                                            rightMap.addLayer({
+                                                id: vvId,
+                                                type: 'raster',
+                                                source: vvSourceId,
+                                                paint: { 'raster-opacity': k.opacity !== undefined ? k.opacity : 1.0 }
+                                            });
+                                        }
+                                    }
+                                }
+                            } catch(e) { /* skip failures */ }
+                        }
+                        // Show only the right layer, hide everything else
+                        try {
+                            const allRightLayers = rightMap.getStyle().layers || [];
+                            for (const l of allRightLayers) {
+                                if (l.id === rightLayer) {
+                                    rightMap.setLayoutProperty(l.id, 'visibility', 'visible');
+                                } else {
+                                    try { rightMap.setLayoutProperty(l.id, 'visibility', 'none'); } catch(e) {}
+                                }
+                            }
+                        } catch(e) {}
+                    });
+
+                    // Sync camera
+                    map.on('move', function() {
+                        rightMap.jumpTo({
+                            center: map.getCenter(),
+                            zoom: map.getZoom(),
+                            bearing: map.getBearing(),
+                            pitch: map.getPitch()
+                        });
+                    });
+
+                    // Create slider
+                    const splitSlider = document.createElement('div');
+                    splitSlider.style.cssText = 'position:absolute;top:0;left:' + splitPos + '%;width:4px;height:100%;background:#333;cursor:ew-resize;z-index:10;box-shadow:-1px 0 0 rgba(255,255,255,0.6),1px 0 0 rgba(255,255,255,0.6),0 0 6px rgba(0,0,0,0.5);';
+                    const splitHandle = document.createElement('div');
+                    splitHandle.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:#fff;border:2px solid #333;box-shadow:0 1px 6px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;font-size:16px;color:#333;font-weight:bold;';
+                    splitHandle.innerHTML = '&#x2194;';
+                    splitSlider.appendChild(splitHandle);
+                    mapEl.appendChild(splitSlider);
+
+                    let splitDragging = false;
+                    splitSlider.addEventListener('pointerdown', function(e) {
+                        splitDragging = true;
+                        splitSlider.setPointerCapture(e.pointerId);
+                        e.preventDefault();
+                    });
+                    window.addEventListener('pointermove', function(e) {
+                        if (!splitDragging) return;
+                        const rect = mapEl.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const pct = Math.max(0, Math.min(100, (x / rect.width) * 100));
+                        splitSlider.style.left = pct + '%';
+                        rightContainer.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
+                    });
+                    window.addEventListener('pointerup', function() { splitDragging = false; });
+                    break;
+                }
+
+                case 'addCOGLayer': {
+                    await ensureDeckGL();
+                    initDeckOverlay();
+
+                    const cogId = kwargs.id || 'cog-' + Date.now();
+                    const geotiff = kwargs.geotiff;
+                    const cogFitBounds = kwargs.fitBounds !== false;
+                    const cogOpacity = kwargs.opacity !== undefined ? kwargs.opacity : 1;
+                    // Use COGLayerWithOpacity to ensure opacity changes propagate to sublayers
+                    const cogLayer = new COGLayerWithOpacity({
+                        id: cogId,
+                        geotiff,
+                        opacity: cogOpacity,
+                        visible: kwargs.visible !== false,
+                        debug: kwargs.debug || false,
+                        debugOpacity: kwargs.debugOpacity !== undefined ? kwargs.debugOpacity : 0.25,
+                        maxError: kwargs.maxError !== undefined ? kwargs.maxError : 0.125,
+                        geoKeysParser,
+                        onGeoTIFFLoad: (tiff, options) => {
+                            if (cogFitBounds) {
+                                const { west, south, east, north } = options.geographicBounds;
+                                map.fitBounds([[west, south], [east, north]], { padding: 40, duration: 1000 });
+                            }
+                        },
+                    });
+                    deckLayers.set(cogId, cogLayer);
+                    cogLayerNames.set(cogId, kwargs.name || cogId);
+                    updateDeckOverlay();
+
+                    // Notify adapter so layer control picks up the new layer
+                    cogChangeCallbacks.forEach(cb => cb('add', cogId));
+
+                    // If layer control already exists, dynamically register the adapter
+                    if (layerControlInstance && typeof layerControlInstance.registerCustomAdapter === 'function') {
+                        layerControlInstance.registerCustomAdapter(cogLayerAdapter);
+                    }
+                    break;
+                }
+
+                case 'removeCOGLayer': {
+                    const removeCogId = args[0];
+                    deckLayers.delete(removeCogId);
+                    cogLayerNames.delete(removeCogId);
+                    updateDeckOverlay();
+                    cogChangeCallbacks.forEach(cb => cb('remove', removeCogId));
+                    break;
+                }
+
+                case 'addScatterplotLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `scatterplot-${Date.now()}`;
+                    const layer = new deck.ScatterplotLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 0.8,
+                        stroked: kwargs.stroked !== false,
+                        filled: kwargs.filled !== false,
+                        radiusScale: kwargs.radiusScale ?? 1,
+                        radiusMinPixels: kwargs.radiusMinPixels ?? 1,
+                        radiusMaxPixels: kwargs.radiusMaxPixels ?? 100,
+                        lineWidthMinPixels: kwargs.lineWidthMinPixels ?? 1,
+                        getPosition: makeAccessor(kwargs.getPosition, 'coordinates', d => d.coordinates || d.position || [d.lng || d.longitude, d.lat || d.latitude]),
+                        getRadius: makeAccessor(kwargs.getRadius ?? kwargs.radius, 'radius', () => 5),
+                        getFillColor: makeAccessor(kwargs.getFillColor ?? kwargs.fillColor, 'fillColor', () => [51, 136, 255, 200]),
+                        getLineColor: makeAccessor(kwargs.getLineColor ?? kwargs.lineColor, 'lineColor', () => [255, 255, 255, 255])
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addArcLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `arc-${Date.now()}`;
+                    const layer = new deck.ArcLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 0.8,
+                        getWidth: makeAccessor(kwargs.getWidth ?? kwargs.width, 'width', () => 1),
+                        getSourcePosition: makeAccessor(kwargs.getSourcePosition, 'source', d => d.source || d.from || d.sourcePosition),
+                        getTargetPosition: makeAccessor(kwargs.getTargetPosition, 'target', d => d.target || d.to || d.targetPosition),
+                        getSourceColor: makeAccessor(kwargs.getSourceColor ?? kwargs.sourceColor, 'sourceColor', () => [51, 136, 255, 255]),
+                        getTargetColor: makeAccessor(kwargs.getTargetColor ?? kwargs.targetColor, 'targetColor', () => [255, 136, 51, 255])
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addPathLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `path-${Date.now()}`;
+                    const layer = new deck.PathLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 0.8,
+                        widthScale: kwargs.widthScale ?? 1,
+                        widthMinPixels: kwargs.widthMinPixels ?? 1,
+                        getPath: makeAccessor(kwargs.getPath, 'path', d => d.path || d.coordinates),
+                        getColor: makeAccessor(kwargs.getColor ?? kwargs.color, 'color', () => [51, 136, 255, 200]),
+                        getWidth: makeAccessor(kwargs.getWidth ?? kwargs.width, 'width', () => 1)
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addPolygonLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `polygon-${Date.now()}`;
+                    const layer = new deck.PolygonLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 0.5,
+                        stroked: kwargs.stroked !== false,
+                        filled: kwargs.filled !== false,
+                        extruded: kwargs.extruded ?? false,
+                        wireframe: kwargs.wireframe ?? false,
+                        lineWidthMinPixels: kwargs.lineWidthMinPixels ?? 1,
+                        getPolygon: makeAccessor(kwargs.getPolygon, 'polygon', d => d.polygon || d.contour || d.coordinates),
+                        getElevation: makeAccessor(kwargs.getElevation ?? kwargs.elevation, 'elevation', () => 0),
+                        getFillColor: makeAccessor(kwargs.getFillColor ?? kwargs.fillColor, 'fillColor', () => [51, 136, 255, 128]),
+                        getLineColor: makeAccessor(kwargs.getLineColor ?? kwargs.lineColor, 'lineColor', () => [0, 0, 255, 255]),
+                        getLineWidth: makeAccessor(kwargs.getLineWidth ?? kwargs.lineWidth, 'lineWidth', () => 1)
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addHexagonLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `hexagon-${Date.now()}`;
+                    const layer = new deck.HexagonLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 0.8,
+                        extruded: kwargs.extruded ?? true,
+                        radius: kwargs.radius ?? 1000,
+                        elevationScale: kwargs.elevationScale ?? 4,
+                        getPosition: makeAccessor(kwargs.getPosition, 'coordinates', d => d.coordinates || d.position || [d.lng || d.longitude, d.lat || d.latitude]),
+                        colorRange: kwargs.colorRange ?? [
+                            [1, 152, 189],
+                            [73, 227, 206],
+                            [216, 254, 181],
+                            [254, 237, 177],
+                            [254, 173, 84],
+                            [209, 55, 78]
+                        ]
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addHeatmapLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `heatmap-${Date.now()}`;
+                    const layer = new deck.HeatmapLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: false,
+                        opacity: kwargs.opacity ?? 1,
+                        radiusPixels: kwargs.radiusPixels ?? 30,
+                        intensity: kwargs.intensity ?? 1,
+                        threshold: kwargs.threshold ?? 0.05,
+                        getPosition: makeAccessor(kwargs.getPosition, 'coordinates', d => d.coordinates || d.position || [d.lng || d.longitude, d.lat || d.latitude]),
+                        getWeight: makeAccessor(kwargs.getWeight ?? kwargs.weight, 'weight', () => 1),
+                        colorRange: kwargs.colorRange ?? [
+                            [255, 255, 178, 25],
+                            [254, 217, 118, 85],
+                            [254, 178, 76, 127],
+                            [253, 141, 60, 170],
+                            [240, 59, 32, 212],
+                            [189, 0, 38, 255]
+                        ]
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addGridLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `grid-${Date.now()}`;
+                    const layer = new deck.GridLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 0.8,
+                        extruded: kwargs.extruded ?? true,
+                        cellSize: kwargs.cellSize ?? 200,
+                        elevationScale: kwargs.elevationScale ?? 4,
+                        getPosition: makeAccessor(kwargs.getPosition, 'coordinates', d => d.coordinates || d.position || [d.lng || d.longitude, d.lat || d.latitude]),
+                        colorRange: kwargs.colorRange ?? [
+                            [1, 152, 189],
+                            [73, 227, 206],
+                            [216, 254, 181],
+                            [254, 237, 177],
+                            [254, 173, 84],
+                            [209, 55, 78]
+                        ]
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addIconLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `icon-${Date.now()}`;
+                    const layer = new deck.IconLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 1,
+                        iconAtlas: kwargs.iconAtlas,
+                        iconMapping: kwargs.iconMapping,
+                        getPosition: makeAccessor(kwargs.getPosition, 'coordinates', d => d.coordinates || d.position || [d.lng || d.longitude, d.lat || d.latitude]),
+                        getIcon: makeAccessor(kwargs.getIcon, 'icon', d => d.icon || 'marker'),
+                        getSize: makeAccessor(kwargs.getSize ?? kwargs.size, 'size', () => 20),
+                        getColor: makeAccessor(kwargs.getColor ?? kwargs.color, 'color', () => [255, 255, 255, 255])
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addTextLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `text-${Date.now()}`;
+                    const layer = new deck.TextLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 1,
+                        getPosition: makeAccessor(kwargs.getPosition, 'coordinates', d => d.coordinates || d.position || [d.lng || d.longitude, d.lat || d.latitude]),
+                        getText: makeAccessor(kwargs.getText, 'text', d => d.text || d.label || d.name || ''),
+                        getSize: makeAccessor(kwargs.getSize ?? kwargs.size, 'size', () => 12),
+                        getColor: makeAccessor(kwargs.getColor ?? kwargs.color, 'color', () => [0, 0, 0, 255]),
+                        getAngle: makeAccessor(kwargs.getAngle, 'angle', () => 0),
+                        getTextAnchor: kwargs.getTextAnchor ?? 'middle',
+                        getAlignmentBaseline: kwargs.getAlignmentBaseline ?? 'center'
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addGeoJsonLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `geojson-${Date.now()}`;
+                    const layer = new deck.GeoJsonLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 0.8,
+                        stroked: kwargs.stroked !== false,
+                        filled: kwargs.filled !== false,
+                        extruded: kwargs.extruded ?? false,
+                        wireframe: kwargs.wireframe ?? false,
+                        lineWidthMinPixels: kwargs.lineWidthMinPixels ?? 1,
+                        pointRadiusMinPixels: kwargs.pointRadiusMinPixels ?? 2,
+                        getFillColor: makeAccessor(kwargs.getFillColor ?? kwargs.fillColor, 'fillColor', () => [51, 136, 255, 128]),
+                        getLineColor: makeAccessor(kwargs.getLineColor ?? kwargs.lineColor, 'lineColor', () => [0, 0, 0, 255]),
+                        getLineWidth: makeAccessor(kwargs.getLineWidth ?? kwargs.lineWidth, 'lineWidth', () => 1),
+                        getPointRadius: makeAccessor(kwargs.getPointRadius ?? kwargs.pointRadius, 'pointRadius', () => 5),
+                        getElevation: makeAccessor(kwargs.getElevation ?? kwargs.elevation, 'elevation', () => 0)
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addContourLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `contour-${Date.now()}`;
+                    const layer = new deck.ContourLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 1,
+                        cellSize: kwargs.cellSize ?? 200,
+                        contours: kwargs.contours ?? [
+                            { threshold: 1, color: [255, 255, 255], strokeWidth: 1 },
+                            { threshold: 5, color: [51, 136, 255], strokeWidth: 2 },
+                            { threshold: 10, color: [0, 0, 255], strokeWidth: 3 }
+                        ],
+                        getPosition: makeAccessor(kwargs.getPosition, 'coordinates', d => d.coordinates || d.position || [d.lng || d.longitude, d.lat || d.latitude]),
+                        getWeight: makeAccessor(kwargs.getWeight ?? kwargs.weight, 'weight', () => 1)
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'addScreenGridLayer': {
+                    initDeckOverlay();
+                    const id = kwargs.id || `screengrid-${Date.now()}`;
+                    const layer = new deck.ScreenGridLayer({
+                        id,
+                        data: kwargs.data,
+                        pickable: kwargs.pickable !== false,
+                        opacity: kwargs.opacity ?? 0.8,
+                        cellSizePixels: kwargs.cellSizePixels ?? 50,
+                        getPosition: makeAccessor(kwargs.getPosition, 'coordinates', d => d.coordinates || d.position || [d.lng || d.longitude, d.lat || d.latitude]),
+                        getWeight: makeAccessor(kwargs.getWeight ?? kwargs.weight, 'weight', () => 1),
+                        colorRange: kwargs.colorRange ?? [
+                            [255, 255, 178, 25],
+                            [254, 217, 118, 85],
+                            [254, 178, 76, 127],
+                            [253, 141, 60, 170],
+                            [240, 59, 32, 212],
+                            [189, 0, 38, 255]
+                        ]
+                    });
+                    deckLayers.set(id, layer);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'removeDeckLayer': {
+                    const removeDeckId = args[0];
+                    deckLayers.delete(removeDeckId);
+                    updateDeckOverlay();
+                    break;
+                }
+
+                case 'setProjection': {
+                    const projection = kwargs.projection || args[0] || 'mercator';
+                    try {
+                        map.setProjection({ type: projection });
+                    } catch (err) {
+                        console.error('setProjection error:', err);
+                    }
+                    break;
+                }
+
+                case 'setPaintProperty': {
+                    const [layerId, property, value] = args;
+                    if (map.getLayer(layerId)) {
+                        map.setPaintProperty(layerId, property, value);
+                    }
+                    break;
+                }
+
+                case 'setLayoutProperty': {
+                    const [layerId, property, value] = args;
+                    if (map.getLayer(layerId)) {
+                        map.setLayoutProperty(layerId, property, value);
+                    }
+                    break;
+                }
+
+                case 'addTimeSlider': {
+                    const layerId = kwargs.layerId;
+                    const property = kwargs.property;
+                    const min = kwargs.min ?? 0;
+                    const max = kwargs.max ?? 100;
+                    const step = kwargs.step ?? 1;
+                    const position = kwargs.position || 'bottom-left';
+                    const label = kwargs.label || 'Time';
+                    const autoPlay = kwargs.autoPlay ?? false;
+                    const interval = kwargs.interval ?? 500;
+
+                    // Remove existing slider
+                    if (timeSliderContainer) {
+                        timeSliderContainer.remove();
+                        timeSliderContainer = null;
+                    }
+
+                    const container = document.createElement('div');
+                    container.className = 'maplibregl-ctrl maplibregl-ctrl-group anymap-time-slider';
+                    container.style.cssText = 'padding:10px;background:rgba(255,255,255,0.95);min-width:250px;border-radius:4px;';
+
+                    const labelEl = document.createElement('div');
+                    labelEl.style.cssText = 'font-size:12px;font-weight:bold;margin-bottom:5px;';
+                    labelEl.textContent = `${label}: ${min}`;
+
+                    const slider = document.createElement('input');
+                    slider.type = 'range';
+                    slider.min = String(min);
+                    slider.max = String(max);
+                    slider.step = String(step);
+                    slider.value = String(min);
+                    slider.style.cssText = 'width:100%;cursor:pointer;';
+
+                    const playBtn = document.createElement('button');
+                    playBtn.textContent = '\u25B6';
+                    playBtn.style.cssText = 'margin-top:5px;padding:2px 8px;cursor:pointer;border:1px solid #ccc;border-radius:3px;background:#fff;';
+
+                    let animTimer = null;
+
+                    const updateFilter = (value) => {
+                        labelEl.textContent = `${label}: ${value}`;
+                        if (layerId && property) {
+                            map.setFilter(layerId, ['<=', property, value]);
+                        }
+                    };
+
+                    slider.addEventListener('input', () => {
+                        updateFilter(Number(slider.value));
+                    });
+
+                    const stopAnim = () => {
+                        if (animTimer !== null) {
+                            clearInterval(animTimer);
+                            animTimer = null;
+                            playBtn.textContent = '\u25B6';
+                        }
+                    };
+
+                    playBtn.addEventListener('click', () => {
+                        if (animTimer !== null) {
+                            stopAnim();
+                        } else {
+                            playBtn.textContent = '\u23F8';
+                            animTimer = setInterval(() => {
+                                let val = Number(slider.value) + step;
+                                if (val > max) val = min;
+                                slider.value = String(val);
+                                updateFilter(val);
+                            }, interval);
+                        }
+                    });
+
+                    container.appendChild(labelEl);
+                    container.appendChild(slider);
+                    container.appendChild(playBtn);
+
+                    const controlContainer = map.getContainer().querySelector(`.maplibregl-ctrl-${position}`);
+                    if (controlContainer) {
+                        controlContainer.appendChild(container);
+                    } else {
+                        map.getContainer().appendChild(container);
+                    }
+                    timeSliderContainer = container;
+
+                    if (autoPlay) {
+                        playBtn.click();
+                    }
+                    break;
+                }
+
+                case 'removeTimeSlider': {
+                    if (timeSliderContainer) {
+                        timeSliderContainer.remove();
+                        timeSliderContainer = null;
+                    }
+                    break;
+                }
+
+                case 'animateAlongRoute': {
+                    const id = kwargs.id;
+                    const coordinates = kwargs.coordinates;
+                    const duration = kwargs.duration || 10000;
+                    const loop = kwargs.loop !== false;
+                    const markerColor = kwargs.markerColor || '#3388ff';
+                    const markerSize = kwargs.markerSize || 1.0;
+                    const showTrail = kwargs.showTrail === true;
+                    const trailColor = kwargs.trailColor || '#3388ff';
+                    const trailWidth = kwargs.trailWidth || 3;
+
+                    const routeLength = _lineLength(coordinates);
+
+                    const marker = new maplibregl.Marker({ color: markerColor, scale: markerSize })
+                        .setLngLat(coordinates[0])
+                        .addTo(map);
+
+                    let trailSourceId;
+                    let trailLayerId;
+                    if (showTrail) {
+                        trailSourceId = `${id}-trail-source`;
+                        trailLayerId = `${id}-trail`;
+
+                        if (!map.getSource(trailSourceId)) {
+                            map.addSource(trailSourceId, {
+                                type: 'geojson',
+                                data: {
+                                    type: 'Feature',
+                                    properties: {},
+                                    geometry: { type: 'LineString', coordinates: [] },
+                                },
+                            });
+                        }
+
+                        if (!map.getLayer(trailLayerId)) {
+                            map.addLayer({
+                                id: trailLayerId,
+                                type: 'line',
+                                source: trailSourceId,
+                                paint: {
+                                    'line-color': trailColor,
+                                    'line-width': trailWidth,
+                                    'line-opacity': 0.8,
+                                },
+                            });
+                        }
+                    }
+
+                    const startTime = performance.now();
+                    const trailCoords = [coordinates[0]];
+
+                    const animate = (currentTime) => {
+                        const animation = animations.get(id);
+                        if (!animation) return;
+
+                        if (animation.isPaused) {
+                            animation.animationId = requestAnimationFrame(animate);
+                            return;
+                        }
+
+                        let elapsed = (currentTime - animation.startTime) * animation.speed;
+                        if (animation.pausedAt > 0) {
+                            elapsed = (currentTime - animation.pausedAt + (animation.pausedAt - animation.startTime)) * animation.speed;
+                        }
+
+                        const progress = (elapsed % animation.duration) / animation.duration;
+                        const distance = progress * routeLength;
+                        const position = _pointAlong(coordinates, distance);
+
+                        animation.marker.setLngLat(position);
+
+                        if (showTrail && trailSourceId) {
+                            trailCoords.push(position);
+                            const source = map.getSource(trailSourceId);
+                            if (source) {
+                                source.setData({
+                                    type: 'Feature',
+                                    properties: {},
+                                    geometry: { type: 'LineString', coordinates: trailCoords },
+                                });
+                            }
+                        }
+
+                        if (elapsed >= animation.duration && !loop) {
+                            cancelAnimationFrame(animation.animationId);
+                            animation.marker.remove();
+                            if (animation.trailLayerId && map.getLayer(animation.trailLayerId)) {
+                                map.removeLayer(animation.trailLayerId);
+                            }
+                            if (animation.trailSourceId && map.getSource(animation.trailSourceId)) {
+                                map.removeSource(animation.trailSourceId);
+                            }
+                            animations.delete(id);
+                            return;
+                        }
+
+                        animation.animationId = requestAnimationFrame(animate);
+                    };
+
+                    animations.set(id, {
+                        animationId: requestAnimationFrame(animate),
+                        marker,
+                        isPaused: false,
+                        speed: 1,
+                        startTime,
+                        pausedAt: 0,
+                        duration,
+                        coordinates,
+                        loop,
+                        trailSourceId,
+                        trailLayerId,
+                    });
+                    break;
+                }
+
+                case 'pauseAnimation': {
+                    const [id] = args;
+                    const animation = animations.get(id);
+                    if (!animation) break;
+                    animation.isPaused = true;
+                    animation.pausedAt = performance.now();
+                    break;
+                }
+
+                case 'resumeAnimation': {
+                    const [id] = args;
+                    const animation = animations.get(id);
+                    if (!animation || !animation.isPaused) break;
+                    const pausedDuration = performance.now() - animation.pausedAt;
+                    animation.startTime += pausedDuration;
+                    animation.isPaused = false;
+                    animation.pausedAt = 0;
+                    break;
+                }
+
+                case 'setAnimationSpeed': {
+                    const [id, speed] = args;
+                    const animation = animations.get(id);
+                    if (!animation) break;
+                    animation.speed = speed;
+                    break;
+                }
+
+                case 'stopAnimation': {
+                    const [id] = args;
+                    const animation = animations.get(id);
+                    if (!animation) break;
+                    cancelAnimationFrame(animation.animationId);
+                    animation.marker.remove();
+                    if (animation.trailLayerId && map.getLayer(animation.trailLayerId)) {
+                        map.removeLayer(animation.trailLayerId);
+                    }
+                    if (animation.trailSourceId && map.getSource(animation.trailSourceId)) {
+                        map.removeSource(animation.trailSourceId);
+                    }
+                    animations.delete(id);
+                    break;
+                }
+
+                default:
+                    console.log('Unknown method:', method);
+            }
+        }
+
+        function getDefaultPaint(layerType) {
+            const defaults = {
+                circle: {
+                    'circle-radius': 5,
+                    'circle-color': '#3388ff',
+                    'circle-opacity': 0.8,
+                    'circle-stroke-width': 1,
+                    'circle-stroke-color': '#ffffff'
+                },
+                line: {
+                    'line-color': '#3388ff',
+                    'line-width': 2,
+                    'line-opacity': 0.8
+                },
+                fill: {
+                    'fill-color': '#3388ff',
+                    'fill-opacity': 0.5,
+                    'fill-outline-color': '#0000ff'
+                },
+                raster: {
+                    'raster-opacity': 1
+                }
+            };
+            return defaults[layerType] || {};
+        }
+
+        function getOpacityProperty(layerType) {
+            const opacityMap = {
+                fill: 'fill-opacity',
+                line: 'line-opacity',
+                circle: 'circle-opacity',
+                symbol: 'icon-opacity',
+                raster: 'raster-opacity',
+                'fill-extrusion': 'fill-extrusion-opacity'
+            };
+            return opacityMap[layerType];
+        }
+
+        let layerControlInstance = null;
+        let layerControlOrderSyncTimer = null;
+
+        function reorderDeckLayersFromLayerControl(layerOrder) {
+            if (deckLayers.size <= 1) return;
+
+            const currentLayers = new Map(deckLayers);
+            const orderedDeckIds = layerOrder.filter(layerId => currentLayers.has(layerId));
+            const seen = new Set();
+            const reorderedEntries = [];
+
+            for (const layerId of orderedDeckIds) {
+                if (!currentLayers.has(layerId) || seen.has(layerId)) continue;
+                reorderedEntries.push([layerId, currentLayers.get(layerId)]);
+                seen.add(layerId);
+            }
+
+            for (const [layerId, layer] of currentLayers) {
+                if (seen.has(layerId)) continue;
+                reorderedEntries.push([layerId, layer]);
+            }
+
+            deckLayers.clear();
+            for (const [layerId, layer] of reorderedEntries) {
+                deckLayers.set(layerId, layer);
+            }
+        }
+
+        function getSentinelBeforeIdForLayerControlOrder(layerOrder) {
+            let lastDeckIndex = -1;
+            for (let i = 0; i < layerOrder.length; i++) {
+                if (deckLayers.has(layerOrder[i])) {
+                    lastDeckIndex = i;
+                }
+            }
+
+            if (lastDeckIndex < 0) {
+                return undefined;
+            }
+
+            for (let i = lastDeckIndex + 1; i < layerOrder.length; i++) {
+                const layerId = layerOrder[i];
+                if (layerId !== DECK_SENTINEL_ID && map.getLayer(layerId)) {
+                    return layerId;
+                }
+            }
+
+            return undefined;
+        }
+
+        function handleLayerControlReorder(layerOrder) {
+            if (deckLayers.size === 0) return;
+
+            reorderDeckLayersFromLayerControl(layerOrder);
+
+            if (!map.getLayer(DECK_SENTINEL_ID)) {
+                updateDeckOverlay(true);
+                return;
+            }
+
+            const sentinelBeforeId = getSentinelBeforeIdForLayerControlOrder(layerOrder);
+
+            try {
+                map.moveLayer(DECK_SENTINEL_ID, sentinelBeforeId);
+            } catch (_err) {
+                // Ignore unsupported move failures from custom/non-style layers.
+            }
+
+            updateDeckOverlay(true);
+        }
+
+        function getLayerControlOrder() {
+            const styleLayers = map.getStyle()?.layers || [];
+            const deckLayerIds = Array.from(deckLayers.keys());
+            if (styleLayers.length === 0) {
+                return deckLayerIds;
+            }
+
+            const orderedLayerIds = [];
+            let insertedDeckLayers = false;
+
+            for (const layer of styleLayers) {
+                if (layer.id === DECK_SENTINEL_ID) {
+                    if (!insertedDeckLayers) {
+                        orderedLayerIds.push(...deckLayerIds);
+                        insertedDeckLayers = true;
+                    }
+                    continue;
+                }
+                orderedLayerIds.push(layer.id);
+            }
+
+            if (!insertedDeckLayers) {
+                orderedLayerIds.push(...deckLayerIds);
+            }
+
+            return orderedLayerIds;
+        }
+
+        function syncLayerControlOrder() {
+            if (!layerControlInstance) return;
+
+            const layerStates = layerControlInstance.state && layerControlInstance.state.layerStates;
+            if (!layerStates || typeof layerControlInstance.buildLayerItems !== 'function') {
+                return;
+            }
+
+            const desiredOrder = getLayerControlOrder();
+            if (desiredOrder.length === 0) {
+                return;
+            }
+
+            const currentOrder = Object.keys(layerStates);
+            const hasBackground = currentOrder.includes('Background');
+            const currentLayerIds = currentOrder.filter(layerId => layerId !== 'Background');
+            const currentSet = new Set(currentLayerIds);
+            const desiredSet = new Set(desiredOrder);
+            const reorderedIds = [
+                ...desiredOrder.filter(layerId => currentSet.has(layerId)),
+                ...currentLayerIds.filter(layerId => !desiredSet.has(layerId)),
+            ];
+
+            if (reorderedIds.length === 0) {
+                return;
+            }
+
+            const isSameOrder = reorderedIds.length === currentLayerIds.length
+                && reorderedIds.every((layerId, index) => layerId === currentLayerIds[index]);
+            if (isSameOrder) {
+                return;
+            }
+
+            const reorderedStates = {};
+            if (hasBackground && Object.prototype.hasOwnProperty.call(layerStates, 'Background')) {
+                reorderedStates.Background = layerStates.Background;
+            }
+            reorderedIds.forEach((layerId) => {
+                reorderedStates[layerId] = layerStates[layerId];
+            });
+
+            layerControlInstance.state.layerStates = reorderedStates;
+            layerControlInstance.targetLayers = hasBackground
+                ? ['Background', ...reorderedIds]
+                : [...reorderedIds];
+            layerControlInstance.buildLayerItems();
+        }
+
+        function scheduleLayerControlOrderSync() {
+            if (!layerControlInstance) return;
+            if (layerControlOrderSyncTimer !== null) {
+                window.clearTimeout(layerControlOrderSyncTimer);
+            }
+            layerControlOrderSyncTimer = window.setTimeout(() => {
+                syncLayerControlOrder();
+                layerControlOrderSyncTimer = null;
+            }, 150);
+        }
+
+        function createLayerControl(config) {
+            const position = config.position || 'top-right';
+            const collapsed = config.collapsed !== false;
+
+            // Build layer IDs from addedLayers (excludes COG layers managed by adapter)
+            const layerIds = addedLayers.map(layer => layer.id);
+
+            // Include custom adapters for non-native layer types
+            const customAdapters = [];
+            if (deckLayers.size > 0) customAdapters.push(cogLayerAdapter);
+            if (markerGroups.size > 0) customAdapters.push(markerLayerAdapter);
+
+            layerControlInstance = new LayerControl({
+                collapsed: collapsed,
+                layers: layerIds,
+                customLayerAdapters: customAdapters.length > 0 ? customAdapters : undefined,
+                onLayerReorder: handleLayerControlReorder,
+            });
+            map.addControl(layerControlInstance, position);
+            syncLayerControlOrder();
+            scheduleLayerControlOrderSync();
+        }
+
+        function createGeoAgentControl(config) {
+            if (!GeoAgentControlClass) {
+                console.warn('GeoAgent library unavailable — skipping GeoAgent control');
+                return;
+            }
+            if (geoAgentControl) {
+                map.removeControl(geoAgentControl);
+                geoAgentControl = null;
+            }
+
+            const position = config.position || 'top-right';
+            geoAgentControl = new GeoAgentControlClass({
+                ...config,
+                position,
+            });
+            map.addControl(geoAgentControl, position);
+            installGeoAgentEventGuards(geoAgentControl);
+        }
+
+        function installGeoAgentEventGuards(control) {
+            const elements = [
+                typeof control.getContainer === 'function' ? control.getContainer() : null,
+                typeof control.getPanel === 'function' ? control.getPanel() : null,
+            ].filter(Boolean);
+            const guardedEvents = [
+                'keydown',
+                'keypress',
+                'keyup',
+                'beforeinput',
+                'input',
+                'compositionstart',
+                'compositionupdate',
+                'compositionend',
+                'mousedown',
+                'mouseup',
+                'click',
+                'dblclick',
+                'pointerdown',
+                'pointerup',
+                'touchstart',
+                'touchend',
+                'wheel',
+            ];
+            const stop = event => event.stopPropagation();
+            for (const element of elements) {
+                if (element.dataset.anymapGeoagentEventGuards === 'true') continue;
+                element.dataset.anymapGeoagentEventGuards = 'true';
+                for (const eventName of guardedEvents) {
+                    element.addEventListener(eventName, stop);
+                }
+            }
+        }
+
+        function createDrawControl(config) {
+            // Check if Geoman is available (UMD exports to Geoman.Geoman)
+            const GeomanClass = (typeof Geoman !== 'undefined' && Geoman.Geoman)
+                ? Geoman.Geoman
+                : (typeof window !== 'undefined' && window.Geoman && window.Geoman.Geoman)
+                    ? window.Geoman.Geoman
+                    : null;
+
+            if (!GeomanClass) {
+                console.warn('Geoman library not loaded. Draw control not available.');
+                return;
+            }
+
+            const position = config.position || 'top-right';
+            const drawModes = config.drawModes || ['polygon', 'line', 'rectangle', 'circle', 'marker'];
+            const editModes = config.editModes || ['select', 'drag', 'change', 'rotate', 'cut', 'delete', 'scale', 'copy', 'split', 'union', 'difference', 'simplify', 'lasso'];
+            const collapsed = config.collapsed || false;
+
+            // Initialize Geoman first
+            const geoman = new GeomanClass(map, {});
+            let editorCreated = false;
+
+            const createEditor = () => {
+                if (editorCreated) return;
+                editorCreated = true;
+
+                if (GeoEditorClass) {
+                    // Use full GeoEditor UI (matches Jupyter widget behavior)
+                    try {
+                        const geoEditor = new GeoEditorClass({
+                            position,
+                            drawModes,
+                            editModes,
+                            fileModes: ['open', 'save'],
+                            collapsed,
+                            showFeatureProperties: false,
+                            fitBoundsOnLoad: true,
+                        });
+                        geoEditor.setGeoman(geoman);
+                        map.addControl(geoEditor, position);
+                    } catch (error) {
+                        console.error('Failed to create GeoEditor:', error);
+                    }
+                } else {
+                    console.warn('GeoEditor not available, using Geoman fallback');
+                }
+            };
+
+            map.on('gm:loaded', createEditor);
+            setTimeout(() => { createEditor(); }, 1000);
+        }
+    </script>
+</body>
+</html>

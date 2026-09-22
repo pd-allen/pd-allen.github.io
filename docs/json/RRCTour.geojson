@@ -1,0 +1,22 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Route Points"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [-0.3323767, 49.1102436],
+          [-0.3416162, 49.125015],
+          [-0.290456, 49.06356],
+          [-0.2922555, 49.0604398],
+          [-0.297155, 49.063248],
+          [-0.2921648, 49.07608]
+        ]
+      }
+    }
+  ]
+}
